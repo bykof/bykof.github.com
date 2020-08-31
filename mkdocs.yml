@@ -1,0 +1,38 @@
+site_name: Michael Bykovski
+nav:
+  - Homepage: 'index.md'
+  - Lectures:
+    - lectures/index.md
+    - JavaScript Fundamentals:
+      - lectures/javascript_fundamentals/index.md
+      - lectures/javascript_fundamentals/history.md
+      - lectures/javascript_fundamentals/tc39.md
+      - lectures/javascript_fundamentals/references.md
+      - lectures/javascript_fundamentals/assert.md
+      - lectures/javascript_fundamentals/variables.md
+      - lectures/javascript_fundamentals/values.md
+      - lectures/javascript_fundamentals/primitive_values.md
+      - lectures/javascript_fundamentals/complex_values.md
+      - lectures/javascript_fundamentals/statements_vs_expressions.md
+      - lectures/javascript_fundamentals/conditions.md
+      - lectures/javascript_fundamentals/loops.md
+      - lectures/javascript_fundamentals/functions.md
+      - lectures/javascript_fundamentals/exceptions.md
+      - lectures/javascript_fundamentals/classes.md
+      - lectures/javascript_fundamentals/asynchronicity.md
+    - Browser API:
+      - lectures/browser_api/index.md
+      - lectures/browser_api/browser_vs_node.md
+      - lectures/browser_api/html.md
+      - lectures/browser_api/web-apis.md
+      - lectures/browser_api/dom.md
+      - lectures/browser_api/element.md
+      - lectures/browser_api/xmlhttprequest.md
+theme:
+  name: material
+  features:
+    - instant
+    - tabs
+markdown_extensions:
+  - attr_list
+  - admonition
