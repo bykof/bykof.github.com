@@ -4,30 +4,30 @@ nav:
   - Lectures:
     - lectures/index.md
     - JavaScript Fundamentals:
-      - lectures/javascript_fundamentals/index.md
-      - lectures/javascript_fundamentals/history.md
-      - lectures/javascript_fundamentals/tc39.md
-      - lectures/javascript_fundamentals/references.md
-      - lectures/javascript_fundamentals/assert.md
-      - lectures/javascript_fundamentals/variables.md
-      - lectures/javascript_fundamentals/values.md
-      - lectures/javascript_fundamentals/primitive_values.md
-      - lectures/javascript_fundamentals/complex_values.md
-      - lectures/javascript_fundamentals/statements_vs_expressions.md
-      - lectures/javascript_fundamentals/conditions.md
-      - lectures/javascript_fundamentals/loops.md
-      - lectures/javascript_fundamentals/functions.md
-      - lectures/javascript_fundamentals/exceptions.md
-      - lectures/javascript_fundamentals/classes.md
-      - lectures/javascript_fundamentals/asynchronicity.md
+      - lectures/javascript-fundamentals/index.md
+      - lectures/javascript-fundamentals/history.md
+      - lectures/javascript-fundamentals/tc39.md
+      - lectures/javascript-fundamentals/references.md
+      - lectures/javascript-fundamentals/assert.md
+      - lectures/javascript-fundamentals/variables.md
+      - lectures/javascript-fundamentals/values.md
+      - lectures/javascript-fundamentals/primitive-values.md
+      - lectures/javascript-fundamentals/complex-values.md
+      - lectures/javascript-fundamentals/statements-vs-expressions.md
+      - lectures/javascript-fundamentals/conditions.md
+      - lectures/javascript-fundamentals/loops.md
+      - lectures/javascript-fundamentals/functions.md
+      - lectures/javascript-fundamentals/exceptions.md
+      - lectures/javascript-fundamentals/classes.md
+      - lectures/javascript-fundamentals/asynchronicity.md
     - Browser API:
-      - lectures/browser_api/index.md
-      - lectures/browser_api/browser_vs_node.md
-      - lectures/browser_api/html.md
-      - lectures/browser_api/web-apis.md
-      - lectures/browser_api/dom.md
-      - lectures/browser_api/element.md
-      - lectures/browser_api/xmlhttprequest.md
+      - lectures/browser-api/index.md
+      - lectures/browser-api/browser-vs-node.md
+      - lectures/browser-api/html.md
+      - lectures/browser-api/web-apis.md
+      - lectures/browser-api/dom.md
+      - lectures/browser-api/element.md
+      - lectures/browser-api/xmlhttprequest.md
 theme:
   name: material
   features:
