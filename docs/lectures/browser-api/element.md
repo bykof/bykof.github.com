@@ -36,7 +36,7 @@ Note that you cannot manipulate `Read only` fields like: `offsetLeft`, `dataset`
 ## Creation
 
 Surely there is the possibility to **create** a HTMLElement.
-Creating an element always means to "access" the `document` and create an element first:
+Creating an element means to create it in the `document` first and then append it to an element you like.
 
 ```javascript
 const divElement = document.createElement("div");
@@ -52,3 +52,16 @@ document.body.append(h1Element);
 
 ## Events
 
+Because deep in the inheritance, the HTMLElement inherits from an EventTarget, you can use `addEventListener` to attach an event listener to an element.
+
+For example:
+
+```javascript
+const element = document.getElementById("title");
+
+element.addEventListener("click", (event) => {
+  console.log(`${event} was clicked!`);
+});
+```
+
+Here are all events: [Link](https://developer.mozilla.org/de/docs/Web/Events)
