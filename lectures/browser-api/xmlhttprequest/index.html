@@ -573,6 +573,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fetch/" title="Fetch" class="md-nav__link">
+      Fetch
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -615,7 +627,25 @@
                 
                 
                 <h1 id="xmlhttprequest">XMLHttpRequest</h1>
-<p>"<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest (XHR)</a> objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing. XMLHttpRequest is used heavily in AJAX programming."</p>
+<p>"<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest (XHR)</a> objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing. XMLHttpRequest is used heavily in AJAX (Asynchronous JavaScript and XML) programming."</p>
+<pre><code class="javascript">const request = new XMLHttpRequest();
+
+request.onload = (event) =&gt; {
+  const json = request.response;
+  console.log(json);
+};
+request.open(&quot;GET&quot;, &quot;http://echo.jsontest.com/key/value/one/two&quot;);
+request.responseType = &quot;json&quot;;
+request.send();
+</code></pre>
+
+<p><code>XMLHttpRequest</code> uses an <strong>event-based</strong> approach.
+When the request is sent with <code>request.send()</code> the browser will send the prepared request and call the <code>onload</code> function of the <code>request</code> after the response was received.</p>
+<p>Consider that after using the <code>request.send()</code> method the thread won't block!</p>
+<figure>
+  <img src="/img/non_blocking_request.gif" width="500" />
+  <figcaption>Non blocking request.send</figcaption>
+</figure>
                 
               
               
@@ -648,6 +678,20 @@
             </div>
           </a>
         
+        
+          <a href="../fetch/" title="Fetch" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Fetch
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>

@@ -620,6 +620,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fetch/" title="Fetch" class="md-nav__link">
+      Fetch
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -718,7 +730,7 @@ element.innerText = &quot;123&quot;;
 <p>Note that you cannot manipulate <code>Read only</code> fields like: <code>offsetLeft</code>, <code>dataset</code> and many more...</p>
 <h2 id="creation">Creation</h2>
 <p>Surely there is the possibility to <strong>create</strong> a HTMLElement.
-Creating an element always means to "access" the <code>document</code> and create an element first:</p>
+Creating an element means to create it in the <code>document</code> first and then append it to an element you like.</p>
 <pre><code class="javascript">const divElement = document.createElement(&quot;div&quot;);
 </code></pre>
 
@@ -729,6 +741,16 @@ document.body.append(h1Element);
 </code></pre>
 
 <h2 id="events">Events</h2>
+<p>Because deep in the inheritance, the HTMLElement inherits from an EventTarget, you can use <code>addEventListener</code> to attach an event listener to an element.</p>
+<p>For example:</p>
+<pre><code class="javascript">const element = document.getElementById(&quot;title&quot;);
+
+element.addEventListener(&quot;click&quot;, (event) =&gt; {
+  console.log(`${event} was clicked!`);
+});
+</code></pre>
+
+<p>Here are all events: <a href="https://developer.mozilla.org/de/docs/Web/Events">Link</a></p>
                 
               
               
