@@ -28,6 +28,7 @@ nav:
       - lectures/browser-api/dom.md
       - lectures/browser-api/element.md
       - lectures/browser-api/xmlhttprequest.md
+      - lectures/browser-api/fetch.md
 theme:
   name: material
   features:
