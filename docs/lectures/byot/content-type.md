@@ -6,7 +6,7 @@ Imagine we want to build a small tool, which helps a company to store their upco
 
 First we need to create a "content type". You can compare it to a model or database table, which stores your information.
 
-Strapi creates and alters your table in the database automatically, so we just have to setup the content tupe through the UI.
+Strapi creates and alters your table in the database automatically, so we just have to setup the content type through the UI.
 
 Click on the left side on `Content-Types Builder` and then on `Create new collection type`:
 
