@@ -28,6 +28,13 @@ nav:
           - lectures/browser-api/element.md
           - lectures/browser-api/xmlhttprequest.md
           - lectures/browser-api/fetch.md
+      - BYOT (Build Your Own Tool):
+          - lectures/byot/index.md
+          - lectures/byot/installation.md
+          - lectures/byot/setup.md
+          - lectures/byot/content-type.md
+          - lectures/byot/roles-and-permissions.md
+          - lectures/byot/api.md
 theme:
   name: material
   features:
