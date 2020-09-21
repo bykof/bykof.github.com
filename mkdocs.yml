@@ -35,6 +35,10 @@ nav:
           - lectures/byot/content-type.md
           - lectures/byot/roles-and-permissions.md
           - lectures/byot/api.md
+          - lectures/byot/setup-next.md
+          - lectures/byot/client.md
+          - lectures/byot/add-theme.md
+          - lectures/byot/implement-the-frontend.md
 theme:
   name: material
   features:
