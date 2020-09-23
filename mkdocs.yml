@@ -28,6 +28,8 @@ nav:
           - lectures/browser-api/element.md
           - lectures/browser-api/xmlhttprequest.md
           - lectures/browser-api/fetch.md
+      - React:
+          - lectures/react/index.md
       - BYOT (Build Your Own Tool):
           - lectures/byot/index.md
           - lectures/byot/installation.md
