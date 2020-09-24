@@ -30,6 +30,15 @@ nav:
           - lectures/browser-api/fetch.md
       - React:
           - lectures/react/index.md
+          - lectures/react/render-engine.md
+          - lectures/react/component.md
+          - lectures/react/jsx.md
+          - lectures/react/reactdom-render.md
+          - lectures/react/props.md
+          - lectures/react/children.md
+          - lectures/react/events.md
+          - lectures/react/hooks.md
+          - lectures/react/context.md
       - BYOT (Build Your Own Tool):
           - lectures/byot/index.md
           - lectures/byot/installation.md
