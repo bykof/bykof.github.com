@@ -15,7 +15,7 @@
     
     
       
-        <title>Roles & Permissions - Lectures</title>
+        <title>Hooks - Lectures</title>
       
     
     
@@ -49,7 +49,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#roles-permissions" class="md-skip">
+        <a href="#hooks" class="md-skip">
           Skip to content
         </a>
       
@@ -77,7 +77,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Roles & Permissions
+              Hooks
             
           </span>
         </div>
@@ -561,10 +561,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4" checked>
     
     <label class="md-nav__link" for="nav-1-4">
       React
@@ -588,7 +590,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../react/" title="Introduction" class="md-nav__link">
+    <a href="../" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -600,7 +602,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../react/render-engine/" title="Render Engine" class="md-nav__link">
+    <a href="../render-engine/" title="Render Engine" class="md-nav__link">
       Render Engine
     </a>
   </li>
@@ -612,7 +614,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../react/component/" title="Component" class="md-nav__link">
+    <a href="../component/" title="Component" class="md-nav__link">
       Component
     </a>
   </li>
@@ -624,7 +626,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../react/jsx/" title="JSX" class="md-nav__link">
+    <a href="../jsx/" title="JSX" class="md-nav__link">
       JSX
     </a>
   </li>
@@ -636,7 +638,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../react/reactdom-render/" title="ReactDOM.render" class="md-nav__link">
+    <a href="../reactdom-render/" title="ReactDOM.render" class="md-nav__link">
       ReactDOM.render
     </a>
   </li>
@@ -648,7 +650,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../react/props/" title="Props" class="md-nav__link">
+    <a href="../props/" title="Props" class="md-nav__link">
       Props
     </a>
   </li>
@@ -660,7 +662,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../react/children/" title="Children" class="md-nav__link">
+    <a href="../children/" title="Children" class="md-nav__link">
       Children
     </a>
   </li>
@@ -672,7 +674,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../react/events/" title="Events" class="md-nav__link">
+    <a href="../events/" title="Events" class="md-nav__link">
       Events
     </a>
   </li>
@@ -682,11 +684,94 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../react/hooks/" title="Hooks" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Hooks
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Hooks" class="md-nav__link md-nav__link--active">
       Hooks
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    State
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle" class="md-nav__link">
+    Lifecycle
+  </a>
+  
+    <nav class="md-nav" aria-label="Lifecycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#call-it-only-once-only-on-mount" class="md-nav__link">
+    Call it only once (only on mount)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reducer" class="md-nav__link">
+    Reducer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-hooks" class="md-nav__link">
+    Custom Hooks
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -696,7 +781,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../react/context/" title="Context" class="md-nav__link">
+    <a href="../context/" title="Context" class="md-nav__link">
       Context
     </a>
   </li>
@@ -711,12 +796,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
     
     <label class="md-nav__link" for="nav-1-5">
       BYOT (Build Your Own Tool)
@@ -740,7 +823,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="Introduction" class="md-nav__link">
+    <a href="../../byot/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -752,7 +835,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../installation/" title="Installation" class="md-nav__link">
+    <a href="../../byot/installation/" title="Installation" class="md-nav__link">
       Installation
     </a>
   </li>
@@ -764,7 +847,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../setup/" title="Setup Strapi" class="md-nav__link">
+    <a href="../../byot/setup/" title="Setup Strapi" class="md-nav__link">
       Setup Strapi
     </a>
   </li>
@@ -776,7 +859,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../content-type/" title="Content-Type" class="md-nav__link">
+    <a href="../../byot/content-type/" title="Content-Type" class="md-nav__link">
       Content-Type
     </a>
   </li>
@@ -786,20 +869,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Roles & Permissions" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../byot/roles-and-permissions/" title="Roles & Permissions" class="md-nav__link">
       Roles & Permissions
     </a>
-    
   </li>
 
         
@@ -809,7 +883,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../api/" title="API" class="md-nav__link">
+    <a href="../../byot/api/" title="API" class="md-nav__link">
       API
     </a>
   </li>
@@ -821,7 +895,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../setup-next/" title="Setup Next.JS" class="md-nav__link">
+    <a href="../../byot/setup-next/" title="Setup Next.JS" class="md-nav__link">
       Setup Next.JS
     </a>
   </li>
@@ -833,7 +907,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../client/" title="Client" class="md-nav__link">
+    <a href="../../byot/client/" title="Client" class="md-nav__link">
       Client
     </a>
   </li>
@@ -845,7 +919,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../add-theme/" title="Add Theme" class="md-nav__link">
+    <a href="../../byot/add-theme/" title="Add Theme" class="md-nav__link">
       Add Theme
     </a>
   </li>
@@ -857,7 +931,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../implement-the-frontend/" title="Implement the frontend" class="md-nav__link">
+    <a href="../../byot/implement-the-frontend/" title="Implement the frontend" class="md-nav__link">
       Implement the frontend
     </a>
   </li>
@@ -890,6 +964,64 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    State
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle" class="md-nav__link">
+    Lifecycle
+  </a>
+  
+    <nav class="md-nav" aria-label="Lifecycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#call-it-only-once-only-on-mount" class="md-nav__link">
+    Call it only once (only on mount)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reducer" class="md-nav__link">
+    Reducer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-hooks" class="md-nav__link">
+    Custom Hooks
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -904,15 +1036,230 @@
                   
                 
                 
-                <h1 id="roles-permissions">Roles &amp; Permissions</h1>
-<p>Before we consume our created content type <code>Event</code>, we need to enable the endpoint <code>find</code> and <code>findOne</code> to public API.</p>
-<figure>
-  <img src="/img/byot/content-type/14.png"/>
-</figure>
+                <h1 id="hooks">Hooks</h1>
+<h2 id="state">State</h2>
+<p>If we use a variable inside of a component and it changes, React won't automatically update the DOM.
+If you execute this code, you will see, that the variable increases but the DOM stays as it is.</p>
+<pre><code class="javascript">const UpdateYourself = () =&gt; {
+  let myVariable = 1;
+  setInterval(() =&gt; {
+    myVariable += 1;
+    console.log(myVariable);
+  }, 500);
+  return &lt;p&gt;{myVariable}&lt;/p&gt;;
+};
+</code></pre>
 
-<figure>
-  <img src="/img/byot/content-type/15.png"/>
-</figure>
+<p>To let React update the DOM properly on changes and rerender only changed elements you have to use State… use State… useState().</p>
+<p>Let's look at an example:</p>
+<pre><code class="javascript">import React, { useState } from &quot;react&quot;;
+
+const UpdateYourself = () =&gt; {
+  const [myVariable, setMyVariable] = useState(1);
+  setInterval(() =&gt; {
+    setMyVariable(myVariable + 1);
+  }, 1000);
+  return &lt;p&gt;{myVariable}&lt;/p&gt;;
+};
+</code></pre>
+
+<p>In the 1st line we import <code>useState</code>. In 4th line we call <code>useState</code> with the start value <code>1</code>.
+<code>useState</code> returns a list <code>[state-variable, set-function]</code>.
+The state-variable contains the value and the set-function to sets a new value.</p>
+<p>Note: setting the state-variable like a common variable <strong>won't work</strong>, because it's a state variable (and for shure, also a const).</p>
+<h2 id="lifecycle">Lifecycle</h2>
+<p>When you build React components, sometimes it's needed to retrieve some values from
+a server on the mount state of a component and unload data when a component unmounts.
+Also sometimes some operations should recalculate values when a state variable changes.
+For that <code>useEffect</code> was invented.</p>
+<p>So imagine <code>useEffect</code> will be called every time something changes.
+When the component <code>mounts</code>, <code>updates</code>, and <code>unmounts</code>, thus on every render cycle.</p>
+<p>Let's start with an example:</p>
+<pre><code class="javascript">const App = () =&gt; {
+  const [myVar, setMyVar] = useState(1);
+
+  useEffect(() =&gt; {
+    console.log(&quot;update on every change&quot;);
+  });
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;MyVar: {myVar}&lt;/p&gt;
+      &lt;button type=&quot;button&quot; onClick={() =&gt; setMyVar(myVar + 1)}&gt;
+        Increment MyVar
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+</code></pre>
+
+<p>On every rerender cycle, the passed function into useEffect will be called.
+In the example above <code>useEffect</code> will be called on every button click.</p>
+<h3 id="dependencies">Dependencies</h3>
+<p><code>useEffect</code> has a second parameter which should be a list of state-variables, which can change over time.
+If we pass in the variables, <code>useEffect</code> is only called, when the passed variables inside the list change.</p>
+<p>Example:</p>
+<pre><code class="javascript">const App = () =&gt; {
+  const [myVar, setMyVar] = useState(1);
+  const [anotherVar, setAnotherVar] = useState(1);
+
+  useEffect(() =&gt; {
+    console.log(&quot;update on myvar&quot;);
+  }, [myVar]);
+
+  useEffect(() =&gt; {
+    console.log(&quot;update on anothervar&quot;);
+  }, [anotherVar]);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;MyVar: {myVar}&lt;/p&gt;
+      &lt;p&gt;AnotherVar: {anotherVar}&lt;/p&gt;
+      &lt;button type=&quot;button&quot; onClick={() =&gt; setMyVar(myVar + 1)}&gt;
+        Increment MyVar
+      &lt;/button&gt;
+      &lt;button type=&quot;button&quot; onClick={() =&gt; setAnotherVar(anotherVar + 1)}&gt;
+        Increment AnotherVar
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+</code></pre>
+
+<p>So if we click on the "Increment MyVar" button only "update on myvar" will be printed to the console. If we click "Increment AnotherVar" button only "update on anothervar" will be printed.</p>
+<h3 id="call-it-only-once-only-on-mount">Call it only once (only on mount)</h3>
+<p>But what if you want to call <code>useEffect</code> once - only on mount time of your component?</p>
+<p>For this behaviour just pass an empty list as second argument. This will trigger useEffect once and stop it from watching any state-variables. Let's call this an "untracked" useEffect.</p>
+<p>Here is an example:</p>
+<pre><code class="javascript">const App = () =&gt; {
+  const [myVar, setMyVar] = useState(1);
+
+  useEffect(() =&gt; {
+    console.log(&quot;called on mount&quot;);
+  }, []);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;MyVar: {myVar}&lt;/p&gt;
+      &lt;button type=&quot;button&quot; onClick={() =&gt; setMyVar(myVar + 1)}&gt;
+        Increment MyVar
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+</code></pre>
+
+<p>But what about the unmount time of a component?
+If you want to execute code on unmount time of a component just return a function in an untracked useEffect:</p>
+<pre><code class="javascript">const MyButton = ({ unmount }) =&gt; {
+  useEffect(() =&gt; {
+    return () =&gt; {
+      console.log(&quot;unmount mybutton&quot;);
+    };
+  }, []);
+  return (
+    &lt;button type=&quot;button&quot; onClick={unmount}&gt;
+      Unmount
+    &lt;/button&gt;
+  );
+};
+
+const App = () =&gt; {
+  const [showMyButton, setShowMyButton] = useState(true);
+  const unmount = () =&gt; setShowMyButton(false);
+  let myButtonContainer = null;
+  if (showMyButton) {
+    myButtonContainer = &lt;MyButton unmount={unmount} /&gt;;
+  }
+  return { myButtonContainer };
+};
+</code></pre>
+
+<h2 id="reducer">Reducer</h2>
+<p>Let's say you have to handle complex logic inside your component.
+For example you want to have your logic based on an event or on a previous state.
+Than reducer are your solution!</p>
+<p>In a nutshell one can say: "If your state has a <strong>workflow</strong>, use reducers"</p>
+<p>React provides us a hook for reducers. It's called <code>useReducer</code>.</p>
+<p>It takes a <code>function</code> the "reducer" as first argument and an <code>initialState</code> as second argument.</p>
+<p>InitialState is easy to comprehend, let's face reducer.</p>
+<p>Reducer takes a state and an action. The state parameter is always the current state when the reducer is dispatched. Action is the action which you will provide when you dispatch.</p>
+<p><code>useReducer</code> returns, like useState, two variables in a list: <code>[state, dispatch]</code>.
+The state of your reducer and a dispatch method.
+Instead of setting a state like in <code>useState</code>, we now call the <code>dispatch</code> method and provide an <code>action</code> (which can be a string, a number, list or object).
+Then the reducer function gets called.
+Inside the reducer function the action gets evaluated.
+Then a new state is returned.
+And this is crucial: <strong>It has to be a completely new object, not a modified old one.</strong></p>
+<p>Why? -&gt; <a href="https://daveceddia.com/why-not-modify-react-state-directly/">https://daveceddia.com/why-not-modify-react-state-directly/</a></p>
+<pre><code class="javascript">const initialState = { count: 0 };
+
+const reducer = (state, action) =&gt; {
+  switch (action.type) {
+    case &quot;increment&quot;:
+      return { count: state.count + 1 };
+    case &quot;decrement&quot;:
+      return { count: state.count - 1 };
+    default:
+      throw new Error();
+  }
+};
+
+const Counter = () =&gt; {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    &lt;&gt;
+      Count: {state.count}
+      &lt;button onClick={() =&gt; dispatch({ type: &quot;decrement&quot; })}&gt;-&lt;/button&gt;
+      &lt;button onClick={() =&gt; dispatch({ type: &quot;increment&quot; })}&gt;+&lt;/button&gt;
+    &lt;/&gt;
+  );
+};
+</code></pre>
+
+<h2 id="custom-hooks">Custom Hooks</h2>
+<p>Custom Hooks are a really special topic.
+It's loved by them who use it and hated by them who don't understand it.</p>
+<p>Let's become the ones who use it :)</p>
+<p>Let's image, we want to write a function, which attaches an event listener to the DOM's scroll event and saves the current position of the body to a variable.</p>
+<p>We would write code like this:</p>
+<p><code>hooks/useBodyScrollPosition.js</code></p>
+<pre><code class="javascript">import { useState, useEffect } from &quot;react&quot;;
+
+export default () =&gt; {
+  const [scrollPosition, setScrollPosition] = useState(window.scrollY);
+  useEffect(() =&gt; {
+    const handleScroll = () =&gt; setScrollPosition(window.scrollY);
+    document.addEventListener(&quot;scroll&quot;, handleScroll);
+    return () =&gt; document.removeEventListener(&quot;scroll&quot;, handleScroll);
+  }, []);
+  return scrollPosition;
+};
+</code></pre>
+
+<p><code>components/One.js</code></p>
+<pre><code class="javscript">import React from &quot;react&quot;;
+import useBodyScrollPosition from &quot;./useBodyScrollPosition&quot;;
+
+const One = () =&gt; {
+ const scrollPosition = useBodyScrollPosition();
+ return &lt;div&gt;{scrollPosition}&lt;/div&gt;;
+};
+
+export default One;
+</code></pre>
+
+<p><code>components/Two.js</code></p>
+<pre><code class="javascript">import React from &quot;react&quot;;
+import useBodyScrollPosition from &quot;./useBodyScrollPosition&quot;;
+
+const Two = () =&gt; {
+  const scrollPosition = useBodyScrollPosition();
+  return &lt;div&gt;{scrollPosition}&lt;/div&gt;;
+};
+
+export default Two;
+</code></pre>
                 
               
               
@@ -931,7 +1278,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../content-type/" title="Content-Type" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../events/" title="Events" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -940,19 +1287,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Content-Type
+                Events
               </div>
             </div>
           </a>
         
         
-          <a href="../api/" title="API" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../context/" title="Context" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                API
+                Context
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
