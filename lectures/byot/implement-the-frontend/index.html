@@ -897,8 +897,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fetch-and-display-data" class="md-nav__link">
-    Fetch and display data
+  <a href="#events-container" class="md-nav__link">
+    Events Container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glueing-it-all-together" class="md-nav__link">
+    Glueing it all together
   </a>
   
 </li>
@@ -967,8 +974,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fetch-and-display-data" class="md-nav__link">
-    Fetch and display data
+  <a href="#events-container" class="md-nav__link">
+    Events Container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glueing-it-all-together" class="md-nav__link">
+    Glueing it all together
   </a>
   
 </li>
@@ -1000,23 +1014,20 @@
 <h2 id="event-component"><code>Event</code> Component</h2>
 <p>First let's create a component to show our events later:</p>
 <p><code>dashboard/components/Event.js</code></p>
-<pre><code class="javascript">import React from &quot;react&quot;;
-
-const windowStyles = { width: 300, marginBottom: 10 };
-
-export const Event = ({ name, description, start, end }) =&gt; {
-  const startDate = new Date(start);
-  const endDate = new Date(end);
+<pre><code class="javascript">export const Event = ({ title, description, start, end }) =&gt; {
+  const startDateTime = new Date(start);
+  const endDateTime = new Date(end);
 
   return (
-    &lt;div className=&quot;window&quot; style={windowStyles}&gt;
+    &lt;div className=&quot;window&quot; style={{ width: 300, marginBottom: &quot;1em&quot; }}&gt;
       &lt;div className=&quot;title-bar&quot;&gt;
-        &lt;div className=&quot;title-bar-text&quot;&gt;{name}&lt;/div&gt;
+        &lt;div className=&quot;title-bar-text&quot;&gt;{title}&lt;/div&gt;
       &lt;/div&gt;
       &lt;div className=&quot;window-body&quot;&gt;
         &lt;p&gt;{description}&lt;/p&gt;
-        &lt;p style={{ textAlign: &quot;right&quot; }}&gt;
-          {startDate.toLocaleString()} - {endDate.toLocaleString()}
+        &lt;hr /&gt;
+        &lt;p&gt;
+          {startDateTime.toLocaleString()} - {endDateTime.toLocaleString()}
         &lt;/p&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -1033,13 +1044,38 @@ It is able to fetch, cache, synchronize and update server state.</p>
 <pre><code class="bash">yarn add react-query
 </code></pre>
 
-<h2 id="fetch-and-display-data">Fetch and display data</h2>
-<p>All preparations are done so far, so let's go and fetch the data from the server and display it by using our created <code>Event</code> component, our implemented <code>client</code>, and the <code>react-query</code> library.</p>
+<h2 id="events-container">Events Container</h2>
+<p>Create a container to fetch the data from the server and display it by using our created <code>Event</code> component, our implemented <code>client</code>, and the <code>react-query</code> library.</p>
+<p><code>dashboard/containers/Events.js</code></p>
+<pre><code class="javascript">import { useQuery } from &quot;react-query&quot;;
+import { getEvents } from &quot;../client&quot;;
+import { Event } from &quot;../components/Event&quot;;
+
+export const Events = () =&gt; {
+  const { isLoading, isError, data: events, error } = useQuery(
+    &quot;events&quot;,
+    getEvents
+  );
+
+  if (isLoading) {
+    return &lt;div&gt;Loading...&lt;/div&gt;;
+  }
+
+  if (isError) {
+    return &lt;div&gt;Error fetching events: {error.toString()}&lt;/div&gt;;
+  }
+
+  return events.map((event) =&gt; &lt;Event key={event.id} {...event} /&gt;);
+};
+
+export default Events;
+</code></pre>
+
+<h2 id="glueing-it-all-together">Glueing it all together</h2>
+<p>Now we are finished and just have to call the <code>Event</code> container in the <code>index.js</code> file.</p>
 <p><code>dashboard/pages/index.js</code></p>
 <pre><code class="javascript">import Head from &quot;next/head&quot;;
-import { useQuery } from &quot;react-query&quot;;
-import { getEvents } from &quot;../client&quot;;
-import Event from &quot;../components/Event&quot;;
+import Events from &quot;../containers/Events&quot;;
 
 const mainStyle = {
   padding: 30,
@@ -1050,30 +1086,13 @@ const mainStyle = {
 };
 
 export default function Home() {
-  const { isLoading, isError, data: events, error } = useQuery(
-    &quot;events&quot;,
-    getEvents
-  );
-  const loadingBar = isLoading &amp;&amp; &lt;div&gt;Loading...&lt;/div&gt;;
-  const errorBar = isError &amp;&amp; &lt;div&gt;{error.toString()}&lt;/div&gt;;
   return (
     &lt;div&gt;
       &lt;Head&gt;
         &lt;title&gt;Events Dashboard&lt;/title&gt;
       &lt;/Head&gt;
       &lt;main style={mainStyle}&gt;
-        {loadingBar}
-        {errorBar}
-        {events &amp;&amp;
-          events.map((event) =&gt; (
-            &lt;Event
-              key={event.id}
-              name={event.name}
-              description={event.description}
-              start={event.start}
-              end={event.end}
-            /&gt;
-          ))}
+        &lt;Events /&gt;
       &lt;/main&gt;
     &lt;/div&gt;
   );
