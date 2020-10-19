@@ -15,7 +15,7 @@
     
     
       
-        <title>Startpage - Lectures</title>
+        <title>Introduction - Lectures</title>
       
     
     
@@ -49,7 +49,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#startpage" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -77,7 +77,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Startpage
+              Introduction
             
           </span>
         </div>
@@ -137,6 +137,19 @@
       
         <a href="../../lectures/" class="md-tabs__link">
           Lectures
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../" class="md-tabs__link">
+          Exercises
         </a>
       
     </li>
@@ -858,6 +871,48 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Exercises
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Exercises
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Exercises" class="md-nav__link">
+      Exercises
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -875,6 +930,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#starting-with-the-exercises" class="md-nav__link">
+    Starting with the exercises
+  </a>
+  
+    <nav class="md-nav" aria-label="Starting with the exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#packagejson" class="md-nav__link">
+    package.json
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -889,8 +974,33 @@
                   
                 
                 
-                <h1 id="startpage">Startpage</h1>
-<p>Hello and welcome to JavaScript Fundamentals Exercises!</p>
+                <h1 id="introduction">Introduction</h1>
+<p>Here you will find some exercises for JavaScript Fundamentals.</p>
+<h2 id="starting-with-the-exercises">Starting with the exercises</h2>
+<p>To start with the exercises I can recommend you following steps:</p>
+<ol>
+<li>install Node.JS <a href="https://nodejs.org/en/">Link</a></li>
+<li>create a folder: <code>mkdir -p js-exercises/javascript-fundamentals/shop</code></li>
+<li>go to the folder: <code>cd js-exercises/javascript-fundamentals/shop</code></li>
+<li>init a node package: <code>npm init -y</code></li>
+<li>add a new script in the <code>package.json</code> <a href="#packagejson">see at the bottom</a>:</li>
+<li>add an <code>index.js</code>: <code>touch index.js</code></li>
+<li>write your code and start the <code>index.js</code> with <code>npm run start</code></li>
+</ol>
+<h3 id="packagejson">package.json</h3>
+<pre><code class="json">{
+  &quot;name&quot;: &quot;shop&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;license&quot;: &quot;MIT&quot;,
+  &quot;devDependencies&quot;: {
+    &quot;jest&quot;: &quot;^26.5.3&quot;
+  },
+  &quot;scripts&quot;: {
+    &quot;start&quot;: &quot;node index.js&quot;
+  }
+}
+</code></pre>
                 
               
               
