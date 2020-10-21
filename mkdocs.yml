@@ -50,6 +50,13 @@ nav:
           - lectures/byot/client.md
           - lectures/byot/add-theme.md
           - lectures/byot/implement-the-frontend.md
+  - Exercises:
+      - exercises/index.md
+    #   - JavaScript Fundamentals:
+    #       - exercises/javascript-fundamentals/index.md
+    #       - exercises/javascript-fundamentals/shop/index.md
+    # - Browser API:
+    # - React:
 theme:
   name: material
   features:
