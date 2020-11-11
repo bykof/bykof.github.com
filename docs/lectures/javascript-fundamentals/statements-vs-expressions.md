@@ -1,9 +1,5 @@
 # Statements vs. Expression
 
-## Useful links
-
-[https://joshwcomeau.com/operator-lookup/](https://joshwcomeau.com/operator-lookup/)
-
 ## Statements
 
 Statements perform instructions step by step.
@@ -148,3 +144,7 @@ The arguments of a function call or a method call must be expressions:
 ```javascript
 console.log('ab' + 'cd', Number('123'));
 ```
+
+## Useful links
+
+[https://joshwcomeau.com/operator-lookup/](https://joshwcomeau.com/operator-lookup/)
