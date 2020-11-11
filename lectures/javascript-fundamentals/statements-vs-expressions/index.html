@@ -398,6 +398,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#useful-links" class="md-nav__link">
+    Useful links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#statements" class="md-nav__link">
     Statements
   </a>
@@ -1069,6 +1076,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#useful-links" class="md-nav__link">
+    Useful links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#statements" class="md-nav__link">
     Statements
   </a>
@@ -1174,27 +1188,29 @@
                 
                 
                 <h1 id="statements-vs-expression">Statements vs. Expression</h1>
+<h2 id="useful-links">Useful links</h2>
+<p><a href="https://joshwcomeau.com/operator-lookup/">https://joshwcomeau.com/operator-lookup/</a></p>
 <h2 id="statements">Statements</h2>
 <p>Statements perform instructions step by step.</p>
 <pre><code class="javascript">let myStr;
 
 if (myBool) {
-  myStr = &quot;Yes&quot;;
+  myStr = 'Yes';
 } else {
-  myStr = &quot;No&quot;;
+  myStr = 'No';
 }
 </code></pre>
 
 <h2 id="expressions">Expressions</h2>
 <p>Expressions always produce a value.</p>
-<pre><code class="javascript">let myStr = myBool ? &quot;Yes&quot; : &quot;No&quot;;
+<pre><code class="javascript">let myStr = myBool ? 'Yes' : 'No';
 </code></pre>
 
 <h2 id="operators">Operators</h2>
 <p>Most operators work with primitive values.</p>
 <h3 id="equality">Equality</h3>
 <h4 id="loose-equality-avoid">Loose Equality (avoid!)</h4>
-<pre><code class="javascript">&quot;123&quot; == 123;
+<pre><code class="javascript">'123' == 123;
 // true
 
 false == 0;
@@ -1205,7 +1221,7 @@ false == 0;
 <pre><code class="javascript">false === 0;
 // false
 
-&quot;123&quot; === 123;
+'123' === 123;
 // false
 </code></pre>
 
@@ -1213,7 +1229,7 @@ false == 0;
 <pre><code class="javascript">5 &gt;= 2;
 // true
 
-&quot;bar&quot; &lt; &quot;foo&quot;;
+'bar' &lt; 'foo';
 //true
 </code></pre>
 
@@ -1226,28 +1242,28 @@ a !== undefined &amp;&amp; a !== null ? a : b;
 
 <h3 id="or-operator">OR Operator</h3>
 <p>Checks if the first value is 'falsy' and uses the second value if so</p>
-<pre><code class="javascript">undefined || &quot;default&quot;;
+<pre><code class="javascript">undefined || 'default';
 // &quot;default&quot;
 
-null || &quot;default&quot;;
+null || 'default';
 // &quot;default&quot;
 
-false || &quot;default&quot;;
+false || 'default';
 // &quot;default&quot;
 
-0 || &quot;default&quot;;
+0 || 'default';
 // &quot;default&quot;
 
-0n || &quot;default&quot;;
+0n || 'default';
 // &quot;default&quot;
 
-&quot;&quot; || &quot;default&quot;;
+'' || 'default';
 // &quot;default&quot;
 
-true || &quot;default&quot;;
+true || 'default';
 // true
 
-&quot;some text&quot; || &quot;default&quot;;
+'some text' || 'default';
 // &quot;some text&quot;
 </code></pre>
 
@@ -1287,7 +1303,7 @@ false &amp;&amp; 'default'
 </code></pre>
 
 <p>The arguments of a function call or a method call must be expressions:</p>
-<pre><code class="javascript">console.log(&quot;ab&quot; + &quot;cd&quot;, Number(&quot;123&quot;));
+<pre><code class="javascript">console.log('ab' + 'cd', Number('123'));
 </code></pre>
                 
               
