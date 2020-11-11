@@ -1,5 +1,9 @@
 # Statements vs. Expression
 
+## Useful links
+
+[https://joshwcomeau.com/operator-lookup/](https://joshwcomeau.com/operator-lookup/)
+
 ## Statements
 
 Statements perform instructions step by step.
@@ -8,9 +12,9 @@ Statements perform instructions step by step.
 let myStr;
 
 if (myBool) {
-  myStr = "Yes";
+  myStr = 'Yes';
 } else {
-  myStr = "No";
+  myStr = 'No';
 }
 ```
 
@@ -19,7 +23,7 @@ if (myBool) {
 Expressions always produce a value.
 
 ```javascript
-let myStr = myBool ? "Yes" : "No";
+let myStr = myBool ? 'Yes' : 'No';
 ```
 
 ## Operators
@@ -31,7 +35,7 @@ Most operators work with primitive values.
 #### Loose Equality (avoid!)
 
 ```javascript
-"123" == 123;
+'123' == 123;
 // true
 
 false == 0;
@@ -44,7 +48,7 @@ false == 0;
 false === 0;
 // false
 
-"123" === 123;
+'123' === 123;
 // false
 ```
 
@@ -54,7 +58,7 @@ false === 0;
 5 >= 2;
 // true
 
-"bar" < "foo";
+'bar' < 'foo';
 //true
 ```
 
@@ -73,28 +77,28 @@ a !== undefined && a !== null ? a : b;
 Checks if the first value is 'falsy' and uses the second value if so
 
 ```javascript
-undefined || "default";
+undefined || 'default';
 // "default"
 
-null || "default";
+null || 'default';
 // "default"
 
-false || "default";
+false || 'default';
 // "default"
 
-0 || "default";
+0 || 'default';
 // "default"
 
-0n || "default";
+0n || 'default';
 // "default"
 
-"" || "default";
+'' || 'default';
 // "default"
 
-true || "default";
+true || 'default';
 // true
 
-"some text" || "default";
+'some text' || 'default';
 // "some text"
 ```
 
@@ -142,5 +146,5 @@ function max(x, y) {
 The arguments of a function call or a method call must be expressions:
 
 ```javascript
-console.log("ab" + "cd", Number("123"));
+console.log('ab' + 'cd', Number('123'));
 ```
