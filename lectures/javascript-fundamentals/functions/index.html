@@ -1334,10 +1334,10 @@ assert.equal(arrow(), 123);
 <h4 id="the-purpose-of-a-method-is-to-be-a-method">The purpose of a <code>method</code> is to be a method:</h4>
 <pre><code class="javascript">const obj = {
   method() {
-    return &quot;abc&quot;;
+    return 'abc';
   },
 };
-assert.equal(obj.method(), &quot;abc&quot;);
+assert.equal(obj.method(), 'abc');
 </code></pre>
 
 <h4 id="the-purpose-of-a-class-is-to-be-a-constructor-function">The purpose of a <code>class</code> is to be a constructor function:</h4>
@@ -1369,13 +1369,14 @@ const plusTwo = (x) =&gt; x + 2;
 </code></pre>
 
 <p>Arrow Functions are often used as a parameter of callback-functions</p>
+<p>If the return value of the arrow function is an expression, you can leave the curly-brackets out.</p>
 <pre><code class="javascript">[1, 2, 3].map((x) =&gt; x + 1);
 </code></pre>
 
 <h2 id="what-about-this-this">What about this 'this'?</h2>
 <p>In ordinary functions 'this' always relates to current function. In specialized functions 'this' always relates to the lexical this which is mostly preferred.</p>
 <pre><code class="javascript">const prefixer = {
-  prefix: &quot;==&gt; &quot;,
+  prefix: '==&gt; ',
   prefixStringArray(stringArray) {
     return stringArray.map(function (x) {
       return this.prefix + x;
@@ -1383,12 +1384,12 @@ const plusTwo = (x) =&gt; x + 2;
   },
 };
 
-prefixer.prefixStringArray([&quot;a&quot;, &quot;b&quot;, &quot;c&quot;])[
-  (&quot;undefineda&quot;, &quot;undefinedb&quot;, &quot;undefinedc&quot;)
+prefixer.prefixStringArray(['a', 'b', 'c'])[
+  ('undefineda', 'undefinedb', 'undefinedc')
 ];
 
 const prefixerRight = {
-  prefix: &quot;==&gt; &quot;,
+  prefix: '==&gt; ',
   prefixStringArray(stringArray) {
     return stringArray.map((x) =&gt; {
       return this.prefix + x;
@@ -1396,7 +1397,7 @@ const prefixerRight = {
   },
 };
 
-prefixerRight.prefixStringArray([&quot;a&quot;, &quot;b&quot;, &quot;c&quot;])[(&quot;==&gt; a&quot;, &quot;==&gt; b&quot;, &quot;==&gt; c&quot;)];
+prefixerRight.prefixStringArray(['a', 'b', 'c'])[('==&gt; a', '==&gt; b', '==&gt; c')];
 </code></pre>
                 
               
