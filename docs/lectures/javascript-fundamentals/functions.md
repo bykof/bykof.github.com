@@ -103,10 +103,10 @@ assert.equal(arrow(), 123);
 ```javascript
 const obj = {
   method() {
-    return "abc";
+    return 'abc';
   },
 };
-assert.equal(obj.method(), "abc");
+assert.equal(obj.method(), 'abc');
 ```
 
 #### The purpose of a `class` is to be a constructor function:
@@ -145,6 +145,8 @@ const plusTwo = (x) => x + 2;
 
 Arrow Functions are often used as a parameter of callback-functions
 
+If the return value of the arrow function is an expression, you can leave the curly-brackets out.
+
 ```javascript
 [1, 2, 3].map((x) => x + 1);
 ```
@@ -155,7 +157,7 @@ In ordinary functions 'this' always relates to current function. In specialized 
 
 ```javascript
 const prefixer = {
-  prefix: "==> ",
+  prefix: '==> ',
   prefixStringArray(stringArray) {
     return stringArray.map(function (x) {
       return this.prefix + x;
@@ -163,12 +165,12 @@ const prefixer = {
   },
 };
 
-prefixer.prefixStringArray(["a", "b", "c"])[
-  ("undefineda", "undefinedb", "undefinedc")
+prefixer.prefixStringArray(['a', 'b', 'c'])[
+  ('undefineda', 'undefinedb', 'undefinedc')
 ];
 
 const prefixerRight = {
-  prefix: "==> ",
+  prefix: '==> ',
   prefixStringArray(stringArray) {
     return stringArray.map((x) => {
       return this.prefix + x;
@@ -176,5 +178,5 @@ const prefixerRight = {
   },
 };
 
-prefixerRight.prefixStringArray(["a", "b", "c"])[("==> a", "==> b", "==> c")];
+prefixerRight.prefixStringArray(['a', 'b', 'c'])[('==> a', '==> b', '==> c')];
 ```
