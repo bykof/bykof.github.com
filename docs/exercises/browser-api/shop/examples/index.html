@@ -1,0 +1,99 @@
+<html>
+  <head> </head>
+  <body>
+    <section>
+      <h1>Customers</h1>
+      <form id="customerForm">
+        <label for="customerFirstname">Firstname: </label>
+        <input type="text" required id="customerFirstname" />
+        <br />
+        <label for="customerLastname">Lastname: </label>
+        <input type="text" required id="customerLastname" />
+        <br />
+        <label for="customerStreet">Street: </label>
+        <input type="text" required id="customerStreet" />
+        <br />
+        <label for="customerPostalCode">Postal Code: </label>
+        <input type="text" required id="customerStreet" />
+        <br />
+        <label for="customerCity">City: </label>
+        <input type="text" required id="customerCity" />
+        <br />
+        <label for="customerPhone">Phone: </label>
+        <input type="text" id="customerPhone" />
+        <br />
+        <label for="customerEmail">Email: </label>
+        <input type="email" required id="customerEmail" />
+        <br />
+        <button type="submit">Create</button>
+      </form>
+    </section>
+    <section>
+      <ul id="customerList">
+        <li>
+          First Customer (test@test.com, 01741234567) - Teststreet 1 123456
+          Testtown
+        </li>
+        <li>
+          Second Customer (test@test.com, 01741234567) - Teststreet 1 123456
+          Testtown
+        </li>
+      </ul>
+    </section>
+    <hr />
+    <h1>Products</h1>
+    <section>
+      <form id="productForm">
+        <label for="productNumber">Number: </label>
+        <input type="text" required id="productNumber" />
+        <br />
+        <label for="productName">Name: </label>
+        <input type="text" required id="productName" />
+        <br />
+        <label for="productPrice">Price: </label>
+        <input type="number" step="1" min="1" required id="productPrice" />
+        <br />
+        <button type="submit">Create</button>
+      </form>
+    </section>
+    <section>
+      <ul id="productList">
+        <li>#switch1 - Nintendo Switch - 199.99</li>
+        <li>#playstation4 - Playstation 4 - 399.99</li>
+      </ul>
+    </section>
+    <hr />
+    <h1>Orders</h1>
+    <section>
+      <form id="orderForm">
+        <label for="orderCustomerNumber">Customer Number: </label>
+        <input type="text" required id="orderCustomerNumber" />
+        <br />
+        <label for="productNumber">Add Product: </label>
+        <input type="number" step="1" min="1" required id="productAmount" />
+        <span>x</span>
+        <input type="text" required id="productNumber" />
+        <button type="button" id="addOrderProductNumber">Add</button> <br />
+        <ul>
+          <li>2x #switch1 - Nintendo Switch - 199.99</li>
+          <li>1x #playstation4 - Playstation 4 - 399.99</li>
+        </ul>
+        <button type="submit">Create</button>
+      </form>
+    </section>
+    <section>
+      <div id="orders">
+        <div style="border: 1px solid black; padding: 1em;">
+          <h3>Customer:</h3>
+          <p>First Customer</p>
+          <p>Teststreet 1 123456 Testtown</p>
+          <p>test@test.com, 01741234567</p>
+          <h3>Products</h3>
+          <p>- 2x #switch1 - Nintendo Switch - 199.99</p>
+          <p>- 1x #playstation4 - Playstation 4 - 399.99</p>
+          <p>Sum: 799.97</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

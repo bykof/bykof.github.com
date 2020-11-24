@@ -55,13 +55,14 @@ nav:
       - JavaScript Fundamentals:
         - exercises/javascript-fundamentals/index.md
         - exercises/javascript-fundamentals/shop/index.md
-    # - Browser API:
+      # - Browser API:
+      #   - exercises/browser-api/shop/index.md
     # - React:
 theme:
   name: material
   features:
-    - instant
-    - tabs
+    - navigation.instant
+    - navigation.tabs
 markdown_extensions:
   - attr_list
   - admonition
