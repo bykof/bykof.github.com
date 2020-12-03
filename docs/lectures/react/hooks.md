@@ -21,7 +21,7 @@ To let React update the DOM properly on changes and rerender only changed elemen
 Let's look at an example:
 
 ```javascript
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const UpdateYourself = () => {
   const [myVariable, setMyVariable] = useState(1);
@@ -38,7 +38,71 @@ The state-variable contains the value and the set-function to sets a new value.
 
 Note: setting the state-variable like a common variable **won't work**, because it's a state variable (and for shure, also a const).
 
+### Difference object - primitive value
+
+If we have following component:
+
+```javascript
+import React, { useState } from 'react';
+
+const Component = () => {
+  const [primitive, setPrimitive] = useState(1);
+  const [complex, setComplex] = useState({ firstName: 'Michael' });
+
+  const onClick = () => {
+    setPrimitive(primitive + 1);
+    setComplex({ ...complex, firstName: 'Test' });
+  };
+
+  return (
+    <button type='click' onClick={onClick}>
+      {primitive} - {complex.firstName}
+    </button>
+  );
+};
+```
+
+`setPrimitive` can be called easily with a "new" value, because the value of the variable `primitive` is a `primitive value`.
+`setComplex` cannot be called by changing `firstName` in the variable `complex` like this:
+
+This is wrong ❌
+```
+complex.firstName = 'Test'';
+setComplex(complex);
+```
+
+It is bad, because this would not rerender the state.
+
+Here is why:
+
+If you compare two primitive values with the strict equality operator, surely two different values are different from each other:
+
+```javascript
+const a = 2;
+const b = a + 1;
+
+a === b // returns false
+```
+
+But if you compare the same object, even by changing it, it will be still the same object:
+
+```javascript
+const a = {firstName: 'Test'};
+const b = a;
+
+b.firstName = 'Michael';
+
+a === b // returns true
+```
+
+Therefore React does not recognize, that your object has changed and it won't rerender.
+
 ## Lifecycle
+
+<figure>
+  <img src="/img/react_lifecycle.png"/>
+  <figcaption>The react lifecycle</figcaption>
+</figure>
 
 When you build React components, sometimes it's needed to retrieve some values from
 a server on the mount state of a component and unload data when a component unmounts.
@@ -55,13 +119,13 @@ const App = () => {
   const [myVar, setMyVar] = useState(1);
 
   useEffect(() => {
-    console.log("update on every change");
+    console.log('update on every change');
   });
 
   return (
     <div>
       <p>MyVar: {myVar}</p>
-      <button type="button" onClick={() => setMyVar(myVar + 1)}>
+      <button type='button' onClick={() => setMyVar(myVar + 1)}>
         Increment MyVar
       </button>
     </div>
@@ -85,21 +149,21 @@ const App = () => {
   const [anotherVar, setAnotherVar] = useState(1);
 
   useEffect(() => {
-    console.log("update on myvar");
+    console.log('update on myvar');
   }, [myVar]);
 
   useEffect(() => {
-    console.log("update on anothervar");
+    console.log('update on anothervar');
   }, [anotherVar]);
 
   return (
     <div>
       <p>MyVar: {myVar}</p>
       <p>AnotherVar: {anotherVar}</p>
-      <button type="button" onClick={() => setMyVar(myVar + 1)}>
+      <button type='button' onClick={() => setMyVar(myVar + 1)}>
         Increment MyVar
       </button>
-      <button type="button" onClick={() => setAnotherVar(anotherVar + 1)}>
+      <button type='button' onClick={() => setAnotherVar(anotherVar + 1)}>
         Increment AnotherVar
       </button>
     </div>
@@ -122,13 +186,13 @@ const App = () => {
   const [myVar, setMyVar] = useState(1);
 
   useEffect(() => {
-    console.log("called on mount");
+    console.log('called on mount');
   }, []);
 
   return (
     <div>
       <p>MyVar: {myVar}</p>
-      <button type="button" onClick={() => setMyVar(myVar + 1)}>
+      <button type='button' onClick={() => setMyVar(myVar + 1)}>
         Increment MyVar
       </button>
     </div>
@@ -143,11 +207,11 @@ If you want to execute code on unmount time of a component just return a functio
 const MyButton = ({ unmount }) => {
   useEffect(() => {
     return () => {
-      console.log("unmount mybutton");
+      console.log('unmount mybutton');
     };
   }, []);
   return (
-    <button type="button" onClick={unmount}>
+    <button type='button' onClick={unmount}>
       Unmount
     </button>
   );
@@ -195,9 +259,9 @@ const initialState = { count: 0 };
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "increment":
+    case 'increment':
       return { count: state.count + 1 };
-    case "decrement":
+    case 'decrement':
       return { count: state.count - 1 };
     default:
       throw new Error();
@@ -209,8 +273,8 @@ const Counter = () => {
   return (
     <>
       Count: {state.count}
-      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
-      <button onClick={() => dispatch({ type: "increment" })}>+</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+      <button onClick={() => dispatch({ type: 'increment' })}>+</button>
     </>
   );
 };
@@ -230,14 +294,14 @@ We would write code like this:
 `hooks/useBodyScrollPosition.js`
 
 ```javascript
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-export default () => {
+const useBodyScrollPosition = () => {
   const [scrollPosition, setScrollPosition] = useState(window.scrollY);
   useEffect(() => {
     const handleScroll = () => setScrollPosition(window.scrollY);
-    document.addEventListener("scroll", handleScroll);
-    return () => document.removeEventListener("scroll", handleScroll);
+    document.addEventListener('scroll', handleScroll);
+    return () => document.removeEventListener('scroll', handleScroll);
   }, []);
   return scrollPosition;
 };
@@ -260,8 +324,8 @@ export default One;
 `components/Two.js`
 
 ```javascript
-import React from "react";
-import useBodyScrollPosition from "./useBodyScrollPosition";
+import React from 'react';
+import useBodyScrollPosition from './useBodyScrollPosition';
 
 const Two = () => {
   const scrollPosition = useBodyScrollPosition();
