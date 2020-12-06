@@ -3,7 +3,7 @@
 Settings up Web Workers in React is pretty simple.
 
 All we need to do is just to include a Webpack module and
-import it to use it afterswards.
+import it, so we can use it afterwards.
 
 Let's start!
 
