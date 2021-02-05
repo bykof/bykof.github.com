@@ -66,6 +66,7 @@ const Component = () => {
 `setComplex` cannot be called by changing `firstName` in the variable `complex` like this:
 
 This is wrong ❌
+
 ```
 complex.firstName = 'Test'';
 setComplex(complex);
@@ -81,23 +82,28 @@ If you compare two primitive values with the strict equality operator, surely tw
 const a = 2;
 const b = a + 1;
 
-a === b // returns false
+a === b; // returns false
 ```
 
 But if you compare the same object, even by changing it, it will be still the same object:
 
 ```javascript
-const a = {firstName: 'Test'};
+const a = { firstName: 'Test' };
 const b = a;
 
 b.firstName = 'Michael';
 
-a === b // returns true
+a === b; // returns true
 ```
 
 Therefore React does not recognize, that your object has changed and it won't rerender.
 
 ## Lifecycle
+
+<figure>
+  <img src="https://raw.githubusercontent.com/donavon/hook-flow/master/hook-flow.png"/>
+  <figcaption>React Hook Flow</figcaption>
+</figure>
 
 <figure>
   <img src="/img/react_lifecycle.png"/>
