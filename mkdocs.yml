@@ -34,10 +34,10 @@ nav:
           - lectures/react/component.md
           - lectures/react/jsx.md
           - lectures/react/reactdom-render.md
-          - lectures/react/props.md
-          - lectures/react/children.md
           - lectures/react/events.md
           - lectures/react/hooks.md
+          - lectures/react/props.md
+          - lectures/react/children.md
           - lectures/react/context.md
       - Web Workers in React:
           - lectures/web-workers-in-react/introduction.md
