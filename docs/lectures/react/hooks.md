@@ -1,5 +1,26 @@
 # Hooks
 
+Hooks are a concept in React, which is pretty important.
+You will recognize Hooks by functions starting with `use`.
+
+Following Hooks are available:
+
+- Basic Hooks
+    - `useState`
+    - `useEffect`
+    - `useContext`
+- Additional Hooks
+    - `useReducer`
+    - `useCallback`
+    - `useMemo`
+    - `useRef`
+    - `useImperativeHandle`
+    - `useLayoutEffect`
+    - `useDebugValue`
+
+We will look at the basic hooks in this lecture, but let's start with an introduction about state in React first.
+
+
 ## State
 
 If we use a variable inside of a component and it changes, React won't automatically update the DOM.
