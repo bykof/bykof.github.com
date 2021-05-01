@@ -330,7 +330,6 @@ export default One;
 `components/Two.js`
 
 ```javascript
-import React from 'react';
 import useBodyScrollPosition from './useBodyScrollPosition';
 
 const Two = () => {

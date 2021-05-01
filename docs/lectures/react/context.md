@@ -6,7 +6,7 @@ Especially when it comes to store and manipulate data from the server in one pla
 Let's start by defining a state in a variable:
 
 ```javascript
-import React, { useContext } from "react";
+import { useContext } from "react";
 
 const ClickContext = createContext();
 ```
@@ -27,7 +27,7 @@ Let's first build a custom Provider with useState in a file called
 `clickContext.js`
 
 ```javascript
-import React, { useState } from "react";
+import { useState } from "react";
 
 export const ClickContext = createContext();
 export const ClickContextProvider = ({ children }) => {
@@ -58,7 +58,7 @@ Our structure will look like this:
 </pre>
 
 ```javascript
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { ClickContext, ClickContextProvider } from "./clickContext";
 
 const Click = () => {

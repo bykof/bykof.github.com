@@ -5,7 +5,7 @@ To render a React component into the DOM, react-dom exports a render function.
 The function will render your React components instead of the provided HTML element.
 
 ```javascript
-import React, { useState } from "react";
+import { useState } from "react";
 import ReactDOM from "react-dom";
 
 const HelloWorld = () => {
