@@ -1128,7 +1128,7 @@
 <p>When we implement components, we want sometimes to have a shared and common state.
 Especially when it comes to store and manipulate data from the server in one place, but to have it used in two deep nested components.</p>
 <p>Let's start by defining a state in a variable:</p>
-<pre><code class="language-javascript">import React, { useContext } from &quot;react&quot;;
+<pre><code class="language-javascript">import { useContext } from &quot;react&quot;;
 
 const ClickContext = createContext();
 </code></pre>
@@ -1140,7 +1140,7 @@ This <code>Provider</code> object is a React <code>component</code>, which passe
 <p>This <code>Provider</code> should wrap the top-level component, which then passes the value to its child components.</p>
 <p>Let's first build a custom Provider with useState in a file called</p>
 <p><code>clickContext.js</code></p>
-<pre><code class="language-javascript">import React, { useState } from &quot;react&quot;;
+<pre><code class="language-javascript">import { useState } from &quot;react&quot;;
 
 export const ClickContext = createContext();
 export const ClickContextProvider = ({ children }) =&gt; {
@@ -1166,7 +1166,7 @@ but wrapped in the <code>ClickContext.Provider</code> to pass the value to the c
         +--+ Click
 </pre>
 
-<pre><code class="language-javascript">import React, { useContext } from &quot;react&quot;;
+<pre><code class="language-javascript">import { useContext } from &quot;react&quot;;
 import { ClickContext, ClickContextProvider } from &quot;./clickContext&quot;;
 
 const Click = () =&gt; {
