@@ -697,6 +697,30 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../props/" class="md-nav__link">
+        Props
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../children/" class="md-nav__link">
+        Children
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -796,30 +820,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../props/" class="md-nav__link">
-        Props
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../children/" class="md-nav__link">
-        Children
-      </a>
     </li>
   
 
@@ -1278,6 +1278,28 @@
                 
                 
                 <h1 id="hooks">Hooks</h1>
+<p>Hooks are a concept in React, which is pretty important.
+You will recognize Hooks by functions starting with <code>use</code>.</p>
+<p>Following Hooks are available:</p>
+<ul>
+<li>Basic Hooks<ul>
+<li><code>useState</code></li>
+<li><code>useEffect</code></li>
+<li><code>useContext</code></li>
+</ul>
+</li>
+<li>Additional Hooks<ul>
+<li><code>useReducer</code></li>
+<li><code>useCallback</code></li>
+<li><code>useMemo</code></li>
+<li><code>useRef</code></li>
+<li><code>useImperativeHandle</code></li>
+<li><code>useLayoutEffect</code></li>
+<li><code>useDebugValue</code></li>
+</ul>
+</li>
+</ul>
+<p>We will look at the basic hooks in this lecture, but let's start with an introduction about state in React first.</p>
 <h2 id="state">State</h2>
 <p>If we use a variable inside of a component and it changes, React won't automatically update the DOM.
 If you execute this code, you will see, that the variable increases but the DOM stays as it is.</p>
@@ -1562,7 +1584,7 @@ export default Two;
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../events/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../children/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1571,19 +1593,19 @@ export default Two;
               <span class="md-footer__direction">
                 Previous
               </span>
-              Events
+              Children
             </div>
           </div>
         </a>
       
       
-        <a href="../props/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../context/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Props
+              Context
             </div>
           </div>
           <div class="md-footer__button md-icon">
