@@ -12,17 +12,6 @@ Or just click in the left upper corner on [Lectures](./lectures/index.md)
 
 ## Light/Dark Mode
 
-<div class="tx-switch">
-  <button
-    data-md-color-scheme="default"
-    data-md-color-primary="blue"
-    data-md-color-accent="blue"
-  ><code>Default Mode</code></button>
-  <button
-    data-md-color-scheme="slate"
-    data-md-color-primary="lime"
-    data-md-color-accent="yellow"
-  ><code>Dark Mode</code></button>
-</div>
+Just switch between Light and Dark mode with the switch in the navigation at the top beside the search input field.
 
 Feel free to visit my website: [https://bykovski.de](https://bykovski.de)

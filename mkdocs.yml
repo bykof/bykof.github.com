@@ -1,4 +1,5 @@
 site_name: Lectures
+site_url: http://bykof.github.com
 nav:
   - Lectures:
       - lectures/index.md
@@ -12,6 +13,7 @@ nav:
           - lectures/javascript-fundamentals/values.md
           - lectures/javascript-fundamentals/primitive-values.md
           - lectures/javascript-fundamentals/complex-values.md
+          - lectures/javascript-fundamentals/json.md
           - lectures/javascript-fundamentals/statements-vs-expressions.md
           - lectures/javascript-fundamentals/conditions.md
           - lectures/javascript-fundamentals/loops.md
@@ -67,6 +69,15 @@ theme:
     - scheme: default
       primary: blue
       accent: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: lime
+      accent: yellow
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
   features:
     - navigation.instant
     - navigation.tabs
