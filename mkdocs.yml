@@ -1,5 +1,5 @@
 site_name: Lectures
-site_url: http://bykof.github.com
+site_url: https://bykof.github.io/
 nav:
   - Lectures:
       - lectures/index.md
