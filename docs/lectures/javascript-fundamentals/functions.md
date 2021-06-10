@@ -136,19 +136,38 @@ const arrowFunc = (x, y) => {
 const f = function (x, y, z) {
   return 123;
 };
-const f = (x, y, z) => {
+
+const g = (x, y, z) => {
   return 123;
 };
-const f = (x, y, z) => 123;
+const h = (x, y, z) => 123;
 const plusTwo = (x) => x + 2;
 ```
 
 Arrow Functions are often used as a parameter of callback-functions
 
+### Return Statements
+
+Normally you can just use `return` in an arrow function to return expressions:
+
+```javascript
+const sum = (a, b) => {
+  return a + b;
+};
+```
+
 If the return value of the arrow function is an expression, you can leave the curly-brackets out.
 
 ```javascript
 [1, 2, 3].map((x) => x + 1);
+```
+
+If you want to return a multiline expression you can wrap the expression in parenthesis:
+
+```javascript
+const divide = (dividend, divisor) => (
+  dividend / divisor
+)
 ```
 
 ## What about this 'this'?
