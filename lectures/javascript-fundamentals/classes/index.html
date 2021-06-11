@@ -520,6 +520,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prototypes-and-inheritance" class="md-nav__link">
+    Prototypes and Inheritance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-inheritance-use-it-with-caution" class="md-nav__link">
+    Multiple Inheritance [use it with caution!]
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes_1" class="md-nav__link">
+    Classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#inheritance" class="md-nav__link">
     Inheritance
   </a>
@@ -1198,6 +1219,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prototypes-and-inheritance" class="md-nav__link">
+    Prototypes and Inheritance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-inheritance-use-it-with-caution" class="md-nav__link">
+    Multiple Inheritance [use it with caution!]
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes_1" class="md-nav__link">
+    Classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#inheritance" class="md-nav__link">
     Inheritance
   </a>
@@ -1227,20 +1269,76 @@
                 <h1 id="classes">Classes</h1>
 <h2 id="constructor-functions">Constructor Functions</h2>
 <p>There is the existence of constructor functions:</p>
-<pre><code class="language-javascript">function Person(name) {
-  this.name = name;
-  this.describe = function () {
-    return &quot;Person named &quot; + this.name;
+<pre><code class="language-javascript">function Person(first, last, age, gender, interests) {
+  // property and method definitions
+  this.name = {
+    first: first,
+    last: last,
   };
+  this.age = age;
+  this.gender = gender;
 }
 
-assert.equal(typeof Person, &quot;function&quot;);
+assert.equal(typeof Person, 'function');
 
-const person = new Person(&quot;Test&quot;);
-assert.equal(typeof person, &quot;object&quot;);
-assert.equal(person.name, &quot;Test&quot;);
-assert.equal(person.describe(), &quot;Person named Test&quot;);
+const person = new Person('Test');
+assert.equal(typeof person, 'object');
+assert.equal(person.name, 'Test');
 </code></pre>
+<h2 id="prototypes-and-inheritance">Prototypes and Inheritance</h2>
+<pre><code class="language-javascript">// Shape - superclass
+function Shape() {
+  this.x = 0;
+  this.y = 0;
+}
+
+// superclass method
+Shape.prototype.move = function (x, y) {
+  this.x += x;
+  this.y += y;
+  console.info('Shape moved.');
+};
+
+// Rectangle - subclass
+function Rectangle() {
+  Shape.call(this); // call super constructor.
+}
+
+// subclass extends superclass
+Rectangle.prototype = Object.create(Shape.prototype);
+
+//If you don't set Rectangle.prototype.constructor to Rectangle,
+//it will take the prototype.constructor of Shape (parent).
+//To avoid that, we set the prototype.constructor to Rectangle (child).
+Rectangle.prototype.constructor = Rectangle;
+
+var rect = new Rectangle();
+
+console.log('Is rect an instance of Rectangle?', rect instanceof Rectangle); // true
+console.log('Is rect an instance of Shape?', rect instanceof Shape); // true
+rect.move(1, 1); // Outputs, 'Shape moved.'
+</code></pre>
+<h2 id="multiple-inheritance-use-it-with-caution">Multiple Inheritance [use it with caution!]</h2>
+<pre><code class="language-javascript">function MyClass() {
+  SuperClass.call(this);
+  OtherSuperClass.call(this);
+}
+
+// inherit one class
+MyClass.prototype = Object.create(SuperClass.prototype);
+// mixin another
+Object.assign(
+  Object.getPrototypeOf(MyClass.prototype),
+  OtherSuperClass.prototype
+);
+// re-assign constructor
+MyClass.prototype.constructor = MyClass;
+
+MyClass.prototype.myMethod = function () {
+  // do something
+};
+</code></pre>
+<h2 id="classes_1">Classes</h2>
 <p>But they are used less frequently because of the implementation of Classes in ES6.
 So it became more convenient to use <code>classes</code> instead of <code>constructor functions</code>:</p>
 <pre><code class="language-javascript">class Person {
@@ -1249,7 +1347,7 @@ So it became more convenient to use <code>classes</code> instead of <code>constr
   }
 
   describe() {
-    return &quot;Person named &quot; + this.name;
+    return 'Person named ' + this.name;
   }
 
   get upperCaseName() {
@@ -1261,17 +1359,17 @@ So it became more convenient to use <code>classes</code> instead of <code>constr
   }
 }
 
-const person = new Person(&quot;Test&quot;);
+const person = new Person('Test');
 
-assert.equal(person.name, &quot;Test&quot;);
-assert.equal(person.describe(), &quot;Person named Test&quot;);
-assert.equal(person.upperCaseName, &quot;TEST&quot;);
+assert.equal(person.name, 'Test');
+assert.equal(person.describe(), 'Person named Test');
+assert.equal(person.upperCaseName, 'TEST');
 
-person.setUpperCaseName = &quot;anotherTest&quot;;
-assert.equal(person.name, &quot;ANOTHERTEST&quot;);
+person.setUpperCaseName = 'anotherTest';
+assert.equal(person.name, 'ANOTHERTEST');
 
-person.name = &quot;backTest&quot;;
-assert.equal(person.name, &quot;backTest&quot;);
+person.name = 'backTest';
+assert.equal(person.name, 'backTest');
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <pre><code class="language-javascript">class Person {
@@ -1292,8 +1390,8 @@ class Employee extends Person {
   }
 }
 
-const empl1 = new Employee(&quot;Test&quot;, &quot;Testlast&quot;, &quot;Developer&quot;);
-assert.equal(empl1.fullName(), &quot;Test Testlast&quot;);
+const empl1 = new Employee('Test', 'Testlast', 'Developer');
+assert.equal(empl1.fullName(), 'Test Testlast');
 </code></pre>
 <h2 id="static">Static</h2>
 <pre><code class="language-javascript">class Person {
@@ -1303,7 +1401,7 @@ assert.equal(empl1.fullName(), &quot;Test Testlast&quot;);
   }
 
   static createDefaultPerson() {
-    return new Person(&quot;Test&quot;, &quot;TestPerson&quot;);
+    return new Person('Test', 'TestPerson');
   }
 }
 </code></pre>
