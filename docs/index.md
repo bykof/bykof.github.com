@@ -2,13 +2,14 @@
 
 On this website you will find lectures about:
 
-- [JavaScript Fundamentals](./lectures/javascript-fundamentals/index.md)
-- [Browser API](./lectures/browser-api/index.md)
-- [React](./lectures/react/index.md)
-- [Web Workers in React](./lectures/web-workers-in-react/introduction.md)
-- [BYOT - Build Your Own Tool](./lectures/byot/index.md)
+- (JavaScript Lectures)[./javascript/index.md]
+    - [JavaScript Fundamentals](./javascript/javascript-fundamentals/index.md)
+    - [Browser API](./javascript/browser-api/index.md)
+    - [React](./javascript/react/index.md)
+    - [Web Workers in React](./javascript/web-workers-in-react/introduction.md)
+    - [BYOT - Build Your Own Tool](./javascript/byot/index.md)
 
-Or just click in the left upper corner on [Lectures](./lectures/index.md)
+Or just click in the left upper corner on [Javascript](./javascript/index.md)
 
 ## Light/Dark Mode
 

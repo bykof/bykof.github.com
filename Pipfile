@@ -1,3 +1,7 @@
 [scripts]
 dev="mkdocs serve"
 deploy="mkdocs gh-deploy"
+
+[packages]
+mkdocs = "*"
+mkdocs-material = "*"
