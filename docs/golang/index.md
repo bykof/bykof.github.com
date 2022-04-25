@@ -1,5 +1,5 @@
 # Introduction
 
-Welcome to my golang lectures.
+Welcome to my Golang lectures.
 
-On the left side you will find several topics of this lectures.
+On the left side you will find several topics of this lecture.

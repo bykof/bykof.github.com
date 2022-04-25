@@ -1,6 +1,7 @@
 [scripts]
 dev="mkdocs serve"
 deploy="mkdocs gh-deploy"
+diagrams="plantuml diagrams/**/*"
 
 [packages]
 mkdocs = "*"

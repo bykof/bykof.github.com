@@ -1,0 +1,33 @@
+@startmindmap
+* Golang
+** Installation
+*** GOPATH
+** Modules
+** Docker
+*** Build
+** Idiomatic Go
+*** Formatting
+*** Semicolons
+*** Commentary
+*** Names
+-- Control structures
+--- If
+--- For
+--- Switch
+--- Type Switch
+-- Functions
+--- Multiple Return Values
+--- Names Result Params
+--- Defer
+--- Pointers vs. Values
+-- Interfaces
+-- Struct
+--- Embedding
+-- Variables & Constants
+--- Redeclaration and reassignment
+-- blank Identifier
+-- Concurrency
+-- Errors
+--- Panic
+--- Recover
+@endmindmap

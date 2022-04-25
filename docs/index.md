@@ -2,12 +2,14 @@
 
 On this website you will find lectures about:
 
-- (JavaScript Lectures)[./javascript/index.md]
+- [JavaScript Lectures](./javascript/index.md)
     - [JavaScript Fundamentals](./javascript/javascript-fundamentals/index.md)
     - [Browser API](./javascript/browser-api/index.md)
     - [React](./javascript/react/index.md)
     - [Web Workers in React](./javascript/web-workers-in-react/introduction.md)
     - [BYOT - Build Your Own Tool](./javascript/byot/index.md)
+- [Golang Lectures](./golang/index.md)
+    - [Golang Fundamentals](./golang/golang-fundamentals/index.md)
 
 Or just click in the left upper corner on [Javascript](./javascript/index.md)
 
