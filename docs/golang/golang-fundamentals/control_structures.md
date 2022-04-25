@@ -483,10 +483,10 @@ You will probably never use goto, but I will show an example here anyway:
 func main() {
     a := 10
     goto skip
-    b := 20 
+    b := 20
 
 skip:
-    c := 30 
+    c := 30
     fmt.Println(a, b, c)
 
     if c > a {
@@ -506,4 +506,3 @@ output:
 ./prog.go:9:10: goto skip jumps over declaration of b at ./prog.go:10:7
 ./prog.go:18:14: goto inner jumps into block starting at ./prog.go:21:14
 ```
-
