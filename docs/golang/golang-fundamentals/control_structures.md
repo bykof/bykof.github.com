@@ -349,7 +349,7 @@ for _, word := range words {
 }
 ```
 
-output: 
+output:
 
 ```
 a is less than 5 characters long
@@ -375,10 +375,9 @@ for _, word := range words {
 
 ### Break switch in for loop
 
-Something you have to break a for loop. 
+Something you have to break a for loop.
 But `break` inside a switch would result in breaking the switch scope and not the for loop.
 In that case you can use labels to break explicitly the loop.
-
 
 ```go linenums="1"
 func main () {
@@ -398,7 +397,7 @@ func main () {
 }
 ```
 
-output: 
+output:
 
 ```
 0 is even
@@ -434,7 +433,7 @@ outer:
 }
 ```
 
-output: 
+output:
 
 ```
 0 is even
@@ -447,6 +446,64 @@ don't know what to do
 exit
 ```
 
+## Blank Switches
 
+You can use a variable to switch on the value of it or use a blank switch to switch for boolean expression:
 
+```go linenums="1"
+n := 2
+
+switch n {
+    case 2:
+        fmt.Println("n is two")
+    default:
+        fmt.Println("n is not two")
+}
+```
+
+```go linenums="1"
+n := 2
+
+switch {
+    case n == 2:
+        fmt.Println("n is two")
+    default:
+        fmt.Println("n is not two")
+}
+```
+
+Surely the first one is more explicit.
+
+## goto
+
+Go has the support to use `goto` statements.
+You will probably never use goto, but I will show an example here anyway:
+
+```go linenums="1"
+func main() {
+    a := 10
+    goto skip
+    b := 20 
+
+skip:
+    c := 30 
+    fmt.Println(a, b, c)
+
+    if c > a {
+        goto inner
+    }
+
+    if a < b {
+    inner:
+        fmt.Println("a is less than b")
+    }
+}
+```
+
+output:
+
+```
+./prog.go:9:10: goto skip jumps over declaration of b at ./prog.go:10:7
+./prog.go:18:14: goto inner jumps into block starting at ./prog.go:21:14
+```
 
