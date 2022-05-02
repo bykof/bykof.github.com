@@ -9,7 +9,7 @@ On this website you will find lectures about:
     - [Web Workers in React](./javascript/web-workers-in-react/introduction.md)
     - [BYOT - Build Your Own Tool](./javascript/byot/index.md)
 - [Golang Lectures](./golang/index.md)
-    - [Golang Fundamentals](./golang/golang-fundamentals/index.md)
+    - [Golang Fundamentals](./golang/golang-fundamentals/overview.md)
 
 Or just click in the left upper corner on [Javascript](./javascript/index.md)
 

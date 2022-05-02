@@ -67,6 +67,7 @@ nav:
           - golang/golang-fundamentals/composite_types.md
           - golang/golang-fundamentals/control_structures.md
           - golang/golang-fundamentals/functions.md
+          - golang/golang-fundamentals/pointers.md
   - Exercises:
       - exercises/index.md
       - JavaScript Fundamentals:
