@@ -10,3 +10,4 @@ We will discuss following content:
 -   [Control Structures](./control_structures.md)
 -   [Functions](./functions.md)
 -   [Pointers](./pointers.md)
+-   [Types, Interfaces and Methods](./types_interfaces_methods.md.md)

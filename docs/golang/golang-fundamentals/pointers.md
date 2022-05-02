@@ -99,7 +99,7 @@ type person struct {
 
 p := &person{
     FirstName:  "Michael",
-    MiddleName: &"Vladislavovitsch",
+    MiddleName: &"Michau",
     LastName: "Bykovski",
 }
 ```
@@ -107,7 +107,7 @@ p := &person{
 output:
 
 ```
-invalid operation: cannot take address of "Vladislavovitsch" (untyped string constant)
+invalid operation: cannot take address of "Michau" (untyped string constant)
 ```
 
 You can use two solutions here.
@@ -132,7 +132,7 @@ func main() {
 		LastName   string
 	}
 
-	middleName := "Vladislavovitsch"
+	middleName := "Michau"
 	p := &person{
 		FirstName:  "Michael",
 		MiddleName: &middleName,
@@ -141,17 +141,239 @@ func main() {
 
 	p2 := &person{
 		FirstName:  "Michael",
-		MiddleName: stringPointer("Vladislavovitsch"),
+		MiddleName: stringPointer("Michau"),
 		LastName:   "Bykovski",
 	}
 	fmt.Println(p, p2)
 }
 ```
 
-output: 
+output:
 
 ```
 &{Michael 0xc000010250 Bykovski} &{Michael 0xc000010260 Bykovski}
 ```
+
+## Mutable Parameters or Call by Reference
+
+Go is a call by value language, which means that if you pass a variable into a function as parameter, it will make a copy of that variable.
+So if you try to manipulate the passed in variable you will only do changed on a copy of the actual passed in variable.
+But what if you store an address of a variable and pass in the address into a function?
+-> Then you will be able to manipulate the actual value of the outer variable.
+Let's check an example:
+
+```go linenums="1"
+type Person struct {
+	FirstName string
+	LastName  string
+	Age       int
+}
+
+func noBirthday(p Person) {
+	p.Age = p.Age + 1
+}
+
+func birthday(p *Person) {
+	p.Age = p.Age + 1
+}
+
+func main() {
+	p := Person{
+		FirstName: "Michael",
+		LastName:  "Bykovski",
+		Age:       28,
+	}
+	fmt.Println(p)
+	noBirthday(p)
+	fmt.Println(p)
+	birthday(&p)
+	fmt.Println(p)
+}
+```
+
+output:
+
+```
+{Michael Bykovski 28}
+{Michael Bykovski 28}
+{Michael Bykovski 29}
+```
+
+But it has some implications, which could be not self explanatory.
+For example, if you have a nil pointer and you want to assign a variable to this pointer.
+**You still work on a "copy" of that pointer.**
+
+```go linenums="1"
+func failedUpdate(g *int) {
+	x := 10
+	g = &x // g is still a copied pointer and will be vanished after function returns
+}
+
+func main() {
+	var f *int
+	failedUpdate(f)
+	fmt.Println(f) // f is still nil
+}
+```
+
+This can be fixed by derefencing the value and setting it.
+By dereferencing we access the actual value in the memory and overwrite it within a function.
+
+```go linenums="1"
+func failedUpdate(g *int) {
+	x := 10
+	g = &x // g is still a copied pointer and will be vanished after function returns
+}
+
+func update(g *int) {
+	*g = 10
+}
+
+func main() {
+	f := 1
+	failedUpdate(&f)
+	fmt.Println(f) // f is still 1
+
+	update(&f)
+	fmt.Println(f) // 10
+}
+```
+
+!!! danger
+
+    Please be carefull with dereferencing, because they can panic.
+    Therefore **always** check for nil pointer!
+
+    ```go linenums="1"
+    func update(g *int) {
+    	*g = 10
+    }
+
+    func main() {
+    	var f *int
+
+    	update(f)
+    	fmt.Println(f) // error: invalid memory address or nil pointer dereference
+    }
+    ```
+
+    Fixed:
+
+    ```go linenums="1"
+    func update(g *int) {
+    	if g != nil {
+    		*g = 10
+    	}
+    }
+
+    func main() {
+    	var f *int
+
+    	update(f)
+    	fmt.Println(f) // prints nil
+    }
+    ```
+
+## Passing Pointers rather than Values
+
+Surely passing pointers and modifying their values is easy.
+But it's actually an "anti-pattern" to make functions, which receive a pointer and modifying the value of your variable.
+Modern Software Engineering teaches us to work with immutable values rather than mutable ones [Source](https://web.mit.edu/6.031/www/fa20/classes/08-immutability/).
+
+Therefore it's better to make functions which receive a copy of a value, mutate it and returns the mutated value:
+
+```go linenums="1"
+type Person struct {
+	FirstName string
+	Age       int
+}
+
+func badBirthday(p *Person) {
+	p.Age++
+}
+
+func birthday(p Person) Person {
+	p.Age++
+	return p
+}
+
+func main() {
+	person := Person{
+		FirstName: "Michael",
+		Age:       28,
+	}
+	fmt.Println(person)
+	badBirthday(person)
+	fmt.Println(person)
+	person = birthday(person)
+	fmt.Println(person)
+}
+```
+
+## Performance
+
+If you pass a variable into a function, the whole variable gets copied to work on it.
+So if you pass in a variable which is around 10megabytes big, it can take up to 1 millisecond to copy the variable.
+Beside that it takes only about 1 nanosecond to load a pointer into a function.
+
+But returning a pointer can take more time than returning a variable.
+But only in one case, if you variable is smaller than 1 megabyte.
+For example for a 100 byte pointer it takes 30 nanoseconds and to return a value, it takes 10 nanoseconds.
+Once your data is bigger than 1 megabyte, this rule inverts.
+
+So for the vast majority of cases you should use call by value, only in a few cases a pointer makes sense.
+
+## Zero Value vs. No Value
+
+A common usage for pointers is to set a variable either to it's zero value or to set it to nil.
+If you need to explicitly say, that a variable is not set, use a nil pointer.
+
+For example if you need optional parameters:
+
+```go linenums="1"
+
+type Parameters struct {
+	a int
+	b *int
+}
+
+func sum(parameters Parameters) int {
+	if parameters.b != nil {
+		return parameters.a + *parameters.b
+	}
+	return parameters.a
+}
+
+func main() {
+	b := 2
+	p1 := Parameters{
+		a: 1,
+		b: &b,
+	}
+	p2 := Parameters{
+		a: 5,
+	}
+	fmt.Println(sum(p1))
+	fmt.Println(sum(p2))
+}
+```
+
+## Maps and Pointers
+
+If you pass a map into a function you can manipulate the actual value of the map.
+This is because Go doesn't copy the value of the map but passes a reference (a pointer to struct) into the function.
+
+Therefore you should avoid using maps, unless you are working with really dynamic JSON data for example.
+Especially if you design your code to work in a team, it is better to define a concrete struct for your data structure than to use a dynamic map.
+
+## When to use Methods over Functions
+
+Any time your logic depends on values that are configured at startup of changed while your program is running, those values should be stored in a struct and that logic should be implemented as a method.
+
+Follow this three rules and you'll be fine:
+
+1. when implementing methods of an interface for your struct (we will do interfaces in the next chapter)
+2. when the function needs to use a private variable within your struct
+3. when the function is completely related to the struct
 
 

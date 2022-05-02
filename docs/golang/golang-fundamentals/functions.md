@@ -16,10 +16,11 @@ func main() {
 }
 ```
 
-## Names and Optional Parameters
+## Named and Optional Parameters
 
 Go doesn't have named and optional parameters.
 If you want to simulate such a feature, you have create a struct for that.
+When you want to explicitly set a value to nil, you should use [Pointers (Zero Value vs. No Value)](./pointers.md#zero-value-vs-no-value).
 
 ```go linenums="1"
 type Options struct {
