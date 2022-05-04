@@ -8,8 +8,9 @@ On this website you will find lectures about:
     - [React](./javascript/react/index.md)
     - [Web Workers in React](./javascript/web-workers-in-react/introduction.md)
     - [BYOT - Build Your Own Tool](./javascript/byot/index.md)
-- [Golang Lectures](./golang/index.md)
-    - [Golang Fundamentals](./golang/golang-fundamentals/overview.md)
+- [Go Lectures](./golang/index.md)
+    - [Go Fundamentals](./golang/golang-fundamentals/overview.md)
+    - [Build Go Docker images](./golang/docker/index.md)
 
 Or just click in the left upper corner on [Javascript](./javascript/index.md)
 
