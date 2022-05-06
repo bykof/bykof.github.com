@@ -83,27 +83,26 @@ var (
 
 Golang supports also a short declaration format.
 It can be only used within function scopes, not at the package scope.
-The short declaration format allows you to assign values to existing variables.
 
 Here is an example:
 
 ```go linenums="1"
-var x = 10
 x := 10
 ```
 
-This wouldn't work:
+it's the same as:
 
 ```go linenums="1"
-var x = 10
 var x = 10
 ```
 
-This would result:
+With `:=` you can also assign values to variables **as long as there is a new variable on the left hand side of `:=`**
+
+For example:
 
 ```go linenums="1"
-./prog.go:5:6: x redeclared in this block
-./prog.go:4:6: other declaration of x
+x := 10
+x, y := 20, "Hello World"
 ```
 
 ### When to use what?
@@ -222,18 +221,17 @@ func main() {
 }
 ```
 
-
 ## Primitive Types
 
 Following primitive types in Go can be used:
 
-* Boolean
-* Integer
-* Float
-* Complex
-* Byte
-* Rune
-* String
+-   Boolean
+-   Integer
+-   Float
+-   Complex
+-   Byte
+-   Rune
+-   String
 
 ## Booleans
 
@@ -400,15 +398,14 @@ const symbolRune = '⌘'
 
 This rune has the integer value: `0x2318` which is the unicode character ⌘ ([See here](https://www.fileformat.info/info/unicode/char/2318/index.htm)).
 
-
 ## String
 
 A string is a read only slice of bytes in Go.
-Strings can be initialized in two ways: 
+Strings can be initialized in two ways:
 
 1. double quotes
 
-Double quotes format the string with escape sequences. 
+Double quotes format the string with escape sequences.
 So if your string contains a `\n` it will format it to a newline.
 
 ```go linenums="1"
@@ -417,20 +414,20 @@ const myString = "Hello\n World!"
 
 2. back quotes
 
-Back quotes **ignore** escape sequences in your string. 
+Back quotes **ignore** escape sequences in your string.
 
 ```go linenums="1"
 const myString = `Hello\n World!`
 ```
 
 Each character in your string represents an `utf-8` encoded string character by default.
-In utf-8 each character occupies between 1-4 bytes. 
-The characters `a` or `b` are encoded using `1 byte`. 
+In utf-8 each character occupies between 1-4 bytes.
+The characters `a` or `b` are encoded using `1 byte`.
 If you use characters like `£` (2 bytes) or `⌘` (3 bytes) the byte size can vary.
 Therefore be cautious if you convert a string into a byte array, the byte array will contain each byte of a character:
 
 ```go linenums="1"
-package main 
+package main
 
 import "fmt"
 
@@ -480,4 +477,3 @@ var sZero bool = s == ""
 fmt.Println(x, xZero)
 fmt.Println(s, sZero)
 ```
-
