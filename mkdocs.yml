@@ -70,8 +70,20 @@ nav:
           - golang/golang-fundamentals/pointers.md
           - golang/golang-fundamentals/types_interfaces_methods.md
           - golang/golang-fundamentals/errors.md
-      - Build Go Docker images:
+          - golang/golang-fundamentals/modules_packages_imports.md
+          - golang/golang-fundamentals/concurrency.md
+          - golang/golang-fundamentals/standard_library.md
+          - golang/golang-fundamentals/context.md
+          - golang/golang-fundamentals/tests.md
+      - Architecture and Best Practices:
+        - golang/architecture/index.md
+      - Dependency Injection:
+        - golang/dependency_injection/index.md
+        - golang/dependency_injection/wire.md
+      - Docker:
         - golang/docker/index.md
+      - Design Patterns:
+        - golang/design_patterns/index.md
   - Exercises:
       - exercises/index.md
       - JavaScript Fundamentals:
