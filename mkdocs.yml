@@ -75,6 +75,7 @@ nav:
           - golang/golang-fundamentals/standard_library.md
           - golang/golang-fundamentals/context.md
           - golang/golang-fundamentals/tests.md
+          - golang/golang-fundamentals/third_party_libraries.md
       - Architecture and Best Practices:
         - golang/architecture/index.md
       - Dependency Injection:
@@ -91,6 +92,13 @@ nav:
           - exercises/javascript-fundamentals/shop/index.md
       - Browser API:
           - exercises/browser-api/shop/index.md
+      - Go:
+          - exercises/go/starter/starter.md
+          - exercises/go/starter/numbers_and_strings.md
+          - exercises/go/starter/composite_types.md
+          - exercises/go/starter/control_structures.md
+          - exercises/go/starter/functions.md
+          
 theme:
   name: material
   palette:

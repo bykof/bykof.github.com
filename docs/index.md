@@ -10,7 +10,7 @@ On this website you will find lectures about:
     - [BYOT - Build Your Own Tool](./javascript/byot/index.md)
 - [Go Lectures](./golang/index.md)
     - [Go Fundamentals](./golang/golang-fundamentals/overview.md)
-    - [Dependency Injection in Go](./golang/dependency_injection.md)
+    - [Dependency Injection in Go](./golang/dependency_injection/index.md)
     - [Build Go Docker images](./golang/docker/index.md)
 
 Or just click in the left upper corner on [Javascript](./javascript/index.md)

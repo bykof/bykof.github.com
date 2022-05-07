@@ -165,4 +165,5 @@ The only reason why some people say "Golang" is, because it helps to identify th
 
 - [Learning Go](https://www.amazon.de/Learning-Go-Idiomatic-Real-World-Programming/dp/1492077216/ref=sr_1_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=E0M6HCWVJ1O&keywords=learning+go&qid=1651558957&sprefix=learning+go%2Caps%2C87&sr=8-1)
 - [The Go Programming Language](https://www.amazon.de/Programming-Language-Addison-Wesley-Professional-Computing/dp/0134190440/ref=sr_1_1?keywords=go+programming&qid=1651558990&sprefix=go+progr%2Caps%2C78&sr=8-1)
+- [Go by Example](https://gobyexample.com/)
 
