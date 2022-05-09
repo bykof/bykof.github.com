@@ -42,6 +42,8 @@ import (
     Task:
         Read first two arguments and print them
         Check: https://pkg.go.dev/os#pkg-variables
+        
+        os.Args[1] is the first argument
 
         Hint:
         Try first "go run" and then "go build"
@@ -63,7 +65,7 @@ package main
 /*
     Task:
         Take "hello" and "programming" and print out just the 
-        half (round to floor) of the word length by using slices
+        half (round to floor) of the word length by using slicing
 
     Output:
        he
@@ -76,5 +78,4 @@ func main() {
 
 	// Your code goes here
 }
-
 ```

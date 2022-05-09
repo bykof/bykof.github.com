@@ -84,7 +84,7 @@ import "fmt"
         | The Godfather                            | 1972 |   9.2 |
         | Harry Potter and the Philosopher's Stone | 2001 |   7.6 |
         +------------------------------------------+------+-------+
-    
+
     Output:
         - The Batman(2022) Score: 8
         - Dune(2021) Score: 8.1
