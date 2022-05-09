@@ -40,6 +40,129 @@ require (
 
 Beside the `require` section, there can be custom repositories like: `exclude` and `replace`.
 
+## Cross Compiling
+
+First we have to find available platforms, where we can compile to. ([Source](https://pkg.go.dev/cmd/go#hdr-Compile_packages_and_dependencies))
+
+To find all possible platforms use:
+
+```sh
+go tool dist list
+```
+
+output:
+
+```
+aix/ppc64
+android/386
+android/amd64
+android/arm
+android/arm64
+darwin/amd64
+darwin/arm64
+dragonfly/amd64
+freebsd/386
+freebsd/amd64
+freebsd/arm
+freebsd/arm64
+illumos/amd64
+ios/amd64
+ios/arm64
+js/wasm
+linux/386
+linux/amd64
+linux/arm
+linux/arm64
+linux/mips
+linux/mips64
+linux/mips64le
+linux/mipsle
+linux/ppc64
+linux/ppc64le
+linux/riscv64
+linux/s390x
+netbsd/386
+netbsd/amd64
+netbsd/arm
+netbsd/arm64
+openbsd/386
+openbsd/amd64
+openbsd/arm
+openbsd/arm64
+openbsd/mips64
+plan9/386
+plan9/amd64
+plan9/arm
+solaris/amd64
+windows/386
+windows/amd64
+windows/arm
+windows/arm64
+```
+
+This will print out all possible cross compilations, since Go 1.15 all possible platforms are built-in.
+The format of the output is: `$GOOS/$GOARCH`.
+
+Then you can use the following pattern for `$GOOS` and `$GOARCH` to cross compile your application:
+
+```sh
+GOOS=windows GOARCH=amd64 go build -o main.exe main.go
+```
+
+## Go generate
+
+Go generate is a useful tool to run important project commands.
+
+You can run it with:
+
+```sh
+go generate [-run regexp] [-n] [-v] [-x] [build flags] [file.go... | packages]
+```
+
+Go generate will not run automatically with go build, go test and go run.
+It should be run manually and explicitly.
+
+The command should be placed a go file at the top of the file:
+
+For example we want to
+
+```go linenums="1" title="main.go"
+package main
+
+//go:generate echo "Hello, Go Generate!"
+
+func main() {}
+```
+
+If you run this file with following commands:
+
+```
+➜ go run main.go
+➜ go generate
+Hello, Go Generate!
+```
+
+You will see later why it's an important tool and how it can be used with [wire](../dependency_injection/wire.md).
+
+## Go format
+
+Go format is very important tool, to format your code upon Go conventions ([Source](https://go.dev/blog/gofmt)).
+
+It make following standards possible:
+
+-   easier to write: never worry about minor formatting concerns while hacking away,
+-   easier to read: when all code looks the same you need not mentally convert others' formatting style into something you can understand.
+-   easier to maintain: mechanical changes to the source don’t cause unrelated changes to the file’s formatting; diffs show only the real changes.
+-   uncontroversial: never have a debate about spacing or brace position ever again!
+
+To use it execute:
+
+```sh
+go fmt path/to/your/package
+```
+
+This will format your code automatically.
+
 ## Imports and Exports
 
 In Go you can import exported:

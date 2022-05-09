@@ -400,24 +400,48 @@ This rune has the integer value: `0x2318` which is the unicode character ⌘ ([S
 
 ## String
 
-A string is a read only slice of bytes in Go.
+A string is a **read only** slice of bytes in Go.
 Strings can be initialized in two ways:
 
-1. double quotes
+### double quote strings
 
 Double quotes format the string with escape sequences.
 So if your string contains a `\n` it will format it to a newline.
 
 ```go linenums="1"
 const myString = "Hello\n World!"
+
+fmt.Println(myString)
 ```
 
-2. back quotes
+output:
+
+```
+Hello
+World
+```
+
+### back quote strings
 
 Back quotes **ignore** escape sequences in your string.
+Back quote strings can be also used as multiline strings
 
 ```go linenums="1"
 const myString = `Hello\n World!`
+const anotherString = `-> Hello
+-> World
+`
+
+fmt.Println(myString)
+fmt.Println(anotherString)
+```
+
+output:
+
+```
+Hello\n World!
+-> Hello
+-> World
 ```
 
 Each character in your string represents an `utf-8` encoded string character by default.
