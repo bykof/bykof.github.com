@@ -44,6 +44,8 @@ Pain points at Google:
 -   InfluxDB
 -   Snappy
 -   Minio
+-   Mattermost
+-   OpenShift
 
 ## The good
 

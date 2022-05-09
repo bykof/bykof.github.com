@@ -328,7 +328,6 @@ The server `http.ServeMux` handles multiple paths.
 You can combine multiple ServeMux Handlers, but be aware, that you have to strip the path before the request will be given to any underlying handler.
 Every incoming request will be handled by it's own goroutine.
 
-
 ```go linenums="1"
 import (
 	"fmt"
@@ -369,4 +368,52 @@ func main() {
 		panic(err)
 	}
 }
+```
+
+Sometimes you need a middleware to check if the user is allowed to access an endpoint:
+
+```go linenums="1" title="main.go"
+
+const Password = "notsecurepassword"
+
+func securityMiddleware(h http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
+		if req.Header.Get("Authorization") != Password {
+			w.WriteHeader(http.StatusUnauthorized)
+			w.Write([]byte("no access"))
+			return
+		}
+		h.ServeHTTP(w, req)
+	})
+}
+
+func requestTimer(h http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
+		start := time.Now()
+		h.ServeHTTP(w, req)
+		end := time.Now()
+		log.Printf("request took: %s", end.Sub(start))
+	})
+}
+
+// ...
+
+mux.Handle(
+	"/",
+	requestTimer(
+		securityMiddleware(
+			http.HandlerFunc(
+				func(w http.ResponseWriter, req *http.Request) {
+					// The "/" pattern matches everything, so we need to check
+					// that we're at the root here.
+					if req.URL.Path != "/" {
+						http.NotFound(w, req)
+						return
+					}
+					fmt.Fprintf(w, "Welcome to the home page!")
+				},
+			),
+		),
+	),
+)
 ```
