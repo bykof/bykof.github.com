@@ -183,6 +183,18 @@ and you can export:
 
 Exporting things in Go is managed by the **`capitalization`**.
 
+This means, if you start the name of a function with an uppercase letter it gets `exported`, otherwise it's only visible inside a package.
+
+```go linenums="1"
+func Exported() {
+    // this function can be accessed from other packages
+}
+
+func packageFunc() {
+    // this function is only available in the package
+}
+```
+
 ## Packages
 
 Creating and accessing packages very easy in Go.
