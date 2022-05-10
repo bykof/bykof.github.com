@@ -2,16 +2,18 @@
 
 On this website you will find lectures about:
 
-- [JavaScript Lectures](./javascript/index.md)
-    - [JavaScript Fundamentals](./javascript/javascript-fundamentals/index.md)
-    - [Browser API](./javascript/browser-api/index.md)
-    - [React](./javascript/react/index.md)
-    - [Web Workers in React](./javascript/web-workers-in-react/introduction.md)
-    - [BYOT - Build Your Own Tool](./javascript/byot/index.md)
-- [Go Lectures](./golang/index.md)
-    - [Go Fundamentals](./golang/golang-fundamentals/overview.md)
-    - [Dependency Injection in Go](./golang/dependency_injection/index.md)
-    - [Build Go Docker images](./golang/docker/index.md)
+-   [JavaScript Lectures](./javascript/index.md)
+    -   [JavaScript Fundamentals](./javascript/javascript-fundamentals/index.md)
+    -   [Browser API](./javascript/browser-api/index.md)
+    -   [React](./javascript/react/index.md)
+    -   [Web Workers in React](./javascript/web-workers-in-react/introduction.md)
+    -   [BYOT - Build Your Own Tool](./javascript/byot/index.md)
+-   [Go Lectures](./golang/index.md)
+    -   [Go Fundamentals](./golang/golang-fundamentals/introduction.md)
+    -   [Dependency Injection in Go](./golang/dependency_injection/index.md)
+    -   [Build Go Docker images](./golang/docker/index.md)
+    -   [Architecture and Best Practices](./golang/architecture/index.md)
+    -   [Design Patterns](./golang/design_patterns/index.md)
 
 Or just click in the left upper corner on [Javascript](./javascript/index.md)
 
