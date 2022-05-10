@@ -161,7 +161,8 @@ Usually you say: "Go".
 
 This is the official name of the programming language.
 
-The only reason why some people say "Golang" is, because it helps to identify the term more as programming language and to use it as google query, because searching for "go strings" is a little bit strange.
+The only reason why some people say "Golang" is, because it helps to identify the term more as programming language and to use it as google query.
+Also the first domain was reserved for [golang.com](https://golang.com) but now it became [go.dev](https://go.dev).
 
 ## Books and Sources
 
