@@ -60,7 +60,6 @@ nav:
   - Golang:
       - golang/index.md
       - Golang Fundamentals:
-          - golang/golang-fundamentals/overview.md
           - golang/golang-fundamentals/introduction.md
           - golang/golang-fundamentals/grammar.md
           - golang/golang-fundamentals/primitive_types_and_declarations.md
@@ -99,6 +98,7 @@ nav:
           - exercises/go/starter/control_structures.md
           - exercises/go/starter/functions.md
           - exercises/go/starter/types_interfaces_methods.md
+          - exercises/go/starter/concurrency.md
           - exercises/go/projects/school.md
           - exercises/go/projects/product_service.md
           

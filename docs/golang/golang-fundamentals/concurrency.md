@@ -41,6 +41,26 @@ Goroutines are executed by the keyword `go` before a function invocation.
 Don't see it as a async/await, it's more a "go and never come back" execution.
 If you want to return values from your `goroutine` don't use return, use it with `Channels`.
 
+```go linenums="1"
+func Compute() {
+	for i := 0; i < 10_000_000_000; i++ {}
+	fmt.Println("Done")
+}
+
+func main() {
+	fmt.Println("Starting")
+	go Compute()
+	fmt.Println("After Compute")
+}
+```
+
+output: 
+
+```
+Starting
+After Compute
+```
+
 ### Channels
 
 Channels are like slices and maps, they are a built-in type and can be created using the `make` function.
