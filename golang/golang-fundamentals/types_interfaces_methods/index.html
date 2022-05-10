@@ -1639,6 +1639,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../reflect/" class="md-nav__link">
+        Reflect
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../generics/" class="md-nav__link">
         Generics
       </a>
@@ -2712,22 +2726,30 @@ output:
 </code></pre></div>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-</div>
 <p>This is the correct usage:</p>
-<div class="highlight"><pre><span></span><code>```go linenums=&quot;1&quot;
-type Test int
-
-const (
-    one Test = iota
-    two
-    three
-)
-
-func main() {
-    fmt.Println(one, two, three)
-}
-```
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Test</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="kd">const</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">    </span><span class="nx">one</span><span class="w"> </span><span class="nx">Test</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">iota</span><span class="w"></span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">    </span><span class="nx">two</span><span class="w"></span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">    </span><span class="nx">three</span><span class="w"></span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">one</span><span class="p">,</span><span class="w"> </span><span class="nx">two</span><span class="p">,</span><span class="w"> </span><span class="nx">three</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+</div>
 <p>Use iota only if you are not relying on the value of the constants.
 Because the values can be changed, if you insert a new constant in the middle of the definition block.
 Use commond constants with a value assigned if you use it for database entries or outgoing messages.
@@ -3546,36 +3568,58 @@ Because interfaces define a specific functionality our code should accept functi
 </code></pre></div></td></tr></table></div>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-</div>
 <p>Do <strong>NOT</strong> do this:</p>
-<div class="highlight"><pre><span></span><code>```go linenums=&quot;1&quot;
-type UserData struct {
-    // ...
-}
-
-type UserDataGetter interface {
-    UserData() UserData
-}
-
-type AppleUserData struct {
-    // ...
-}
-
-func (aud AppleUserData) UserData() {
-
-}
-
-type GoogleUserData struct {
-    // ...
-}
-
-// ...
-
-func DoAuthentication(a Authenticator) UserDataGetter {
-    return a.Auth()
-}
-```
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-29-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-29-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-29-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-29-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-29-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-29-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-29-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-29-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-29-10">10</a></span>
+<span class="normal"><a href="#__codelineno-29-11">11</a></span>
+<span class="normal"><a href="#__codelineno-29-12">12</a></span>
+<span class="normal"><a href="#__codelineno-29-13">13</a></span>
+<span class="normal"><a href="#__codelineno-29-14">14</a></span>
+<span class="normal"><a href="#__codelineno-29-15">15</a></span>
+<span class="normal"><a href="#__codelineno-29-16">16</a></span>
+<span class="normal"><a href="#__codelineno-29-17">17</a></span>
+<span class="normal"><a href="#__codelineno-29-18">18</a></span>
+<span class="normal"><a href="#__codelineno-29-19">19</a></span>
+<span class="normal"><a href="#__codelineno-29-20">20</a></span>
+<span class="normal"><a href="#__codelineno-29-21">21</a></span>
+<span class="normal"><a href="#__codelineno-29-22">22</a></span>
+<span class="normal"><a href="#__codelineno-29-23">23</a></span>
+<span class="normal"><a href="#__codelineno-29-24">24</a></span>
+<span class="normal"><a href="#__codelineno-29-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">UserData</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="w">    </span><span class="c1">// ...</span><span class="w"></span>
+<a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-29-4" name="__codelineno-29-4"></a>
+<a id="__codelineno-29-5" name="__codelineno-29-5"></a><span class="kd">type</span><span class="w"> </span><span class="nx">UserDataGetter</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-29-6" name="__codelineno-29-6"></a><span class="w">    </span><span class="nx">UserData</span><span class="p">()</span><span class="w"> </span><span class="nx">UserData</span><span class="w"></span>
+<a id="__codelineno-29-7" name="__codelineno-29-7"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-29-8" name="__codelineno-29-8"></a>
+<a id="__codelineno-29-9" name="__codelineno-29-9"></a><span class="kd">type</span><span class="w"> </span><span class="nx">AppleUserData</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-29-10" name="__codelineno-29-10"></a><span class="w">    </span><span class="c1">// ...</span><span class="w"></span>
+<a id="__codelineno-29-11" name="__codelineno-29-11"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-29-12" name="__codelineno-29-12"></a>
+<a id="__codelineno-29-13" name="__codelineno-29-13"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">aud</span><span class="w"> </span><span class="nx">AppleUserData</span><span class="p">)</span><span class="w"> </span><span class="nx">UserData</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-29-14" name="__codelineno-29-14"></a>
+<a id="__codelineno-29-15" name="__codelineno-29-15"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-29-16" name="__codelineno-29-16"></a>
+<a id="__codelineno-29-17" name="__codelineno-29-17"></a><span class="kd">type</span><span class="w"> </span><span class="nx">GoogleUserData</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-29-18" name="__codelineno-29-18"></a><span class="w">    </span><span class="c1">// ...</span><span class="w"></span>
+<a id="__codelineno-29-19" name="__codelineno-29-19"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-29-20" name="__codelineno-29-20"></a>
+<a id="__codelineno-29-21" name="__codelineno-29-21"></a><span class="c1">// ...</span><span class="w"></span>
+<a id="__codelineno-29-22" name="__codelineno-29-22"></a>
+<a id="__codelineno-29-23" name="__codelineno-29-23"></a><span class="kd">func</span><span class="w"> </span><span class="nx">DoAuthentication</span><span class="p">(</span><span class="nx">a</span><span class="w"> </span><span class="nx">Authenticator</span><span class="p">)</span><span class="w"> </span><span class="nx">UserDataGetter</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-29-24" name="__codelineno-29-24"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="p">.</span><span class="nx">Auth</span><span class="p">()</span><span class="w"></span>
+<a id="__codelineno-29-25" name="__codelineno-29-25"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+</div>
 <p>If you want to read more about "accept interfaces, return concrete types" follow <a href="https://medium.com/@cep21/what-accept-interfaces-return-structs-means-in-go-2fe879e25ee8">this</a> and <a href="https://medium.com/@cep21/preemptive-interface-anti-pattern-in-go-54c18ac0668a">this</a></p>
 <p>The rule is:</p>
 <blockquote>

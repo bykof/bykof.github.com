@@ -161,6 +161,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bykof.github.io/golang/golang-fundamentals/reflect/</loc>
+         <lastmod>2022-05-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bykof.github.io/golang/golang-fundamentals/standard_library/</loc>
          <lastmod>2022-05-10</lastmod>
          <changefreq>daily</changefreq>
