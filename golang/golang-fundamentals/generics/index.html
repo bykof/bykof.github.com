@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://bykof.github.io/golang/dependency_injection/wire/">
+        <link rel="canonical" href="https://bykof.github.io/golang/golang-fundamentals/generics/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>Wire - Michael Bykovski Lectures</title>
+        <title>Generics - Michael Bykovski Lectures</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wire" class="md-skip">
+        <a href="#generics" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Wire
+              Generics
             
           </span>
         </div>
@@ -1242,12 +1242,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
       
       
       
@@ -1270,7 +1272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../golang-fundamentals/introduction/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -1284,7 +1286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../golang-fundamentals/grammar/" class="md-nav__link">
+      <a href="../grammar/" class="md-nav__link">
         Grammar
       </a>
     </li>
@@ -1298,7 +1300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../golang-fundamentals/primitive_types_and_declarations/" class="md-nav__link">
+      <a href="../primitive_types_and_declarations/" class="md-nav__link">
         Primitive Types and Declarations
       </a>
     </li>
@@ -1312,7 +1314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../golang-fundamentals/composite_types/" class="md-nav__link">
+      <a href="../composite_types/" class="md-nav__link">
         Composite Types
       </a>
     </li>
@@ -1326,7 +1328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../golang-fundamentals/control_structures/" class="md-nav__link">
+      <a href="../control_structures/" class="md-nav__link">
         Control Structures
       </a>
     </li>
@@ -1340,7 +1342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../golang-fundamentals/functions/" class="md-nav__link">
+      <a href="../functions/" class="md-nav__link">
         Functions
       </a>
     </li>
@@ -1354,7 +1356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../golang-fundamentals/pointers/" class="md-nav__link">
+      <a href="../pointers/" class="md-nav__link">
         Pointers
       </a>
     </li>
@@ -1368,7 +1370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../golang-fundamentals/types_interfaces_methods/" class="md-nav__link">
+      <a href="../types_interfaces_methods/" class="md-nav__link">
         Types, Interfaces and Methods
       </a>
     </li>
@@ -1382,7 +1384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../golang-fundamentals/errors/" class="md-nav__link">
+      <a href="../errors/" class="md-nav__link">
         Errors
       </a>
     </li>
@@ -1396,7 +1398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../golang-fundamentals/modules_packages_imports/" class="md-nav__link">
+      <a href="../modules_packages_imports/" class="md-nav__link">
         Modules, Packages, and Imports
       </a>
     </li>
@@ -1410,7 +1412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../golang-fundamentals/concurrency/" class="md-nav__link">
+      <a href="../concurrency/" class="md-nav__link">
         Concurrency
       </a>
     </li>
@@ -1424,7 +1426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../golang-fundamentals/standard_library/" class="md-nav__link">
+      <a href="../standard_library/" class="md-nav__link">
         The standard library
       </a>
     </li>
@@ -1438,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../golang-fundamentals/context/" class="md-nav__link">
+      <a href="../context/" class="md-nav__link">
         Context
       </a>
     </li>
@@ -1452,7 +1454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../golang-fundamentals/tests/" class="md-nav__link">
+      <a href="../tests/" class="md-nav__link">
         Tests
       </a>
     </li>
@@ -1464,11 +1466,73 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../golang-fundamentals/generics/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Generics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Generics
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#type-constraints" class="md-nav__link">
+    Type Constraints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-types" class="md-nav__link">
+    Which Types?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constraints-package" class="md-nav__link">
+    Constraints Package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-defined-generic-types" class="md-nav__link">
+    User defined generic types
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1480,7 +1544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../golang-fundamentals/third_party_libraries/" class="md-nav__link">
+      <a href="../third_party_libraries/" class="md-nav__link">
         Third Party Libraries
       </a>
     </li>
@@ -1546,14 +1610,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
       
       
       
@@ -1576,7 +1638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../dependency_injection/" class="md-nav__link">
         Dependency Injection in Go
       </a>
     </li>
@@ -1588,21 +1650,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../dependency_injection/wire/" class="md-nav__link">
         Wire
       </a>
-      
     </li>
   
 
@@ -2050,6 +2102,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#type-constraints" class="md-nav__link">
+    Type Constraints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-types" class="md-nav__link">
+    Which Types?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constraints-package" class="md-nav__link">
+    Constraints Package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-defined-generic-types" class="md-nav__link">
+    User defined generic types
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2062,149 +2150,235 @@
                 
 
 
-<h1 id="wire">Wire</h1>
-<p>Google's own compile time dependency injection framework is called: <a href="https://github.com/google/wire">Wire</a>.
-Wire works a little bit different from guice for example.
-Wire generates code from a file called <code>wire.go</code> to a file called <code>wire_gen.go</code>, which can be used in the <code>main.go</code> file to initialize and start the application.</p>
-<p>Install wire first: </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>go install github.com/google/wire/cmd/wire@latest
-</code></pre></div>
-<p>Let's take our example from the chapter before.
-We first just create a file called <code>wire.go</code>:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">wire.go</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span>
-<span class="normal"><a href="#__codelineno-1-16">16</a></span>
-<span class="normal"><a href="#__codelineno-1-17">17</a></span>
-<span class="normal"><a href="#__codelineno-1-18">18</a></span>
-<span class="normal"><a href="#__codelineno-1-19">19</a></span>
-<span class="normal"><a href="#__codelineno-1-20">20</a></span>
-<span class="normal"><a href="#__codelineno-1-21">21</a></span>
-<span class="normal"><a href="#__codelineno-1-22">22</a></span>
-<span class="normal"><a href="#__codelineno-1-23">23</a></span>
-<span class="normal"><a href="#__codelineno-1-24">24</a></span>
-<span class="normal"><a href="#__codelineno-1-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">//go:build wireinject</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1">// +build wireinject</span><span class="w"></span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="s">&quot;dependency_injection/core/ports&quot;</span><span class="w"></span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="s">&quot;dependency_injection/infrastructure/services&quot;</span><span class="w"></span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="s">&quot;dependency_injection/interface/controllers&quot;</span><span class="w"></span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="s">&quot;github.com/google/wire&quot;</span><span class="w"></span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="s">&quot;os&quot;</span><span class="w"></span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="kd">func</span><span class="w"> </span><span class="nx">NewTTSService</span><span class="p">()</span><span class="w"> </span><span class="nx">ports</span><span class="p">.</span><span class="nx">TTSServicePort</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Getenv</span><span class="p">(</span><span class="s">&quot;ENV&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;prod&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">services</span><span class="p">.</span><span class="nx">NewRealTTSService</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">services</span><span class="p">.</span><span class="nx">NewFakeTTSService</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a>
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="kd">func</span><span class="w"> </span><span class="nx">InitializeMainController</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="nx">controllers</span><span class="p">.</span><span class="nx">MainController</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">    </span><span class="nx">wire</span><span class="p">.</span><span class="nx">Build</span><span class="p">(</span><span class="nx">NewTTSService</span><span class="p">,</span><span class="w"> </span><span class="nx">controllers</span><span class="p">.</span><span class="nx">NewMainController</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">controllers</span><span class="p">.</span><span class="nx">MainController</span><span class="p">{}</span><span class="w"></span>
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="p">}</span><span class="w"></span>
+<h1 id="generics">Generics</h1>
+<p>Generics can be used, if you want to do similar operations with the same function, but you have different variable types.</p>
+<p>Let's check an example first:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// SumInts adds together the values of m.</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kd">func</span><span class="w"> </span><span class="nx">SumInts</span><span class="p">(</span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int64</span><span class="p">)</span><span class="w"> </span><span class="kt">int64</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="kt">int64</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="nx">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">v</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">s</span><span class="w"></span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="c1">// SumFloats adds together the values of m.</span><span class="w"></span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="kd">func</span><span class="w"> </span><span class="nx">SumFloats</span><span class="p">(</span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">float64</span><span class="p">)</span><span class="w"> </span><span class="kt">float64</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="kt">float64</span><span class="w"></span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="nx">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">v</span><span class="w"></span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">s</span><span class="w"></span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">    </span><span class="c1">// Initialize a map for the integer values</span><span class="w"></span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="nx">ints</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int64</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">        </span><span class="s">&quot;first&quot;</span><span class="p">:</span><span class="w">  </span><span class="mi">34</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">        </span><span class="s">&quot;second&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">    </span><span class="c1">// Initialize a map for the float values</span><span class="w"></span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">    </span><span class="nx">floats</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">float64</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">        </span><span class="s">&quot;first&quot;</span><span class="p">:</span><span class="w">  </span><span class="mf">35.98</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">        </span><span class="s">&quot;second&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">26.99</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Non-Generic Sums: %v and %v\n&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">        </span><span class="nx">SumInts</span><span class="p">(</span><span class="nx">ints</span><span class="p">),</span><span class="w"></span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">        </span><span class="nx">SumFloats</span><span class="p">(</span><span class="nx">floats</span><span class="p">))</span><span class="w"></span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>After that we can run wire to generate a <code>wire_gen.go</code> file:</p>
-<div class="highlight"><span class="filename">Run in project root</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>wire
+<p>output:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Non-Generic Sums: 46 and 62.97
 </code></pre></div>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">wire_gen.go</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span>
-<span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span>
-<span class="normal"><a href="#__codelineno-3-13">13</a></span>
-<span class="normal"><a href="#__codelineno-3-14">14</a></span>
-<span class="normal"><a href="#__codelineno-3-15">15</a></span>
-<span class="normal"><a href="#__codelineno-3-16">16</a></span>
-<span class="normal"><a href="#__codelineno-3-17">17</a></span>
-<span class="normal"><a href="#__codelineno-3-18">18</a></span>
-<span class="normal"><a href="#__codelineno-3-19">19</a></span>
-<span class="normal"><a href="#__codelineno-3-20">20</a></span>
-<span class="normal"><a href="#__codelineno-3-21">21</a></span>
-<span class="normal"><a href="#__codelineno-3-22">22</a></span>
-<span class="normal"><a href="#__codelineno-3-23">23</a></span>
-<span class="normal"><a href="#__codelineno-3-24">24</a></span>
-<span class="normal"><a href="#__codelineno-3-25">25</a></span>
-<span class="normal"><a href="#__codelineno-3-26">26</a></span>
-<span class="normal"><a href="#__codelineno-3-27">27</a></span>
-<span class="normal"><a href="#__codelineno-3-28">28</a></span>
-<span class="normal"><a href="#__codelineno-3-29">29</a></span>
-<span class="normal"><a href="#__codelineno-3-30">30</a></span>
-<span class="normal"><a href="#__codelineno-3-31">31</a></span>
-<span class="normal"><a href="#__codelineno-3-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">// Code generated by Wire. DO NOT EDIT.</span><span class="w"></span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="c1">//go:generate go run github.com/google/wire/cmd/wire</span><span class="w"></span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1">//go:build !wireinject</span><span class="w"></span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="c1">// +build !wireinject</span><span class="w"></span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="s">&quot;dependency_injection/core/ports&quot;</span><span class="w"></span>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="s">&quot;dependency_injection/infrastructure/services&quot;</span><span class="w"></span>
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">    </span><span class="s">&quot;dependency_injection/interface/controllers&quot;</span><span class="w"></span>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">    </span><span class="s">&quot;os&quot;</span><span class="w"></span>
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a>
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="c1">// Injectors from wire.go:</span><span class="w"></span>
-<a id="__codelineno-3-17" name="__codelineno-3-17"></a>
-<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="kd">func</span><span class="w"> </span><span class="nx">InitializeMainController</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="nx">controllers</span><span class="p">.</span><span class="nx">MainController</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">    </span><span class="nx">ttsServicePort</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">NewTTSService</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">    </span><span class="nx">mainController</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">controllers</span><span class="p">.</span><span class="nx">NewMainController</span><span class="p">(</span><span class="nx">ttsServicePort</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">mainController</span><span class="w"></span>
-<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-3-23" name="__codelineno-3-23"></a>
-<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="c1">// wire.go:</span><span class="w"></span>
-<a id="__codelineno-3-25" name="__codelineno-3-25"></a>
-<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="kd">func</span><span class="w"> </span><span class="nx">NewTTSService</span><span class="p">()</span><span class="w"> </span><span class="nx">ports</span><span class="p">.</span><span class="nx">TTSServicePort</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Getenv</span><span class="p">(</span><span class="s">&quot;ENV&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;prod&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">services</span><span class="p">.</span><span class="nx">NewRealTTSService</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">services</span><span class="p">.</span><span class="nx">NewFakeTTSService</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="p">}</span><span class="w"></span>
+<p>Now let's transform the function into a generic one:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">SumIntsOrFloats</span><span class="p">[</span><span class="nx">K</span><span class="w"> </span><span class="nx">comparable</span><span class="p">,</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="kt">int64</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="kt">float64</span><span class="p">](</span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="nx">K</span><span class="p">]</span><span class="nx">V</span><span class="p">)</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="nx">V</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">        </span><span class="nx">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">v</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">s</span><span class="w"></span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="c1">// Initialize a map for the integer values</span><span class="w"></span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="nx">ints</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int64</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">        </span><span class="s">&quot;first&quot;</span><span class="p">:</span><span class="w">  </span><span class="mi">34</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">        </span><span class="s">&quot;second&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">    </span><span class="c1">// Initialize a map for the float values</span><span class="w"></span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">    </span><span class="nx">floats</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">float64</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">        </span><span class="s">&quot;first&quot;</span><span class="p">:</span><span class="w">  </span><span class="mf">35.98</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">        </span><span class="s">&quot;second&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">26.99</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Generic Sums: %v and %v\n&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">        </span><span class="nx">SumIntsOrFloats</span><span class="p">(</span><span class="nx">ints</span><span class="p">),</span><span class="w"></span>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">        </span><span class="nx">SumIntsOrFloats</span><span class="p">(</span><span class="nx">floats</span><span class="p">))</span><span class="w"></span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>And now we can adapt the <code>main.go</code> file:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.go</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<p>output:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Generic Sums: 46 and 62.97
+</code></pre></div>
+<h2 id="type-constraints">Type Constraints</h2>
+<p>We can define type constraints by defining new interfaces and use <a href="../types_interfaces_methods/#embedding-interfaces">interface embedding</a>.</p>
+<p>For example we define:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="nx">mainController</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">InitializeMainController</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/say&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">mainController</span><span class="p">.</span><span class="nx">Say</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Running server on http://localhost:8081&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;:8081&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">))</span><span class="w"></span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Number</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="kt">int64</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="kt">float64</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>Since we have now two files for the main package, we need to adapt our start line.
-This is important because otherwise it won't compile properly:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>go run main.go wire_gen.go
-</code></pre></div>
+<p>now we can use:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">SumNumbers</span><span class="p">[</span><span class="nx">K</span><span class="w"> </span><span class="nx">comparable</span><span class="p">,</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="nx">Number</span><span class="p">](</span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="nx">K</span><span class="p">]</span><span class="nx">V</span><span class="p">)</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="nx">V</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">        </span><span class="nx">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">v</span><span class="w"></span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">s</span><span class="w"></span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h2 id="which-types">Which Types?</h2>
+<p>You can use built-in types for generics, but also interfaces:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Stringer</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="nx">String</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Join</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="nx">Stringer</span><span class="p">](</span><span class="nx">things</span><span class="w"> </span><span class="p">[]</span><span class="nx">E</span><span class="p">)</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">things</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">        </span><span class="nx">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">value</span><span class="p">.</span><span class="nx">String</span><span class="p">()</span><span class="w"></span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="w"></span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>There are also new keywords invented for generics like: <code>any</code> and <code>comparable</code></p>
+<h2 id="constraints-package">Constraints Package</h2>
+<p>The <a href="https://pkg.go.dev/golang.org/x/exp/constraints">constraints package</a> provides some useful interfaces to use for Generics.
+For example</p>
+<h2 id="user-defined-generic-types">User defined generic types</h2>
+<p>We can also define user-defined generic types.</p>
+<p>Check the example here:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="nx">any</span><span class="p">]</span><span class="w"> </span><span class="p">[]</span><span class="nx">E</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="kd">var</span><span class="w"> </span><span class="nx">myBunch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="kt">int</span><span class="p">]{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>Also you can use the <code>Bunch</code> now as parameter type:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span>
+<span class="normal"><a href="#__codelineno-8-8">8</a></span>
+<span class="normal"><a href="#__codelineno-8-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="nx">any</span><span class="p">]</span><span class="w"> </span><span class="p">[]</span><span class="nx">E</span><span class="w"></span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">PrintBunch</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="nx">any</span><span class="p">](</span><span class="nx">bunch</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="c1">//...</span><span class="w"></span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="kd">func</span><span class="w"> </span><span class="p">[</span><span class="nx">b</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="p">]]</span><span class="w"> </span><span class="nx">Print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="c1">// ...</span><span class="w"></span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>or as a struct:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span>
+<span class="normal"><a href="#__codelineno-9-7">7</a></span>
+<span class="normal"><a href="#__codelineno-9-8">8</a></span>
+<span class="normal"><a href="#__codelineno-9-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">List</span><span class="p">[</span><span class="nx">T</span><span class="w"> </span><span class="nx">any</span><span class="p">]</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="nx">next</span><span class="w">  </span><span class="o">*</span><span class="nx">List</span><span class="p">[</span><span class="nx">T</span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="nx">value</span><span class="w"> </span><span class="nx">T</span><span class="w"></span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="nx">myList</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">List</span><span class="p">[</span><span class="kt">int</span><span class="p">]{</span><span class="nx">value</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">myList</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 
               
             </article>
@@ -2223,7 +2397,7 @@ This is important because otherwise it won't compile properly:</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Dependency Injection in Go" rel="prev">
+        <a href="../tests/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tests" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2232,20 +2406,20 @@ This is important because otherwise it won't compile properly:</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Dependency Injection in Go
+              Tests
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../docker/" class="md-footer__link md-footer__link--next" aria-label="Next: Docker Images for Go" rel="next">
+        <a href="../third_party_libraries/" class="md-footer__link md-footer__link--next" aria-label="Next: Third Party Libraries" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Docker Images for Go
+              Third Party Libraries
             </div>
           </div>
           <div class="md-footer__button md-icon">
