@@ -1,4 +1,4 @@
-# Starter 
+# Starter
 
 ## Print Names
 
@@ -82,5 +82,75 @@ func main() {
     movie2 := "Die Hard"
     // Your code goes here
     fmt.Println(movie, movie2)
+}
+```
+
+## Variable and Constant Declarations
+
+```go linenums="1" title="main.go"
+package main
+/*
+    Task:
+        Declare and Initialize all possible variable and constant formats
+
+    Output:
+        Harry Potter Die Hard The Batman Dune The Godfather
+*/
+func main() {
+
+    // Your code goes here
+    fmt.Println(movie, movie2, movie3, movie4, movie5)
+}
+```
+
+## Explicit Type Conversion
+
+```go linenums="1" title="main.go"
+package main
+
+import "fmt"
+
+/*
+	Task:
+		Take the first letter of text and save it as a rune into letter variable
+		Take the letter and save it as an int into number variable
+		Take the number variable and save it as a float64 into floatingPoint variable
+
+	Output:
+		abc 97 97 97
+*/
+
+func main() {
+	text := "abc"
+	// Your code goes here
+	fmt.Println(text, letter, number, floatingPoint)
+
+}
+```
+
+```go linenums="1" title="main.go"
+package main
+
+import "fmt"
+
+/*
+	Task:
+        Type Convert the byte slice into a string and print it out
+
+*/
+
+func main() {
+	bytes := []byte{
+		0x47,
+		0x6F,
+		0x20,
+		0x69,
+		0x73,
+		0x20,
+		0x63,
+		0x6F,
+		0x6F,
+		0x6C,
+	}
 }
 ```

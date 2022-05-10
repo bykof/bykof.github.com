@@ -42,7 +42,7 @@ import (
     Task:
         Read first two arguments and print them
         Check: https://pkg.go.dev/os#pkg-variables
-        
+
         os.Args[1] is the first argument
 
         Hint:
@@ -64,18 +64,36 @@ package main
 
 /*
     Task:
-        Take "hello" and "programming" and print out just the 
+        Take "hello" and "programming" and print out just the
         half (round to floor) of the word length by using slicing
 
     Output:
-       he
-	   wo
+        he
+        progr
 */
 
 func main() {
 	hello := "hello"
 	programming := "programming"
 
+	// Your code goes here
+}
+```
+
+```go linenums="1" title="main.go"
+package main
+
+/*
+    Task:
+        Slice out the two "Go" in the text and print them out
+
+    Output:
+        Go
+        Go
+*/
+
+func main() {
+	text := "Wake me up before you Go Go"
 	// Your code goes here
 }
 ```
