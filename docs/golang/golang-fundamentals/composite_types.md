@@ -188,10 +188,10 @@ A slice is not a comparable.
 
 You can use following built-in functions for slices:
 
--   len
--   append
--   capacity
--   make
+-   [len](https://pkg.go.dev/builtin#len)
+-   [append](https://pkg.go.dev/builtin#append)
+-   [cap](https://pkg.go.dev/builtin#cap)
+-   [make](https://pkg.go.dev/builtin#make)
 
 As for arrays you can use len to get the length of a slice:
 
@@ -235,7 +235,13 @@ output:
 If you do not assign the return value of an append call, it will result in a compile time error:
 
 !!! failure
-`go linenums="1" var x = []int{1, 2, 3} var y = []int{4, 5, 6} append(x, y...) fmt.Println(x) `
+
+    ```go linenums="1"
+    var x = []int{1, 2, 3}
+    var y = []int{4, 5, 6}
+    append(x, y...)
+    fmt.Println(x)
+    ```
 
     will result in:
 
@@ -442,7 +448,7 @@ This will create a 10 length key-value pair map.
 But, other than slices, it will have a length of 0.
 
 ```go linenums="1"
-classes := make(map[string][int], 10)
+classes := make(map[string]int, 10)
 ```
 
 The key of a slice can be a [comparable type](#comparable-types).
@@ -472,7 +478,7 @@ map[Class 1:[Sarah Peter Justin] Class 2:[Fred Ralph Lea]]
 [Sarah Peter Justin Christian]
 ```
 
-If you access a key which is not assigned to the map, it will return the value to that type:
+If you access a key which is not assigned to the map, it will return the zero value to that type:
 
 ```go linenums="1"
 classes := map[string][]string{
@@ -480,12 +486,20 @@ classes := map[string][]string{
 }
 fmt.Println(classes["Not exist"])
 fmt.Println(classes["Not exist"] == nil)
+
+ages := map[string]int{
+    "Tester": 31,
+}
+fmt.Println(ages["Not exist"])
+fmt.Println(ages["Not exist"] == 0)
 ```
 
 output:
 
 ```
 []
+true
+0
 true
 ```
 
@@ -694,7 +708,7 @@ pet4 = fourthPet(pet)
 pet5 = fifthPet(pet)
 ```
 
-Cannot type convert to any type, because all field signatures are wrong: 
+Cannot type convert to any type, because all field signatures are wrong:
 
 ```
 ./prog.go:41:17: cannot convert pet (variable of type firstPet) to type thirdPet
@@ -727,4 +741,3 @@ output:
 ```
 {Jukes cat} {Jukes cat} true
 ```
-

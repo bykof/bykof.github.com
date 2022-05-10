@@ -9,7 +9,8 @@ import "fmt"
 
 
 /*
-    Task: Pass an argument into your application and search for a movie (case insensitive, substring):
+    Task:
+        Pass an argument into your application and search for a movie (case insensitive, substring):
 
         +------------------------------------------+------+-------+
         |                   name                   | year | score |
@@ -49,7 +50,8 @@ import "fmt"
 
 
 /*
-    Task: Use strings.ToLower and string.ToUpper with a switch and arguments
+    Task:
+        Use strings.ToLower and string.ToUpper with a switch and arguments
 
     Output:
         go build main.go
@@ -79,18 +81,19 @@ import (
 )
 
 /*
-   Task: Display a endless rotating tick
+   Task:
+    Display a endless rotating tick
 
    Hint:
-   Use the same line of console by printing "\r" at the start of a line
-   Use time.Sleep(100 * time.Millisecond) to sleep to 100 milliseconds
+    Use the same line of console by printing "\r" at the start of a line
+    Use time.Sleep(100 * time.Millisecond) to sleep to 100 milliseconds
 
    Output:
-   \
-   |
-   /
-   -
-   \
+    \
+    |
+    /
+    -
+    \
    ...
 
 */
@@ -111,7 +114,8 @@ import (
 )
 
 /*
-    Task: Sort Authors by different values
+    Task:
+        Sort Authors by different values
 
     Output:
         [{Cina 634 102} {Mina 304 1098} {Mohit 300 104} {Rina 10 108} {Riya 4 101} {Rohit 56 107} {Sina 234 103} {Sohit 20 110} {Tina 104 105} {Vina 237 106}]
@@ -138,6 +142,38 @@ func main() {
         {"Riya", 4, 101},
         {"Sohit", 20, 110},
     }
+	// Your code goes here
+}
+```
+
+## Endless Input
+
+```go linenums="1" title="main.go"
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+/*
+    Task:
+        Make a program where you input a line and the line gets printed inverted
+
+    Hint:
+        https://pkg.go.dev/bufio#example-Scanner-Lines
+
+    Output:
+        > Test
+        tseT
+        > Hello World
+        dlroW olleH
+
+
+
+*/
+func main() {
 	// Your code goes here
 }
 ```

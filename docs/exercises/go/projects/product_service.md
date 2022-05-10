@@ -1,5 +1,10 @@
 # Product Service
 
+<figure markdown>
+  ![Image title](../../../img/exercises/product_service.png)
+  <figcaption>Domain Driven Hexagonal Architecture</figcaption>
+</figure>
+
 You are the main dev of a big online shop.
 The old product service is written in an esoteric language, which cannot handle more than 10.000 requests per second.
 Now you want to try Go, so let's do it...
@@ -91,10 +96,13 @@ Response:
 ### Get products
 
 Request:
+
 ```title="GET /products"
+
 ```
 
 Response:
+
 ```title="GET /products: 200"
 [
     {
@@ -115,10 +123,13 @@ Response:
 ### Get a specific product
 
 Request:
+
 ```title="GET /products/1"
+
 ```
 
 Response:
+
 ```title="GET /products/1: 200"
 {
     "id": 1,
@@ -129,10 +140,13 @@ Response:
 ```
 
 Request:
+
 ```title="GET /products/999"
+
 ```
 
 Response:
+
 ```title="GET /products/999: 404"
 {
     "error": "could not find product with id: 999"
@@ -142,6 +156,7 @@ Response:
 ### Update a product
 
 Request:
+
 ```title="PUT /products/1"
 {
     "name": "iPhone 11 Pro",
@@ -151,6 +166,7 @@ Request:
 ```
 
 Response:
+
 ```title="PUT /products/1: 200"
 {
     "name": "iPhone 11 Pro",
@@ -162,12 +178,13 @@ Response:
 ### Delete a product
 
 Request:
+
 ```title="DELETE /products/1"
+
 ```
 
 Response:
+
 ```title="DELETE /products/1: 204"
+
 ```
-
-
-
