@@ -74,6 +74,7 @@ nav:
           - golang/golang-fundamentals/standard_library.md
           - golang/golang-fundamentals/context.md
           - golang/golang-fundamentals/tests.md
+          - golang/golang-fundamentals/reflect.md
           - golang/golang-fundamentals/generics.md
           - golang/golang-fundamentals/third_party_libraries.md
       - Architecture and Best Practices:

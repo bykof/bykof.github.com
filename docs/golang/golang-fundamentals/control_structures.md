@@ -141,7 +141,7 @@ With for you can define 4 different formats in Go:
 This is probably known to you.
 The only thing to mention is that you can't use `var` keyword to define i.
 
-```go linenumes="1"
+```go linenums="1"
 for i := 0; i < 10; i++ {
     fmt.Println(i)
 }
@@ -152,7 +152,7 @@ for i := 0; i < 10; i++ {
 Go has the ability to run a go loop forever until a certain variable because `false`.
 This pattern is known as `while` loops in other programming languages:
 
-```go linenumes="1"
+```go linenums="1"
 i := 1
 for i < 10 {
     i++
@@ -260,17 +260,17 @@ You have to overwrite outer scopes variables:
 
 ```go linenums="1"
 values := []int{1, 3, 5, 7, 9}
-	for _, v := range values {
-		v++
-		fmt.Println(v)
-	}
-	fmt.Println(values)
+for _, v := range values {
+    v++
+    fmt.Println(v)
+}
+fmt.Println(values)
 
-	for i := range values {
-		values[i]++
-		fmt.Println(values[i])
-	}
-	fmt.Println(values)
+for i := range values {
+    values[i]++
+    fmt.Println(values[i])
+}
+fmt.Println(values)
 ```
 
 output:
@@ -296,7 +296,7 @@ You can `break` or `continue` in for loops by using `labels`.
 This example continues the outer for loop.
 You will find labeled for loops very rare in the Go ecosystem.
 
-```go linenumes="1"
+```go linenums="1"
 func main() {
     values := []string{"hello", "world"}
 
@@ -329,7 +329,7 @@ output:
 
 ## switch
 
-Switch statements in Go are veryuseful though in other languages they are more avoided.
+Switch statements in Go are very useful though in other languages they are more avoided.
 
 Let's see an example:
 
@@ -364,12 +364,12 @@ You cannot define multiple cases:
 
 ```go linenums="1"
 for _, word := range words {
-		switch size := len(word); size {
-		case 1, 2, 3, 4:
-			fmt.Println(word, "is less than 5 characters long")
-		case 1:
-			fmt.Println(word, "")
-        }
+    switch size := len(word); size {
+    case 1, 2, 3, 4:
+        fmt.Println(word, "is less than 5 characters long")
+    case 1:
+        fmt.Println(word, "")
+    }
 }
 ```
 

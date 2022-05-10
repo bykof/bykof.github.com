@@ -268,7 +268,8 @@ This will not work
     ```
 
 !!! success
-This is the correct usage:
+
+    This is the correct usage:
 
     ```go linenums="1"
     type Test int
@@ -781,7 +782,8 @@ func DoAuthentication(a Authenticator) (UserData, error) {
 ```
 
 !!! danger
-Do **NOT** do this:
+
+	Do **NOT** do this:
 
     ```go linenums="1"
     type UserData struct {
@@ -995,4 +997,3 @@ func checkType(i interface{}) {
 	}
 }
 ```
-
