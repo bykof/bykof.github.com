@@ -98,6 +98,7 @@ nav:
           - exercises/go/starter/composite_types.md
           - exercises/go/starter/control_structures.md
           - exercises/go/starter/functions.md
+          - exercises/go/starter/types_interfaces_methods.md
           - exercises/go/projects/school.md
           - exercises/go/projects/product_service.md
           
