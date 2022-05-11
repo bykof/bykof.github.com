@@ -75,6 +75,7 @@ nav:
           - golang/golang-fundamentals/context.md
           - golang/golang-fundamentals/tests.md
           - golang/golang-fundamentals/reflect.md
+          - golang/golang-fundamentals/tags.md
           - golang/golang-fundamentals/generics.md
           - golang/golang-fundamentals/templates.md
           - golang/golang-fundamentals/third_party_libraries.md
@@ -97,13 +98,7 @@ nav:
       - Browser API:
           - exercises/browser-api/shop/index.md
       - Go:
-          - exercises/go/starter/starter.md
-          - exercises/go/starter/numbers_and_strings.md
-          - exercises/go/starter/composite_types.md
-          - exercises/go/starter/control_structures.md
-          - exercises/go/starter/functions.md
-          - exercises/go/starter/types_interfaces_methods.md
-          - exercises/go/starter/concurrency.md
+          - exercises/go/starter/index.md
           - exercises/go/projects/school.md
           - exercises/go/projects/product_service.md
           
