@@ -154,7 +154,7 @@ Windows users can install golang with Chocolatey: `choco install golang`
 
 ## Hello World!
 
-```go linenums="1" title="main.py"
+```go linenums="1" title="main.go"
 package main
 
 import "fmt"
@@ -164,7 +164,7 @@ func main() {
 }
 ```
 
-To build and run it, simply run: `go run main.py`
+To build and run it, simply run: `go run main.go`
 
 ## Playground
 

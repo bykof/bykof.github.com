@@ -375,7 +375,7 @@ for _, word := range words {
 
 ### Break switch in for loop
 
-Something you have to break a for loop.
+Sometimes you have to break a for loop.
 But `break` inside a switch would result in breaking the switch scope and not the for loop.
 In that case you can use labels to break explicitly the loop.
 
