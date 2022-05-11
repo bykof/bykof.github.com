@@ -26,37 +26,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bykof.github.io/exercises/go/starter/composite_types/</loc>
-         <lastmod>2022-05-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bykof.github.io/exercises/go/starter/concurrency/</loc>
-         <lastmod>2022-05-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bykof.github.io/exercises/go/starter/control_structures/</loc>
-         <lastmod>2022-05-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bykof.github.io/exercises/go/starter/functions/</loc>
-         <lastmod>2022-05-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bykof.github.io/exercises/go/starter/numbers_and_strings/</loc>
-         <lastmod>2022-05-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bykof.github.io/exercises/go/starter/starter/</loc>
-         <lastmod>2022-05-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bykof.github.io/exercises/go/starter/types_interfaces_methods/</loc>
+         <loc>https://bykof.github.io/exercises/go/starter/</loc>
          <lastmod>2022-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -167,6 +137,11 @@
     </url>
     <url>
          <loc>https://bykof.github.io/golang/golang-fundamentals/standard_library/</loc>
+         <lastmod>2022-05-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bykof.github.io/golang/golang-fundamentals/tags/</loc>
          <lastmod>2022-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
