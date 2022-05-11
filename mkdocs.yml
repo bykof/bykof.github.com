@@ -77,7 +77,6 @@ nav:
           - golang/golang-fundamentals/reflect.md
           - golang/golang-fundamentals/tags.md
           - golang/golang-fundamentals/generics.md
-          - golang/golang-fundamentals/templates.md
           - golang/golang-fundamentals/third_party_libraries.md
       - Architecture and Best Practices:
         - golang/architecture/index.md
