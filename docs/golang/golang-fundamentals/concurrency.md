@@ -16,6 +16,8 @@ Writing that code is much easier using one goroutine per task. Then the state of
 
 [Source](https://stackoverflow.com/a/19749371)
 
+[Go Concurrency Guide](https://github.com/luk4z7/go-concurrency-guide)
+
 ## Scheduler
 
 Every programm gets executed as a process and every process has one or many threads.
