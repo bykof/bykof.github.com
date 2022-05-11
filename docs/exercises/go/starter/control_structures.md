@@ -23,6 +23,7 @@ import "fmt"
 
     Hint:
         Use the "strings" library: https://pkg.go.dev/strings
+        Use the "os" library with os.Args variable (it's a slice): https://pkg.go.dev/os 
 
     Output:
         ./main ba
