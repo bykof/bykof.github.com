@@ -29,8 +29,8 @@ import "fmt"
 /*
     Task:
 
-    1. Print 0 to 15 in hexadecimal
-    2. Print 19, 54, 99 in hexadecimal
+    1. Print 0 to 15 as hexadecimal integer
+    2. Print 19, 54, 99 as hexadecimal integer
 
     Output:
 
