@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://bykof.github.io/javascript/react/children/">
+        <link rel="canonical" href="https://bykof.github.io/golang/grpc/">
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>Children - Michael Bykovski Lectures</title>
+        <title>gRPC and Protobuf - Michael Bykovski Lectures</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.e411adfe.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e411adfe.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
         
       
     
@@ -37,7 +37,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#children" class="md-skip">
+        <a href="#grpc-and-protobuf" class="md-skip">
           Skip to content
         </a>
       
@@ -79,7 +79,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Michael Bykovski Lectures" class="md-header__button md-logo" aria-label="Michael Bykovski Lectures" data-md-component="logo">
+    <a href="../.." title="Michael Bykovski Lectures" class="md-header__button md-logo" aria-label="Michael Bykovski Lectures" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Children
+              gRPC and Protobuf
             
           </span>
         </div>
@@ -186,8 +186,24 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         Homepage
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../javascript/" class="md-tabs__link">
+        JavaScript
       </a>
     </li>
   
@@ -204,23 +220,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../" class="md-tabs__link md-tabs__link--active">
-        JavaScript
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../golang/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         Golang
       </a>
     </li>
@@ -236,7 +236,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../exercises/" class="md-tabs__link">
+      <a href="../../exercises/" class="md-tabs__link">
         Exercises
       </a>
     </li>
@@ -264,7 +264,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Michael Bykovski Lectures" class="md-nav__button md-logo" aria-label="Michael Bykovski Lectures" data-md-component="logo">
+    <a href="../.." title="Michael Bykovski Lectures" class="md-nav__button md-logo" aria-label="Michael Bykovski Lectures" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -309,7 +309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Welcome!
       </a>
     </li>
@@ -329,14 +329,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -359,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../javascript/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -399,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript-fundamentals/" class="md-nav__link">
+      <a href="../../javascript/javascript-fundamentals/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -413,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript-fundamentals/history/" class="md-nav__link">
+      <a href="../../javascript/javascript-fundamentals/history/" class="md-nav__link">
         History
       </a>
     </li>
@@ -427,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript-fundamentals/tc39/" class="md-nav__link">
+      <a href="../../javascript/javascript-fundamentals/tc39/" class="md-nav__link">
         TC39 (Technical Committee 39)
       </a>
     </li>
@@ -441,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript-fundamentals/references/" class="md-nav__link">
+      <a href="../../javascript/javascript-fundamentals/references/" class="md-nav__link">
         References
       </a>
     </li>
@@ -455,7 +453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript-fundamentals/assert/" class="md-nav__link">
+      <a href="../../javascript/javascript-fundamentals/assert/" class="md-nav__link">
         Assert
       </a>
     </li>
@@ -469,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript-fundamentals/variables/" class="md-nav__link">
+      <a href="../../javascript/javascript-fundamentals/variables/" class="md-nav__link">
         Variables
       </a>
     </li>
@@ -483,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript-fundamentals/values/" class="md-nav__link">
+      <a href="../../javascript/javascript-fundamentals/values/" class="md-nav__link">
         Values
       </a>
     </li>
@@ -497,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript-fundamentals/primitive-values/" class="md-nav__link">
+      <a href="../../javascript/javascript-fundamentals/primitive-values/" class="md-nav__link">
         Primitive Values
       </a>
     </li>
@@ -511,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript-fundamentals/complex-values/" class="md-nav__link">
+      <a href="../../javascript/javascript-fundamentals/complex-values/" class="md-nav__link">
         Complex Values
       </a>
     </li>
@@ -525,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript-fundamentals/json/" class="md-nav__link">
+      <a href="../../javascript/javascript-fundamentals/json/" class="md-nav__link">
         JSON
       </a>
     </li>
@@ -539,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript-fundamentals/statements-vs-expressions/" class="md-nav__link">
+      <a href="../../javascript/javascript-fundamentals/statements-vs-expressions/" class="md-nav__link">
         Statements vs. Expression
       </a>
     </li>
@@ -553,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript-fundamentals/conditions/" class="md-nav__link">
+      <a href="../../javascript/javascript-fundamentals/conditions/" class="md-nav__link">
         Conditions
       </a>
     </li>
@@ -567,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript-fundamentals/loops/" class="md-nav__link">
+      <a href="../../javascript/javascript-fundamentals/loops/" class="md-nav__link">
         Loops
       </a>
     </li>
@@ -581,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript-fundamentals/functions/" class="md-nav__link">
+      <a href="../../javascript/javascript-fundamentals/functions/" class="md-nav__link">
         Functions
       </a>
     </li>
@@ -595,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript-fundamentals/exceptions/" class="md-nav__link">
+      <a href="../../javascript/javascript-fundamentals/exceptions/" class="md-nav__link">
         Exceptions
       </a>
     </li>
@@ -609,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript-fundamentals/classes/" class="md-nav__link">
+      <a href="../../javascript/javascript-fundamentals/classes/" class="md-nav__link">
         Classes
       </a>
     </li>
@@ -623,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript-fundamentals/asynchronicity/" class="md-nav__link">
+      <a href="../../javascript/javascript-fundamentals/asynchronicity/" class="md-nav__link">
         Asynchronicity
       </a>
     </li>
@@ -670,7 +668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../browser-api/" class="md-nav__link">
+      <a href="../../javascript/browser-api/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -684,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../browser-api/browser-vs-node/" class="md-nav__link">
+      <a href="../../javascript/browser-api/browser-vs-node/" class="md-nav__link">
         Browser vs. Node
       </a>
     </li>
@@ -698,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../browser-api/html/" class="md-nav__link">
+      <a href="../../javascript/browser-api/html/" class="md-nav__link">
         HTML
       </a>
     </li>
@@ -712,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../browser-api/web-apis/" class="md-nav__link">
+      <a href="../../javascript/browser-api/web-apis/" class="md-nav__link">
         Web APIs
       </a>
     </li>
@@ -726,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../browser-api/dom/" class="md-nav__link">
+      <a href="../../javascript/browser-api/dom/" class="md-nav__link">
         DOM (Document Object Model)
       </a>
     </li>
@@ -740,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../browser-api/element/" class="md-nav__link">
+      <a href="../../javascript/browser-api/element/" class="md-nav__link">
         Element
       </a>
     </li>
@@ -754,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../browser-api/xmlhttprequest/" class="md-nav__link">
+      <a href="../../javascript/browser-api/xmlhttprequest/" class="md-nav__link">
         XMLHttpRequest
       </a>
     </li>
@@ -768,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../browser-api/fetch/" class="md-nav__link">
+      <a href="../../javascript/browser-api/fetch/" class="md-nav__link">
         Fetch
       </a>
     </li>
@@ -787,14 +785,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
       
       
       
@@ -817,7 +813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../javascript/react/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -831,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../render-engine/" class="md-nav__link">
+      <a href="../../javascript/react/render-engine/" class="md-nav__link">
         Render Engine
       </a>
     </li>
@@ -845,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../component/" class="md-nav__link">
+      <a href="../../javascript/react/component/" class="md-nav__link">
         Component
       </a>
     </li>
@@ -859,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jsx/" class="md-nav__link">
+      <a href="../../javascript/react/jsx/" class="md-nav__link">
         JSX
       </a>
     </li>
@@ -873,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reactdom-render/" class="md-nav__link">
+      <a href="../../javascript/react/reactdom-render/" class="md-nav__link">
         ReactDOM.render
       </a>
     </li>
@@ -887,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/" class="md-nav__link">
+      <a href="../../javascript/react/events/" class="md-nav__link">
         Events
       </a>
     </li>
@@ -901,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../props/" class="md-nav__link">
+      <a href="../../javascript/react/props/" class="md-nav__link">
         Props
       </a>
     </li>
@@ -913,21 +909,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../javascript/react/children/" class="md-nav__link">
         Children
       </a>
-      
     </li>
   
 
@@ -939,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hooks/" class="md-nav__link">
+      <a href="../../javascript/react/hooks/" class="md-nav__link">
         Hooks
       </a>
     </li>
@@ -953,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../context/" class="md-nav__link">
+      <a href="../../javascript/react/context/" class="md-nav__link">
         Context
       </a>
     </li>
@@ -1000,7 +986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../web-workers-in-react/introduction/" class="md-nav__link">
+      <a href="../../javascript/web-workers-in-react/introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -1014,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../web-workers-in-react/tutorial/" class="md-nav__link">
+      <a href="../../javascript/web-workers-in-react/tutorial/" class="md-nav__link">
         Tutorial
       </a>
     </li>
@@ -1061,7 +1047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../byot/" class="md-nav__link">
+      <a href="../../javascript/byot/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -1075,7 +1061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../byot/installation/" class="md-nav__link">
+      <a href="../../javascript/byot/installation/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -1089,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../byot/setup/" class="md-nav__link">
+      <a href="../../javascript/byot/setup/" class="md-nav__link">
         Setup Strapi
       </a>
     </li>
@@ -1103,7 +1089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../byot/content-type/" class="md-nav__link">
+      <a href="../../javascript/byot/content-type/" class="md-nav__link">
         Content-Type
       </a>
     </li>
@@ -1117,7 +1103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../byot/roles-and-permissions/" class="md-nav__link">
+      <a href="../../javascript/byot/roles-and-permissions/" class="md-nav__link">
         Roles & Permissions
       </a>
     </li>
@@ -1131,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../byot/api/" class="md-nav__link">
+      <a href="../../javascript/byot/api/" class="md-nav__link">
         API
       </a>
     </li>
@@ -1145,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../byot/setup-next/" class="md-nav__link">
+      <a href="../../javascript/byot/setup-next/" class="md-nav__link">
         Setup Next.JS
       </a>
     </li>
@@ -1159,7 +1145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../byot/client/" class="md-nav__link">
+      <a href="../../javascript/byot/client/" class="md-nav__link">
         Client
       </a>
     </li>
@@ -1173,7 +1159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../byot/add-theme/" class="md-nav__link">
+      <a href="../../javascript/byot/add-theme/" class="md-nav__link">
         Add Theme
       </a>
     </li>
@@ -1187,7 +1173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../byot/implement-the-frontend/" class="md-nav__link">
+      <a href="../../javascript/byot/implement-the-frontend/" class="md-nav__link">
         Implement the frontend
       </a>
     </li>
@@ -1214,12 +1200,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -1242,7 +1230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -1282,7 +1270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/introduction/" class="md-nav__link">
+      <a href="../golang-fundamentals/introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -1296,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/grammar/" class="md-nav__link">
+      <a href="../golang-fundamentals/grammar/" class="md-nav__link">
         Grammar
       </a>
     </li>
@@ -1310,7 +1298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/primitive_types_and_declarations/" class="md-nav__link">
+      <a href="../golang-fundamentals/primitive_types_and_declarations/" class="md-nav__link">
         Primitive Types and Declarations
       </a>
     </li>
@@ -1324,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/composite_types/" class="md-nav__link">
+      <a href="../golang-fundamentals/composite_types/" class="md-nav__link">
         Composite Types
       </a>
     </li>
@@ -1338,7 +1326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/control_structures/" class="md-nav__link">
+      <a href="../golang-fundamentals/control_structures/" class="md-nav__link">
         Control Structures
       </a>
     </li>
@@ -1352,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/functions/" class="md-nav__link">
+      <a href="../golang-fundamentals/functions/" class="md-nav__link">
         Functions
       </a>
     </li>
@@ -1366,7 +1354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/pointers/" class="md-nav__link">
+      <a href="../golang-fundamentals/pointers/" class="md-nav__link">
         Pointers
       </a>
     </li>
@@ -1380,7 +1368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/types_interfaces_methods/" class="md-nav__link">
+      <a href="../golang-fundamentals/types_interfaces_methods/" class="md-nav__link">
         Types, Interfaces and Methods
       </a>
     </li>
@@ -1394,7 +1382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/errors/" class="md-nav__link">
+      <a href="../golang-fundamentals/errors/" class="md-nav__link">
         Errors
       </a>
     </li>
@@ -1408,7 +1396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/modules_packages_imports/" class="md-nav__link">
+      <a href="../golang-fundamentals/modules_packages_imports/" class="md-nav__link">
         Modules, Packages, and Imports
       </a>
     </li>
@@ -1422,7 +1410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/concurrency/" class="md-nav__link">
+      <a href="../golang-fundamentals/concurrency/" class="md-nav__link">
         Concurrency
       </a>
     </li>
@@ -1436,7 +1424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/standard_library/" class="md-nav__link">
+      <a href="../golang-fundamentals/standard_library/" class="md-nav__link">
         The standard library
       </a>
     </li>
@@ -1450,7 +1438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/context/" class="md-nav__link">
+      <a href="../golang-fundamentals/context/" class="md-nav__link">
         Context
       </a>
     </li>
@@ -1464,7 +1452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/tests/" class="md-nav__link">
+      <a href="../golang-fundamentals/tests/" class="md-nav__link">
         Tests
       </a>
     </li>
@@ -1478,7 +1466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/reflect/" class="md-nav__link">
+      <a href="../golang-fundamentals/reflect/" class="md-nav__link">
         Reflect
       </a>
     </li>
@@ -1492,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/generics/" class="md-nav__link">
+      <a href="../golang-fundamentals/generics/" class="md-nav__link">
         Generics
       </a>
     </li>
@@ -1506,7 +1494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/templates/" class="md-nav__link">
+      <a href="../golang-fundamentals/templates/" class="md-nav__link">
         Templates
       </a>
     </li>
@@ -1520,7 +1508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/golang-fundamentals/third_party_libraries/" class="md-nav__link">
+      <a href="../golang-fundamentals/third_party_libraries/" class="md-nav__link">
         Third Party Libraries
       </a>
     </li>
@@ -1567,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/architecture/" class="md-nav__link">
+      <a href="../architecture/" class="md-nav__link">
         Architecture and Best Practices in Go
       </a>
     </li>
@@ -1614,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/dependency_injection/" class="md-nav__link">
+      <a href="../dependency_injection/" class="md-nav__link">
         Dependency Injection in Go
       </a>
     </li>
@@ -1628,7 +1616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/dependency_injection/wire/" class="md-nav__link">
+      <a href="../dependency_injection/wire/" class="md-nav__link">
         Wire
       </a>
     </li>
@@ -1675,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/docker/" class="md-nav__link">
+      <a href="../docker/" class="md-nav__link">
         Docker Images for Go
       </a>
     </li>
@@ -1694,12 +1682,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" checked>
       
       
       
@@ -1720,11 +1710,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../golang/grpc/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         gRPC and Protobuf
       </a>
+      
     </li>
   
 
@@ -1769,7 +1769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../golang/design_patterns/" class="md-nav__link">
+      <a href="../design_patterns/" class="md-nav__link">
         Design Patterns in Go
       </a>
     </li>
@@ -1824,7 +1824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercises/" class="md-nav__link">
+      <a href="../../exercises/" class="md-nav__link">
         Exercises
       </a>
     </li>
@@ -1864,7 +1864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercises/javascript-fundamentals/" class="md-nav__link">
+      <a href="../../exercises/javascript-fundamentals/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -1878,7 +1878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercises/javascript-fundamentals/shop/" class="md-nav__link">
+      <a href="../../exercises/javascript-fundamentals/shop/" class="md-nav__link">
         Shopping Exercise
       </a>
     </li>
@@ -1925,7 +1925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercises/browser-api/shop/" class="md-nav__link">
+      <a href="../../exercises/browser-api/shop/" class="md-nav__link">
         Shop Exercise
       </a>
     </li>
@@ -1972,7 +1972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercises/go/starter/starter/" class="md-nav__link">
+      <a href="../../exercises/go/starter/starter/" class="md-nav__link">
         Starter
       </a>
     </li>
@@ -1986,7 +1986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercises/go/starter/numbers_and_strings/" class="md-nav__link">
+      <a href="../../exercises/go/starter/numbers_and_strings/" class="md-nav__link">
         Numbers and Strings
       </a>
     </li>
@@ -2000,7 +2000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercises/go/starter/composite_types/" class="md-nav__link">
+      <a href="../../exercises/go/starter/composite_types/" class="md-nav__link">
         Composite Types
       </a>
     </li>
@@ -2014,7 +2014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercises/go/starter/control_structures/" class="md-nav__link">
+      <a href="../../exercises/go/starter/control_structures/" class="md-nav__link">
         Control Structures
       </a>
     </li>
@@ -2028,7 +2028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercises/go/starter/functions/" class="md-nav__link">
+      <a href="../../exercises/go/starter/functions/" class="md-nav__link">
         Functions
       </a>
     </li>
@@ -2042,7 +2042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercises/go/starter/types_interfaces_methods/" class="md-nav__link">
+      <a href="../../exercises/go/starter/types_interfaces_methods/" class="md-nav__link">
         Types, Interfaces and Methods
       </a>
     </li>
@@ -2056,7 +2056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercises/go/starter/concurrency/" class="md-nav__link">
+      <a href="../../exercises/go/starter/concurrency/" class="md-nav__link">
         Concurrency
       </a>
     </li>
@@ -2070,7 +2070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercises/go/projects/school/" class="md-nav__link">
+      <a href="../../exercises/go/projects/school/" class="md-nav__link">
         School
       </a>
     </li>
@@ -2084,7 +2084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercises/go/projects/product_service/" class="md-nav__link">
+      <a href="../../exercises/go/projects/product_service/" class="md-nav__link">
         Product Service
       </a>
     </li>
@@ -2137,37 +2137,7 @@
                 
 
 
-<h1 id="children">Children</h1>
-<p>When opening an html element and closing it <code>&lt;h1&gt;&lt;u&gt;Children&lt;/u&gt;&lt;/h1&gt;</code>,
-one can enter text or additional html elements inside the <code>h1</code> element as <code>u</code> and <code>Children</code> for example.</p>
-<p>React solved this by passing <strong>a children key into props</strong>.</p>
-<p><strong>Note:</strong> The children entry in props is created automatically.</p>
-<p>For example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">SayLoud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">children</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">children</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h1&gt;;</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">};</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kd">function</span><span class="w"> </span><span class="nx">Root</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">SayLoud</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">u</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="w"> </span><span class="nx">World</span><span class="o">&lt;</span><span class="err">/u&gt;</span><span class="w"></span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/SayLoud&gt;</span><span class="w"></span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<p>And a combined example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">SayLoud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">isLoud</span><span class="p">,</span><span class="w"> </span><span class="nx">children</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">isLoud</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">children</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h1&gt;;</span><span class="w"></span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">children</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h2&gt;;</span><span class="w"></span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">};</span><span class="w"></span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="kd">const</span><span class="w"> </span><span class="nx">Root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">SayLoud</span><span class="w"> </span><span class="nx">isLoud</span><span class="o">=</span><span class="p">{</span><span class="kc">false</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="w"> </span><span class="nx">World</span><span class="o">&lt;</span><span class="err">/SayLoud&gt;;</span><span class="w"></span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<h1 id="grpc-and-protobuf">gRPC and Protobuf</h1>
 
               
             </article>
@@ -2186,7 +2156,7 @@ one can enter text or additional html elements inside the <code>h1</code> elemen
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../props/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Props" rel="prev">
+        <a href="../docker/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Docker Images for Go" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2195,20 +2165,20 @@ one can enter text or additional html elements inside the <code>h1</code> elemen
               <span class="md-footer__direction">
                 Previous
               </span>
-              Props
+              Docker Images for Go
             </div>
           </div>
         </a>
       
       
         
-        <a href="../hooks/" class="md-footer__link md-footer__link--next" aria-label="Next: Hooks" rel="next">
+        <a href="../design_patterns/" class="md-footer__link md-footer__link--next" aria-label="Next: Design Patterns in Go" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Hooks
+              Design Patterns in Go
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -2238,12 +2208,12 @@ one can enter text or additional html elements inside the <code>h1</code> elemen
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.ed9748b7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ed9748b7.min.js"></script>
       
-        <script src="../../../javascripts/extra.js"></script>
+        <script src="../../javascripts/extra.js"></script>
       
     
   </body>
