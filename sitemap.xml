@@ -146,11 +146,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bykof.github.io/golang/golang-fundamentals/templates/</loc>
-         <lastmod>2022-05-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bykof.github.io/golang/golang-fundamentals/tests/</loc>
          <lastmod>2022-05-11</lastmod>
          <changefreq>daily</changefreq>
