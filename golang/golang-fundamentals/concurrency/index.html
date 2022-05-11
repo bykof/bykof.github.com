@@ -2290,6 +2290,7 @@
 <p>Another good use for concurrency is interacting with multiple input/output sources (disks, network, terminal, etc.). Your program should be able to wake up and do some work whenever a result comes from any of these sources. It is possible to do this with one thread and a system call like poll(2) or select(2). When your thread wakes up, it must figure out which result came in, find where it left off in the relevant task, and pick up from there. That's a lot of code you need to write.</p>
 <p>Writing that code is much easier using one goroutine per task. Then the state of that task is captured implicitly in the goroutine, and picking up where it left off is as simple as waking up and running.</p>
 <p><a href="https://stackoverflow.com/a/19749371">Source</a></p>
+<p><a href="https://github.com/luk4z7/go-concurrency-guide">Go Concurrency Guide</a></p>
 <h2 id="scheduler">Scheduler</h2>
 <p>Every programm gets executed as a process and every process has one or many threads.
 The scheduler of an operating system decides which process (and the threads within a process) gets a specific amount of time to calculate.</p>
