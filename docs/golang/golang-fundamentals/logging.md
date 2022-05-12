@@ -68,7 +68,7 @@ func main() {
 
 ## Zap Logger
 
-The [Zap Logger](https://github.com/uber-go/zap) is faster than the default logger with the `encoding/json` package.
+The [Zap Logger](https://github.com/uber-go/zap) is faster than the default logger.
 
 Let's check an example:
 
