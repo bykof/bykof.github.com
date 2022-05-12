@@ -1449,9 +1449,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Logging
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Logging
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#json-logger" class="md-nav__link">
+    JSON Logger
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zap-logger" class="md-nav__link">
+    Zap Logger
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2055,6 +2093,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#json-logger" class="md-nav__link">
+    JSON Logger
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zap-logger" class="md-nav__link">
+    Zap Logger
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2068,6 +2128,151 @@
 
 
 <h1 id="logging">Logging</h1>
+<p>To use logging the <code>log</code> package provides a standard logger, which prints to the systems <code>Standard out</code>. <a href="https://pkg.go.dev/log#pkg-overview">Source</a></p>
+<p>The documentation says:</p>
+<blockquote>
+<p>Package log implements a simple logging package. It defines a type, Logger, with methods for formatting output. It also has a predefined 'standard' Logger accessible through helper functions Print[f|ln], Fatal[f|ln], and Panic[f|ln], which are easier to use than creating a Logger manually. That logger writes to standard error and prints the date and time of each logged message. Every log message is output on a separate line: if the message being printed does not end in a newline, the logger will add one. The Fatal functions call os.Exit(1) after writing the log message. The Panic functions call panic after writing the log message.</p>
+</blockquote>
+<p>So if you want to use the default logger, here is an example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nx">a</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nx">logger</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">log</span><span class="p">.</span><span class="nx">Default</span><span class="p">()</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nx">logger</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="s">&quot;Just print a string &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nx">logger</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;print a digit: %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nx">logger</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="s">&quot;print and os.Exit(1)&quot;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nx">logger</span><span class="p">.</span><span class="nx">Panic</span><span class="p">(</span><span class="s">&quot;print and panic&quot;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>output:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2009/11/10 23:00:00 Just print a string 2
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2009/11/10 23:00:00 print a digit: 2
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2009/11/10 23:00:00 print and os.Exit(1)
+</code></pre></div>
+<h2 id="json-logger">JSON Logger</h2>
+<p>If you want to have a JSON logger, you can write one on your own.
+Here you could use embedding, to support the log.Logger struct:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span>
+<span class="normal"><a href="#__codelineno-2-27">27</a></span>
+<span class="normal"><a href="#__codelineno-2-28">28</a></span>
+<span class="normal"><a href="#__codelineno-2-29">29</a></span>
+<span class="normal"><a href="#__codelineno-2-30">30</a></span>
+<span class="normal"><a href="#__codelineno-2-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">JSONLogger</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Logger</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">l</span><span class="w"> </span><span class="nx">JSONLogger</span><span class="p">)</span><span class="w"> </span><span class="nx">Print</span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="kd">interface</span><span class="p">{})</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="nx">bytes</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">json</span><span class="p">.</span><span class="nx">Marshal</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span><span class="w"></span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">        </span><span class="s">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="nx">value</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="s">&quot;time&quot;</span><span class="p">:</span><span class="w">  </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">().</span><span class="nx">Format</span><span class="p">(</span><span class="s">&quot;2006-01-02T15:04:05Z07:00&quot;</span><span class="p">),</span><span class="w"></span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="p">})</span><span class="w"></span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="nx">l</span><span class="p">.</span><span class="nx">Logger</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">bytes</span><span class="p">))</span><span class="w"></span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="kd">func</span><span class="w"> </span><span class="nx">NewJSONLogger</span><span class="p">(</span><span class="nx">logger</span><span class="w"> </span><span class="nx">log</span><span class="p">.</span><span class="nx">Logger</span><span class="p">)</span><span class="w"> </span><span class="nx">JSONLogger</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">JSONLogger</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">        </span><span class="nx">Logger</span><span class="p">:</span><span class="w"> </span><span class="nx">logger</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">    </span><span class="nx">jsonLogger</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">NewJSONLogger</span><span class="p">(</span><span class="o">*</span><span class="nx">log</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"></span>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="nx">jsonLogger</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">        </span><span class="nx">Name</span><span class="w">     </span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;name&quot;`</span><span class="w"></span>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">        </span><span class="nx">LastName</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;lastName&quot;`</span><span class="w"></span>
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">    </span><span class="p">}{</span><span class="w"></span>
+<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">        </span><span class="nx">Name</span><span class="p">:</span><span class="w">     </span><span class="s">&quot;hello&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">        </span><span class="nx">LastName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;world&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">    </span><span class="p">})</span><span class="w"></span>
+<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h2 id="zap-logger">Zap Logger</h2>
+<p>The <a href="https://github.com/uber-go/zap">Zap Logger</a> is faster than the default logger with the <code>encoding/json</code> package.</p>
+<p>Let's check an example:</p>
+<p>Add zap logger to your dependencies:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>go get go.uber.org/zap
+</code></pre></div>
+<p>Then use the zap logger:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="s">&quot;go.uber.org/zap&quot;</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="nx">developmentLogger</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">zap</span><span class="p">.</span><span class="nx">NewDevelopment</span><span class="p">()</span><span class="w"></span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="nx">productionLogger</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">zap</span><span class="p">.</span><span class="nx">NewProduction</span><span class="p">()</span><span class="w"></span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">    </span><span class="nx">developmentLogger</span><span class="p">.</span><span class="nx">Info</span><span class="p">(</span><span class="s">&quot;failed to fetch URL&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">        </span><span class="nx">zap</span><span class="p">.</span><span class="nx">String</span><span class="p">(</span><span class="s">&quot;url&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;url&quot;</span><span class="p">),</span><span class="w"></span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">    </span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">    </span><span class="nx">productionLogger</span><span class="p">.</span><span class="nx">Info</span><span class="p">(</span><span class="s">&quot;failed to fetch URL&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">        </span><span class="nx">zap</span><span class="p">.</span><span class="nx">String</span><span class="p">(</span><span class="s">&quot;url&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;url&quot;</span><span class="p">),</span><span class="w"></span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">    </span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>output:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2022-05-12T14:27:26.733+0200    INFO    bruh/main.go:16 failed to fetch URL     {&quot;url&quot;: &quot;url&quot;}
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>{&quot;level&quot;:&quot;info&quot;,&quot;ts&quot;:1652358446.733641,&quot;caller&quot;:&quot;bruh/main.go:19&quot;,&quot;msg&quot;:&quot;failed to fetch URL&quot;,&quot;url&quot;:&quot;url&quot;}
+</code></pre></div>
+<p>The Development Logger produces a tab separated string as log.
+The Production Logger produces a json string as log.</p>
 
               
             </article>
