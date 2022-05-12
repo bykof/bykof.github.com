@@ -7,7 +7,7 @@ It can be a struct literal or primitive type.
 Let's see an example:
 
 ```go linenums="1"
-type Person {
+type Person struct {
     FirstName   string
     LastName    string
 }

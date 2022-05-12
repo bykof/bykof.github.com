@@ -72,6 +72,7 @@ nav:
           - golang/golang-fundamentals/modules_packages_imports.md
           - golang/golang-fundamentals/concurrency.md
           - golang/golang-fundamentals/standard_library.md
+          - golang/golang-fundamentals/logging.md
           - golang/golang-fundamentals/context.md
           - golang/golang-fundamentals/tests.md
           - golang/golang-fundamentals/reflect.md
