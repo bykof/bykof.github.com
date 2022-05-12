@@ -6,6 +6,8 @@ Tests in Go are so easy, it's easier to write tests than not to do it.
 
 Normally you will not see any logs from tests, unles you set the `-v` (verbose) flag.
 
+Tests are executed automatically when you name your files `*_test.go`.
+
 Let's dive in with an easy example:
 
 ```go linenums="1" title="calculator.go"
