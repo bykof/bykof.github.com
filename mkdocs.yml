@@ -79,17 +79,17 @@ nav:
           - golang/golang-fundamentals/tags.md
           - golang/golang-fundamentals/generics.md
           - golang/golang-fundamentals/third_party_libraries.md
-      - Architecture and Best Practices:
-        - golang/architecture/index.md
       - Dependency Injection:
         - golang/dependency_injection/index.md
         - golang/dependency_injection/wire.md
+      - Architecture and Best Practices:
+        - golang/architecture/index.md
       - Docker:
         - golang/docker/index.md
-      - GRPC:
-        - golang/grpc/index.md
       - Design Patterns:
         - golang/design_patterns/index.md
+      # - GRPC:
+      #   - golang/grpc/index.md
   - Exercises:
       - exercises/index.md
       - JavaScript Fundamentals:
