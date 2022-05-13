@@ -7,7 +7,7 @@
 
 You are the main dev of a big online shop.
 The old product service is written in an esoteric language, which cannot handle more than 10.000 requests per second.
-Now you want to try Go, so let's do it...
+Now you want to try Go, so let's do this!
 
 Create a RESTful service with the http web-framework [Gin](https://github.com/gin-gonic/gin).
 
@@ -38,7 +38,7 @@ type Product struct {
 
 The service should have two possible ways to store products and categories.
 It should store all data **in memory** or in **json files** called `products.json` and `categories.json`.
-Use interfaces, domain driven hexagonal architecture and dependency injection to built the service properly.
+Use [interfaces](../../../golang/golang-fundamentals/types_interfaces_methods.md#interfaces), [domain driven hexagonal architecture](../../../golang/architecture/index.md) and [dependency injection](../../../golang/dependency_injection/wire.md) to built the service properly.
 
 Example Requests:
 
