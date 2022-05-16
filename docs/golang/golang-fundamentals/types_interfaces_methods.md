@@ -245,7 +245,8 @@ The first constant `NoCategory` receives the value `0`.
 If you define a new const block with another variable, iota will start again from `0`.
 
 !!! danger
-This will not work
+
+	This will not work
 
     ```go linenums="1"
     type Test int
@@ -818,6 +819,44 @@ If you want to read more about "accept interfaces, return concrete types" follow
 The rule is:
 
 > Unnecessary abstraction creates unnecessary complication. Don’t over complicate code until it’s needed.
+
+### Interface as a type
+
+An `interface` can be used as a type.
+It does the same if you define a user-defined user type.
+The example above shows a defined interface with **no methods**.
+Therefore **every type** can be used as this interface type.
+
+Take a look:
+
+```go linenums="1"
+func main() {
+	var i interface{}
+	i = 2
+	fmt.Println(i)
+	i = "test"
+	fmt.Println(i)
+	i = func () {
+		fmt.Println("Test")
+	}
+	fmt.Println(i)
+	i = struct {
+		name string
+	} {
+		name: "Michael",
+	}
+	fmt.Println(i)
+}
+```
+
+output:
+
+```
+2
+test
+0x104244000
+{Michael}
+```
 
 ### Interfaces and nil
 
