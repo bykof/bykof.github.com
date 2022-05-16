@@ -1495,6 +1495,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#interface-as-a-type" class="md-nav__link">
+    Interface as a type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#interfaces-and-nil" class="md-nav__link">
     Interfaces and nil
   </a>
@@ -2267,6 +2274,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#interface-as-a-type" class="md-nav__link">
+    Interface as a type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#interfaces-and-nil" class="md-nav__link">
     Interfaces and nil
   </a>
@@ -2646,28 +2660,33 @@ The first constant <code>NoCategory</code> receives the value <code>0</code>.
 If you define a new const block with another variable, iota will start again from <code>0</code>.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-</div>
 <p>This will not work</p>
-<div class="highlight"><pre><span></span><code>```go linenums=&quot;1&quot;
-type Test int
-
-const (
-    one Test = 1
-    two
-    three
-)
-
-func main() {
-    fmt.Println(one, two, three)
-}
-```
-
-output:
-
-```
-1 1 1
-```
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Test</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="kd">const</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">    </span><span class="nx">one</span><span class="w"> </span><span class="nx">Test</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">    </span><span class="nx">two</span><span class="w"></span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">    </span><span class="nx">three</span><span class="w"></span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">one</span><span class="p">,</span><span class="w"> </span><span class="nx">two</span><span class="p">,</span><span class="w"> </span><span class="nx">three</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>output:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>1 1 1
 </code></pre></div>
+</div>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
 <p>This is the correct usage:</p>
@@ -3569,6 +3588,88 @@ Because interfaces define a specific functionality our code should accept functi
 <blockquote>
 <p>Unnecessary abstraction creates unnecessary complication. Don’t over complicate code until it’s needed.</p>
 </blockquote>
+<h3 id="interface-as-a-type">Interface as a type</h3>
+<p>An <code>interface</code> can be used as a type.
+It does the same if you define a user-defined user type.
+The example above shows a defined interface with <strong>no methods</strong>.
+Therefore <strong>every type</strong> can be used as this interface type.</p>
+<p>Take a look:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-30-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-30-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-30-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-30-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-30-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-30-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-30-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-30-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-30-10">10</a></span>
+<span class="normal"><a href="#__codelineno-30-11">11</a></span>
+<span class="normal"><a href="#__codelineno-30-12">12</a></span>
+<span class="normal"><a href="#__codelineno-30-13">13</a></span>
+<span class="normal"><a href="#__codelineno-30-14">14</a></span>
+<span class="normal"><a href="#__codelineno-30-15">15</a></span>
+<span class="normal"><a href="#__codelineno-30-16">16</a></span>
+<span class="normal"><a href="#__codelineno-30-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<a id="__codelineno-30-4" name="__codelineno-30-4"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-30-5" name="__codelineno-30-5"></a><span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;test&quot;</span><span class="w"></span>
+<a id="__codelineno-30-6" name="__codelineno-30-6"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-30-7" name="__codelineno-30-7"></a><span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kd">func</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-30-8" name="__codelineno-30-8"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Test&quot;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-30-9" name="__codelineno-30-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-30-10" name="__codelineno-30-10"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-30-11" name="__codelineno-30-11"></a><span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-30-12" name="__codelineno-30-12"></a><span class="w">        </span><span class="nx">name</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<a id="__codelineno-30-13" name="__codelineno-30-13"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-30-14" name="__codelineno-30-14"></a><span class="w">        </span><span class="nx">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Michael&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-30-15" name="__codelineno-30-15"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-30-16" name="__codelineno-30-16"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-30-17" name="__codelineno-30-17"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>output:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>2
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>test
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>0x104244000
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>{Michael}
+</code></pre></div>
+<p>You can also use <code>any</code> as an alias for an empty <code>interface{}</code>.
+But the empty interface is used regularly.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-32-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-32-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-32-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-32-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-32-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-32-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-32-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-32-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-32-10">10</a></span>
+<span class="normal"><a href="#__codelineno-32-11">11</a></span>
+<span class="normal"><a href="#__codelineno-32-12">12</a></span>
+<span class="normal"><a href="#__codelineno-32-13">13</a></span>
+<span class="normal"><a href="#__codelineno-32-14">14</a></span>
+<span class="normal"><a href="#__codelineno-32-15">15</a></span>
+<span class="normal"><a href="#__codelineno-32-16">16</a></span>
+<span class="normal"><a href="#__codelineno-32-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="nx">any</span><span class="w"></span>
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<a id="__codelineno-32-4" name="__codelineno-32-4"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-32-5" name="__codelineno-32-5"></a><span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;test&quot;</span><span class="w"></span>
+<a id="__codelineno-32-6" name="__codelineno-32-6"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-32-7" name="__codelineno-32-7"></a><span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kd">func</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-32-8" name="__codelineno-32-8"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Test&quot;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-32-9" name="__codelineno-32-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-32-10" name="__codelineno-32-10"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-32-11" name="__codelineno-32-11"></a><span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-32-12" name="__codelineno-32-12"></a><span class="w">        </span><span class="nx">name</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<a id="__codelineno-32-13" name="__codelineno-32-13"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-32-14" name="__codelineno-32-14"></a><span class="w">        </span><span class="nx">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Michael&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-32-15" name="__codelineno-32-15"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-32-16" name="__codelineno-32-16"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-32-17" name="__codelineno-32-17"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h3 id="interfaces-and-nil">Interfaces and nil</h3>
 <p>Interfaces are nil as long as they:</p>
 <ol>
@@ -3576,77 +3677,23 @@ Because interfaces define a specific functionality our code should accept functi
 <li>don't have a value</li>
 </ol>
 <p>This example should make it clear:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
-<span class="normal"><a href="#__codelineno-30-2">2</a></span>
-<span class="normal"><a href="#__codelineno-30-3">3</a></span>
-<span class="normal"><a href="#__codelineno-30-4">4</a></span>
-<span class="normal"><a href="#__codelineno-30-5">5</a></span>
-<span class="normal"><a href="#__codelineno-30-6">6</a></span>
-<span class="normal"><a href="#__codelineno-30-7">7</a></span>
-<span class="normal"><a href="#__codelineno-30-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="o">*</span><span class="kt">string</span><span class="w"></span>
-<a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">s</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"> </span><span class="c1">// true</span><span class="w"></span>
-<a id="__codelineno-30-3" name="__codelineno-30-3"></a>
-<a id="__codelineno-30-4" name="__codelineno-30-4"></a><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
-<a id="__codelineno-30-5" name="__codelineno-30-5"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"> </span><span class="c1">// true</span><span class="w"></span>
-<a id="__codelineno-30-6" name="__codelineno-30-6"></a>
-<a id="__codelineno-30-7" name="__codelineno-30-7"></a><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">s</span><span class="w"></span>
-<a id="__codelineno-30-8" name="__codelineno-30-8"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"> </span><span class="c1">// false</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
+<span class="normal"><a href="#__codelineno-33-2">2</a></span>
+<span class="normal"><a href="#__codelineno-33-3">3</a></span>
+<span class="normal"><a href="#__codelineno-33-4">4</a></span>
+<span class="normal"><a href="#__codelineno-33-5">5</a></span>
+<span class="normal"><a href="#__codelineno-33-6">6</a></span>
+<span class="normal"><a href="#__codelineno-33-7">7</a></span>
+<span class="normal"><a href="#__codelineno-33-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="o">*</span><span class="kt">string</span><span class="w"></span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">s</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"> </span><span class="c1">// true</span><span class="w"></span>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a>
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
+<a id="__codelineno-33-5" name="__codelineno-33-5"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"> </span><span class="c1">// true</span><span class="w"></span>
+<a id="__codelineno-33-6" name="__codelineno-33-6"></a>
+<a id="__codelineno-33-7" name="__codelineno-33-7"></a><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">s</span><span class="w"></span>
+<a id="__codelineno-33-8" name="__codelineno-33-8"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"> </span><span class="c1">// false</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>This tells us, that if an interface has a struct which is nil, it can still run methods of the nil-struct:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-31-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-31-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-31-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-31-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-31-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-31-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-31-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-31-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-31-10">10</a></span>
-<span class="normal"><a href="#__codelineno-31-11">11</a></span>
-<span class="normal"><a href="#__codelineno-31-12">12</a></span>
-<span class="normal"><a href="#__codelineno-31-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Dog</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
-<a id="__codelineno-31-2" name="__codelineno-31-2"></a>
-<a id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">d</span><span class="w"> </span><span class="o">*</span><span class="nx">Dog</span><span class="p">)</span><span class="w"> </span><span class="nx">BarkGhost</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-31-4" name="__codelineno-31-4"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Woof!&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-31-5" name="__codelineno-31-5"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-31-6" name="__codelineno-31-6"></a>
-<a id="__codelineno-31-7" name="__codelineno-31-7"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-31-8" name="__codelineno-31-8"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">ghostDog</span><span class="w"> </span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
-<a id="__codelineno-31-9" name="__codelineno-31-9"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">dog</span><span class="w"> </span><span class="o">*</span><span class="nx">Dog</span><span class="w"></span>
-<a id="__codelineno-31-10" name="__codelineno-31-10"></a>
-<a id="__codelineno-31-11" name="__codelineno-31-11"></a><span class="w">    </span><span class="nx">ghostDog</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">dog</span><span class="w"></span>
-<a id="__codelineno-31-12" name="__codelineno-31-12"></a><span class="w">    </span><span class="nx">ghostDog</span><span class="p">.(</span><span class="o">*</span><span class="nx">Dog</span><span class="p">).</span><span class="nx">BarkGhost</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-31-13" name="__codelineno-31-13"></a><span class="p">}</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-<h3 id="empty-interface-all-the-way">Empty Interface All The Way</h3>
-<p>Sometimes you need to define a variable, where you will not know which type it is going to have.
-Take <code>interface</code> for that:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
-<span class="normal"><a href="#__codelineno-32-2">2</a></span>
-<span class="normal"><a href="#__codelineno-32-3">3</a></span>
-<span class="normal"><a href="#__codelineno-32-4">4</a></span>
-<span class="normal"><a href="#__codelineno-32-5">5</a></span>
-<span class="normal"><a href="#__codelineno-32-6">6</a></span>
-<span class="normal"><a href="#__codelineno-32-7">7</a></span>
-<span class="normal"><a href="#__codelineno-32-8">8</a></span>
-<span class="normal"><a href="#__codelineno-32-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
-<a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
-<a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-32-4" name="__codelineno-32-4"></a><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="w"></span>
-<a id="__codelineno-32-5" name="__codelineno-32-5"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-32-6" name="__codelineno-32-6"></a><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">word</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-32-7" name="__codelineno-32-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">word</span><span class="w"></span>
-<a id="__codelineno-32-8" name="__codelineno-32-8"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-32-9" name="__codelineno-32-9"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-<p>output:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>10
-<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>Hello
-<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>0x47dcc0
-</code></pre></div>
-<p>Mostly you won't need an empty interface.
-Sometimes you will need it to store some really unknown data structure, which comes from an unknown json schema:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-34-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-34-3"> 3</a></span>
@@ -3656,20 +3703,26 @@ Sometimes you will need it to store some really unknown data structure, which co
 <span class="normal"><a href="#__codelineno-34-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-34-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-34-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-34-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-34-10">10</a></span>
+<span class="normal"><a href="#__codelineno-34-11">11</a></span>
+<span class="normal"><a href="#__codelineno-34-12">12</a></span>
+<span class="normal"><a href="#__codelineno-34-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Dog</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
 <a id="__codelineno-34-2" name="__codelineno-34-2"></a>
-<a id="__codelineno-34-3" name="__codelineno-34-3"></a><span class="w">    </span><span class="nx">data</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{}</span><span class="w"></span>
-<a id="__codelineno-34-4" name="__codelineno-34-4"></a><span class="w">    </span><span class="nx">contents</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadFile</span><span class="p">(</span><span class="s">&quot;data.json&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-34-5" name="__codelineno-34-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-34-6" name="__codelineno-34-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">err</span><span class="w"></span>
-<a id="__codelineno-34-7" name="__codelineno-34-7"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-34-8" name="__codelineno-34-8"></a><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">contents</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-34-9" name="__codelineno-34-9"></a><span class="w">    </span><span class="nx">json</span><span class="p">.</span><span class="nx">Unmarshal</span><span class="p">(</span><span class="nx">contents</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">data</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-34-10" name="__codelineno-34-10"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-34-3" name="__codelineno-34-3"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">d</span><span class="w"> </span><span class="o">*</span><span class="nx">Dog</span><span class="p">)</span><span class="w"> </span><span class="nx">BarkGhost</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-34-4" name="__codelineno-34-4"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Woof!&quot;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-34-5" name="__codelineno-34-5"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-34-6" name="__codelineno-34-6"></a>
+<a id="__codelineno-34-7" name="__codelineno-34-7"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-34-8" name="__codelineno-34-8"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">ghostDog</span><span class="w"> </span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
+<a id="__codelineno-34-9" name="__codelineno-34-9"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">dog</span><span class="w"> </span><span class="o">*</span><span class="nx">Dog</span><span class="w"></span>
+<a id="__codelineno-34-10" name="__codelineno-34-10"></a>
+<a id="__codelineno-34-11" name="__codelineno-34-11"></a><span class="w">    </span><span class="nx">ghostDog</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">dog</span><span class="w"></span>
+<a id="__codelineno-34-12" name="__codelineno-34-12"></a><span class="w">    </span><span class="nx">ghostDog</span><span class="p">.(</span><span class="o">*</span><span class="nx">Dog</span><span class="p">).</span><span class="nx">BarkGhost</span><span class="p">()</span><span class="w"></span>
+<a id="__codelineno-34-13" name="__codelineno-34-13"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h2 id="type-assertions-and-type-switches">Type Assertions and Type Switches</h2>
-<h3 id="type-assertions">Type Assertions</h3>
-<p>Let's make first a type assertions, so we assert a specific type to an interface variable:</p>
+<h3 id="empty-interface-all-the-way">Empty Interface All The Way</h3>
+<p>Sometimes you need to define a variable, where you will not know which type it is going to have.
+Take <code>interface</code> for that:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span>
 <span class="normal"><a href="#__codelineno-35-2">2</a></span>
 <span class="normal"><a href="#__codelineno-35-3">3</a></span>
@@ -3678,39 +3731,46 @@ Sometimes you will need it to store some really unknown data structure, which co
 <span class="normal"><a href="#__codelineno-35-6">6</a></span>
 <span class="normal"><a href="#__codelineno-35-7">7</a></span>
 <span class="normal"><a href="#__codelineno-35-8">8</a></span>
-<span class="normal"><a href="#__codelineno-35-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Score</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
-<a id="__codelineno-35-2" name="__codelineno-35-2"></a>
-<a id="__codelineno-35-3" name="__codelineno-35-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-35-4" name="__codelineno-35-4"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
-<a id="__codelineno-35-5" name="__codelineno-35-5"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="nx">Score</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">20</span><span class="w"></span>
-<a id="__codelineno-35-6" name="__codelineno-35-6"></a><span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">score</span><span class="w"></span>
-<a id="__codelineno-35-7" name="__codelineno-35-7"></a><span class="w">    </span><span class="nx">i2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">i</span><span class="p">.(</span><span class="nx">Score</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-35-8" name="__codelineno-35-8"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">score</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-35-9" name="__codelineno-35-9"></a><span class="p">}</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-<p>If you try to assert a type, which could not work, Go will panic:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span>
-<span class="normal"><a href="#__codelineno-36-2">2</a></span>
-<span class="normal"><a href="#__codelineno-36-3">3</a></span>
-<span class="normal"><a href="#__codelineno-36-4">4</a></span>
-<span class="normal"><a href="#__codelineno-36-5">5</a></span>
-<span class="normal"><a href="#__codelineno-36-6">6</a></span>
-<span class="normal"><a href="#__codelineno-36-7">7</a></span>
-<span class="normal"><a href="#__codelineno-36-8">8</a></span>
-<span class="normal"><a href="#__codelineno-36-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Score</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
-<a id="__codelineno-36-2" name="__codelineno-36-2"></a>
-<a id="__codelineno-36-3" name="__codelineno-36-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-36-4" name="__codelineno-36-4"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
-<a id="__codelineno-36-5" name="__codelineno-36-5"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="nx">Score</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">20</span><span class="w"></span>
-<a id="__codelineno-36-6" name="__codelineno-36-6"></a><span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">score</span><span class="w"></span>
-<a id="__codelineno-36-7" name="__codelineno-36-7"></a><span class="w">    </span><span class="nx">i2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">i</span><span class="p">.(</span><span class="kt">string</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-36-8" name="__codelineno-36-8"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i2</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-36-9" name="__codelineno-36-9"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-35-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-35-4" name="__codelineno-35-4"></a><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="w"></span>
+<a id="__codelineno-35-5" name="__codelineno-35-5"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-35-6" name="__codelineno-35-6"></a><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">word</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-35-7" name="__codelineno-35-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">word</span><span class="w"></span>
+<a id="__codelineno-35-8" name="__codelineno-35-8"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-35-9" name="__codelineno-35-9"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>output:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>interface conversion: interface {} is main.Score, not string
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>10
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>Hello
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>0x47dcc0
 </code></pre></div>
-<p>The type has to match the exact underlying type, <strong>not embedded or type inferenced</strong>.</p>
+<p>Mostly you won't need an empty interface.
+Sometimes you will need it to store some really unknown data structure, which comes from an unknown json schema:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-37-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-37-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-37-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-37-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-37-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-37-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-37-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-37-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-37-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-37-2" name="__codelineno-37-2"></a>
+<a id="__codelineno-37-3" name="__codelineno-37-3"></a><span class="w">    </span><span class="nx">data</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{}</span><span class="w"></span>
+<a id="__codelineno-37-4" name="__codelineno-37-4"></a><span class="w">    </span><span class="nx">contents</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadFile</span><span class="p">(</span><span class="s">&quot;data.json&quot;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-37-5" name="__codelineno-37-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-37-6" name="__codelineno-37-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">err</span><span class="w"></span>
+<a id="__codelineno-37-7" name="__codelineno-37-7"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-37-8" name="__codelineno-37-8"></a><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">contents</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span><span class="w"></span>
+<a id="__codelineno-37-9" name="__codelineno-37-9"></a><span class="w">    </span><span class="nx">json</span><span class="p">.</span><span class="nx">Unmarshal</span><span class="p">(</span><span class="nx">contents</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">data</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-37-10" name="__codelineno-37-10"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h2 id="type-assertions-and-type-switches">Type Assertions and Type Switches</h2>
+<h3 id="type-assertions">Type Assertions</h3>
+<p>Let's make first a type assertions, so we assert a specific type to an interface variable:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
 <span class="normal"><a href="#__codelineno-38-2">2</a></span>
 <span class="normal"><a href="#__codelineno-38-3">3</a></span>
@@ -3725,75 +3785,116 @@ Sometimes you will need it to store some really unknown data structure, which co
 <a id="__codelineno-38-4" name="__codelineno-38-4"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
 <a id="__codelineno-38-5" name="__codelineno-38-5"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="nx">Score</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">20</span><span class="w"></span>
 <a id="__codelineno-38-6" name="__codelineno-38-6"></a><span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">score</span><span class="w"></span>
-<a id="__codelineno-38-7" name="__codelineno-38-7"></a><span class="w">    </span><span class="nx">i2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">i</span><span class="p">.(</span><span class="kt">int</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-38-7" name="__codelineno-38-7"></a><span class="w">    </span><span class="nx">i2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">i</span><span class="p">.(</span><span class="nx">Score</span><span class="p">)</span><span class="w"></span>
 <a id="__codelineno-38-8" name="__codelineno-38-8"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">score</span><span class="p">)</span><span class="w"></span>
 <a id="__codelineno-38-9" name="__codelineno-38-9"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
+<p>If you try to assert a type, which could not work, Go will panic:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span>
+<span class="normal"><a href="#__codelineno-39-2">2</a></span>
+<span class="normal"><a href="#__codelineno-39-3">3</a></span>
+<span class="normal"><a href="#__codelineno-39-4">4</a></span>
+<span class="normal"><a href="#__codelineno-39-5">5</a></span>
+<span class="normal"><a href="#__codelineno-39-6">6</a></span>
+<span class="normal"><a href="#__codelineno-39-7">7</a></span>
+<span class="normal"><a href="#__codelineno-39-8">8</a></span>
+<span class="normal"><a href="#__codelineno-39-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Score</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<a id="__codelineno-39-2" name="__codelineno-39-2"></a>
+<a id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-39-4" name="__codelineno-39-4"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
+<a id="__codelineno-39-5" name="__codelineno-39-5"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="nx">Score</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">20</span><span class="w"></span>
+<a id="__codelineno-39-6" name="__codelineno-39-6"></a><span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">score</span><span class="w"></span>
+<a id="__codelineno-39-7" name="__codelineno-39-7"></a><span class="w">    </span><span class="nx">i2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">i</span><span class="p">.(</span><span class="kt">string</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-39-8" name="__codelineno-39-8"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i2</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-39-9" name="__codelineno-39-9"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <p>output:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>interface conversion: interface {} is main.Score, not int
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>interface conversion: interface {} is main.Score, not string
+</code></pre></div>
+<p>The type has to match the exact underlying type, <strong>not embedded or type inferenced</strong>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1">1</a></span>
+<span class="normal"><a href="#__codelineno-41-2">2</a></span>
+<span class="normal"><a href="#__codelineno-41-3">3</a></span>
+<span class="normal"><a href="#__codelineno-41-4">4</a></span>
+<span class="normal"><a href="#__codelineno-41-5">5</a></span>
+<span class="normal"><a href="#__codelineno-41-6">6</a></span>
+<span class="normal"><a href="#__codelineno-41-7">7</a></span>
+<span class="normal"><a href="#__codelineno-41-8">8</a></span>
+<span class="normal"><a href="#__codelineno-41-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Score</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<a id="__codelineno-41-2" name="__codelineno-41-2"></a>
+<a id="__codelineno-41-3" name="__codelineno-41-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-41-4" name="__codelineno-41-4"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
+<a id="__codelineno-41-5" name="__codelineno-41-5"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="nx">Score</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">20</span><span class="w"></span>
+<a id="__codelineno-41-6" name="__codelineno-41-6"></a><span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">score</span><span class="w"></span>
+<a id="__codelineno-41-7" name="__codelineno-41-7"></a><span class="w">    </span><span class="nx">i2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">i</span><span class="p">.(</span><span class="kt">int</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-41-8" name="__codelineno-41-8"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">score</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-41-9" name="__codelineno-41-9"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>output:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>interface conversion: interface {} is main.Score, not int
 </code></pre></div>
 <p>If you want to test in your code and don't want to panic, use the <a href="../composite_types/#variable-ok--idiom"><code>variable, ok := idiom</code></a></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-40-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-40-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-40-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-40-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-40-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-40-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-40-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-40-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-40-10">10</a></span>
-<span class="normal"><a href="#__codelineno-40-11">11</a></span>
-<span class="normal"><a href="#__codelineno-40-12">12</a></span>
-<span class="normal"><a href="#__codelineno-40-13">13</a></span>
-<span class="normal"><a href="#__codelineno-40-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Score</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
-<a id="__codelineno-40-2" name="__codelineno-40-2"></a>
-<a id="__codelineno-40-3" name="__codelineno-40-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-40-4" name="__codelineno-40-4"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
-<a id="__codelineno-40-5" name="__codelineno-40-5"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="nx">Score</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<a id="__codelineno-40-6" name="__codelineno-40-6"></a><span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">score</span><span class="w"></span>
-<a id="__codelineno-40-7" name="__codelineno-40-7"></a><span class="w">    </span><span class="nx">i2</span><span class="p">,</span><span class="w"> </span><span class="nx">ok</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">i</span><span class="p">.(</span><span class="kt">int</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-40-8" name="__codelineno-40-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">!</span><span class="nx">ok</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-40-9" name="__codelineno-40-9"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;i is not an int: %v&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-40-10" name="__codelineno-40-10"></a><span class="w">        </span><span class="k">return</span><span class="w"></span>
-<a id="__codelineno-40-11" name="__codelineno-40-11"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-40-12" name="__codelineno-40-12"></a>
-<a id="__codelineno-40-13" name="__codelineno-40-13"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-40-14" name="__codelineno-40-14"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-43-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-43-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-43-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-43-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-43-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-43-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-43-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-43-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-43-10">10</a></span>
+<span class="normal"><a href="#__codelineno-43-11">11</a></span>
+<span class="normal"><a href="#__codelineno-43-12">12</a></span>
+<span class="normal"><a href="#__codelineno-43-13">13</a></span>
+<span class="normal"><a href="#__codelineno-43-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Score</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<a id="__codelineno-43-2" name="__codelineno-43-2"></a>
+<a id="__codelineno-43-3" name="__codelineno-43-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-43-4" name="__codelineno-43-4"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
+<a id="__codelineno-43-5" name="__codelineno-43-5"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="nx">Score</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<a id="__codelineno-43-6" name="__codelineno-43-6"></a><span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">score</span><span class="w"></span>
+<a id="__codelineno-43-7" name="__codelineno-43-7"></a><span class="w">    </span><span class="nx">i2</span><span class="p">,</span><span class="w"> </span><span class="nx">ok</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">i</span><span class="p">.(</span><span class="kt">int</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-43-8" name="__codelineno-43-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">!</span><span class="nx">ok</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-43-9" name="__codelineno-43-9"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;i is not an int: %v&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-43-10" name="__codelineno-43-10"></a><span class="w">        </span><span class="k">return</span><span class="w"></span>
+<a id="__codelineno-43-11" name="__codelineno-43-11"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-43-12" name="__codelineno-43-12"></a>
+<a id="__codelineno-43-13" name="__codelineno-43-13"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-43-14" name="__codelineno-43-14"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h3 id="type-switches">Type Switches</h3>
 <p>If your <code>interface</code> variable can have multiple types, use a type switch:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-41-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-41-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-41-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-41-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-41-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-41-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-41-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-41-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-41-10">10</a></span>
-<span class="normal"><a href="#__codelineno-41-11">11</a></span>
-<span class="normal"><a href="#__codelineno-41-12">12</a></span>
-<span class="normal"><a href="#__codelineno-41-13">13</a></span>
-<span class="normal"><a href="#__codelineno-41-14">14</a></span>
-<span class="normal"><a href="#__codelineno-41-15">15</a></span>
-<span class="normal"><a href="#__codelineno-41-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">checkType</span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="kd">interface</span><span class="p">{})</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-41-2" name="__codelineno-41-2"></a><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">i</span><span class="p">.(</span><span class="kd">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-41-3" name="__codelineno-41-3"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="kc">nil</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-41-4" name="__codelineno-41-4"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;i is nil&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-41-5" name="__codelineno-41-5"></a><span class="w">            </span><span class="k">return</span><span class="w"></span>
-<a id="__codelineno-41-6" name="__codelineno-41-6"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="kt">int</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-41-7" name="__codelineno-41-7"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;i is an int&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-41-8" name="__codelineno-41-8"></a><span class="w">            </span><span class="k">return</span><span class="w"></span>
-<a id="__codelineno-41-9" name="__codelineno-41-9"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
-<a id="__codelineno-41-10" name="__codelineno-41-10"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;i is a string&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-41-11" name="__codelineno-41-11"></a><span class="w">            </span><span class="k">return</span><span class="w"></span>
-<a id="__codelineno-41-12" name="__codelineno-41-12"></a><span class="w">        </span><span class="k">default</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-41-13" name="__codelineno-41-13"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;the type is not defined as case&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-41-14" name="__codelineno-41-14"></a><span class="w">            </span><span class="k">return</span><span class="w"></span>
-<a id="__codelineno-41-15" name="__codelineno-41-15"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-41-16" name="__codelineno-41-16"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-44-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-44-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-44-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-44-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-44-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-44-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-44-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-44-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-44-10">10</a></span>
+<span class="normal"><a href="#__codelineno-44-11">11</a></span>
+<span class="normal"><a href="#__codelineno-44-12">12</a></span>
+<span class="normal"><a href="#__codelineno-44-13">13</a></span>
+<span class="normal"><a href="#__codelineno-44-14">14</a></span>
+<span class="normal"><a href="#__codelineno-44-15">15</a></span>
+<span class="normal"><a href="#__codelineno-44-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">checkType</span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="kd">interface</span><span class="p">{})</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-44-2" name="__codelineno-44-2"></a><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">i</span><span class="p">.(</span><span class="kd">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-44-3" name="__codelineno-44-3"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="kc">nil</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-44-4" name="__codelineno-44-4"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;i is nil&quot;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-44-5" name="__codelineno-44-5"></a><span class="w">            </span><span class="k">return</span><span class="w"></span>
+<a id="__codelineno-44-6" name="__codelineno-44-6"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="kt">int</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-44-7" name="__codelineno-44-7"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;i is an int&quot;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-44-8" name="__codelineno-44-8"></a><span class="w">            </span><span class="k">return</span><span class="w"></span>
+<a id="__codelineno-44-9" name="__codelineno-44-9"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<a id="__codelineno-44-10" name="__codelineno-44-10"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;i is a string&quot;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-44-11" name="__codelineno-44-11"></a><span class="w">            </span><span class="k">return</span><span class="w"></span>
+<a id="__codelineno-44-12" name="__codelineno-44-12"></a><span class="w">        </span><span class="k">default</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-44-13" name="__codelineno-44-13"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;the type is not defined as case&quot;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-44-14" name="__codelineno-44-14"></a><span class="w">            </span><span class="k">return</span><span class="w"></span>
+<a id="__codelineno-44-15" name="__codelineno-44-15"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-44-16" name="__codelineno-44-16"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 
               
