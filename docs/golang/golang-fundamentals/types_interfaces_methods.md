@@ -858,6 +858,29 @@ test
 {Michael}
 ```
 
+You can also use `any` as an alias for an empty `interface{}`.
+But the empty interface is used regularly.
+
+```go linenums="1"
+func main() {
+	var i any
+	i = 2
+	fmt.Println(i)
+	i = "test"
+	fmt.Println(i)
+	i = func () {
+		fmt.Println("Test")
+	}
+	fmt.Println(i)
+	i = struct {
+		name string
+	} {
+		name: "Michael",
+	}
+	fmt.Println(i)
+}
+```
+
 ### Interfaces and nil
 
 Interfaces are nil as long as they:
