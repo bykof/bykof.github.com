@@ -2136,8 +2136,8 @@ Now you want to try Go, so let's do this!</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>GET     /product - List all articles
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>GET     /product/{id} - Get a specific article
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>POST    /product - Create a product
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>PUT     /product - Update a product
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>DELETE  /product - Delete a product
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>PUT     /product/{id} - Update a product
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>DELETE  /product/{id} - Delete a product
 </code></pre></div>
 <p>The product struct uses the package <a href="https://pkg.go.dev/github.com/shopspring/decimal">https://pkg.go.dev/github.com/shopspring/decimal</a> for prices:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">core/domain/product.go</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
