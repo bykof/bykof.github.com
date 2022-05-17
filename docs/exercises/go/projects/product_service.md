@@ -37,7 +37,7 @@ type Product struct {
 ```
 
 The service should have two possible ways to store products and categories.
-It should store all data **in memory** or in **json files** called `products.json` and `categories.json`.
+It should store all data **in memory** or in **json files** called `products.json`.
 Use [interfaces](../../../golang/golang-fundamentals/types_interfaces_methods.md#interfaces), [domain driven hexagonal architecture](../../../golang/architecture/index.md) and [dependency injection](../../../golang/dependency_injection/wire.md) to built the service properly.
 
 Example Requests:
