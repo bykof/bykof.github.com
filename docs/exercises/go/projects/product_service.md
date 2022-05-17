@@ -17,8 +17,8 @@ It has the following endpoints:
 GET     /product - List all articles
 GET     /product/{id} - Get a specific article
 POST    /product - Create a product
-PUT     /product - Update a product
-DELETE  /product - Delete a product
+PUT     /product/{id} - Update a product
+DELETE  /product/{id} - Delete a product
 ```
 
 The product struct uses the package [https://pkg.go.dev/github.com/shopspring/decimal](https://pkg.go.dev/github.com/shopspring/decimal) for prices:
