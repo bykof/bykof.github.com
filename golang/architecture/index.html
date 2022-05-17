@@ -1672,6 +1672,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#getter" class="md-nav__link">
+    Getter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-names" class="md-nav__link">
+    Interface Names
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camelcase-or-snake_case" class="md-nav__link">
+    CamelCase or snake_case?
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2052,6 +2073,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#getter" class="md-nav__link">
+    Getter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-names" class="md-nav__link">
+    Interface Names
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camelcase-or-snake_case" class="md-nav__link">
+    CamelCase or snake_case?
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2086,6 +2128,22 @@ The "flat" architecture and the "domain driven" architecture.</p>
 Go Cache uses the domain driven approach, at least it utilizes packages.</p>
 <p>Mostly the flat architecture is used, when the Go programm is small and does just one thing.
 If the Go program becomes more complicated and does several things, I would suggest to use the domain driven hexagonal approach.</p>
+<h2 id="getter">Getter</h2>
+<p>In Go it's unusual to use <code>Get</code> before a getter.
+You often just remove the <code>Get</code> in a getter method so that you access it with <code>.Thing()</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">owner</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">obj</span><span class="p">.</span><span class="nx">Owner</span><span class="p">()</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">if</span><span class="w"> </span><span class="nx">owner</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nx">obj</span><span class="p">.</span><span class="nx">SetOwner</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h2 id="interface-names">Interface Names</h2>
+<p>Interface names are often defined with <code>er</code> as suffix.
+Like <code>Reader</code>, <code>Writer</code>, <code>Closer</code> and so on...</p>
+<h2 id="camelcase-or-snake_case">CamelCase or snake_case?</h2>
+<p>In Go you normally write <code>CamelCase</code> or how they call it <code>MixedCaps</code> and <strong>not</strong> <code>snake_case</code> like in Python for example.</p>
 
               
             </article>
