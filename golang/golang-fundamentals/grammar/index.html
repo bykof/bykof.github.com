@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://bykof.github.io/golang/golang-fundamentals/grammar/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
@@ -19,11 +19,12 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.e411adfe.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
         
+      
       
     
     
@@ -1349,6 +1350,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#blank-identifier" class="md-nav__link">
+    Blank Identifier
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#keywords" class="md-nav__link">
     Keywords
   </a>
@@ -2178,6 +2186,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#blank-identifier" class="md-nav__link">
+    Blank Identifier
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#keywords" class="md-nav__link">
     Keywords
   </a>
@@ -2341,132 +2356,139 @@ Check the following code:</p>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>ThisVariableIsExported
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>αβ
 </code></pre></div>
+<h3 id="blank-identifier">Blank Identifier</h3>
+<p>There is one special identifier called the <code>blank identifier</code>.</p>
+<p>This identifier let's you assign every value to it, but you can never read from it: </p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+It's often used to "throw away" values or to test a specific type over another.
+You will see in the next chapters, why we need this.</p>
 <p>Some identifiers are predeclared, you will find them in the next chapter <a href="#keywords">Keywords</a>.</p>
 <h3 id="keywords">Keywords</h3>
 <p>The following keywords are reserved and may not be used as identifiers.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>break        default      func         interface    select
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>case         defer        go           map          struct
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>chan         else         goto         package      switch
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>const        fallthrough  if           range        type
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>continue     for          import       return       var
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>break        default      func         interface    select
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>case         defer        go           map          struct
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>chan         else         goto         package      switch
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>const        fallthrough  if           range        type
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>continue     for          import       return       var
 </code></pre></div>
 <h4 id="types">Types</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>any bool byte comparable
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>complex64 complex128 error float32 float64
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>int int8 int16 int32 int64 rune string
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>uint uint8 uint16 uint32 uint64 uintptr
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>any bool byte comparable
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>complex64 complex128 error float32 float64
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>int int8 int16 int32 int64 rune string
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>uint uint8 uint16 uint32 uint64 uintptr
 </code></pre></div>
 <h4 id="constants">Constants</h4>
 <p><code>true false iota</code></p>
 <p>Zero value:</p>
 <p><code>nil</code></p>
 <h4 id="functions">Functions</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>append cap close complex copy delete imag len
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>make new panic print println real recover
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>append cap close complex copy delete imag len
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>make new panic print println real recover
 </code></pre></div>
 <h2 id="operators-and-punctuation">Operators and punctuation</h2>
 <p>Following operators, assignment operators and puctuation is defined in Go.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>+    &amp;     +=    &amp;=     &amp;&amp;    ==    !=    (    )
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>-    |     -=    |=     ||    &lt;     &lt;=    [    ]
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>*    ^     *=    ^=     &lt;-    &gt;     &gt;=    {    }
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>/    &lt;&lt;    /=    &lt;&lt;=    ++    =     :=    ,    ;
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>%    &gt;&gt;    %=    &gt;&gt;=    --    !     ...   .    :
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>     &amp;^          &amp;^=          ~
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>+    &amp;     +=    &amp;=     &amp;&amp;    ==    !=    (    )
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>-    |     -=    |=     ||    &lt;     &lt;=    [    ]
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>*    ^     *=    ^=     &lt;-    &gt;     &gt;=    {    }
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>/    &lt;&lt;    /=    &lt;&lt;=    ++    =     :=    ,    ;
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>%    &gt;&gt;    %=    &gt;&gt;=    --    !     ...   .    :
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>     &amp;^          &amp;^=          ~
 </code></pre></div>
 <h2 id="integer-literals">Integer literals</h2>
 <p>An integer literal is a sequence of digits representing an integer constant. An optional prefix sets a non-decimal base: 0b or 0B for binary, 0, 0o, or 0O for octal, and 0x or 0X for hexadecimal. A single 0 is considered a decimal zero. In hexadecimal literals, letters a through f and A through F represent values 10 through 15.</p>
 <p>For readability, an underscore character _ may appear after a base prefix or between successive digits; such underscores do not change the literal's value. </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>int_lit        = decimal_lit | binary_lit | octal_lit | hex_lit .
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>decimal_lit    = &quot;0&quot; | ( &quot;1&quot; … &quot;9&quot; ) [ [ &quot;_&quot; ] decimal_digits ] .
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>binary_lit     = &quot;0&quot; ( &quot;b&quot; | &quot;B&quot; ) [ &quot;_&quot; ] binary_digits .
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>octal_lit      = &quot;0&quot; [ &quot;o&quot; | &quot;O&quot; ] [ &quot;_&quot; ] octal_digits .
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>hex_lit        = &quot;0&quot; ( &quot;x&quot; | &quot;X&quot; ) [ &quot;_&quot; ] hex_digits .
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>int_lit        = decimal_lit | binary_lit | octal_lit | hex_lit .
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>decimal_lit    = &quot;0&quot; | ( &quot;1&quot; … &quot;9&quot; ) [ [ &quot;_&quot; ] decimal_digits ] .
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>binary_lit     = &quot;0&quot; ( &quot;b&quot; | &quot;B&quot; ) [ &quot;_&quot; ] binary_digits .
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>octal_lit      = &quot;0&quot; [ &quot;o&quot; | &quot;O&quot; ] [ &quot;_&quot; ] octal_digits .
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>hex_lit        = &quot;0&quot; ( &quot;x&quot; | &quot;X&quot; ) [ &quot;_&quot; ] hex_digits .
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>decimal_digits = decimal_digit { [ &quot;_&quot; ] decimal_digit } .
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>binary_digits  = binary_digit { [ &quot;_&quot; ] binary_digit } .
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>octal_digits   = octal_digit { [ &quot;_&quot; ] octal_digit } .
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>hex_digits     = hex_digit { [ &quot;_&quot; ] hex_digit } .
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>decimal_digits = decimal_digit { [ &quot;_&quot; ] decimal_digit } .
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>binary_digits  = binary_digit { [ &quot;_&quot; ] binary_digit } .
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>octal_digits   = octal_digit { [ &quot;_&quot; ] octal_digit } .
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>hex_digits     = hex_digit { [ &quot;_&quot; ] hex_digit } .
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>42
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>4_2
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>0600
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>0_600
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>0o600
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>0O600       // second character is capital letter &#39;O&#39;
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>0xBadFace
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>0xBad_Face
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>0x_67_7a_2f_cc_40_c6
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>170141183460469231731687303715884105727
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>170_141183_460469_231731_687303_715884_105727
-<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
-<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>_42         // an identifier, not an integer literal
-<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>42_         // invalid: _ must separate successive digits
-<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>4__2        // invalid: only one _ at a time
-<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>0_xBadFace  // invalid: _ must separate successive digits
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>42
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>4_2
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>0600
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>0_600
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>0o600
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>0O600       // second character is capital letter &#39;O&#39;
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>0xBadFace
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>0xBad_Face
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>0x_67_7a_2f_cc_40_c6
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>170141183460469231731687303715884105727
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>170_141183_460469_231731_687303_715884_105727
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>_42         // an identifier, not an integer literal
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>42_         // invalid: _ must separate successive digits
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>4__2        // invalid: only one _ at a time
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>0_xBadFace  // invalid: _ must separate successive digits
 </code></pre></div>
 <h2 id="floating-point-literals">Floating-point literals</h2>
 <p>A floating-point literal is a decimal or hexadecimal representation of a floating-point constant.</p>
 <p>A decimal floating-point literal consists of an integer part (decimal digits), a decimal point, a fractional part (decimal digits), and an exponent part (e or E followed by an optional sign and decimal digits). One of the integer part or the fractional part may be elided; one of the decimal point or the exponent part may be elided. An exponent value exp scales the mantissa (integer and fractional part) by 10exp.</p>
 <p>A hexadecimal floating-point literal consists of a 0x or 0X prefix, an integer part (hexadecimal digits), a radix point, a fractional part (hexadecimal digits), and an exponent part (p or P followed by an optional sign and decimal digits). One of the integer part or the fractional part may be elided; the radix point may be elided as well, but the exponent part is required. (This syntax matches the one given in IEEE 754-2008 §5.12.3.) An exponent value exp scales the mantissa (integer and fractional part) by 2exp.</p>
 <p>For readability, an underscore character _ may appear after a base prefix or between successive digits; such underscores do not change the literal value.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>float_lit         = decimal_float_lit | hex_float_lit .
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>float_lit         = decimal_float_lit | hex_float_lit .
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>decimal_float_lit = decimal_digits &quot;.&quot; [ decimal_digits ] [ decimal_exponent ] |
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>                    decimal_digits decimal_exponent |
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>                    &quot;.&quot; decimal_digits [ decimal_exponent ] .
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>decimal_exponent  = ( &quot;e&quot; | &quot;E&quot; ) [ &quot;+&quot; | &quot;-&quot; ] decimal_digits .
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>decimal_float_lit = decimal_digits &quot;.&quot; [ decimal_digits ] [ decimal_exponent ] |
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>                    decimal_digits decimal_exponent |
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>                    &quot;.&quot; decimal_digits [ decimal_exponent ] .
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>decimal_exponent  = ( &quot;e&quot; | &quot;E&quot; ) [ &quot;+&quot; | &quot;-&quot; ] decimal_digits .
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>hex_float_lit     = &quot;0&quot; ( &quot;x&quot; | &quot;X&quot; ) hex_mantissa hex_exponent .
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>hex_mantissa      = [ &quot;_&quot; ] hex_digits &quot;.&quot; [ hex_digits ] |
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>                    [ &quot;_&quot; ] hex_digits |
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>                    &quot;.&quot; hex_digits .
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>hex_exponent      = ( &quot;p&quot; | &quot;P&quot; ) [ &quot;+&quot; | &quot;-&quot; ] decimal_digits .
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>hex_float_lit     = &quot;0&quot; ( &quot;x&quot; | &quot;X&quot; ) hex_mantissa hex_exponent .
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>hex_mantissa      = [ &quot;_&quot; ] hex_digits &quot;.&quot; [ hex_digits ] |
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>                    [ &quot;_&quot; ] hex_digits |
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>                    &quot;.&quot; hex_digits .
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>hex_exponent      = ( &quot;p&quot; | &quot;P&quot; ) [ &quot;+&quot; | &quot;-&quot; ] decimal_digits .
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>0.
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>72.40
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>072.40       // == 72.40
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>2.71828
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>1.e+0
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>6.67428e-11
-<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>1E6
-<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>.25
-<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>.12345E+5
-<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>1_5.         // == 15.0
-<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>0.15e+0_2    // == 15.0
-<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>
-<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>0x1p-2       // == 0.25
-<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>0x2.p10      // == 2048.0
-<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>0x1.Fp+0     // == 1.9375
-<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>0X.8p-0      // == 0.5
-<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>0X_1FFFP-16  // == 0.1249847412109375
-<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>0x15e-2      // == 0x15e - 2 (integer subtraction)
-<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>
-<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>0x.p1        // invalid: mantissa has no digits
-<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>1p-2         // invalid: p exponent requires hexadecimal mantissa
-<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>0x1.5e-2     // invalid: hexadecimal mantissa requires p exponent
-<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>1_.5         // invalid: _ must separate successive digits
-<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>1._5         // invalid: _ must separate successive digits
-<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a>1.5_e1       // invalid: _ must separate successive digits
-<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a>1.5e_1       // invalid: _ must separate successive digits
-<a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a>1.5e1_       // invalid: _ must separate successive digits
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>0.
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>72.40
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>072.40       // == 72.40
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>2.71828
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>1.e+0
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>6.67428e-11
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>1E6
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>.25
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>.12345E+5
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>1_5.         // == 15.0
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>0.15e+0_2    // == 15.0
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>0x1p-2       // == 0.25
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>0x2.p10      // == 2048.0
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>0x1.Fp+0     // == 1.9375
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>0X.8p-0      // == 0.5
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>0X_1FFFP-16  // == 0.1249847412109375
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>0x15e-2      // == 0x15e - 2 (integer subtraction)
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a>
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a>0x.p1        // invalid: mantissa has no digits
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a>1p-2         // invalid: p exponent requires hexadecimal mantissa
+<a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a>0x1.5e-2     // invalid: hexadecimal mantissa requires p exponent
+<a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a>1_.5         // invalid: _ must separate successive digits
+<a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a>1._5         // invalid: _ must separate successive digits
+<a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a>1.5_e1       // invalid: _ must separate successive digits
+<a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a>1.5e_1       // invalid: _ must separate successive digits
+<a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a>1.5e1_       // invalid: _ must separate successive digits
 </code></pre></div>
 <h2 id="imaginary-literals">Imaginary literals</h2>
 <p>An imaginary literal represents the imaginary part of a complex constant. It consists of an integer or floating-point literal followed by the lower-case letter i. The value of an imaginary literal is the value of the respective integer or floating-point literal multiplied by the imaginary unit i.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>imaginary_lit = (decimal_digits | int_lit | float_lit) &quot;i&quot; .
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>imaginary_lit = (decimal_digits | int_lit | float_lit) &quot;i&quot; .
 </code></pre></div>
 <p>For backward compatibility, an imaginary literal's integer part consisting entirely of decimal digits (and possibly underscores) is considered a decimal integer, even if it starts with a leading <code>0</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>0i
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>0123i         // == 123i for backward-compatibility
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>0o123i        // == 0o123 * 1i == 83i
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>0xabci        // == 0xabc * 1i == 2748i
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>0.i
-<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>2.71828i
-<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>1.e+0i
-<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>6.67428e-11i
-<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>1E6i
-<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>.25i
-<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>.12345E+5i
-<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>0x1p-2i       // == 0x1p-2 *
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>0i
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>0123i         // == 123i for backward-compatibility
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>0o123i        // == 0o123 * 1i == 83i
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>0xabci        // == 0xabc * 1i == 2748i
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>0.i
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>2.71828i
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>1.e+0i
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>6.67428e-11i
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>1E6i
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>.25i
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>.12345E+5i
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>0x1p-2i       // == 0x1p-2 *
 </code></pre></div>
 <h2 id="rune-literals">Rune literals</h2>
 <p>A rune literal represents a rune constant, an integer value identifying a Unicode code point. A rune literal is expressed as one or more characters enclosed in single quotes, as in 'x' or '\n'. Within the quotes, any character may appear except newline and unescaped single quote. A single quoted character represents the Unicode value of the character itself, while multi-character sequences beginning with a backslash encode values in various formats.</p>
@@ -2474,81 +2496,82 @@ Check the following code:</p>
 <p>Several backslash escapes allow arbitrary values to be encoded as ASCII text. There are four ways to represent the integer value as a numeric constant: \x followed by exactly two hexadecimal digits; \u followed by exactly four hexadecimal digits; \U followed by exactly eight hexadecimal digits, and a plain backslash \ followed by exactly three octal digits. In each case the value of the literal is the value represented by the digits in the corresponding base.</p>
 <p>Although these representations all result in an integer, they have different valid ranges. Octal escapes must represent a value between 0 and 255 inclusive. Hexadecimal escapes satisfy this condition by construction. The escapes \u and \U represent Unicode code points so within them some values are illegal, in particular those above 0x10FFFF and surrogate halves.</p>
 <p>After a backslash, certain single-character escapes represent special values:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>\a   U+0007 alert or bell
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>\b   U+0008 backspace
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>\f   U+000C form feed
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>\n   U+000A line feed or newline
-<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>\r   U+000D carriage return
-<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>\t   U+0009 horizontal tab
-<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>\v   U+000B vertical tab
-<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>\\   U+005C backslash
-<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>\&#39;   U+0027 single quote  (valid escape only within rune literals)
-<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>\&quot;   U+0022 double quote  (valid escape only within string literals)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>\a   U+0007 alert or bell
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>\b   U+0008 backspace
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>\f   U+000C form feed
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>\n   U+000A line feed or newline
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>\r   U+000D carriage return
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>\t   U+0009 horizontal tab
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>\v   U+000B vertical tab
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>\\   U+005C backslash
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>\&#39;   U+0027 single quote  (valid escape only within rune literals)
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>\&quot;   U+0022 double quote  (valid escape only within string literals)
 </code></pre></div>
 <p>All other sequences starting with a backslash are illegal inside rune literals.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>rune_lit         = &quot;&#39;&quot; ( unicode_value | byte_value ) &quot;&#39;&quot; .
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>unicode_value    = unicode_char | little_u_value | big_u_value | escaped_char .
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>byte_value       = octal_byte_value | hex_byte_value .
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>octal_byte_value = `\` octal_digit octal_digit octal_digit .
-<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>hex_byte_value   = `\` &quot;x&quot; hex_digit hex_digit .
-<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>little_u_value   = `\` &quot;u&quot; hex_digit hex_digit hex_digit hex_digit .
-<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>big_u_value      = `\` &quot;U&quot; hex_digit hex_digit hex_digit hex_digit
-<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>                           hex_digit hex_digit hex_digit hex_digit .
-<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>escaped_char     = `\` ( &quot;a&quot; | &quot;b&quot; | &quot;f&quot; | &quot;n&quot; | &quot;r&quot; | &quot;t&quot; | &quot;v&quot; | `\` | &quot;&#39;&quot; | `&quot;` ) .
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>rune_lit         = &quot;&#39;&quot; ( unicode_value | byte_value ) &quot;&#39;&quot; .
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>unicode_value    = unicode_char | little_u_value | big_u_value | escaped_char .
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>byte_value       = octal_byte_value | hex_byte_value .
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>octal_byte_value = `\` octal_digit octal_digit octal_digit .
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>hex_byte_value   = `\` &quot;x&quot; hex_digit hex_digit .
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>little_u_value   = `\` &quot;u&quot; hex_digit hex_digit hex_digit hex_digit .
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>big_u_value      = `\` &quot;U&quot; hex_digit hex_digit hex_digit hex_digit
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>                           hex_digit hex_digit hex_digit hex_digit .
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>escaped_char     = `\` ( &quot;a&quot; | &quot;b&quot; | &quot;f&quot; | &quot;n&quot; | &quot;r&quot; | &quot;t&quot; | &quot;v&quot; | `\` | &quot;&#39;&quot; | `&quot;` ) .
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>&#39;a&#39;
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>&#39;ä&#39;
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>&#39;本&#39;
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>&#39;\t&#39;
-<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>&#39;\000&#39;
-<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>&#39;\007&#39;
-<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>&#39;\377&#39;
-<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>&#39;\x07&#39;
-<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>&#39;\xff&#39;
-<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>&#39;\u12e4&#39;
-<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>&#39;\U00101234&#39;
-<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>&#39;\&#39;&#39;         // rune literal containing single quote character
-<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>&#39;aa&#39;         // illegal: too many characters
-<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>&#39;\xa&#39;        // illegal: too few hexadecimal digits
-<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>&#39;\0&#39;         // illegal: too few octal digits
-<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>&#39;\uDFFF&#39;     // illegal: surrogate half
-<a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a>&#39;\U00110000&#39; // illegal: invalid Unicode code point
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>&#39;a&#39;
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>&#39;ä&#39;
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>&#39;本&#39;
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>&#39;\t&#39;
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>&#39;\000&#39;
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>&#39;\007&#39;
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>&#39;\377&#39;
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>&#39;\x07&#39;
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>&#39;\xff&#39;
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>&#39;\u12e4&#39;
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>&#39;\U00101234&#39;
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>&#39;\&#39;&#39;         // rune literal containing single quote character
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>&#39;aa&#39;         // illegal: too many characters
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>&#39;\xa&#39;        // illegal: too few hexadecimal digits
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>&#39;\0&#39;         // illegal: too few octal digits
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>&#39;\uDFFF&#39;     // illegal: surrogate half
+<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>&#39;\U00110000&#39; // illegal: invalid Unicode code point
 </code></pre></div>
 <h2 id="string-literals">String literals</h2>
 <p>A string literal represents a string constant obtained from concatenating a sequence of characters. There are two forms: raw string literals and interpreted string literals.</p>
 <p>Raw string literals are character sequences between back quotes, as in <code>foo</code>. Within the quotes, any character may appear except back quote. The value of a raw string literal is the string composed of the uninterpreted (implicitly UTF-8-encoded) characters between the quotes; in particular, backslashes have no special meaning and the string may contain newlines. Carriage return characters ('\r') inside raw string literals are discarded from the raw string value.</p>
 <p>Interpreted string literals are character sequences between double quotes, as in "bar". Within the quotes, any character may appear except newline and unescaped double quote. The text between the quotes forms the value of the literal, with backslash escapes interpreted as they are in rune literals (except that \' is illegal and \" is legal), with the same restrictions. The three-digit octal (\nnn) and two-digit hexadecimal (\xnn) escapes represent individual bytes of the resulting string; all other escapes represent the (possibly multi-byte) UTF-8 encoding of individual characters. Thus inside a string literal \377 and \xFF represent a single byte of value 0xFF=255, while ÿ, \u00FF, \U000000FF and \xc3\xbf represent the two bytes 0xc3 0xbf of the UTF-8 encoding of character U+00FF.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>string_lit             = raw_string_lit | interpreted_string_lit .
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>raw_string_lit         = &quot;`&quot; { unicode_char | newline } &quot;`&quot; .
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>interpreted_string_lit = `&quot;` { unicode_value | byte_value } `&quot;` .
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>string_lit             = raw_string_lit | interpreted_string_lit .
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>raw_string_lit         = &quot;`&quot; { unicode_char | newline } &quot;`&quot; .
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>interpreted_string_lit = `&quot;` { unicode_value | byte_value } `&quot;` .
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>`abc`                // same as &quot;abc&quot;
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>`\n
-<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>\n`                  // same as &quot;\\n\n\\n&quot;
-<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>&quot;\n&quot;
-<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>&quot;\&quot;&quot;                 // same as `&quot;`
-<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>&quot;Hello, world!\n&quot;
-<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>&quot;日本語&quot;
-<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>&quot;\u65e5本\U00008a9e&quot;
-<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>&quot;\xff\u00FF&quot;
-<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>&quot;\uD800&quot;             // illegal: surrogate half
-<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>&quot;\U00110000&quot;         // illegal: invalid Unicode code point
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>`abc`                // same as &quot;abc&quot;
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>`\n
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>\n`                  // same as &quot;\\n\n\\n&quot;
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>&quot;\n&quot;
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>&quot;\&quot;&quot;                 // same as `&quot;`
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>&quot;Hello, world!\n&quot;
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>&quot;日本語&quot;
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>&quot;\u65e5本\U00008a9e&quot;
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>&quot;\xff\u00FF&quot;
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>&quot;\uD800&quot;             // illegal: surrogate half
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>&quot;\U00110000&quot;         // illegal: invalid Unicode code point
 </code></pre></div>
 <p>These examples all represent the same string:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>&quot;日本語&quot;                                 // UTF-8 input text
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>`日本語`                                 // UTF-8 input text as a raw literal
-<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>&quot;\u65e5\u672c\u8a9e&quot;                    // the explicit Unicode code points
-<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>&quot;\U000065e5\U0000672c\U00008a9e&quot;        // the explicit Unicode code points
-<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>&quot;\xe6\x97\xa5\xe6\x9c\xac\xe8\xaa\x9e&quot;  // the explicit UTF-8 bytes
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>&quot;日本語&quot;                                 // UTF-8 input text
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>`日本語`                                 // UTF-8 input text as a raw literal
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>&quot;\u65e5\u672c\u8a9e&quot;                    // the explicit Unicode code points
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>&quot;\U000065e5\U0000672c\U00008a9e&quot;        // the explicit Unicode code points
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>&quot;\xe6\x97\xa5\xe6\x9c\xac\xe8\xaa\x9e&quot;  // the explicit UTF-8 bytes
 </code></pre></div>
 <p>If the source code represents a character as two code points, such as a combining form involving an accent and a letter, the result will be an error if placed in a rune literal (it is not a single code point), and will appear as two code points if placed in a string literal. </p>
 
               
             </article>
+            
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             Back to top
           </a>
@@ -2557,7 +2580,8 @@ Check the following code:</p>
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
         <a href="../introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
@@ -2612,10 +2636,10 @@ Check the following code:</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.ed9748b7.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
         <script src="../../../javascripts/extra.js"></script>
       
