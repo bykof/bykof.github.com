@@ -246,7 +246,7 @@ If you define a new const block with another variable, iota will start again fro
 
 !!! danger
 
-	This will not work
+    This will not work
 
     ```go linenums="1"
     type Test int
@@ -486,8 +486,64 @@ If you have a struct, which embeds another struct and you can an embedded functi
 
 ## Interfaces
 
+### Why interfaces?
+
+!!! tip
+
+    **Interfaces specify behaviour**.
+
+    Interfaces are a _tool_ to make code more reliable, shorter, clearer and easier to understand.
+    But using to much and unnecessary interfaces can have the opposite effect.
+
+Let's have a look at the following example:
+
+```go linenums="1"
+package main
+
+import "fmt"
+
+type Cat struct{}
+
+func (c Cat) Say() string  { return "meow" }
+func (c Cat) Type() string { return "cat" }
+
+type Dog struct{}
+
+func (d Dog) Say() string  { return "woof" }
+func (d Dog) Type() string { return "dog" }
+
+func main() {
+	c := Cat{}
+	fmt.Println(c.Type(), "says:", c.Say())
+	d := Dog{}
+	fmt.Println(d.Type(), "says:", d.Say())
+}
+```
+
+Output:
+
+```
+cat says: meow
+dog says: woof
+```
+
+If we would like to make a function, which takes in a Cat or a Dog and prints out the output message, we would have to create two functions, because of Go's strict typing.
+
+```go linenums="1"
+func TalkDog(dog Dog) {
+	fmt.Println(dog.Type(), "says:", dog.Say())
+}
+
+func TalkCat(cat Cat) {
+	fmt.Println(cat.Type(), "says:", cat.Say())
+}
+```
+
+But there is help, we can use **interfaces**.
+
+### Syntax
+
 The only abstract type in Go are `interfaces`.
-So let's check them out:
 
 ```go linenums="1"
 type Stringer interface {
@@ -495,7 +551,7 @@ type Stringer interface {
 }
 ```
 
-Usually Interfaces end with "er", there are several Go built-in interfaces like `io.Reader`, `io.Closer`, `io.ReadCloser`, `json.Marshaler`.
+Usually interfaces end with "er", there are several Go built-in interfaces like `io.Reader`, `io.Closer`, `io.ReadCloser`, `json.Marshaler`.
 
 ### Implicit Interfaces
 
@@ -784,7 +840,7 @@ func DoAuthentication(a Authenticator) (UserData, error) {
 
 !!! danger
 
-	Do **NOT** do this:
+    Do **NOT** do this:
 
     ```go linenums="1"
     type UserData struct {
@@ -880,6 +936,26 @@ func main() {
 	fmt.Println(i)
 }
 ```
+
+### Is struct implementing interface check
+
+If you want to check, if a struct implements a specific interface.
+You can use a small "hack".
+
+Just initiate a [blank identifier](./grammar.md#blank-identifier) variable with the interface type and the struct value.
+
+```go linenums="1"
+type Sayer interface {
+	Say() string
+}
+
+type Cat struct{}
+func (c Cat) Say() string  { return "meow" }
+
+var _ Sayer = Cat{}
+```
+
+Since the compiler will ignore the value of `_` but will do the type checks, this can get very useful.
 
 ### Interfaces and nil
 

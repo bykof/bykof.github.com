@@ -69,6 +69,18 @@ ThisVariableIsExported
 αβ
 ```
 
+### Blank Identifier
+
+There is one special identifier called the `blank identifier`.
+
+This identifier let's you assign every value to it, but you can never read from it: 
+
+```go linenums="1"
+var _ = 2
+```
+It's often used to "throw away" values or to test a specific type over another.
+You will see in the next chapters, why we need this.
+
 Some identifiers are predeclared, you will find them in the next chapter [Keywords](#keywords).
 
 ### Keywords
