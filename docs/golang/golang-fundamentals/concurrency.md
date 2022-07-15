@@ -347,6 +347,7 @@ func RandomBetween(min int, max int) int {
 }
 
 func main() {
+	rand.Seed(time.Now().Unix())
 	searchers := []searcherFunc{
 		func(s string) string {
 			sleepSeconds := time.Second * time.Duration(RandomBetween(1, 10))
