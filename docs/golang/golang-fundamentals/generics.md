@@ -108,6 +108,63 @@ func SumNumbers[K comparable, V Number](m map[K]V) V {
 }
 ```
 
+## Underlying Types
+
+Sometimes you define a user-defined type, but don't want to add your type to a generic function, which takes in just `primitive` types.
+Therefore just use underlying types:
+
+```go linenums="1"
+type Number interface {
+    int | int8 | int16 | int32 | int64
+}
+
+type MySpecialNumber int32
+
+func Sum[V Number](a V, b V) V {
+    return a + b
+}
+
+func main() {
+    var a MySpecialNumber = 1
+    var b MySpecialNumber = 2
+    fmt.Println(Sum(a, b))
+}
+```
+
+makes the error:
+
+```
+MySpecialNumber does not implement Number (possibly missing ~ for int32 in constraint Number)
+```
+
+So what you need here is `underlying types` so that you allow any user-defined types, which use the underlying type.
+Use `~` to make the type underlying.
+
+Here is a fixed example:
+
+```go linenums="1"
+type Number interface {
+    ~int | ~int8 | ~int16 | ~int32 | ~int64
+}
+
+type MySpecialNumber int32
+
+func Sum[V Number](a V, b V) V {
+    return a + b
+}
+
+func main() {
+    var a MySpecialNumber = 1
+    var b MySpecialNumber = 2
+    fmt.Println(Sum(a, b))
+}
+```
+
+!!! warning
+
+    You cannot use underlying types with user-defined types.
+    You have to use a primitive type!
+
 ## Which Types?
 
 You can use built-in types for generics, but also interfaces:
