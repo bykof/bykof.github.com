@@ -1552,6 +1552,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#underlying-types" class="md-nav__link">
+    Underlying Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#which-types" class="md-nav__link">
     Which Types?
   </a>
@@ -2075,6 +2082,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#underlying-types" class="md-nav__link">
+    Underlying Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#which-types" class="md-nav__link">
     Which Types?
   </a>
@@ -2263,8 +2277,9 @@
 <a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">s</span><span class="w"></span>
 <a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h2 id="which-types">Which Types?</h2>
-<p>You can use built-in types for generics, but also interfaces:</p>
+<h2 id="underlying-types">Underlying Types</h2>
+<p>Sometimes you define a user-defined type, but don't want to add your type to a generic function, which takes in just <code>primitive</code> types.
+Therefore just use underlying types:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
@@ -2275,17 +2290,90 @@
 <span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-6-10">10</a></span>
-<span class="normal"><a href="#__codelineno-6-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Stringer</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="nx">String</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Number</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="kt">int8</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="kt">int16</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="kt">int32</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="kt">int64</span><span class="w"></span>
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Join</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="nx">Stringer</span><span class="p">](</span><span class="nx">things</span><span class="w"> </span><span class="p">[]</span><span class="nx">E</span><span class="p">)</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">things</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">        </span><span class="nx">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">value</span><span class="p">.</span><span class="nx">String</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="w"></span>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="kd">type</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="kt">int32</span><span class="w"></span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Sum</span><span class="p">[</span><span class="nx">V</span><span class="w"> </span><span class="nx">Number</span><span class="p">](</span><span class="nx">a</span><span class="w"> </span><span class="nx">V</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="nx">V</span><span class="p">)</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="w"></span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">Sum</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">))</span><span class="w"></span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>makes the error:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>MySpecialNumber does not implement Number (possibly missing ~ for int32 in constraint Number)
+</code></pre></div>
+<p>So what you need here is <code>underlying types</code> so that you allow any user-defined types, which use the underlying type.
+Use <code>~</code> to make the type underlying.</p>
+<p>Here is a fixed example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Number</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="err">~</span><span class="kt">int</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="err">~</span><span class="kt">int8</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="err">~</span><span class="kt">int16</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="err">~</span><span class="kt">int32</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="err">~</span><span class="kt">int64</span><span class="w"></span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="kd">type</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="kt">int32</span><span class="w"></span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Sum</span><span class="p">[</span><span class="nx">V</span><span class="w"> </span><span class="nx">Number</span><span class="p">](</span><span class="nx">a</span><span class="w"> </span><span class="nx">V</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="nx">V</span><span class="p">)</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="w"></span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">Sum</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">))</span><span class="w"></span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You cannot use underlying types with user-defined types.
+You have to use a primitive type!</p>
+</div>
+<h2 id="which-types">Which Types?</h2>
+<p>You can use built-in types for generics, but also interfaces:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Stringer</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="nx">String</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Join</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="nx">Stringer</span><span class="p">](</span><span class="nx">things</span><span class="w"> </span><span class="p">[]</span><span class="nx">E</span><span class="p">)</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">things</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">        </span><span class="nx">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">value</span><span class="p">.</span><span class="nx">String</span><span class="p">()</span><span class="w"></span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="w"></span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>There are also new keywords invented for generics like: <code>any</code> and <code>comparable</code></p>
 <h2 id="constraints-package">Constraints Package</h2>
@@ -2294,49 +2382,49 @@ For example</p>
 <h2 id="user-defined-generic-types">User defined generic types</h2>
 <p>We can also define user-defined generic types.</p>
 <p>Check the example here:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
-<span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="nx">any</span><span class="p">]</span><span class="w"> </span><span class="p">[]</span><span class="nx">E</span><span class="w"></span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="kd">var</span><span class="w"> </span><span class="nx">myBunch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="kt">int</span><span class="p">]{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">}</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="nx">any</span><span class="p">]</span><span class="w"> </span><span class="p">[]</span><span class="nx">E</span><span class="w"></span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kd">var</span><span class="w"> </span><span class="nx">myBunch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="kt">int</span><span class="p">]{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>Also you can use the <code>Bunch</code> now as parameter type:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span>
-<span class="normal"><a href="#__codelineno-8-4">4</a></span>
-<span class="normal"><a href="#__codelineno-8-5">5</a></span>
-<span class="normal"><a href="#__codelineno-8-6">6</a></span>
-<span class="normal"><a href="#__codelineno-8-7">7</a></span>
-<span class="normal"><a href="#__codelineno-8-8">8</a></span>
-<span class="normal"><a href="#__codelineno-8-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="nx">any</span><span class="p">]</span><span class="w"> </span><span class="p">[]</span><span class="nx">E</span><span class="w"></span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">PrintBunch</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="nx">any</span><span class="p">](</span><span class="nx">bunch</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="c1">//...</span><span class="w"></span>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a>
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="kd">func</span><span class="w"> </span><span class="p">[</span><span class="nx">b</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="p">]]</span><span class="w"> </span><span class="nx">Print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="c1">// ...</span><span class="w"></span>
-<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span>
+<span class="normal"><a href="#__codelineno-11-6">6</a></span>
+<span class="normal"><a href="#__codelineno-11-7">7</a></span>
+<span class="normal"><a href="#__codelineno-11-8">8</a></span>
+<span class="normal"><a href="#__codelineno-11-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="nx">any</span><span class="p">]</span><span class="w"> </span><span class="p">[]</span><span class="nx">E</span><span class="w"></span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">PrintBunch</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="nx">any</span><span class="p">](</span><span class="nx">bunch</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="c1">//...</span><span class="w"></span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="kd">func</span><span class="w"> </span><span class="p">[</span><span class="nx">b</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="p">]]</span><span class="w"> </span><span class="nx">Print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">    </span><span class="c1">// ...</span><span class="w"></span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>or as a struct:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
-<span class="normal"><a href="#__codelineno-9-2">2</a></span>
-<span class="normal"><a href="#__codelineno-9-3">3</a></span>
-<span class="normal"><a href="#__codelineno-9-4">4</a></span>
-<span class="normal"><a href="#__codelineno-9-5">5</a></span>
-<span class="normal"><a href="#__codelineno-9-6">6</a></span>
-<span class="normal"><a href="#__codelineno-9-7">7</a></span>
-<span class="normal"><a href="#__codelineno-9-8">8</a></span>
-<span class="normal"><a href="#__codelineno-9-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">List</span><span class="p">[</span><span class="nx">T</span><span class="w"> </span><span class="nx">any</span><span class="p">]</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="nx">next</span><span class="w">  </span><span class="o">*</span><span class="nx">List</span><span class="p">[</span><span class="nx">T</span><span class="p">]</span><span class="w"></span>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="nx">value</span><span class="w"> </span><span class="nx">T</span><span class="w"></span>
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="nx">myList</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">List</span><span class="p">[</span><span class="kt">int</span><span class="p">]{</span><span class="nx">value</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">myList</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span>
+<span class="normal"><a href="#__codelineno-12-7">7</a></span>
+<span class="normal"><a href="#__codelineno-12-8">8</a></span>
+<span class="normal"><a href="#__codelineno-12-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">List</span><span class="p">[</span><span class="nx">T</span><span class="w"> </span><span class="nx">any</span><span class="p">]</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="nx">next</span><span class="w">  </span><span class="o">*</span><span class="nx">List</span><span class="p">[</span><span class="nx">T</span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="nx">value</span><span class="w"> </span><span class="nx">T</span><span class="w"></span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">    </span><span class="nx">myList</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">List</span><span class="p">[</span><span class="kt">int</span><span class="p">]{</span><span class="nx">value</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">myList</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 
               
