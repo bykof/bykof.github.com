@@ -2,12 +2,7 @@
 
 On this website you will find lectures about:
 
--   [JavaScript Lectures](./javascript/index.md)
-    -   [JavaScript Fundamentals](./javascript/javascript-fundamentals/index.md)
-    -   [Browser API](./javascript/browser-api/index.md)
-    -   [React](./javascript/react/index.md)
-    -   [Web Workers in React](./javascript/web-workers-in-react/introduction.md)
-    -   [BYOT - Build Your Own Tool](./javascript/byot/index.md)
+-   [Webengineering](https://bykof.github.io/webengineering-course/)
 -   [Go Lectures](./golang/index.md)
     -   [Go Fundamentals](./golang/golang-fundamentals/introduction.md)
     -   [Dependency Injection in Go](./golang/dependency_injection/index.md)

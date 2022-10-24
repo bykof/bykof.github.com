@@ -1,135 +1,94 @@
 site_name: Michael Bykovski Lectures
 site_url: https://bykof.github.io/
 nav:
-  - Homepage:
-      - index.md
-  - JavaScript:
-      - javascript/index.md
-      - JavaScript Fundamentals:
-          - javascript/javascript-fundamentals/index.md
-          - javascript/javascript-fundamentals/history.md
-          - javascript/javascript-fundamentals/tc39.md
-          - javascript/javascript-fundamentals/references.md
-          - javascript/javascript-fundamentals/assert.md
-          - javascript/javascript-fundamentals/variables.md
-          - javascript/javascript-fundamentals/values.md
-          - javascript/javascript-fundamentals/primitive-values.md
-          - javascript/javascript-fundamentals/complex-values.md
-          - javascript/javascript-fundamentals/json.md
-          - javascript/javascript-fundamentals/statements-vs-expressions.md
-          - javascript/javascript-fundamentals/conditions.md
-          - javascript/javascript-fundamentals/loops.md
-          - javascript/javascript-fundamentals/functions.md
-          - javascript/javascript-fundamentals/exceptions.md
-          - javascript/javascript-fundamentals/classes.md
-          - javascript/javascript-fundamentals/asynchronicity.md
-      - Browser API:
-          - javascript/browser-api/index.md
-          - javascript/browser-api/browser-vs-node.md
-          - javascript/browser-api/html.md
-          - javascript/browser-api/web-apis.md
-          - javascript/browser-api/dom.md
-          - javascript/browser-api/element.md
-          - javascript/browser-api/xmlhttprequest.md
-          - javascript/browser-api/fetch.md
-      - React:
-          - javascript/react/index.md
-          - javascript/react/render-engine.md
-          - javascript/react/component.md
-          - javascript/react/jsx.md
-          - javascript/react/reactdom-render.md
-          - javascript/react/events.md
-          - javascript/react/props.md
-          - javascript/react/children.md
-          - javascript/react/hooks.md
-          - javascript/react/context.md
-      - Web Workers in React:
-          - javascript/web-workers-in-react/introduction.md
-          - javascript/web-workers-in-react/tutorial.md
-      - BYOT (Build Your Own Tool):
-          - javascript/byot/index.md
-          - javascript/byot/installation.md
-          - javascript/byot/setup.md
-          - javascript/byot/content-type.md
-          - javascript/byot/roles-and-permissions.md
-          - javascript/byot/api.md
-          - javascript/byot/setup-next.md
-          - javascript/byot/client.md
-          - javascript/byot/add-theme.md
-          - javascript/byot/implement-the-frontend.md
-  - Golang:
-      - golang/index.md
-      - Golang Fundamentals:
-          - golang/golang-fundamentals/introduction.md
-          - golang/golang-fundamentals/grammar.md
-          - golang/golang-fundamentals/primitive_types_and_declarations.md
-          - golang/golang-fundamentals/composite_types.md
-          - golang/golang-fundamentals/control_structures.md
-          - golang/golang-fundamentals/functions.md
-          - golang/golang-fundamentals/pointers.md
-          - golang/golang-fundamentals/types_interfaces_methods.md
-          - golang/golang-fundamentals/errors.md
-          - golang/golang-fundamentals/modules_packages_imports.md
-          - golang/golang-fundamentals/concurrency.md
-          - golang/golang-fundamentals/standard_library.md
-          - golang/golang-fundamentals/logging.md
-          - golang/golang-fundamentals/context.md
-          - golang/golang-fundamentals/tests.md
-          - golang/golang-fundamentals/reflect.md
-          - golang/golang-fundamentals/tags.md
-          - golang/golang-fundamentals/generics.md
-          - golang/golang-fundamentals/third_party_libraries.md
-      - Dependency Injection:
-        - golang/dependency_injection/index.md
-        - golang/dependency_injection/wire.md
-      - Architecture and Best Practices:
-        - golang/architecture/index.md
-      - Docker:
-        - golang/docker/index.md
-      - Design Patterns:
-        - golang/design_patterns/index.md
-      # - GRPC:
-      #   - golang/grpc/index.md
-  - Exercises:
-      - exercises/index.md
-      - JavaScript Fundamentals:
-          - exercises/javascript-fundamentals/index.md
-          - exercises/javascript-fundamentals/shop/index.md
-      - Browser API:
-          - exercises/browser-api/shop/index.md
-      - Go:
-          - exercises/go/starter/index.md
-          - exercises/go/projects/school.md
-          - exercises/go/projects/product_service.md
-          
+    - Homepage:
+          - index.md
+    - JavaScript:
+          - javascript/index.md
+          - BYOT (Build Your Own Tool):
+                - javascript/byot/index.md
+                - javascript/byot/installation.md
+                - javascript/byot/setup.md
+                - javascript/byot/content-type.md
+                - javascript/byot/roles-and-permissions.md
+                - javascript/byot/api.md
+                - javascript/byot/setup-next.md
+                - javascript/byot/client.md
+                - javascript/byot/add-theme.md
+                - javascript/byot/implement-the-frontend.md
+    - Golang:
+          - golang/index.md
+          - Golang Fundamentals:
+                - golang/golang-fundamentals/introduction.md
+                - golang/golang-fundamentals/grammar.md
+                - golang/golang-fundamentals/primitive_types_and_declarations.md
+                - golang/golang-fundamentals/composite_types.md
+                - golang/golang-fundamentals/control_structures.md
+                - golang/golang-fundamentals/functions.md
+                - golang/golang-fundamentals/pointers.md
+                - golang/golang-fundamentals/types_interfaces_methods.md
+                - golang/golang-fundamentals/errors.md
+                - golang/golang-fundamentals/modules_packages_imports.md
+                - golang/golang-fundamentals/concurrency.md
+                - golang/golang-fundamentals/standard_library.md
+                - golang/golang-fundamentals/logging.md
+                - golang/golang-fundamentals/context.md
+                - golang/golang-fundamentals/tests.md
+                - golang/golang-fundamentals/reflect.md
+                - golang/golang-fundamentals/tags.md
+                - golang/golang-fundamentals/generics.md
+                - golang/golang-fundamentals/third_party_libraries.md
+          - Dependency Injection:
+                - golang/dependency_injection/index.md
+                - golang/dependency_injection/wire.md
+          - Architecture and Best Practices:
+                - golang/architecture/index.md
+          - Docker:
+                - golang/docker/index.md
+          - Design Patterns:
+                - golang/design_patterns/index.md
+          # - GRPC:
+          #   - golang/grpc/index.md
+    - Exercises:
+          - exercises/index.md
+          - JavaScript Fundamentals:
+                - exercises/javascript-fundamentals/index.md
+                - exercises/javascript-fundamentals/shop/index.md
+          - Browser API:
+                - exercises/browser-api/shop/index.md
+          - Go:
+                - exercises/go/starter/index.md
+                - exercises/go/projects/school.md
+                - exercises/go/projects/product_service.md
+
 theme:
-  name: material
-  palette:
-    - scheme: default
-      primary: blue
-      accent: blue
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-    - scheme: slate
-      primary: lime
-      accent: yellow
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
-  features:
-    - navigation.instant
-    - navigation.tabs
-    - navigation.top
+    name: material
+    palette:
+        - scheme: default
+          primary: blue
+          accent: blue
+          toggle:
+              icon: material/toggle-switch-off-outline
+              name: Switch to dark mode
+        - scheme: slate
+          primary: lime
+          accent: yellow
+          toggle:
+              icon: material/toggle-switch
+              name: Switch to light mode
+    features:
+        - navigation.instant
+        - navigation.tabs
+        - navigation.top
 markdown_extensions:
-  - attr_list
-  - md_in_html
-  - admonition
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
+    - attr_list
+    - md_in_html
+    - admonition
+    - pymdownx.highlight:
+          anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
 
 extra_javascript:
-  - javascripts/extra.js
+    - javascripts/extra.js
