@@ -3,6 +3,23 @@ site_url: https://bykof.github.io/
 nav:
     - Homepage:
           - index.md
+    - React:
+          - react/getting_started.md
+          - react/setting_up.md
+          - react/components.md
+          - react/props.md
+          - react/map_list_keys.md
+          - react/hooks.md
+          - react/events.md
+          - react/forms.md
+          - react/component_lifecycles.md
+          - react/controlled_versus_uncontrolled.md
+          - react/context.md
+          - react/custom_hooks.md
+          - react/fetch_and_useQuery.md
+          - react/react-router.md
+          - react/chakra-ui.md
+          - react/project_structure.md
     - JavaScript:
           - javascript/index.md
           - BYOT (Build Your Own Tool):
