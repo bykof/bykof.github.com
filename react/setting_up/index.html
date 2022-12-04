@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://bykof.github.io/react/setting_up/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -19,13 +19,14 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
         
       
       
+
     
     
     
@@ -38,10 +39,11 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -110,6 +112,7 @@
         
           
           
+          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -117,6 +120,7 @@
             </label>
           
         
+          
           
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
@@ -144,7 +148,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -1683,14 +1687,15 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
 
 <h1 id="setting-up">Setting Up</h1>
-<p>In the previous section, we learned about JSX and we accessed the React and ReactDOM package using CDN. However, in real projects instead of CDN you will use the create-react-app package to generate a React project starter(boilerplate). The initial <em>create-react-app</em> was released on Jul 22, 2016. Before this time, developers used to configure webpack with a JavaScript module bundler, babel and all the necessary packages manually and this used to take half an hour or maybe more. Now, create-react-app will take care of everything and you will be in charge of only developing the product, instead of spending too much time configuring and setting up projects. Before we start using different tools, let's have a brief introduction to all the tools we are going to use in this challenge. You do not have to understand everything, but I will try to give a very short introduction to some of the tools and technologies that we use when we work with React.</p>
+<p>Here we will learn, how to setup a React project fast, so that we don't have to setup every dependency by ourselves.</p>
 <h2 id="create-react-app">Create React App</h2>
 <p>To create a react project you can use one of the following ways. Let's assume you installed node. Open the command line interface (CLI), git bash or terminal on Mac or Linux. Then run the following command. I am using git bash.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ npx create-react-app name-of-your-project
@@ -1723,29 +1728,25 @@ To stop the server, press Ctr + C in the CLI.</p>
 </li>
 <li>
 <p>/public</p>
-</li>
-<li>
-<p>index.html - the only HTML file we have in the entire application</p>
-</li>
+<ul>
+<li>index.html - the only HTML file we have in the entire application</li>
 <li>favicon.ico - an icon file</li>
 <li>manifest.json - is used to make the application a progressive web app</li>
 <li>other images - open graph images(open graph images are images which are visible when a link share on social media)</li>
-<li>
-<p>robots.txt - information, if the website allows web scraping</p>
+<li>robots.txt - information, if the website allows web scraping</li>
+</ul>
 </li>
 <li>
 <p>/src</p>
-</li>
-<li>
-<p>App.css, index.css - are different CSS files</p>
-</li>
+<ul>
+<li>App.css, index.css - are different CSS files</li>
 <li>index.js - a file which allows to connect all the components with index.html</li>
 <li>App.js - A file where we usually import most of the presentational components</li>
 <li>App.test.js - Tests with testing library and jest</li>
 <li>reportWebVitals.js: is useful to collect Web Vitals information</li>
 <li>setupTests.js - to write testing cases</li>
-<li>
-<p>logo.svg - just a svg file</p>
+<li>logo.svg - just a svg file</li>
+</ul>
 </li>
 <li>
 <p>package.json - List of packages the applications uses</p>
@@ -1754,42 +1755,42 @@ To stop the server, press Ctr + C in the CLI.</p>
 <li>README.md - Markdown file to write documentation</li>
 <li>yarn.lock or package-lock.json - a means to lock the version of the package</li>
 </ul>
-<div class="highlight"><span class="filename">index.js</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;react&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">ReactDOM</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;react-dom/client&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">import</span><span class="w"> </span><span class="s2">&quot;./index.css&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">App</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./App&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">import</span><span class="w"> </span><span class="nx">reportWebVitals</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./reportWebVitals&quot;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><span class="filename">index.js</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">ReactDOM</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-dom/client&#39;</span><span class="w"></span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">import</span><span class="w"> </span><span class="s1">&#39;./index.css&#39;</span><span class="w"></span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">App</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./App&#39;</span><span class="w"></span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">import</span><span class="w"> </span><span class="nx">reportWebVitals</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./reportWebVitals&#39;</span><span class="w"></span>
 <a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="kd">const</span><span class="w"> </span><span class="nx">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;root&quot;</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="kd">const</span><span class="w"> </span><span class="nx">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">))</span><span class="w"></span>
 <a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">StrictMode</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">App</span><span class="w"> </span><span class="o">/&gt;</span><span class="w"></span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/React.StrictMode&gt;</span><span class="w"></span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">StrictMode</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">App</span><span class="w"> </span><span class="o">/&gt;</span><span class="w"></span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/React.StrictMode&gt;,</span><span class="w"></span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="p">)</span><span class="w"></span>
 <a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
 <a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="c1">// If you want to start measuring performance in your app, pass a function</span><span class="w"></span>
 <a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="c1">// to log results (for example: reportWebVitals(console.log))</span><span class="w"></span>
 <a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="c1">// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals</span><span class="w"></span>
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="nx">reportWebVitals</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="nx">reportWebVitals</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
 <div class="highlight"><span class="filename">index.html</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span> <span class="p">/&gt;</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;icon&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;%PUBLIC_URL%/favicon.ico&quot;</span> <span class="p">/&gt;</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1&quot;</span> <span class="p">/&gt;</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;theme-color&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;#000000&quot;</span> <span class="p">/&gt;</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="p">&lt;</span><span class="nt">meta</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>      <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>      <span class="na">content</span><span class="o">=</span><span class="s">&quot;Web site created using create-react-app&quot;</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    <span class="p">/&gt;</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;apple-touch-icon&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;%PUBLIC_URL%/logo192.png&quot;</span> <span class="p">/&gt;</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    <span class="cm">&lt;!--</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;icon&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;%PUBLIC_URL%/favicon.ico&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;theme-color&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;#000000&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>        <span class="p">&lt;</span><span class="nt">meta</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>            <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>            <span class="na">content</span><span class="o">=</span><span class="s">&quot;Web site created using create-react-app&quot;</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>        <span class="p">/&gt;</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;apple-touch-icon&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;%PUBLIC_URL%/logo192.png&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>        <span class="cm">&lt;!--</span>
 <a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="cm">      manifest.json provides metadata used when your web app is installed on a</span>
 <a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="cm">      user&#39;s mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/</span>
 <a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="cm">    --&gt;</span>
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;manifest&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;%PUBLIC_URL%/manifest.json&quot;</span> <span class="p">/&gt;</span>
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>    <span class="cm">&lt;!--</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;manifest&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;%PUBLIC_URL%/manifest.json&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>        <span class="cm">&lt;!--</span>
 <a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="cm">      Notice the use of %PUBLIC_URL% in the tags above.</span>
 <a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="cm">      It will be replaced with the URL of the `public` folder during the build.</span>
 <a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="cm">      Only files inside the `public` folder can be referenced from the HTML.</span>
@@ -1798,12 +1799,12 @@ To stop the server, press Ctr + C in the CLI.</p>
 <a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="cm">      work correctly both with client-side routing and a non-root public URL.</span>
 <a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="cm">      Learn how to configure a non-root public URL by running `npm run build`.</span>
 <a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="cm">    --&gt;</span>
-<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>React App<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>    <span class="p">&lt;</span><span class="nt">noscript</span><span class="p">&gt;</span>You need to enable JavaScript to run this app.<span class="p">&lt;/</span><span class="nt">noscript</span><span class="p">&gt;</span>
-<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>    <span class="cm">&lt;!--</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>React App<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>        <span class="p">&lt;</span><span class="nt">noscript</span><span class="p">&gt;</span>You need to enable JavaScript to run this app.<span class="p">&lt;/</span><span class="nt">noscript</span><span class="p">&gt;</span>
+<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>        <span class="cm">&lt;!--</span>
 <a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="cm">      This HTML file is a template.</span>
 <a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="cm">      If you open it directly in the browser, you will see an empty page.</span>
 <a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a>
@@ -1812,126 +1813,19 @@ To stop the server, press Ctr + C in the CLI.</p>
 <a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a>
 <a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a><span class="cm">      To begin the development, run `npm start` or `yarn start`.</span>
 <a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a><span class="cm">      To create a production bundle, use `npm run build` or `yarn build`.</span>
-<a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a><span class="cm">    --&gt;</span>
-<a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a><span class="cm">    --&gt;</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<h2 id="injecting-data-to-jsx-elements">Injecting data to JSX elements</h2>
-<div class="highlight"><span class="filename">index.js</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;react&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">ReactDOM</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;react-dom/client&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">welcome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Welcome to Webengineering&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Getting Started React&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">subtitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;JavaScript Library&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="kd">const</span><span class="w"> </span><span class="nx">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">  </span><span class="nx">firstName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Michael&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">  </span><span class="nx">lastName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bykovski&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="p">};</span><span class="w"></span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="kd">const</span><span class="w"> </span><span class="nx">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;18. August 2022&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
-<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="c1">// JSX element, header</span><span class="w"></span>
-<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="kd">const</span><span class="w"> </span><span class="nx">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">header</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">welcome</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
-<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">title</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h2&gt;</span><span class="w"></span>
-<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">h3</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">subtitle</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h3&gt;</span><span class="w"></span>
-<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="w">        </span><span class="nx">Instructor</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">author</span><span class="p">.</span><span class="nx">firstName</span><span class="p">}</span><span class="w"> </span><span class="p">{</span><span class="nx">author</span><span class="p">.</span><span class="nx">lastName</span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="w">      </span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
-<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">small</span><span class="o">&gt;</span><span class="nb">Date</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">date</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/small&gt;</span><span class="w"></span>
-<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span><span class="w"></span>
-<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/header&gt;</span><span class="w"></span>
-<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>
-<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="kd">const</span><span class="w"> </span><span class="nx">numOne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a><span class="kd">const</span><span class="w"> </span><span class="nx">numTwo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>
-<a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a><span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a><span class="w">    </span><span class="p">{</span><span class="nx">numOne</span><span class="p">}</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">{</span><span class="nx">numTwo</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">numOne</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">numTwo</span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
-<a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a>
-<a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a><span class="kd">const</span><span class="w"> </span><span class="nx">yearBorn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1994</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a><span class="kd">const</span><span class="w"> </span><span class="nx">currentYear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">().</span><span class="nx">getFullYear</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a><span class="kd">const</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">currentYear</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">yearBorn</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a><span class="kd">const</span><span class="w"> </span><span class="nx">personAge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-9-41" name="__codelineno-9-41" href="#__codelineno-9-41"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-9-42" name="__codelineno-9-42" href="#__codelineno-9-42"></a><span class="w">    </span><span class="p">{</span><span class="nx">author</span><span class="p">.</span><span class="nx">firstName</span><span class="p">}</span><span class="w"> </span><span class="p">{</span><span class="nx">author</span><span class="p">.</span><span class="nx">lastName</span><span class="p">}</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="p">{</span><span class="nx">age</span><span class="p">}</span><span class="w"> </span><span class="nx">years</span><span class="w"> </span><span class="nx">old</span><span class="w"></span>
-<a id="__codelineno-9-43" name="__codelineno-9-43" href="#__codelineno-9-43"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
-<a id="__codelineno-9-44" name="__codelineno-9-44" href="#__codelineno-9-44"></a><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-9-45" name="__codelineno-9-45" href="#__codelineno-9-45"></a>
-<a id="__codelineno-9-46" name="__codelineno-9-46" href="#__codelineno-9-46"></a><span class="c1">// JSX element, main</span><span class="w"></span>
-<a id="__codelineno-9-47" name="__codelineno-9-47" href="#__codelineno-9-47"></a><span class="kd">const</span><span class="w"> </span><span class="nx">techs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;CSS&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;JavaScript&quot;</span><span class="p">];</span><span class="w"></span>
-<a id="__codelineno-9-48" name="__codelineno-9-48" href="#__codelineno-9-48"></a><span class="kd">const</span><span class="w"> </span><span class="nx">techsFormatted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">techs</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">tech</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">tech</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/li&gt;);</span><span class="w"></span>
-<a id="__codelineno-9-49" name="__codelineno-9-49" href="#__codelineno-9-49"></a>
-<a id="__codelineno-9-50" name="__codelineno-9-50" href="#__codelineno-9-50"></a><span class="c1">// JSX element, main</span><span class="w"></span>
-<a id="__codelineno-9-51" name="__codelineno-9-51" href="#__codelineno-9-51"></a><span class="kd">const</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-9-52" name="__codelineno-9-52" href="#__codelineno-9-52"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">main</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-9-53" name="__codelineno-9-53" href="#__codelineno-9-53"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-9-54" name="__codelineno-9-54" href="#__codelineno-9-54"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-9-55" name="__codelineno-9-55" href="#__codelineno-9-55"></a><span class="w">        </span><span class="nx">Prerequisite</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">get</span><span class="w"> </span><span class="nx">started</span><span class="p">{</span><span class="s2">&quot; &quot;</span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-9-56" name="__codelineno-9-56" href="#__codelineno-9-56"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-9-57" name="__codelineno-9-57" href="#__codelineno-9-57"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">em</span><span class="o">&gt;</span><span class="nx">react</span><span class="p">.</span><span class="nx">js</span><span class="o">&lt;</span><span class="err">/em&gt;</span><span class="w"></span>
-<a id="__codelineno-9-58" name="__codelineno-9-58" href="#__codelineno-9-58"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">/strong&gt;</span><span class="w"></span>
-<a id="__codelineno-9-59" name="__codelineno-9-59" href="#__codelineno-9-59"></a><span class="w">        </span><span class="o">:</span><span class="w"></span>
-<a id="__codelineno-9-60" name="__codelineno-9-60" href="#__codelineno-9-60"></a><span class="w">      </span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
-<a id="__codelineno-9-61" name="__codelineno-9-61" href="#__codelineno-9-61"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">techsFormatted</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/ul&gt;</span><span class="w"></span>
-<a id="__codelineno-9-62" name="__codelineno-9-62" href="#__codelineno-9-62"></a><span class="w">      </span><span class="p">{</span><span class="nx">result</span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-9-63" name="__codelineno-9-63" href="#__codelineno-9-63"></a><span class="w">      </span><span class="p">{</span><span class="nx">personAge</span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-9-64" name="__codelineno-9-64" href="#__codelineno-9-64"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span><span class="w"></span>
-<a id="__codelineno-9-65" name="__codelineno-9-65" href="#__codelineno-9-65"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/main&gt;</span><span class="w"></span>
-<a id="__codelineno-9-66" name="__codelineno-9-66" href="#__codelineno-9-66"></a><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-9-67" name="__codelineno-9-67" href="#__codelineno-9-67"></a>
-<a id="__codelineno-9-68" name="__codelineno-9-68" href="#__codelineno-9-68"></a><span class="kd">const</span><span class="w"> </span><span class="nx">copyRight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Copyright 2022&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-9-69" name="__codelineno-9-69" href="#__codelineno-9-69"></a>
-<a id="__codelineno-9-70" name="__codelineno-9-70" href="#__codelineno-9-70"></a><span class="c1">// JSX element, footer</span><span class="w"></span>
-<a id="__codelineno-9-71" name="__codelineno-9-71" href="#__codelineno-9-71"></a><span class="kd">const</span><span class="w"> </span><span class="nx">footer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-9-72" name="__codelineno-9-72" href="#__codelineno-9-72"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">footer</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-9-73" name="__codelineno-9-73" href="#__codelineno-9-73"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-9-74" name="__codelineno-9-74" href="#__codelineno-9-74"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">copyRight</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
-<a id="__codelineno-9-75" name="__codelineno-9-75" href="#__codelineno-9-75"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span><span class="w"></span>
-<a id="__codelineno-9-76" name="__codelineno-9-76" href="#__codelineno-9-76"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/footer&gt;</span><span class="w"></span>
-<a id="__codelineno-9-77" name="__codelineno-9-77" href="#__codelineno-9-77"></a><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-9-78" name="__codelineno-9-78" href="#__codelineno-9-78"></a>
-<a id="__codelineno-9-79" name="__codelineno-9-79" href="#__codelineno-9-79"></a><span class="c1">// JSX element, app</span><span class="w"></span>
-<a id="__codelineno-9-80" name="__codelineno-9-80" href="#__codelineno-9-80"></a><span class="kd">const</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-9-81" name="__codelineno-9-81" href="#__codelineno-9-81"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-9-82" name="__codelineno-9-82" href="#__codelineno-9-82"></a><span class="w">    </span><span class="p">{</span><span class="nx">header</span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-9-83" name="__codelineno-9-83" href="#__codelineno-9-83"></a><span class="w">    </span><span class="p">{</span><span class="nx">main</span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-9-84" name="__codelineno-9-84" href="#__codelineno-9-84"></a><span class="w">    </span><span class="p">{</span><span class="nx">footer</span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-9-85" name="__codelineno-9-85" href="#__codelineno-9-85"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/div&gt;</span><span class="w"></span>
-<a id="__codelineno-9-86" name="__codelineno-9-86" href="#__codelineno-9-86"></a><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-9-87" name="__codelineno-9-87" href="#__codelineno-9-87"></a>
-<a id="__codelineno-9-88" name="__codelineno-9-88" href="#__codelineno-9-88"></a><span class="kd">const</span><span class="w"> </span><span class="nx">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;root&quot;</span><span class="p">));</span><span class="w"></span>
-<a id="__codelineno-9-89" name="__codelineno-9-89" href="#__codelineno-9-89"></a><span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">StrictMode</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">app</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/React.StrictMode&gt;);</span><span class="w"></span>
-</code></pre></div>
-<p><img alt="Inline styling JSX" src="../../images/inecting_data_to_jsx_create_react_app.png" /></p>
-<h2 id="importing-media-objects-in-react">Importing Media Objects in React</h2>
-<p>How do we import images, video and audio in React? Let's see how we import images first.
-Create images folder in the src folder and save an image inside. For instance let's save react.jpg image and let's import this image to index.js. After importing we will inject it to a JSX expression, user. See the code below.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">// index.js</span><span class="w"></span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;react&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">import</span><span class="w"> </span><span class="nx">ReactDOM</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;react-dom&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">reactJPG</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./images/react.jpg&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">img</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">reactJPG</span><span class="p">}</span><span class="w"> </span><span class="nx">alt</span><span class="o">=</span><span class="s2">&quot;react&quot;</span><span class="w"> </span><span class="o">/&gt;</span><span class="w"></span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/div&gt;</span><span class="w"></span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="kd">const</span><span class="w"> </span><span class="nx">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;root&quot;</span><span class="p">));</span><span class="w"></span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">StrictMode</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">app</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/React.StrictMode&gt;);</span><span class="w"></span>
-</code></pre></div>
-<p><img alt="Rendering image" src="../../images/rendering_image.png" /></p>
-<p>See more possibilities in the documentation of <a href="https://create-react-app.dev/docs/getting-started">create-react-app</a></p>
 
-              
-            </article>
-            
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
           <a href="#" class="md-top md-icon" data-md-component="top" hidden>
@@ -1999,13 +1893,15 @@ Create images folder in the src folder and save an image inside. For instance le
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
       
         <script src="../../javascripts/extra.js"></script>
       
+    
     
   </body>
 </html>

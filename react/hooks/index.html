@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://bykof.github.io/react/hooks/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -19,13 +19,14 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
         
       
       
+
     
     
     
@@ -38,10 +39,11 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -110,6 +112,7 @@
         
           
           
+          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -117,6 +120,7 @@
             </label>
           
         
+          
           
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
@@ -144,7 +148,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -1929,10 +1933,11 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
 
 <h1 id="react-hooks">React Hooks</h1>
@@ -2052,9 +2057,9 @@ This can lead to massive performance improvements.</p>
 <p>If you have some operations, which take a lot of computing time, <code>useMemo</code>.
 Actually I would say, use always <code>useMemo</code> if you calculate something depending on a state or prop.</p>
 <p>Here is a bad example:</p>
-<iframe src="https://codesandbox.io/embed/eager-rui-gimoud?fontsize=14&hidenavigation=1&theme=dark"
-     style="width:100%; height:600px; border:0; border-radius: 4px; overflow:hidden;"
-     title="eager-rui-gimoud"
+<iframe src="https://codesandbox.io/embed/dreamy-hawking-4futxj?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="dreamy-hawking-4futxj"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
@@ -2093,39 +2098,39 @@ Updates scheduled inside useLayoutEffect will be flushed synchronously, before t
 <h4 id="debug-value">Debug Value</h4>
 <p><code>useDebugValue</code> shows a value in React DevTools.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">useFriendStatus</span><span class="p">(</span><span class="nx">friendID</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">isOnline</span><span class="p">,</span><span class="w"> </span><span class="nx">setIsOnline</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">isOnline</span><span class="p">,</span><span class="w"> </span><span class="nx">setIsOnline</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span><span class="w"></span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="c1">// Show a label in DevTools next to this Hook  // e.g. &quot;FriendStatus: Online&quot;</span><span class="w"></span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nx">useDebugValue</span><span class="p">(</span><span class="nx">isOnline</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;Online&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Offline&quot;</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">isOnline</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="c1">// Show a label in DevTools next to this Hook  // e.g. &quot;FriendStatus: Online&quot;</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nx">useDebugValue</span><span class="p">(</span><span class="nx">isOnline</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;Online&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Offline&#39;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">isOnline</span><span class="w"></span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <h4 id="deferred-value">Deferred Value</h4>
 <p><code>useDeferredValue</code> receives a state variable and returns a new state variable, which will wait until all rendering finishes for the given state variable and then rerenders the deferred value.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">Typeahead</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useSearchQuery</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">deferredQuery</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useDeferredValue</span><span class="p">(</span><span class="nx">query</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useSearchQuery</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">deferredQuery</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useDeferredValue</span><span class="p">(</span><span class="nx">query</span><span class="p">)</span><span class="w"></span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="c1">// Memoizing tells React to only re-render when deferredQuery changes,</span><span class="w"></span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="c1">// not when query changes.</span><span class="w"></span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">suggestions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useMemo</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">SearchSuggestions</span><span class="w"> </span><span class="nx">query</span><span class="o">=</span><span class="p">{</span><span class="nx">deferredQuery</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="p">[</span><span class="nx">deferredQuery</span><span class="p">]</span><span class="w"></span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="c1">// Memoizing tells React to only re-render when deferredQuery changes,</span><span class="w"></span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="c1">// not when query changes.</span><span class="w"></span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">suggestions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useMemo</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">SearchSuggestions</span><span class="w"> </span><span class="nx">query</span><span class="o">=</span><span class="p">{</span><span class="nx">deferredQuery</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="p">[</span><span class="nx">deferredQuery</span><span class="p">],</span><span class="w"></span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">)</span><span class="w"></span>
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="o">&lt;&gt;</span><span class="w"></span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">SearchInput</span><span class="w"> </span><span class="nx">query</span><span class="o">=</span><span class="p">{</span><span class="nx">query</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span><span class="w"></span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">Suspense</span><span class="w"> </span><span class="nx">fallback</span><span class="o">=</span><span class="s2">&quot;Loading results...&quot;</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">suggestions</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/Suspense&gt;</span><span class="w"></span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/&gt;</span><span class="w"></span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">  </span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="o">&lt;&gt;</span><span class="w"></span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">SearchInput</span><span class="w"> </span><span class="nx">query</span><span class="o">=</span><span class="p">{</span><span class="nx">query</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span><span class="w"></span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">Suspense</span><span class="w"> </span><span class="nx">fallback</span><span class="o">=</span><span class="s2">&quot;Loading results...&quot;</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">suggestions</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/Suspense&gt;</span><span class="w"></span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">/&gt;</span><span class="w"></span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="p">)</span><span class="w"></span>
 <a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <h4 id="transition">Transition</h4>
 <p><code>useTransition</code> can handle loading states.</p>
-<iframe src="https://codesandbox.io/embed/naughty-chandrasekhar-23n0ry?fontsize=14&hidenavigation=1&theme=dark"
-     style="width:100%; height:600px; border:0; border-radius: 4px; overflow:hidden;"
-     title="naughty-chandrasekhar-23n0ry"
+<iframe src="https://codesandbox.io/embed/heavy-update-as-non-urgent-forked-p30dj5?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="heavy-update-as-non-urgent (forked)"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
@@ -2137,20 +2142,25 @@ Updates scheduled inside useLayoutEffect will be flushed synchronously, before t
 <p><code>useId</code> is not for generating keys in a list. Keys should be generated from your data.</p>
 </div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">Checkbox</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useId</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="o">&lt;&gt;</span><span class="w"></span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">label</span><span class="w"> </span><span class="nx">htmlFor</span><span class="o">=</span><span class="p">{</span><span class="nx">id</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Do</span><span class="w"> </span><span class="nx">you</span><span class="w"> </span><span class="nx">like</span><span class="w"> </span><span class="nx">React</span><span class="o">?&lt;</span><span class="err">/label&gt;</span><span class="w"></span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">input</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="p">{</span><span class="nx">id</span><span class="p">}</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;checkbox&quot;</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;react&quot;</span><span class="w"> </span><span class="o">/&gt;</span><span class="w"></span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/&gt;</span><span class="w"></span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useId</span><span class="p">()</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="o">&lt;&gt;</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">label</span><span class="w"> </span><span class="nx">htmlFor</span><span class="o">=</span><span class="p">{</span><span class="nx">id</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Do</span><span class="w"> </span><span class="nx">you</span><span class="w"> </span><span class="nx">like</span><span class="w"> </span><span class="nx">React</span><span class="o">?&lt;</span><span class="err">/label&gt;</span><span class="w"></span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">input</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="p">{</span><span class="nx">id</span><span class="p">}</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;checkbox&quot;</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;react&quot;</span><span class="w"> </span><span class="o">/&gt;</span><span class="w"></span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">/&gt;</span><span class="w"></span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="p">)</span><span class="w"></span>
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 
-              
-            </article>
-            
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
           <a href="#" class="md-top md-icon" data-md-component="top" hidden>
@@ -2218,13 +2228,15 @@ Updates scheduled inside useLayoutEffect will be flushed synchronously, before t
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
       
         <script src="../../javascripts/extra.js"></script>
       
+    
     
   </body>
 </html>
