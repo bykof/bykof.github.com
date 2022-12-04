@@ -8,9 +8,9 @@ Different hooks have been introduced to React: Basic hooks and additional hooks
 
 The basic hooks are:
 
-- useState
-- useEffect
-- useContext
+-   useState
+-   useEffect
+-   useContext
 
 ### State Hook
 
@@ -89,16 +89,16 @@ To watch for changes and do a sideeffect (not computing a value or not preparing
 
 Additional Hooks can be used to express specific statements or to speed up your code.
 
-- useReducer
-- useCallback
-- useMemo
-- useRef
-- useImperativeHandle
-- useLayoutEffect
-- useDebugValue
-- useDeferredValue
-- useTransition
-- useId
+-   useReducer
+-   useCallback
+-   useMemo
+-   useRef
+-   useImperativeHandle
+-   useLayoutEffect
+-   useDebugValue
+-   useDeferredValue
+-   useTransition
+-   useId
 
 #### Reducer
 
@@ -144,9 +144,9 @@ Actually I would say, use always `useMemo` if you calculate something depending 
 
 Here is a bad example:
 
-<iframe src="https://codesandbox.io/embed/eager-rui-gimoud?fontsize=14&hidenavigation=1&theme=dark"
-     style="width:100%; height:600px; border:0; border-radius: 4px; overflow:hidden;"
-     title="eager-rui-gimoud"
+<iframe src="https://codesandbox.io/embed/dreamy-hawking-4futxj?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="dreamy-hawking-4futxj"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
@@ -194,11 +194,11 @@ Updates scheduled inside useLayoutEffect will be flushed synchronously, before t
 
 ```js
 function useFriendStatus(friendID) {
-  const [isOnline, setIsOnline] = useState(null);
+    const [isOnline, setIsOnline] = useState(null)
 
-  // Show a label in DevTools next to this Hook  // e.g. "FriendStatus: Online"
-  useDebugValue(isOnline ? "Online" : "Offline");
-  return isOnline;
+    // Show a label in DevTools next to this Hook  // e.g. "FriendStatus: Online"
+    useDebugValue(isOnline ? 'Online' : 'Offline')
+    return isOnline
 }
 ```
 
@@ -208,22 +208,22 @@ function useFriendStatus(friendID) {
 
 ```js
 function Typeahead() {
-  const query = useSearchQuery("");
-  const deferredQuery = useDeferredValue(query);
+    const query = useSearchQuery('')
+    const deferredQuery = useDeferredValue(query)
 
-  // Memoizing tells React to only re-render when deferredQuery changes,
-  // not when query changes.
-  const suggestions = useMemo(
-    () => <SearchSuggestions query={deferredQuery} />,
-    [deferredQuery]
-  );
+    // Memoizing tells React to only re-render when deferredQuery changes,
+    // not when query changes.
+    const suggestions = useMemo(
+        () => <SearchSuggestions query={deferredQuery} />,
+        [deferredQuery],
+    )
 
-  return (
-    <>
-      <SearchInput query={query} />
-      <Suspense fallback="Loading results...">{suggestions}</Suspense>
-    </>
-  );
+    return (
+        <>
+            <SearchInput query={query} />
+            <Suspense fallback="Loading results...">{suggestions}</Suspense>
+        </>
+    )
 }
 ```
 
@@ -231,9 +231,9 @@ function Typeahead() {
 
 `useTransition` can handle loading states.
 
-<iframe src="https://codesandbox.io/embed/naughty-chandrasekhar-23n0ry?fontsize=14&hidenavigation=1&theme=dark"
-     style="width:100%; height:600px; border:0; border-radius: 4px; overflow:hidden;"
-     title="naughty-chandrasekhar-23n0ry"
+<iframe src="https://codesandbox.io/embed/heavy-update-as-non-urgent-forked-p30dj5?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="heavy-update-as-non-urgent (forked)"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
@@ -248,12 +248,12 @@ function Typeahead() {
 
 ```js
 function Checkbox() {
-  const id = useId();
-  return (
-    <>
-      <label htmlFor={id}>Do you like React?</label>
-      <input id={id} type="checkbox" name="react" />
-    </>
-  );
+    const id = useId()
+    return (
+        <>
+            <label htmlFor={id}>Do you like React?</label>
+            <input id={id} type="checkbox" name="react" />
+        </>
+    )
 }
 ```
