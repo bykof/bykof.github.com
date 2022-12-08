@@ -8,9 +8,9 @@ Different hooks have been introduced to React: Basic hooks and additional hooks
 
 The basic hooks are:
 
--   useState
--   useEffect
--   useContext
+- useState
+- useEffect
+- useContext
 
 ### State Hook
 
@@ -89,16 +89,16 @@ To watch for changes and do a sideeffect (not computing a value or not preparing
 
 Additional Hooks can be used to express specific statements or to speed up your code.
 
--   useReducer
--   useCallback
--   useMemo
--   useRef
--   useImperativeHandle
--   useLayoutEffect
--   useDebugValue
--   useDeferredValue
--   useTransition
--   useId
+- useReducer
+- useCallback
+- useMemo
+- useRef
+- useImperativeHandle
+- useLayoutEffect
+- useDebugValue
+- useDeferredValue
+- useTransition
+- useId
 
 #### Reducer
 
@@ -194,11 +194,11 @@ Updates scheduled inside useLayoutEffect will be flushed synchronously, before t
 
 ```js
 function useFriendStatus(friendID) {
-    const [isOnline, setIsOnline] = useState(null)
+  const [isOnline, setIsOnline] = useState(null);
 
-    // Show a label in DevTools next to this Hook  // e.g. "FriendStatus: Online"
-    useDebugValue(isOnline ? 'Online' : 'Offline')
-    return isOnline
+  // Show a label in DevTools next to this Hook  // e.g. "FriendStatus: Online"
+  useDebugValue(isOnline ? "Online" : "Offline");
+  return isOnline;
 }
 ```
 
@@ -208,22 +208,22 @@ function useFriendStatus(friendID) {
 
 ```js
 function Typeahead() {
-    const query = useSearchQuery('')
-    const deferredQuery = useDeferredValue(query)
+  const query = useSearchQuery("");
+  const deferredQuery = useDeferredValue(query);
 
-    // Memoizing tells React to only re-render when deferredQuery changes,
-    // not when query changes.
-    const suggestions = useMemo(
-        () => <SearchSuggestions query={deferredQuery} />,
-        [deferredQuery],
-    )
+  // Memoizing tells React to only re-render when deferredQuery changes,
+  // not when query changes.
+  const suggestions = useMemo(
+    () => <SearchSuggestions query={deferredQuery} />,
+    [deferredQuery]
+  );
 
-    return (
-        <>
-            <SearchInput query={query} />
-            <Suspense fallback="Loading results...">{suggestions}</Suspense>
-        </>
-    )
+  return (
+    <>
+      <SearchInput query={query} />
+      <Suspense fallback="Loading results...">{suggestions}</Suspense>
+    </>
+  );
 }
 ```
 
@@ -248,12 +248,12 @@ function Typeahead() {
 
 ```js
 function Checkbox() {
-    const id = useId()
-    return (
-        <>
-            <label htmlFor={id}>Do you like React?</label>
-            <input id={id} type="checkbox" name="react" />
-        </>
-    )
+  const id = useId();
+  return (
+    <>
+      <label htmlFor={id}>Do you like React?</label>
+      <input id={id} type="checkbox" name="react" />
+    </>
+  );
 }
 ```

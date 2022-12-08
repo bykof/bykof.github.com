@@ -3,6 +3,7 @@
 On this website you will find lectures about:
 
 -   [Webengineering](https://bykof.github.io/webengineering-course/)
+-   [React Workshop](./react/getting_started.md)
 -   [Go Lectures](./golang/index.md)
     -   [Go Fundamentals](./golang/golang-fundamentals/introduction.md)
     -   [Dependency Injection in Go](./golang/dependency_injection/index.md)

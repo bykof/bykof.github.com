@@ -6,435 +6,282 @@ Props is a special keyword in React that stands for properties and is being used
 
 I hope you are familiar with the JavaScript function. Most of the time, functions with parameters are smart and they can take dynamic data likewise props is a way we pass data or parameter to a component. Let's see the difference between a function and a component.
 
-```js
-// function syntax
-const getUserInfo = (firstName, lastName, country) => {
-  return `${firstName} ${lastName}. Lives in ${country}.`;
-};
+In a React component function you will always get the first parameter as an object, which represents your
 
-// calling a functons
-getUserInfo("Asabeneh", "Yeteyeh", "Finland");
+!!! example
 
-//component syntax
+    ```js
+    const getUserInfo = (firstName, lastName, country) => {
+        return `${firstName} ${lastName}. Lives in ${country}.`
+    }
+    const userInfo = getUserInfo('Asabeneh', 'Yeteyeh', 'Finland')
 
-// User component, component should start with an uppercase
-function User(props) {
-  return (
-    <div>
-      <h1>
-        {props.firstName}
-        {props.lastName}
-      </h1>
-      <small>{props.country}</small>
-    </div>
-  );
-}
-// calling or instantiating a component, this component has three properties and we call them props:firstName, lastName, country
-<User firstName={"Asabeneh"} lastName={"Yetayeh"} country={"Finland"} />;
-```
+    function User(props) {
+        return (
+            <div>
+                <h1>
+                    {props.firstName}
+                    {props.lastName}
+                </h1>
+                <small>{props.country}</small>
+            </div>
+        )
+    }
 
-In the previous section, we injected data as follows and today we will change these data to props.
+    const renderedUser = (
+        <User firstName={'Asabeneh'} lastName={'Yetayeh'} country={'Finland'} />
+    )
+    ```
 
-```js
-const welcome = "Welcome to 30 Days Of React";
-const title = "Getting Started React";
-const subtitle = "JavaScript Library";
-const author = {
-  firstName: "Asabeneh",
-  lastName: "Yetayeh",
-};
-const date = "Oct 4, 2020";
+## Children
 
-// Header Component
-function Header() {
-  return (
-    <header>
-      <div className="header-wrapper">
-        <h1>{welcome}</h1>
-        <h2>{title}</h2>
-        <h3>{subtitle}</h3>
-        <p>
-          {author.firstName} {author.lastName}
-        </p>
-        <small>{date}</small>
-      </div>
-    </header>
-  );
-}
-```
-
-Instead of injecting data we can also pass the data as props. React props are similar to parameters in functions.
-
-## Props object
-
-React props is an object which you get instantly when you create a React component. Before we pass properties to the component, let's check what do we get in the props object.
-
-```js
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-function Header(props) {
-  console.log(props); // empty object, {}
-  return (
-    <header>
-      <div>
-        <h1>{}</h1>
-        <h2>{}</h2>
-        <h3>{}</h3>
-        <p>
-          {} {}
-        </p>
-        <small>{}</small>
-      </div>
-    </header>
-  );
-}
-
-function App() {
-  return (
-    <div>
-      <Header />
-    </div>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-```
-
-In the above console.log(props), you would get an empty object({}). That means if you do not pass any attributes or properties when you instantiate the component, the props will be empty otherwise it will be populated with the data you passed as attributes and the proper name of these attributes are props.
-
-Let's start with a simple example. In the example below, the welcome string has been passed as props in the Header components.
-
-```js
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-function Header(props) {
-  console.log(props); // empty object, {}
-  return (
-    <header>
-      <div>
-        <h1>{props.welcome}</h1>
-        <p>
-          {props.firstName} {props.lastName}
-        </p>
-      </div>
-    </header>
-  );
-}
-
-function App() {
-  return (
-    <div>
-      <Header
-        welcome={"Welcome to Webengineering"}
-        author={{ firstName: "Michael", lastName: "Bykovski" }}
-      />
-    </div>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-```
-
-Now, when you do console.log(props) you should get the following object, that means the welcome property we passed to the Header component can be found inside the props object.
-
-```js
-{
-  "welcome": "Welcome to Webengineering",
-  "author": {
-    "firstName": "Michael",
-    "lastName": "Bykovski"
-  }
-}
-```
-
-As you can see in the above code, we passed only single props to Header component, the welcome props. A component can have one or many props. Props could be different data types. It could be a string, number, boolean, array, object or a function. We will cover different kind of props in the next sections.
-
-### Different data type props
+## Different data type props
 
 ### String props type
 
 The data type of the props we pass an attribute to the component is a string.
 
-```js
-import React from "react";
-import ReactDOM from "react-dom/client";
+!!! example
 
-function App(props) {
-  return <div>{props.text}</div>;
-}
+    ```js
+    function Component(props) {
+        return <div>{props.text}</div>
+    }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App text={"Hello World!"} />
-  </React.StrictMode>
-);
-```
+    const component = <Component text={'Hello World!'} />
+    ```
 
-Since you are a JavaScript ninja by now, you know what do do with this object.
+    the result is:
 
-As you can see from the above example, the value of the props are written statically. However, if we want to apply some logic it is hard to implement with statically written data, so it will be better to use a variable as props. Let's see the following example:
-
-```js
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-function App(props) {
-  return <div>{props.text}</div>;
-}
-
-const text = "Hello World";
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App text={text} />
-  </React.StrictMode>
-);
-```
+    ```html
+    <div>Hello World!</div>
 
 ### Number props type
 
 Let's use a number props to a component
 
-```js
-import React from "react";
-import ReactDOM from "react-dom/client";
+!!! example
 
-function App(props) {
-  return <div>{props.year}</div>;
-}
+    ```js
+    function Component(props) {
+        return <div>{props.year}</div>
+    }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App year={2022} />
-  </React.StrictMode>
-);
-```
+    const component = <Component year={2022} />
+    ```
+
+    the result is:
+
+    ```html
+    <div>2022</div>
+    ```
 
 ### Boolean props type
 
 We can pass boolean data types to a React component.
 
-```js
-import React from "react";
-import ReactDOM from "react-dom/client";
+!!! example
 
-function App(props) {
-  return <div>{props.show ? "Is shown" : "Not shown"}</div>;
-}
+    ```js
+    function Component(props) {
+        return <div>{props.isChecked}</div>
+    }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App show={true} />
-  </React.StrictMode>
-);
-```
+    const component = <Component isChecked={true} />
+    ```
+
+    the result is:
+
+    ```html
+    <div></div>
+    ```
+
+Boolean types do not get rendered with their `.toString()` method.
+Therefore you have to set the value, which should be rendered.
+
+!!! example
+
+    ```js
+    function Component(props) {
+        return <div>{props.isChecked ? 'is checked' : 'not checked'}</div>
+    }
+
+    const component = <Component isChecked={true} />
+    ```
+
+    the result is:
+
+    ```html
+    <div>is checked</div>
+    ```
 
 ### Array props type
 
 In programming arrays and objects are the most frequently used data structure to solve different problems and store data in a more structured way. Therefore, we encounter data in the form of an array quite often. Let's pass an array as props to a component
 
-```js
-import React from "react";
-import ReactDOM from "react-dom/client";
+!!! example
 
-function App(props) {
-  return <div>{props.skills}</div>;
-}
+    ```js
+    function Component(props) {
+        return <div>{props.skills}</div>
+    }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App skills={["HTML", "CSS", "JavaScript"]} />
-  </React.StrictMode>
-);
-```
+    const component = <Component skills={['HTML', 'CSS', 'JavaScript']} />
+    ```
 
-If you see the result on the browser, the skills elements needs formatting. Therefore before we render, it should have some elements between each skill. To modify the array and to add a li element we can use map method. You should be very familiar with the functional programming map, filter and reduce to feel good at React if not please go back to day 1 JavaScript refresher. Let's apply map to modify the array.
+    the result is:
 
-```js
-import React from "react";
-import ReactDOM from "react-dom/client";
+    ```html
+    <div>HTMLCSSJavaScript</div>
+    ```
 
-function App(props) {
-  return (
+In this case, react tries to iterate over the array and render each element.
+In the example above we are lucky, because we have only strings. If we would use something not renderable like a boolean, React wouldn't show anything.
+
+!!! example
+
+    ```js
+    function Component(props) {
+        return <div>{props.skills}</div>
+    }
+
+    const component = <Component skills={[true, false, true]} />
+    ```
+
+    the result is:
+
+    ```html
+    <div></div>
+    ```
+
+In the most cases you would wrap each element in a HTML element or prerender the given array elements:
+
+!!! example "Wrap each array element in a HTML element"
+
+    ```js
+    function Component(props) {
+        return <ul>{props.skills.map((skill) => <li>{skill}</li>)}</ul>
+    }
+
+    const component = <Component skills={['HTML', 'CSS', 'JavaScrip']} />
+    ```
+
+    the result is:
+
+    ```html
     <ul>
-      {props.skills.map((skill) => (
-        <li>{skill}</li>
-      ))}
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
     </ul>
-  );
-}
+    ```
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App skills={["HTML", "CSS", "JavaScript"]} />
-  </React.StrictMode>
-);
-```
+!!! example "Render prerendered JSX element"
 
-We will go in-depth about list and map in other sections. Now, let's see an object as a props.
+    ```js
+    function Component(props) {
+        return <ul>{props.skills}</ul>
+    }
+
+    const component = <Component skills={[<li>HTML</li>, <li>CSS</li>, <li>JavaScript</li>]} />
+    ```
+
+    the result is:
+
+    ```html
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+    ```
 
 ### Object props type
 
 We may pass an object as props to a React component. Let's see an example.
-We can change the previous Header props to object. For the time being let's change a few properties for better understanding.
 
-```js
-import React from "react";
-import ReactDOM from "react-dom/client";
+!!! example
 
-function App(props) {
-  return (
-    <div>
-      {props.author.firstName} {props.author.age}
-    </div>
-  );
-}
+    ```js
+    function Component(props) {
+        return <p>{props.user.firstName} {props.user.lastName}</p>
+    }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App author={{ firstName: "Michael", age: 28 }} />
-  </React.StrictMode>
-);
-```
+    const component = <Component user={{firstName: 'Test', lastName: 'Tester'}} />
+    ```
 
-When we use an object as props we usually destructure the data to access the values. Destructuring makes our code easy to read. We will soon see the destructuring of props but before that let's see function as props for a React component.
+    the result is:
+
+    ```html
+    <p>Test Tester</p>
+    ```
+
+When we use an object as props we usually destructure the data to access the values. Destructuring makes our code easy to read.
+
+!!! example
+
+    ```js
+    function Component(props) {
+        const {firstName, lastName} = props.user
+        return <p>{firstName} {lastName}</p>
+    }
+
+    const component = <Component user={{firstName: 'Test', lastName: 'Tester'}} />
+    ```
+
+    the result is:
+
+    ```html
+    <p>Test Tester</p>
+    ```
 
 ### Function prop types
 
-We can pass a function as props type to a React component. Let's see some examples
+We can pass a function as props type to a React component. Functions passed in React Compoents are often used as callbacks
 
-```js
-import React from "react";
-import ReactDOM from "react-dom/client";
+Let's see some examples
 
-function App(props) {
-  return <button onClick={props.onClick}>Click</button>;
-}
+!!! example
 
-const sayHi = (event) => {
-  console.log(event);
-  console.log("Hi");
-};
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App onClick={sayHi} />
-  </React.StrictMode>
-);
-```
+    ```js
+    function Component(props) {
+        return <p>{props.callback()}</p>
+    }
 
-Even we can write a function inside the curly bracket
+    const component = <Component callback={() => 'Hello World'} />
+    ```
 
-```js
-import React from "react";
-import ReactDOM from "react-dom/client";
+    the result is:
 
-function App(props) {
-  return <button onClick={props.onClick}>Click</button>;
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App
-      onClick={(event) => {
-        console.log(event);
-        console.log("Hi");
-      }}
-    />
-  </React.StrictMode>
-);
-```
-
-## Destructuring props
-
-By now, I believe you are a JavaScript ninja and you know about destructing arrays and objects. Destructuring code to some extent makes easy to read. Let us destructure the props in Header component. Everything we passed as props is stored in props object. Therefore, props is an object and we can destructure the properties. Let's destructure some of the props we wrote in object props example. We can destructure in many ways:
-
-1. Step by step destructuring
-
-```js
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-function App(props) {
-  const {
-    author: { firstName, age },
-  } = props;
-  return (
-    <div>
-      {firstName} {age}
-    </div>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App author={{ firstName: "Michael", age: 28 }} />
-  </React.StrictMode>
-);
-```
-
-2. Destructuring in one line
-
-```js
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-function App({ author: { firstName, age } }) {
-  return (
-    <div>
-      {firstName} {age}
-    </div>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App author={{ firstName: "Michael", age: 28 }} />
-  </React.StrictMode>
-);
-```
+    ```html
+    <p>Hello World</p>
+    ```
 
 ## Default Props
 
 You can define default or optional props, by assigning values or defining undefined to them:
 
-```js
-import React from "react";
-import ReactDOM from "react-dom/client";
+!!! example
 
-function App({ author: { firstName = "Default", age = null } }) {
-  return (
-    <div>
-      {firstName} {age === null ? "No age defined" : age}
-    </div>
-  );
-}
+    ```js
+    function Component({firstName = 'Default', lastName='Default'}) {
+      return (
+        <p>
+          {firstName} {lastName}
+        </p>
+      );
+    }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App author={{ firstName: "Michael" }} />
-  </React.StrictMode>
-);
-```
+    const component = (
+      <Component firstName={'Test'} lastName={'Tester'} />
+    );
+
+    const defaultComponent = <Component />;
+    ```
+
+    the result is:
+
+    ```html
+    <p>Test Tester</p>
+    <p>Default Default</p>
+    ```

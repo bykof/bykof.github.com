@@ -6,8 +6,8 @@ An event is an action or occurrence recognized by a software. To make an event m
 
 Handling events in React is very similar to handling elements on DOM elements using pure JavaScript. Some of the syntax difference between handling event in React and pure JavaScript:
 
-- React events are named using camelCase, rather than lowercase.
-- With JSX you pass a function as the event handler, rather than a string.
+-   React events are named using camelCase, rather than lowercase.
+-   With JSX you pass a function as the event handler, rather than a string.
 
 Let's see some examples to understand event handling.
 
@@ -16,31 +16,31 @@ Event handling in HTML
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-  </head>
-  <body>
-    <button>onclick="greetPeople()">Greet People</button>
-    <script>
-      const greetPeople = () => {
-        alert("Welcome");
-      };
-    </script>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <button>onclick="greetPeople()">Greet People</button>
+        <script>
+            const greetPeople = () => {
+                alert('Welcome')
+            }
+        </script>
+    </body>
 </html>
 ```
 
 In React, it is slightly different
 
 ```js
-import React from "react";
+import React from 'react'
 // if it is functional components
 const App = () => {
-  const greetPeople = (event) => {
-    alert("Welcome");
-  };
-  return <button onClick={greetPeople}>Welcome</button>;
-};
+    const greetPeople = (event) => {
+        alert('Welcome')
+    }
+    return <button onClick={greetPeople}>Welcome</button>
+}
 ```
 
 Another difference between HTML and React event is that you cannot return false to prevent default behavior in React.
@@ -50,7 +50,7 @@ Plain HTML
 
 ```html
 <a href="#" onclick="console.log('The link was clicked.'); return false">
-  Click me
+    Click me
 </a>
 ```
 
@@ -62,3 +62,23 @@ However, in React it could be as follows:
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
+
+## Overview
+
+| Event Type/Category: | Events:                                                   | Event Specific Properties:     |
+| -------------------- | --------------------------------------------------------- | ------------------------------ |
+| Clipboard            | onCopy, onCut, onPaste                                    | DOMDataTransfer, clipboardData |
+| Composition          | onCompositionEnd, onCompositionStart, onCompositionUpdate | data                           |
+| Keyboard             | onKeyDown, onKeyPress, onKeyUp                            | altKey, charCode, ctrlKey, getModifierState(key), key, keyCode, locale, location, metaKey, repeat, shiftKey, which |
+| Focus | onChange, onInput, onSubmit | DOMEventTarget, relatedTarget |
+| Form | onFocus, onBlur | |
+| Mouse | onClick, onContextMenu, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp | altKey, button, buttons, clientX, clientY, ctrlKey, getModifierState(key), metaKey, pageX, pageY, DOMEventTarget relatedTarget, screenX, screenY, shiftKey |
+| Selection | onSelect | |
+| Touch | onTouchCancel, onTouchEnd, onTouchMove, onTouchStart | altKey DOMTouchList changedTouches, ctrlKey, getModifierState(key), metaKey, shiftKey, DOMTouchList targetTouches, DOMTouchList touches |
+| UI | onScroll | detail, DOMAbstractView view |
+| Wheel | onWheel | deltaMode, deltaX, deltaY, deltaZ |
+| Media | onAbort, onCanPlay, onCanPlayThrough, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onLoadedData, onLoadedMetadata, onLoadStart, onPause, onPlay, onPlaying, onProgress, onRateChange, onSeeked, onSeeking, onStalled, onSuspend, onTimeUpdate, onVolumeChange, onWaiting | |
+| Image | onLoad, onError | |
+| Animation | onAnimationStart, onAnimationEnd, onAnimationIteration | animationName, pseudoElement, elapsedTime |
+| Transition | onTransitionEnd | propertyName, pseudoElement, elapsedTime |
+|

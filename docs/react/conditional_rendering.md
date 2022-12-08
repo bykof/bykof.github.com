@@ -4,19 +4,81 @@ As we can understand from the term, conditional rendering is a way to render dif
 
 ## Conditional Rendering using If and Else statement
 
+The problem with using if and else statements is that you are not allowed to use hooks afterwards.
 
+```js
+const Component = ({ isAllowed }) => {
+  if (isAllowed) {
+    return <p>You are allowed</p>;
+  }
+  return <p>You are not allowed!</p>;
+};
+```
 
-## Exercises
+An if- and else statement inside a React component is done mostly at the bottom of the component.
+See an example here:
 
-### Exercises: Level 1
+```js
+const Component = () => {
+  const { isLoggedIn, isLoading } = React.useContext(AuthenticationContext);
+  const [someState, setSomeState] = React.useState(false);
 
-1. What is conditional rendering?
-2. How do you implement conditional rendering?
-3. Which method of conditional rendering do you prefer to use?
+  if (!isLoggedIn) {
+    return <p>You are not allowed to see this</p>;
+  }
 
-### Exercises: Level 2
+  if (!isLoading) {
+    return <p>Loading...</p>;
+  }
 
-1. Make a single page application which changes the body of the background based on the season of the year(Autumn, Winter, Spring, Summer)
-2. Make a single page application which change the body of the background based on the time of the day(Morning, Noon, Evening, Night)
+  return (
+    <p
+      onClick={() => {
+        setSomeState(!someState);
+      }}
+    >
+      Currently its: {someState}
+    </p>
+  );
+};
+```
 
-### Exercises: Level 3
+## Ternary operator
+
+In most cases you want to switch inside your component between different views.
+Therefore you will use the [conditional operator](https://javascript.info/ifelse#conditional-operator) the [OR operator](https://javascript.info/ifelse#conditional-operator) or the [AND Operator](https://javascript.info/ifelse#conditional-operator).
+
+Here are some examples:
+
+```js
+const Component = ({ isAllowed }) => {
+  return (
+    <div>
+      <h1>Here is a title</h1>
+      <p>You are {isAllowed ? "allowed" : "not allowed"} to enter</p>
+    </div>
+  );
+};
+```
+
+```js
+const Component = ({ isAllowed }) => {
+  return (
+    <div>
+      <h1>Here is a title</h1>
+      <p>You are {!isAllowed && "not"} allowed to enter</p>
+    </div>
+  );
+};
+```
+
+```js
+const Component = ({ value, defaultValue }) => {
+  return (
+    <div>
+      <h1>Here is a title</h1>
+      <p>{value || defaultValue}</p>
+    </div>
+  );
+};
+```

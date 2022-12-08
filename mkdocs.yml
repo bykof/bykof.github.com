@@ -5,12 +5,13 @@ nav:
           - index.md
     - React:
           - react/getting_started.md
+          - react/jsx.md
           - react/setting_up.md
           - react/components.md
           - react/props.md
-          - react/map_list_keys.md
-          - react/hooks.md
           - react/events.md
+          - react/conditional_rendering.md
+          - react/hooks.md
           - react/forms.md
           - react/component_lifecycles.md
           - react/controlled_versus_uncontrolled.md
@@ -20,6 +21,7 @@ nav:
           - react/react-router.md
           - react/chakra-ui.md
           - react/project_structure.md
+          - react/openapi.md
     - JavaScript:
           - javascript/index.md
           - BYOT (Build Your Own Tool):
@@ -102,6 +104,7 @@ markdown_extensions:
     - md_in_html
     - admonition
     - pymdownx.highlight:
+          use_pygments: true
           anchor_linenums: true
     - pymdownx.inlinehilite
     - pymdownx.snippets
