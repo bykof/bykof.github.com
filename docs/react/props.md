@@ -1,7 +1,7 @@
 # Props
 
 ## What is props?
-
+w
 Props is a special keyword in React that stands for properties and is being used to pass data from one component to another and mostly from parent component to child component. We can say props is a data carrier or a means to transport data.
 
 I hope you are familiar with the JavaScript function. Most of the time, functions with parameters are smart and they can take dynamic data likewise props is a way we pass data or parameter to a component. Let's see the difference between a function and a component.
@@ -11,11 +11,14 @@ In a React component function you will always get the first parameter as an obje
 !!! example
 
     ```js
+
+    // JavaScript
     const getUserInfo = (firstName, lastName, country) => {
         return `${firstName} ${lastName}. Lives in ${country}.`
     }
-    const userInfo = getUserInfo('Asabeneh', 'Yeteyeh', 'Finland')
+    const userInfo = getUserInfo('Test', 'Tester', 'Finland')
 
+    // JSX
     function User(props) {
         return (
             <div>
@@ -29,17 +32,54 @@ In a React component function you will always get the first parameter as an obje
     }
 
     const renderedUser = (
-        <User firstName={'Asabeneh'} lastName={'Yetayeh'} country={'Finland'} />
+        <User firstName={'Test'} lastName={'Tester'} country={'Finland'} />
     )
     ```
 
+<figure markdown>
+  ![React passing props into JSX Element](../images/props.svg)
+  <figcaption>React passing `props` into JSX Element</figcaption>
+</figure>
+
 ## Children
+
+If you nest JSX Elements you can decide how to wrap the child elements of your component.
+The word `children` is a reserved keyword to pass in the child elements into your component.
+You can pick elements and render them separately or render them all at one (which is the most common case)
+
+!!! example
+
+    ```js
+    function User(props) {
+        return (
+            <div>
+            {props.children}
+            </div>
+        )
+    }
+
+    const renderedUser = (
+        <User>
+            <p>Test</p>
+            <p>Tester</p>
+        </User>
+    )
+    ```
+
+    the result is:
+
+    ```html
+    <div>
+        <p>Test</p>
+        <p>Tester</p>
+    </div>
+    ```
 
 ## Different data type props
 
 ### String props type
 
-The data type of the props we pass an attribute to the component is a string.
+Strings are easy to pass into components
 
 !!! example
 
@@ -55,6 +95,7 @@ The data type of the props we pass an attribute to the component is a string.
 
     ```html
     <div>Hello World!</div>
+    ```
 
 ### Number props type
 

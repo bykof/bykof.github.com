@@ -6,23 +6,27 @@ To create HTML elements in React we do not use the `createElement()` instead we 
 
 In conclusion with Babel this:
 
-```js
-const a = <h1 id="123">test</h1>
-```
+!!! example
+
+    ```js
+    const a = <h1 id="123">test</h1>
+    ```
 
 becomes this:
 
-```js
-'use strict'
+!!! example
 
-const a = /*#__PURE__*/ React.createElement(
-    'h1',
-    {
-        id: '123',
-    },
-    'test',
-)
-```
+    ```js
+    'use strict'
+
+    const a = /*#__PURE__*/ React.createElement(
+        'h1',
+        {
+            id: '123',
+        },
+        'test',
+    )
+    ```
 
 JSX is **stricter** than html.
 If you write for example `<br>` in HTML this becomes valid.
@@ -30,9 +34,11 @@ If you write the same in JSX, it will throw an error.
 
 Therefore you have to close every element properly:
 
-```js
-<br />
-```
+!!! example
+
+    ```js
+    <br />
+    ```
 
 ## Expressions in JSX
 
@@ -88,10 +94,12 @@ For example, you can also use the result of a function inside of jsx:
 
 You can specify attributes in JSX:
 
-```js
-const h1Id = 'testId'
-const element = <h1 id={h1Id}>Test</h1>
-```
+!!! example
+
+    ```js
+    const h1Id = 'testId'
+    const element = <h1 id={h1Id}>Test</h1>
+    ```
 
 !!! warning
 
@@ -104,14 +112,16 @@ const element = <h1 id={h1Id}>Test</h1>
 We discussed simple elements for now.
 But when HTML elements can have children, JSX elements can have them too:
 
-```js
-const container = (
-    <div>
-        <h1>Hello World</h1>
-        <p>Some text</p>
-    </div>
-)
-```
+!!! example
+
+    ```js
+    const container = (
+        <div>
+            <h1>Hello World</h1>
+            <p>Some text</p>
+        </div>
+    )
+    ```
 
 !!! warning
 
@@ -188,10 +198,12 @@ For example:
 If you want to add a style to a JSX element, you can use `className` (instead of the html `class`) or `style`.
 Please note, that `style` will be overwritten by Babel so that you cannot use just a string, but you use an object:
 
-```js
-const container = (
-    <p style={{ color: 'red', fontSize: '' }} className={'bordered'}>
-        abc
-    </p>
-)
-```
+!!! example
+
+    ```js
+    const container = (
+        <p style={{ color: 'red', fontSize: '' }} className={'bordered'}>
+            abc
+        </p>
+    )
+    ```

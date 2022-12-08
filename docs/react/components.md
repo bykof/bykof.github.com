@@ -25,103 +25,113 @@ Using a JavaScript function, we can make a functional React component.
 
 This example is the most simple React Component you can image:
 
-```js
-function ComponentName() {
-    return <p>Content</p>
-}
-```
+!!! example
+
+    ```js
+    function ComponentName() {
+        return <p>Content</p>
+    }
+    ```
 
 As we know already you can define variables and set the values in JSX:
 
-```js
-function Component() {
-    const user = {
-        firstName: 'Test',
-        lastName: 'Tester',
-    }
+!!! example
 
-    return (
-        <>
-            <p>{user.firstName}</p>
-            <p>{user.lastName}</p>
-        </>
-    )
-}
-```
+    ```js
+    function Component() {
+        const user = {
+            firstName: 'Test',
+            lastName: 'Tester',
+        }
+
+        return (
+            <>
+                <p>{user.firstName}</p>
+                <p>{user.lastName}</p>
+            </>
+        )
+    }
+    ```
 
 Also you can define styles in the Component:
 
-```js
-function Component() {
-    const user = {
-        firstName: 'Test',
-        lastName: 'Tester',
-    }
-    const firstNameStyles = {
-        fontSize: '24px',
-    }
+!!! example
 
-    const lastNameStyles = {
-        fontSize: '18px',
-        color: 'red',
-    }
+    ```js
+    function Component() {
+        const user = {
+            firstName: 'Test',
+            lastName: 'Tester',
+        }
+        const firstNameStyles = {
+            fontSize: '24px',
+        }
 
-    return (
-        <>
-            <p style={firstNameStyles}>First Name: {user.firstName}</p>
-            <p style={lastNameStyles}>{user.lastName}</p>
-        </>
-    )
-}
-```
+        const lastNameStyles = {
+            fontSize: '18px',
+            color: 'red',
+        }
+
+        return (
+            <>
+                <p style={firstNameStyles}>First Name: {user.firstName}</p>
+                <p style={lastNameStyles}>{user.lastName}</p>
+            </>
+        )
+    }
+    ```
 
 If you run the example above in Babel you get following JavaScript Code:
 
-```js
-'use strict'
+!!! example
 
-function Component() {
-    const user = {
-        firstName: 'Test',
-        lastName: 'Tester',
+    ```js
+    'use strict'
+
+    function Component() {
+        const user = {
+            firstName: 'Test',
+            lastName: 'Tester',
+        }
+        const firstNameStyles = {
+            fontSize: '24px',
+        }
+        const lastNameStyles = {
+            fontSize: '18px',
+            color: 'red',
+        }
+        return /*#__PURE__*/ React.createElement(
+            React.Fragment,
+            null,
+            /*#__PURE__*/ React.createElement(
+                'p',
+                {
+                    style: firstNameStyles,
+                },
+                'First Name: ',
+                user.firstName,
+            ),
+            /*#__PURE__*/ React.createElement(
+                'p',
+                {
+                    style: lastNameStyles,
+                },
+                user.lastName,
+            ),
+        )
     }
-    const firstNameStyles = {
-        fontSize: '24px',
-    }
-    const lastNameStyles = {
-        fontSize: '18px',
-        color: 'red',
-    }
-    return /*#__PURE__*/ React.createElement(
-        React.Fragment,
-        null,
-        /*#__PURE__*/ React.createElement(
-            'p',
-            {
-                style: firstNameStyles,
-            },
-            'First Name: ',
-            user.firstName,
-        ),
-        /*#__PURE__*/ React.createElement(
-            'p',
-            {
-                style: lastNameStyles,
-            },
-            user.lastName,
-        ),
-    )
-}
-```
+    ```
 
 As you see, you actually call `React.createElement` and pass in the element name + the variables you defined.
 
 The result of the example is:
 
-```html
-<p style="font-size: 24px;">First Name: Test</p>
-<p style="font-size: 18px; color: red;">Tester</p>
-```
+!!! example
+
+    ```html
+    <p style="font-size: 24px;">First Name: Test</p>
+    <p style="font-size: 18px; color: red;">Tester</p>
+    ```
 
 ## Nesting React Components
 
@@ -180,21 +190,23 @@ Let's check a simple example first:
 
 if you check the Babel output this is what happens:
 
-```js
-'use strict'
+!!! example
 
-function Text() {
-    return /*#__PURE__*/ React.createElement('p', null, 'Some Text')
-}
-function Wrapper() {
-    return /*#__PURE__*/ React.createElement(
-        React.Fragment,
-        null,
-        /*#__PURE__*/ React.createElement(Text, null),
-        /*#__PURE__*/ React.createElement(Text, null),
-        /*#__PURE__*/ React.createElement(Text, null),
-    )
-}
-```
+    ```js
+    'use strict'
+
+    function Text() {
+        return /*#__PURE__*/ React.createElement('p', null, 'Some Text')
+    }
+    function Wrapper() {
+        return /*#__PURE__*/ React.createElement(
+            React.Fragment,
+            null,
+            /*#__PURE__*/ React.createElement(Text, null),
+            /*#__PURE__*/ React.createElement(Text, null),
+            /*#__PURE__*/ React.createElement(Text, null),
+        )
+    }
+    ```
 
 The actual function `Text` gets inserted into `React.createElement`.

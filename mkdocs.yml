@@ -10,8 +10,8 @@ nav:
           - react/components.md
           - react/props.md
           - react/events.md
-          - react/conditional_rendering.md
           - react/hooks.md
+          - react/conditional_rendering.md
           - react/forms.md
           - react/component_lifecycles.md
           - react/controlled_versus_uncontrolled.md
