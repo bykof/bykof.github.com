@@ -82,13 +82,13 @@ Here are some examples:
 
 !!! example
 
-```js
-const Component = ({ value, defaultValue }) => {
-    return (
-        <div>
-            <h1>Here is a title</h1>
-            <p>{value || defaultValue}</p>
-        </div>
-    )
-}
-```
+    ```js
+    const Component = ({ value, defaultValue }) => {
+        return (
+            <div>
+                <h1>Here is a title</h1>
+                <p>{value || defaultValue}</p>
+            </div>
+        )
+    }
+    ```
