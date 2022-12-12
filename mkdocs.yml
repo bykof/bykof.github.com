@@ -79,6 +79,15 @@ nav:
                 - exercises/go/starter/index.md
                 - exercises/go/projects/school.md
                 - exercises/go/projects/product_service.md
+          - React:
+                - exercises/react/index.md
+                - exercises/react/components/index.md
+                - exercises/react/hooks/index.md
+                - exercises/react/forms/index.md
+                - exercises/react/context/index.md
+                - exercises/react/requests/index.md
+                - exercises/react/routing/index.md
+                - exercises/react/mantine/index.md
 
 theme:
     name: material
