@@ -19,7 +19,7 @@ nav:
           - react/custom_hooks.md
           - react/fetch_and_useQuery.md
           - react/react-router.md
-          - react/chakra-ui.md
+          - react/mantine.md
           - react/project_structure.md
           - react/openapi.md
     - JavaScript:

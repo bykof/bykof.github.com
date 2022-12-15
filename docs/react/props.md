@@ -1,7 +1,7 @@
 # Props
 
 ## What is props?
-w
+
 Props is a special keyword in React that stands for properties and is being used to pass data from one component to another and mostly from parent component to child component. We can say props is a data carrier or a means to transport data.
 
 I hope you are familiar with the JavaScript function. Most of the time, functions with parameters are smart and they can take dynamic data likewise props is a way we pass data or parameter to a component. Let's see the difference between a function and a component.
@@ -44,7 +44,8 @@ In a React component function you will always get the first parameter as an obje
 ## Children
 
 If you nest JSX Elements you can decide how to wrap the child elements of your component.
-The word `children` is a reserved keyword to pass in the child elements into your component.
+The word `children` is a **reserved keyword** to pass in the child elements into your component.
+
 You can pick elements and render them separately or render them all at one (which is the most common case)
 
 !!! example
@@ -119,7 +120,7 @@ Let's use a number props to a component
 
 ### Boolean props type
 
-We can pass boolean data types to a React component.
+We can pass boolean data types to a React component but **they do not get rendered**.
 
 !!! example
 
