@@ -256,6 +256,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bykof.github.io/react/browser-storages/</loc>
+         <lastmod>2022-12-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bykof.github.io/react/component_lifecycles/</loc>
          <lastmod>2022-12-19</lastmod>
          <changefreq>daily</changefreq>
