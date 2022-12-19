@@ -20,6 +20,7 @@ nav:
           - react/fetch_and_useQuery.md
           - react/component_structure.md
           - react/react-router.md
+          - react/browser-storages.md
           - react/mantine.md
           - react/project_structure.md
           - react/openapi.md

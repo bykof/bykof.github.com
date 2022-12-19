@@ -7,7 +7,7 @@ I think that, because I used it in three different React projects and it always 
 
 So here is the structure:
 
-!!!
+!!! example
 
     ```
     my-app/

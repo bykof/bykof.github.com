@@ -9,7 +9,7 @@ Let's first see an example:
     ```js
 
     export default function App({isLoggedIn, firstProp, children}) {
-    
+
     // FIRST use states
     const [state, setState] = React.useState(false);
 
@@ -20,7 +20,7 @@ Let's first see an example:
 
     // THIRD use or define callbacks
 
-    // First define useCallbacks, which will be passed into child componentd
+    // First define useCallbacks, which will be passed into child components
     const callback = React.useCallback(() => {
         ...
     }, [firstProp])
@@ -35,12 +35,12 @@ Let's first see an example:
         ...
     }, [firstProp])
 
-    // Fifth make hard conditions
+    // FIFTH make hard conditions
     if (!isLoggedIn) {
         return <p>Not allowed</p>
     }
 
-    // Sixth return the actual component
+    // SIXTH return the actual component
     return (
         <>
             <p>You are logged in</p>
