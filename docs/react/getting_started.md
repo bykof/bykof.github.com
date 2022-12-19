@@ -49,3 +49,18 @@ Why we choose to use React?
 -   open source
 -   High job opportunity
 -   most used JavaScript rendering library
+
+## IDE
+
+Which IDE should you choose?
+
+-   [Webstorm](https://www.jetbrains.com/webstorm/)
+-   [Visual Studio Code](https://code.visualstudio.com/)
+
+Good extensions for Visual Studio Code:
+
+-   [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+-   [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+-   [npm Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
+-   [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+-   [npm](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script)
