@@ -686,6 +686,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../component_structure/" class="md-nav__link">
+        Component Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../react-router/" class="md-nav__link">
         React Router
       </a>
@@ -700,8 +714,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../chakra-ui/" class="md-nav__link">
-        Chakra UI
+      <a href="../mantine/" class="md-nav__link">
+        Mantine
       </a>
     </li>
   
@@ -730,6 +744,20 @@
     <li class="md-nav__item">
       <a href="../openapi/" class="md-nav__link">
         OpenAPI (Swagger)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../popular-libraries/" class="md-nav__link">
+        Popular Libraries and other sources
       </a>
     </li>
   
@@ -1769,20 +1797,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exercises/react/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../exercises/react/components/" class="md-nav__link">
         Components / JSX
       </a>
@@ -1812,21 +1826,7 @@
   
     <li class="md-nav__item">
       <a href="../../exercises/react/forms/" class="md-nav__link">
-        JSX
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../exercises/react/context/" class="md-nav__link">
-        JSX
+        Forms
       </a>
     </li>
   
@@ -1840,7 +1840,21 @@
   
     <li class="md-nav__item">
       <a href="../../exercises/react/requests/" class="md-nav__link">
-        JSX
+        Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercises/react/context/" class="md-nav__link">
+        Context
       </a>
     </li>
   
@@ -1854,7 +1868,7 @@
   
     <li class="md-nav__item">
       <a href="../../exercises/react/routing/" class="md-nav__link">
-        JSX
+        Routing
       </a>
     </li>
   
@@ -1868,7 +1882,7 @@
   
     <li class="md-nav__item">
       <a href="../../exercises/react/mantine/" class="md-nav__link">
-        JSX
+        Mantine
       </a>
     </li>
   
@@ -2007,8 +2021,7 @@
 
 <h1 id="props">Props</h1>
 <h2 id="what-is-props">What is props?</h2>
-<p>w
-Props is a special keyword in React that stands for properties and is being used to pass data from one component to another and mostly from parent component to child component. We can say props is a data carrier or a means to transport data.</p>
+<p>Props is a special keyword in React that stands for properties and is being used to pass data from one component to another and mostly from parent component to child component. We can say props is a data carrier or a means to transport data.</p>
 <p>I hope you are familiar with the JavaScript function. Most of the time, functions with parameters are smart and they can take dynamic data likewise props is a way we pass data or parameter to a component. Let's see the difference between a function and a component.</p>
 <p>In a React component function you will always get the first parameter as an object, which represents your</p>
 <div class="admonition example">
@@ -2044,8 +2057,8 @@ Props is a special keyword in React that stands for properties and is being used
 </figure>
 <h2 id="children">Children</h2>
 <p>If you nest JSX Elements you can decide how to wrap the child elements of your component.
-The word <code>children</code> is a reserved keyword to pass in the child elements into your component.
-You can pick elements and render them separately or render them all at one (which is the most common case)</p>
+The word <code>children</code> is a <strong>reserved keyword</strong> to pass in the child elements into your component.</p>
+<p>You can pick elements and render them separately or render them all at one (which is the most common case)</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">User</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -2100,7 +2113,7 @@ You can pick elements and render them separately or render them all at one (whic
 </code></pre></div>
 </div>
 <h3 id="boolean-props-type">Boolean props type</h3>
-<p>We can pass boolean data types to a React component.</p>
+<p>We can pass boolean data types to a React component but <strong>they do not get rendered</strong>.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">Component</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>

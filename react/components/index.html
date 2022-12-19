@@ -456,13 +456,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#big-picture-of-components" class="md-nav__link">
-    Big picture of components
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#creating-react-components" class="md-nav__link">
     Creating React Components
   </a>
@@ -631,6 +624,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../component_structure/" class="md-nav__link">
+        Component Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../react-router/" class="md-nav__link">
         React Router
       </a>
@@ -645,8 +652,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../chakra-ui/" class="md-nav__link">
-        Chakra UI
+      <a href="../mantine/" class="md-nav__link">
+        Mantine
       </a>
     </li>
   
@@ -675,6 +682,20 @@
     <li class="md-nav__item">
       <a href="../openapi/" class="md-nav__link">
         OpenAPI (Swagger)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../popular-libraries/" class="md-nav__link">
+        Popular Libraries and other sources
       </a>
     </li>
   
@@ -1714,20 +1735,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exercises/react/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../exercises/react/components/" class="md-nav__link">
         Components / JSX
       </a>
@@ -1757,21 +1764,7 @@
   
     <li class="md-nav__item">
       <a href="../../exercises/react/forms/" class="md-nav__link">
-        JSX
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../exercises/react/context/" class="md-nav__link">
-        JSX
+        Forms
       </a>
     </li>
   
@@ -1785,7 +1778,21 @@
   
     <li class="md-nav__item">
       <a href="../../exercises/react/requests/" class="md-nav__link">
-        JSX
+        Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercises/react/context/" class="md-nav__link">
+        Context
       </a>
     </li>
   
@@ -1799,7 +1806,7 @@
   
     <li class="md-nav__item">
       <a href="../../exercises/react/routing/" class="md-nav__link">
-        JSX
+        Routing
       </a>
     </li>
   
@@ -1813,7 +1820,7 @@
   
     <li class="md-nav__item">
       <a href="../../exercises/react/mantine/" class="md-nav__link">
-        JSX
+        Mantine
       </a>
     </li>
   
@@ -1860,13 +1867,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#big-picture-of-components" class="md-nav__link">
-    Big picture of components
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#creating-react-components" class="md-nav__link">
     Creating React Components
   </a>
@@ -1896,17 +1896,7 @@
 
 
 <h1 id="components">Components</h1>
-<p>A React component is a small, reusable code, which is responsible for one part of the application UI. A React application is an aggregation of components. React can help us to build reusable components. The following diagram shows different components. All the components have different border colors. In React we assemble different components together to create an application. We use JavaScript functions or classes to make components. If we use a function, the component will be a functional component, but if we use a class, the component will be a class-based component.</p>
-<p>Components can be:</p>
-<ul>
-<li>Functional Component / Presentational Component / Stateless Component / Dumb Component</li>
-<li>Class Component / Container Component / Stateful Component / Smart Component</li>
-</ul>
-<p>The classification of components above does not work for the latest version of React, but it is good to know the former definition and how the previous versions work.</p>
-<p>So, let us change all the JSX to components. Components in React are JavaScript functions, that return a JSX. Component name must start with an uppercase, and if the name is two words, it should be CamelCase - a camel with two humps.</p>
-<p>In general class components will fade away in the future, therefore use <strong>only functional components</strong>!</p>
-<h2 id="big-picture-of-components">Big picture of components</h2>
-<p>In the previous section we agreed, that a website or an application is made of buttons, forms, texts, media objects, header, section, article and footer. If we have a million-dollar button, we can use this button all the time, instead of recreating it all over again, whenever we need a button. The same goes for input fields, forms, header or footer. That is where the power of the component comes. In the following diagram, the header, main and footer are components. Inside the main there is also a user card component and a text section component. All the different colors represent different components. How many colors do you see? Each color represent a single component. We have four components in this diagram, but they are reused multiple times.</p>
+<p>A React component is a small, reusable code, which is responsible for one part of the application UI. A React application is an aggregation of components. React can help us to build reusable components. The following diagram shows different components. All the components have different colors. In React we assemble different components together to create an application. We use JavaScript functions to make components. If we use a function, the component will be a functional component, but if we use a class, the component will be a class-based component.</p>
 <p><img alt="Components" src="../../images/components_example.jpg" /></p>
 <h2 id="creating-react-components">Creating React Components</h2>
 <p>Using a JavaScript function, we can make a functional React component.</p>
