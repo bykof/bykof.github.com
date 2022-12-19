@@ -8,9 +8,9 @@ Different hooks have been introduced to React: Basic hooks and additional hooks
 
 The basic hooks are:
 
-- useState
-- useEffect
-- useContext
+-   useState
+-   useEffect
+-   useContext
 
 ### State Hook
 
@@ -29,7 +29,85 @@ To use hooks, first we should import the `useState` hooks from react. The useSta
 
 If you use `useState` with primitive data types, there is no problem by using operators to set the state with the current value, like in our example above.
 
-But if you use non-primitive data types you can't just change the value and set it, you have to create a "new" object or copy the old one and set it:
+But if you use non-primitive data types you can't just change the value and set it.
+
+!!! note
+
+    The reason is that React compares object by strict equality `===`.
+
+    Strict equality works for strings, numbers and booleans.
+
+    For example for strings:
+
+    ```js
+    const one = 'one'
+    const anotherOne = 'one'
+    const two = 'two'
+
+    one === anotherOne
+    one !== two
+    ```
+
+    For example for numbers:
+
+    ```js
+    const one = 1
+    const anotherOne = 1
+    const two = 2
+
+    one === anotherOne
+    one !== two
+    ```
+
+    For example for booleans:
+
+    ```js
+    const one = true
+    const anotherOne = true
+    const two = false
+
+    one === anotherOne
+    one !== two
+    ```
+
+    ---
+
+    But it doesn't work for arrays, objects and functions (functions and arrays are objects under the hood), because JavaScript compares the memory address of the variable containing arrays, objects and functions.
+
+    For example for arrays:
+
+    ```js
+    const one = ['one']
+    const anotherOne = ['one']
+    const two = ['two']
+
+    one !== anotherOne
+    one !== two
+    ```
+
+    For example for objects:
+
+    ```js
+    const one = { one: 'value' }
+    const anotherOne = { one: 'value' }
+    const two = { two: 'value' }
+
+    one !== anotherOne
+    one !== two
+    ```
+
+    For example for functions:
+
+    ```js
+    const one = () => 'one'
+    const anotherOne = () => 'one'
+    const two = () => 'two'
+
+    one !== anotherOne
+    one !== two
+    ```
+
+You have to create a "new" object or copy the old one and set it.
 
 Here is a bad example, which won't work:
 
@@ -89,16 +167,16 @@ To watch for changes and do a sideeffect (not computing a value or not preparing
 
 Additional Hooks can be used to express specific statements or to speed up your code.
 
-- useReducer
-- useCallback
-- useMemo
-- useRef
-- useImperativeHandle
-- useLayoutEffect
-- useDebugValue
-- useDeferredValue
-- useTransition
-- useId
+-   useReducer
+-   useCallback
+-   useMemo
+-   useRef
+-   useImperativeHandle
+-   useLayoutEffect
+-   useDebugValue
+-   useDeferredValue
+-   useTransition
+-   useId
 
 #### Reducer
 
@@ -194,11 +272,11 @@ Updates scheduled inside useLayoutEffect will be flushed synchronously, before t
 
 ```js
 function useFriendStatus(friendID) {
-  const [isOnline, setIsOnline] = useState(null);
+    const [isOnline, setIsOnline] = useState(null)
 
-  // Show a label in DevTools next to this Hook  // e.g. "FriendStatus: Online"
-  useDebugValue(isOnline ? "Online" : "Offline");
-  return isOnline;
+    // Show a label in DevTools next to this Hook  // e.g. "FriendStatus: Online"
+    useDebugValue(isOnline ? 'Online' : 'Offline')
+    return isOnline
 }
 ```
 
@@ -208,22 +286,22 @@ function useFriendStatus(friendID) {
 
 ```js
 function Typeahead() {
-  const query = useSearchQuery("");
-  const deferredQuery = useDeferredValue(query);
+    const query = useSearchQuery('')
+    const deferredQuery = useDeferredValue(query)
 
-  // Memoizing tells React to only re-render when deferredQuery changes,
-  // not when query changes.
-  const suggestions = useMemo(
-    () => <SearchSuggestions query={deferredQuery} />,
-    [deferredQuery]
-  );
+    // Memoizing tells React to only re-render when deferredQuery changes,
+    // not when query changes.
+    const suggestions = useMemo(
+        () => <SearchSuggestions query={deferredQuery} />,
+        [deferredQuery],
+    )
 
-  return (
-    <>
-      <SearchInput query={query} />
-      <Suspense fallback="Loading results...">{suggestions}</Suspense>
-    </>
-  );
+    return (
+        <>
+            <SearchInput query={query} />
+            <Suspense fallback="Loading results...">{suggestions}</Suspense>
+        </>
+    )
 }
 ```
 
@@ -248,12 +326,12 @@ function Typeahead() {
 
 ```js
 function Checkbox() {
-  const id = useId();
-  return (
-    <>
-      <label htmlFor={id}>Do you like React?</label>
-      <input id={id} type="checkbox" name="react" />
-    </>
-  );
+    const id = useId()
+    return (
+        <>
+            <label htmlFor={id}>Do you like React?</label>
+            <input id={id} type="checkbox" name="react" />
+        </>
+    )
 }
 ```

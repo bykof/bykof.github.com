@@ -38,7 +38,7 @@ const users = [
 ]
 ```
 
-And create the following website with React.js by using React components.
+And create the following website with React.js by using React components:
 
 <figure markdown>
   ![Image title](./example.png)

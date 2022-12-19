@@ -18,10 +18,12 @@ nav:
           - react/context.md
           - react/custom_hooks.md
           - react/fetch_and_useQuery.md
+          - react/component_structure.md
           - react/react-router.md
           - react/mantine.md
           - react/project_structure.md
           - react/openapi.md
+          - react/popular-libraries.md
     - JavaScript:
           - javascript/index.md
           - BYOT (Build Your Own Tool):
@@ -80,12 +82,11 @@ nav:
                 - exercises/go/projects/school.md
                 - exercises/go/projects/product_service.md
           - React:
-                - exercises/react/index.md
                 - exercises/react/components/index.md
                 - exercises/react/hooks/index.md
                 - exercises/react/forms/index.md
-                - exercises/react/context/index.md
                 - exercises/react/requests/index.md
+                - exercises/react/context/index.md
                 - exercises/react/routing/index.md
                 - exercises/react/mantine/index.md
 

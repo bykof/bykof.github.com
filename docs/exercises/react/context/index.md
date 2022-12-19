@@ -1,4 +1,3 @@
-# JSX
+# Context
 
-1. Setup React locally
-
+Create two components that access a context.
