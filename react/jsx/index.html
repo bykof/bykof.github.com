@@ -428,6 +428,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#babel" class="md-nav__link">
+    Babel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#expressions-in-jsx" class="md-nav__link">
     Expressions in JSX
   </a>
@@ -1895,6 +1902,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#babel" class="md-nav__link">
+    Babel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#expressions-in-jsx" class="md-nav__link">
     Expressions in JSX
   </a>
@@ -1939,25 +1953,33 @@
 
 <h1 id="jsx">JSX</h1>
 <p>JSX stands for <strong>JavaScript XML</strong>. JSX allows us to write HTML elements with JavaScript code. An HTML element has an opening and closing tags, content, and attribute in the opening tag. However, some HTML elements may not have content and a closing tag - they are self closing elements.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Test&#39;</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">style</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">background</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;white&#39;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">p</span><span class="w"> </span><span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">style</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">content</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
+</code></pre></div>
+</div>
+<h2 id="babel">Babel</h2>
 <p>To create HTML elements in React we do not use the <code>createElement()</code> instead we just use JSX elements. Therefore, JSX makes it easier to write and add HTML elements in React. JSX will be converted to JavaScript on browser using a transpiler - <a href="https://babeljs.io/">babel.js</a>. Babel is a library which transpiles JSX to pure JavaScript and latest JavaScript to older version. See the JSX code below.</p>
 <p>In conclusion with Babel this:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">h1</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="o">&gt;</span><span class="nx">test</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">h1</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="o">&gt;</span><span class="nx">test</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
 </code></pre></div>
 </div>
 <p>becomes this:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="s1">&#39;use strict&#39;</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/*#__PURE__*/</span><span class="w"> </span><span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="s1">&#39;h1&#39;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;123&#39;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="p">},</span><span class="w"></span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="s1">&#39;use strict&#39;</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/*#__PURE__*/</span><span class="w"> </span><span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="s1">&#39;h1&#39;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;123&#39;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 </div>
 <p>JSX is <strong>stricter</strong> than html.
@@ -1966,22 +1988,22 @@ If you write the same in JSX, it will throw an error.</p>
 <p>Therefore you have to close every element properly:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">&lt;</span><span class="nx">br</span><span class="w"> </span><span class="o">/&gt;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">&lt;</span><span class="nx">br</span><span class="w"> </span><span class="o">/&gt;</span><span class="w"></span>
 </code></pre></div>
 </div>
 <h2 id="expressions-in-jsx">Expressions in JSX</h2>
 <p>If you work with JSX, you can use expressions to inject values into jsx code:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">123</span><span class="w"></span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">value</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">123</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">value</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>123<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>123<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions">Expressions</a> produce <strong>values</strong>.
 According to MDN an expression is:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>An expression is any valid unit of code that resolves to a value.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>An expression is any valid unit of code that resolves to a value.
 </code></pre></div>
 <p>Do not confuse it with statements which produce code statements, assignments and expressions.</p>
 <table>
@@ -2005,26 +2027,26 @@ According to MDN an expression is:</p>
 <p>For example, you can also use the result of a function inside of jsx:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">formatName</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">user</span><span class="p">.</span><span class="nx">firstName</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">user</span><span class="p">.</span><span class="nx">lastName</span><span class="si">}</span><span class="sb">`</span><span class="w"></span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nx">firstName</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Test&#39;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nx">lastName</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Tester&#39;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">formatName</span><span class="p">(</span><span class="nx">user</span><span class="p">)}</span><span class="o">!</span><span class="w"> </span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">formatName</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">user</span><span class="p">.</span><span class="nx">firstName</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">user</span><span class="p">.</span><span class="nx">lastName</span><span class="si">}</span><span class="sb">`</span><span class="w"></span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="nx">firstName</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Test&#39;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nx">lastName</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Tester&#39;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">formatName</span><span class="p">(</span><span class="nx">user</span><span class="p">)}</span><span class="o">!</span><span class="w"> </span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
 </code></pre></div>
-<div class="highlight"><span class="filename">result</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, Test Tester<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<div class="highlight"><span class="filename">result</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, Test Tester<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 <h2 id="attributes-in-jsx">Attributes in JSX</h2>
 <p>You can specify attributes in JSX:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">h1Id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;testId&#39;</span><span class="w"></span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">h1</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="p">{</span><span class="nx">h1Id</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Test</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">h1Id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;testId&#39;</span><span class="w"></span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">h1</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="p">{</span><span class="nx">h1Id</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Test</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
 </code></pre></div>
 </div>
 <div class="admonition warning">
@@ -2037,33 +2059,33 @@ According to MDN an expression is:</p>
 But when HTML elements can have children, JSX elements can have them too:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="w"> </span><span class="nx">World</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Some</span><span class="w"> </span><span class="nx">text</span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span><span class="w"></span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="w"> </span><span class="nx">World</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Some</span><span class="w"> </span><span class="nx">text</span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span><span class="w"></span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Do not use nested elements without paranthesis.</p>
 <p>This is a <strong>false</strong> example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="w"> </span><span class="nx">World</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Some</span><span class="w"> </span><span class="nx">text</span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="w"> </span><span class="nx">World</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Some</span><span class="w"> </span><span class="nx">text</span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span><span class="w"></span>
 </code></pre></div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Note that you cannot use multiple elements as JSX:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">// this won&#39;t work!</span><span class="w"></span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="w"> </span><span class="nx">World</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Some</span><span class="w"> </span><span class="nx">text</span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">// this won&#39;t work!</span><span class="w"></span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="w"> </span><span class="nx">World</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Some</span><span class="w"> </span><span class="nx">text</span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 </div>
 <p>You have to wrap multiple elements into an outer element.
@@ -2071,32 +2093,32 @@ This can be another html element or the 'empty' element <code>&lt;&gt;...</code>
 <p>For example:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="w"> </span><span class="nx">World</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Some</span><span class="w"> </span><span class="nx">text</span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span><span class="w"></span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="w"> </span><span class="nx">World</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Some</span><span class="w"> </span><span class="nx">text</span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span><span class="w"></span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>will result as HTML in the DOM as:</p>
-<div class="highlight"><span class="filename">result</span><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello World<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Some text<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="highlight"><span class="filename">result</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello World<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Some text<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="o">&lt;&gt;</span><span class="w"></span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="w"> </span><span class="nx">World</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Some</span><span class="w"> </span><span class="nx">text</span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/&gt;</span><span class="w"></span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="o">&lt;&gt;</span><span class="w"></span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="w"> </span><span class="nx">World</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Some</span><span class="w"> </span><span class="nx">text</span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/&gt;</span><span class="w"></span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>will result als HTML in the DOM as:</p>
-<div class="highlight"><span class="filename">result</span><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello World<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Some text<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<div class="highlight"><span class="filename">result</span><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello World<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Some text<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 <h2 id="adding-styles">Adding styles</h2>
@@ -2104,11 +2126,11 @@ This can be another html element or the 'empty' element <code>&lt;&gt;...</code>
 Please note, that <code>style</code> will be overwritten by Babel so that you cannot use just a string, but you use an object:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">p</span><span class="w"> </span><span class="nx">style</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">fontSize</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="p">}}</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;bordered&#39;</span><span class="p">}</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">        </span><span class="nx">abc</span><span class="w"></span>
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">p</span><span class="w"> </span><span class="nx">style</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">fontSize</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="p">}}</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;bordered&#39;</span><span class="p">}</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">        </span><span class="nx">abc</span><span class="w"></span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/p&gt;</span><span class="w"></span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 </div>
 
