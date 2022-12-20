@@ -1,7 +1,3 @@
 # Introduction
 
-Welcome to my lectures which I collected, wrote, reevaluated and worked on in several years.
-
-Here is the webengineering course:
-
-[Link](https://bykof.github.io/webengineering-course/)
+If you are on a search for JavaScript expertise, follow here: [JavaScript.info](https://javascript.info/)

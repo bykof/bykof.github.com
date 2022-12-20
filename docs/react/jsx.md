@@ -2,6 +2,16 @@
 
 JSX stands for **JavaScript XML**. JSX allows us to write HTML elements with JavaScript code. An HTML element has an opening and closing tags, content, and attribute in the opening tag. However, some HTML elements may not have content and a closing tag - they are self closing elements.
 
+!!! example
+
+    ```js
+    const content = 'Test'
+    const style = {background: 'red', color: 'white'}
+    const element = <p style={style}>{content}</p>
+    ```
+
+## Babel
+
 To create HTML elements in React we do not use the `createElement()` instead we just use JSX elements. Therefore, JSX makes it easier to write and add HTML elements in React. JSX will be converted to JavaScript on browser using a transpiler - [babel.js](https://babeljs.io/). Babel is a library which transpiles JSX to pure JavaScript and latest JavaScript to older version. See the JSX code below.
 
 In conclusion with Babel this:
