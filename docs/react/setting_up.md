@@ -37,7 +37,7 @@ $ cd react-app
 ```
 
 ```sh
-$ yarn start
+$ npm start
 ```
 
 Now your React app should run at localhost 3000. Go to the App.js and modify the content by writing some text, you will see the latest changes on the browser.

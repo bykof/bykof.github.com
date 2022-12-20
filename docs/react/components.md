@@ -8,6 +8,8 @@ A React component is a small, reusable code, which is responsible for one part o
 
 Using a JavaScript function, we can make a functional React component.
 
+A React component **has to** start with an uppercase letter!
+
 This example is the most simple React Component you can image:
 
 !!! example
