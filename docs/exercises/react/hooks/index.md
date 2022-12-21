@@ -6,6 +6,94 @@ Take your solution from the `Components / JSX` section and add following behavio
 
 <iframe src="/exercises/react/hooks/useState/index.html" width="800px" height="950px"></iframe>
 
+### Solution
+
+```js
+import React from 'react'
+
+function Address(props) {
+    return (
+        <>
+            <p>{props.address.street}</p>
+            <p>
+                {props.address.city} {props.address.zipcode}
+            </p>
+            <p>{props.address.country}</p>
+        </>
+    )
+}
+
+function Person(props) {
+    const [showAddress, setShowAddress] = React.useState(false)
+
+    return (
+        <div>
+            <img width="250" alt="" src={props.person.profilePicture} />
+            <h1>
+                {props.person.firstName} {props.person.lastName}
+            </h1>
+            <p>Phone: {props.person.phone}</p>
+            <p>
+                Email: <a href={props.person.email}>{props.person.email}</a>
+            </p>
+            <a href={props.person.website}>{props.person.website}</a>
+            <br />
+            <br />
+            <button onClick={() => setShowAddress(!showAddress)}>
+                {showAddress ? 'Hide' : 'Show'} Address
+            </button>
+            {showAddress ? <Address address={props.person.address} /> : null}
+        </div>
+    )
+}
+
+function App() {
+    const users = [
+        {
+            firstName: 'John',
+            lastName: 'Smith',
+            email: 'john@example.com',
+            profilePicture:
+                'https://images.pexels.com/photos/6206980/pexels-photo-6206980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            phone: '+1 (123) 456-7890',
+            address: {
+                street: '9062 Mertz Plains Apt. 623',
+                buildingNumber: '410',
+                city: 'Boganside',
+                zipcode: '71562',
+                country: 'Estonia',
+            },
+            website: 'http://www.johnsmith.com',
+        },
+        {
+            firstName: 'Raegan',
+            lastName: 'Haley',
+            email: 'ustroman@hotmail.com',
+            profilePicture:
+                'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            phone: '+5089956276536',
+            address: {
+                street: '2922 Retha Plaza',
+                city: 'Lake Gail',
+                zipcode: '26859-4338',
+                country: 'Mozambique',
+            },
+            website: 'http://zboncak.biz',
+        },
+    ]
+
+    return (
+        <>
+            <Person person={users[0]} />
+            <br />
+            <Person person={users[1]} />
+        </>
+    )
+}
+
+export default App
+```
+
 ## useMemo
 
 The calculate function runs on every click of the button and slows the application.
