@@ -63,4 +63,3 @@ Good extensions for Visual Studio Code:
 -   [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
 -   [npm Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
 -   [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
--   [npm](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script)
