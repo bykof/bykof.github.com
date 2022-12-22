@@ -6,7 +6,7 @@ Take your solution from the `Components / JSX` section and add following behavio
 
 <iframe src="/exercises/react/hooks/useState/index.html" width="800px" height="950px"></iframe>
 
-<!-- ### Solution
+### Solution
 
 ```js
 import React from 'react'
@@ -92,7 +92,7 @@ function App() {
 }
 
 export default App
-``` -->
+```
 
 ## useMemo
 
