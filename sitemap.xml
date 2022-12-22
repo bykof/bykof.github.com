@@ -66,6 +66,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bykof.github.io/exercises/react/props/</loc>
+         <lastmod>2022-12-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bykof.github.io/exercises/react/requests/</loc>
          <lastmod>2022-12-22</lastmod>
          <changefreq>daily</changefreq>
