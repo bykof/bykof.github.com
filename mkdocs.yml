@@ -84,6 +84,7 @@ nav:
                 - exercises/go/projects/product_service.md
           - React:
                 - exercises/react/components/index.md
+                - exercises/react/props/index.md
                 - exercises/react/hooks/index.md
                 - exercises/react/forms/index.md
                 - exercises/react/requests/index.md
