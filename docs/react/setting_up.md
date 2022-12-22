@@ -7,37 +7,37 @@ Here we will learn, how to setup a React project fast, so that we don't have to 
 To create a react project you can use one of the following ways. Let's assume you installed node. Open the command line interface (CLI), git bash or terminal on Mac or Linux. Then run the following command. I am using git bash.
 
 ```sh
-$ npx create-react-app name-of-your-project
+npx create-react-app name-of-your-project
 ```
 
 If you do not like to write npx every time you create a project you may install create-react-app package globally in your computer using the following command.
 
 ```sh
-$ npm install -g create-react-app
+npm install -g create-react-app
 ```
 
 After you installed create-react-app, you create a React application as follows:
 
 ```sh
-$ create-react-app name-of-project
+create-react-app name-of-project
 ```
 
 # Your first React App
 
 ```sh
-$ cd Desktop/
+cd Desktop/
 ```
 
 ```sh
-$ npx create-react-app react-app
+npx create-react-app react-app
 ```
 
 ```sh
-$ cd react-app
+cd react-app
 ```
 
 ```sh
-$ npm start
+npm start
 ```
 
 Now your React app should run at localhost 3000. Go to the App.js and modify the content by writing some text, you will see the latest changes on the browser.
