@@ -10,8 +10,14 @@
       
         <link rel="canonical" href="https://bykof.github.io/golang/golang-fundamentals/errors/">
       
+      
+        <link rel="prev" href="../types_interfaces_methods/">
+      
+      
+        <link rel="next" href="../modules_packages_imports/">
+      
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
@@ -19,11 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0d440cfe.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -111,8 +116,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -120,8 +123,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -160,7 +161,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -307,17 +308,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_1">
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
           Homepage
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Homepage" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Homepage
@@ -355,17 +357,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
           React
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="React" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           React
@@ -683,17 +686,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           JavaScript
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="JavaScript" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           JavaScript
@@ -723,17 +727,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3_2">
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
           BYOT (Build Your Own Tool)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="BYOT (Build Your Own Tool)" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           BYOT (Build Your Own Tool)
@@ -906,17 +911,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           Golang
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Golang" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Golang
@@ -948,17 +954,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_2">
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
           Golang Fundamentals
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Golang Fundamentals" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
           Golang Fundamentals
@@ -1086,7 +1093,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -1350,17 +1357,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_3">
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
           Dependency Injection
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Dependency Injection" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
           Dependency Injection
@@ -1411,17 +1419,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_4">
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
           Architecture and Best Practices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Architecture and Best Practices" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_4">
           <span class="md-nav__icon md-icon"></span>
           Architecture and Best Practices
@@ -1458,17 +1467,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_5">
+        <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
           Docker
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Docker" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_5">
           <span class="md-nav__icon md-icon"></span>
           Docker
@@ -1505,17 +1515,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_6">
+        <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
           Design Patterns
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Design Patterns" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_6">
           <span class="md-nav__icon md-icon"></span>
           Design Patterns
@@ -1560,17 +1571,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
           Exercises
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Exercises
@@ -1600,17 +1612,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_2">
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
           JavaScript Fundamentals
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="JavaScript Fundamentals" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
           JavaScript Fundamentals
@@ -1661,17 +1674,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_3">
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
           Browser API
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Browser API" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_3">
           <span class="md-nav__icon md-icon"></span>
           Browser API
@@ -1708,17 +1722,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_4">
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
           Go
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Go" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_4">
           <span class="md-nav__icon md-icon"></span>
           Go
@@ -1783,17 +1798,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_5">
+        <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
           React
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="React" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_5">
           <span class="md-nav__icon md-icon"></span>
           React
@@ -2035,6 +2051,7 @@
                   
 
 
+
 <h1 id="errors">Errors</h1>
 <p>Handling errors in Go can lead to a strange feeling, the concepts in Go are pretty well-thought.
 A lot of programmers might</p>
@@ -2061,34 +2078,34 @@ Use the package <code>errors</code> to create new errors or wrap them.</p>
 <span class="normal"><a href="#__codelineno-0-17">17</a></span>
 <span class="normal"><a href="#__codelineno-0-18">18</a></span>
 <span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="s">&quot;errors&quot;</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">)</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="s">&quot;errors&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">)</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="kd">func</span><span class="w"> </span><span class="nx">divide</span><span class="p">(</span><span class="nx">dividend</span><span class="w"> </span><span class="kt">float64</span><span class="p">,</span><span class="w"> </span><span class="nx">divisor</span><span class="w"> </span><span class="kt">float64</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">float64</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">divisor</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;divisor is 0&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">dividend</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">divisor</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="w"></span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="kd">func</span><span class="w"> </span><span class="nx">divide</span><span class="p">(</span><span class="nx">dividend</span><span class="w"> </span><span class="kt">float64</span><span class="p">,</span><span class="w"> </span><span class="nx">divisor</span><span class="w"> </span><span class="kt">float64</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">float64</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">divisor</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;divisor is 0&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">dividend</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">divisor</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="p">}</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="nx">result</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">divide</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">        </span><span class="k">return</span><span class="w"></span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="nx">result</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">divide</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">        </span><span class="k">return</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="the-error-interface">The error interface</h3>
 <p><code>error</code> is a built-in interface which is quiet simple (<a href="https://pkg.go.dev/builtin#error">link</a>):</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">type</span><span class="w"> </span><span class="kt">error</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nx">Error</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">type</span><span class="w"> </span><span class="kt">error</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nx">Error</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>That's why we can return <code>nil</code> for an error, because it's an interface type.</p>
 <h2 id="simple-errors-strings">Simple Errors: Strings</h2>
@@ -2101,14 +2118,14 @@ Use the package <code>errors</code> to create new errors or wrap them.</p>
 <span class="normal"><a href="#__codelineno-2-5">5</a></span>
 <span class="normal"><a href="#__codelineno-2-6">6</a></span>
 <span class="normal"><a href="#__codelineno-2-7">7</a></span>
-<span class="normal"><a href="#__codelineno-2-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;errors&quot;</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;errors&quot;</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">divide</span><span class="p">(</span><span class="nx">dividend</span><span class="w"> </span><span class="kt">float64</span><span class="p">,</span><span class="w"> </span><span class="nx">divisor</span><span class="w"> </span><span class="kt">float64</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">float64</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">divisor</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;divisor is 0&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">dividend</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">divisor</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="w"></span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">divide</span><span class="p">(</span><span class="nx">dividend</span><span class="w"> </span><span class="kt">float64</span><span class="p">,</span><span class="w"> </span><span class="nx">divisor</span><span class="w"> </span><span class="kt">float64</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">float64</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">divisor</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;divisor is 0&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">dividend</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">divisor</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>or if you need some data in the error string:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
@@ -2118,14 +2135,14 @@ Use the package <code>errors</code> to create new errors or wrap them.</p>
 <span class="normal"><a href="#__codelineno-3-5">5</a></span>
 <span class="normal"><a href="#__codelineno-3-6">6</a></span>
 <span class="normal"><a href="#__codelineno-3-7">7</a></span>
-<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">divide</span><span class="p">(</span><span class="nx">dividend</span><span class="w"> </span><span class="kt">float64</span><span class="p">,</span><span class="w"> </span><span class="nx">divisor</span><span class="w"> </span><span class="kt">float64</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">float64</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">divisor</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Errorf</span><span class="p">(</span><span class="s">&quot;divisor is %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">divisor</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">dividend</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">divisor</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="w"></span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">divide</span><span class="p">(</span><span class="nx">dividend</span><span class="w"> </span><span class="kt">float64</span><span class="p">,</span><span class="w"> </span><span class="nx">divisor</span><span class="w"> </span><span class="kt">float64</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">float64</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">divisor</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Errorf</span><span class="p">(</span><span class="s">&quot;divisor is %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">divisor</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">dividend</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">divisor</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="sentinel-errors">Sentinel Errors</h2>
 <p>Sentinel Errors are constants defined for a whole package (we will talk about packages later).
@@ -2140,16 +2157,16 @@ It's convention to start the name with <code>Err</code>.</p>
 <span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-4-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">CustomError</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">CustomError</span><span class="w"> </span><span class="kt">string</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">ce</span><span class="w"> </span><span class="nx">CustomerError</span><span class="p">)</span><span class="w"> </span><span class="nx">Error</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">string</span><span class="p">(</span><span class="nx">ce</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">ce</span><span class="w"> </span><span class="nx">CustomerError</span><span class="p">)</span><span class="w"> </span><span class="nx">Error</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">string</span><span class="p">(</span><span class="nx">ce</span><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">}</span>
 <a id="__codelineno-4-6" name="__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="kd">const</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="nx">ErrFileNotFound</span><span class="w"> </span><span class="nx">CustomError</span><span class="p">(</span><span class="s">&quot;File was not found&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="nx">ErrFileCorrupted</span><span class="w"> </span><span class="nx">CustomError</span><span class="p">(</span><span class="s">&quot;File is corrupted&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="kd">const</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="nx">ErrFileNotFound</span><span class="w"> </span><span class="nx">CustomError</span><span class="p">(</span><span class="s">&quot;File was not found&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="nx">ErrFileCorrupted</span><span class="w"> </span><span class="nx">CustomError</span><span class="p">(</span><span class="s">&quot;File is corrupted&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="errors-with-data">Errors with data</h2>
 <p>Since <code>error</code> is an interface, you can create your own struct to hold more data than just a string.
@@ -2191,43 +2208,43 @@ Please mark, that you always return <code>error</code> type and do not specifiy 
 <span class="normal"><a href="#__codelineno-5-34">34</a></span>
 <span class="normal"><a href="#__codelineno-5-35">35</a></span>
 <span class="normal"><a href="#__codelineno-5-36">36</a></span>
-<span class="normal"><a href="#__codelineno-5-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Status</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-5-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Status</span><span class="w"> </span><span class="kt">int</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="kd">const</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="nx">InvalidLogin</span><span class="w"> </span><span class="nx">Status</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">iota</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="nx">NotFound</span><span class="w"></span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="kd">const</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="nx">InvalidLogin</span><span class="w"> </span><span class="nx">Status</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">iota</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="nx">NotFound</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="p">)</span>
 <a id="__codelineno-5-7" name="__codelineno-5-7"></a>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="kd">type</span><span class="w"> </span><span class="nx">StatusError</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span><span class="nx">Status</span><span class="w">  </span><span class="nx">Status</span><span class="w"></span>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="nx">Message</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="kd">type</span><span class="w"> </span><span class="nx">StatusError</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span><span class="nx">Status</span><span class="w">  </span><span class="nx">Status</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="nx">Message</span><span class="w"> </span><span class="kt">string</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="p">}</span>
 <a id="__codelineno-5-12" name="__codelineno-5-12"></a>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">se</span><span class="w"> </span><span class="nx">StatusError</span><span class="p">)</span><span class="w"> </span><span class="nx">Error</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">se</span><span class="p">.</span><span class="nx">Message</span><span class="w"></span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">se</span><span class="w"> </span><span class="nx">StatusError</span><span class="p">)</span><span class="w"> </span><span class="nx">Error</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">se</span><span class="p">.</span><span class="nx">Message</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="p">}</span>
 <a id="__codelineno-5-16" name="__codelineno-5-16"></a>
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Login</span><span class="p">(</span><span class="nx">username</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">password</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="nx">User</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">    </span><span class="nx">loginService</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">LoginService</span><span class="p">{}</span><span class="w"></span>
-<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">    </span><span class="nx">userService</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">UserService</span><span class="p">{}</span><span class="w"></span>
-<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">    </span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">loginService</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span><span class="w"> </span><span class="nx">password</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">User</span><span class="p">{},</span><span class="w"> </span><span class="nx">StatusError</span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="w">            </span><span class="nx">Status</span><span class="p">:</span><span class="w"> </span><span class="nx">InvalidLogin</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">            </span><span class="nx">Message</span><span class="p">:</span><span class="w"> </span><span class="nx">err</span><span class="p">.</span><span class="nx">Error</span><span class="p">(),</span><span class="w"></span>
-<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Login</span><span class="p">(</span><span class="nx">username</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">password</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="nx">User</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">    </span><span class="nx">loginService</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">LoginService</span><span class="p">{}</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">    </span><span class="nx">userService</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">UserService</span><span class="p">{}</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">    </span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">loginService</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span><span class="w"> </span><span class="nx">password</span><span class="p">)</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">User</span><span class="p">{},</span><span class="w"> </span><span class="nx">StatusError</span><span class="p">{</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="w">            </span><span class="nx">Status</span><span class="p">:</span><span class="w"> </span><span class="nx">InvalidLogin</span><span class="p">,</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">            </span><span class="nx">Message</span><span class="p">:</span><span class="w"> </span><span class="nx">err</span><span class="p">.</span><span class="nx">Error</span><span class="p">(),</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-5-27" name="__codelineno-5-27"></a>
-<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="w">    </span><span class="nx">user</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">userService</span><span class="p">.</span><span class="nx">User</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">User</span><span class="p">{},</span><span class="w"> </span><span class="nx">StatusError</span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="w">            </span><span class="nx">Status</span><span class="p">:</span><span class="w"> </span><span class="nx">NotFound</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="w">            </span><span class="nx">Message</span><span class="p">:</span><span class="w"> </span><span class="nx">err</span><span class="p">.</span><span class="nx">Error</span><span class="p">(),</span><span class="w"></span>
-<a id="__codelineno-5-33" name="__codelineno-5-33"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="w">    </span><span class="nx">user</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">userService</span><span class="p">.</span><span class="nx">User</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">User</span><span class="p">{},</span><span class="w"> </span><span class="nx">StatusError</span><span class="p">{</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="w">            </span><span class="nx">Status</span><span class="p">:</span><span class="w"> </span><span class="nx">NotFound</span><span class="p">,</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="w">            </span><span class="nx">Message</span><span class="p">:</span><span class="w"> </span><span class="nx">err</span><span class="p">.</span><span class="nx">Error</span><span class="p">(),</span>
+<a id="__codelineno-5-33" name="__codelineno-5-33"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-5-35" name="__codelineno-5-35"></a>
-<a id="__codelineno-5-36" name="__codelineno-5-36"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">user</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="w"></span>
-<a id="__codelineno-5-37" name="__codelineno-5-37"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-5-36" name="__codelineno-5-36"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">user</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span>
+<a id="__codelineno-5-37" name="__codelineno-5-37"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="wrapping-errors">Wrapping Errors</h2>
 <p>Sometimes you want to add additional information to an error, for example the location where the error happened.
@@ -2261,32 +2278,32 @@ It will return an <code>error</code> if it unwraps an error, otherwise <code>nil
 <span class="normal"><a href="#__codelineno-6-23">23</a></span>
 <span class="normal"><a href="#__codelineno-6-24">24</a></span>
 <span class="normal"><a href="#__codelineno-6-25">25</a></span>
-<span class="normal"><a href="#__codelineno-6-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-6-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="s">&quot;errors&quot;</span><span class="w"></span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="s">&quot;os&quot;</span><span class="w"></span>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="s">&quot;errors&quot;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="s">&quot;os&quot;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="p">)</span>
 <a id="__codelineno-6-8" name="__codelineno-6-8"></a>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="kd">func</span><span class="w"> </span><span class="nx">fileChecker</span><span class="p">(</span><span class="nx">name</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="kt">error</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">    </span><span class="nx">f</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Open</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Errorf</span><span class="p">(</span><span class="s">&quot;in fileChecker: %w&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">    </span><span class="nx">f</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">nil</span><span class="w"></span>
-<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="kd">func</span><span class="w"> </span><span class="nx">fileChecker</span><span class="p">(</span><span class="nx">name</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="kt">error</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">    </span><span class="nx">f</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Open</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Errorf</span><span class="p">(</span><span class="s">&quot;in fileChecker: %w&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">    </span><span class="nx">f</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">nil</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="p">}</span>
 <a id="__codelineno-6-17" name="__codelineno-6-17"></a>
-<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fileChecker</span><span class="p">(</span><span class="s">&quot;doesNotExist.txt&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">wrappedErr</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">Unwrap</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span><span class="w"> </span><span class="nx">wrappedErr</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">wrappedErr</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fileChecker</span><span class="p">(</span><span class="s">&quot;doesNotExist.txt&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">wrappedErr</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">Unwrap</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span><span class="w"> </span><span class="nx">wrappedErr</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">wrappedErr</span><span class="p">)</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>output:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>in fileChecker: open doesNotExist.txt: no such file or directory
@@ -2321,32 +2338,32 @@ There is a solution to check, if an error variable wrapped another error.</p>
 <span class="normal"><a href="#__codelineno-8-23">23</a></span>
 <span class="normal"><a href="#__codelineno-8-24">24</a></span>
 <span class="normal"><a href="#__codelineno-8-25">25</a></span>
-<span class="normal"><a href="#__codelineno-8-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-8-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="s">&quot;errors&quot;</span><span class="w"></span>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="s">&quot;os&quot;</span><span class="w"></span>
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="s">&quot;errors&quot;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="s">&quot;os&quot;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="p">)</span>
 <a id="__codelineno-8-8" name="__codelineno-8-8"></a>
-<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="kd">func</span><span class="w"> </span><span class="nx">fileChecker</span><span class="p">(</span><span class="nx">name</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="kt">error</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">    </span><span class="nx">f</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Open</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Errorf</span><span class="p">(</span><span class="s">&quot;in fileChecker: %w&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">    </span><span class="nx">f</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">nil</span><span class="w"></span>
-<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="kd">func</span><span class="w"> </span><span class="nx">fileChecker</span><span class="p">(</span><span class="nx">name</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="kt">error</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">    </span><span class="nx">f</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Open</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Errorf</span><span class="p">(</span><span class="s">&quot;in fileChecker: %w&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">    </span><span class="nx">f</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">nil</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="p">}</span>
 <a id="__codelineno-8-17" name="__codelineno-8-17"></a>
-<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fileChecker</span><span class="p">(</span><span class="s">&quot;doesNotExist.txt&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">Is</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">ErrNotExist</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;The file does not exist&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fileChecker</span><span class="p">(</span><span class="s">&quot;doesNotExist.txt&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">Is</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">ErrNotExist</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;The file does not exist&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>With <code>errors.As</code> you can check, if an <code>error</code> has a custom error type:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
@@ -2388,46 +2405,46 @@ There is a solution to check, if an error variable wrapped another error.</p>
 <span class="normal"><a href="#__codelineno-9-37">37</a></span>
 <span class="normal"><a href="#__codelineno-9-38">38</a></span>
 <span class="normal"><a href="#__codelineno-9-39">39</a></span>
-<span class="normal"><a href="#__codelineno-9-40">40</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-9-40">40</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="s">&quot;errors&quot;</span><span class="w"></span>
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="s">&quot;os&quot;</span><span class="w"></span>
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="s">&quot;errors&quot;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="s">&quot;os&quot;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="p">)</span>
 <a id="__codelineno-9-8" name="__codelineno-9-8"></a>
-<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="kd">type</span><span class="w"> </span><span class="nx">FileCheckerError</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">    </span><span class="nx">name</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
-<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">    </span><span class="nx">err</span><span class="w">  </span><span class="kt">error</span><span class="w"></span>
-<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="kd">type</span><span class="w"> </span><span class="nx">FileCheckerError</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">    </span><span class="nx">name</span><span class="w"> </span><span class="kt">string</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">    </span><span class="nx">err</span><span class="w">  </span><span class="kt">error</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="p">}</span>
 <a id="__codelineno-9-13" name="__codelineno-9-13"></a>
-<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">fce</span><span class="w"> </span><span class="nx">FileCheckerError</span><span class="p">)</span><span class="w"> </span><span class="nx">Error</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Sprintf</span><span class="p">(</span><span class="s">&quot;FileCheckerError %s: %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">fce</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">fce</span><span class="p">.</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">fce</span><span class="w"> </span><span class="nx">FileCheckerError</span><span class="p">)</span><span class="w"> </span><span class="nx">Error</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Sprintf</span><span class="p">(</span><span class="s">&quot;FileCheckerError %s: %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">fce</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">fce</span><span class="p">.</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="p">}</span>
 <a id="__codelineno-9-17" name="__codelineno-9-17"></a>
-<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="kd">func</span><span class="w"> </span><span class="nx">fileChecker</span><span class="p">(</span><span class="nx">name</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="kt">error</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">    </span><span class="nx">f</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Open</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">FileCheckerError</span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-22" name="__codelineno-9-22"></a><span class="w">            </span><span class="nx">name</span><span class="p">:</span><span class="w"> </span><span class="nx">name</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="w">            </span><span class="nx">err</span><span class="p">:</span><span class="w">  </span><span class="nx">err</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-9-26" name="__codelineno-9-26"></a><span class="w">    </span><span class="nx">f</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">nil</span><span class="w"></span>
-<a id="__codelineno-9-28" name="__codelineno-9-28"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="kd">func</span><span class="w"> </span><span class="nx">fileChecker</span><span class="p">(</span><span class="nx">name</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="kt">error</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">    </span><span class="nx">f</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Open</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">FileCheckerError</span><span class="p">{</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22"></a><span class="w">            </span><span class="nx">name</span><span class="p">:</span><span class="w"> </span><span class="nx">name</span><span class="p">,</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="w">            </span><span class="nx">err</span><span class="p">:</span><span class="w">  </span><span class="nx">err</span><span class="p">,</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26"></a><span class="w">    </span><span class="nx">f</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">nil</span>
+<a id="__codelineno-9-28" name="__codelineno-9-28"></a><span class="p">}</span>
 <a id="__codelineno-9-29" name="__codelineno-9-29"></a>
-<a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-31" name="__codelineno-9-31"></a><span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fileChecker</span><span class="p">(</span><span class="s">&quot;doesNotExist.txt&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-9-32" name="__codelineno-9-32"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-33" name="__codelineno-9-33"></a><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">fileCheckerError</span><span class="w"> </span><span class="nx">FileCheckerError</span><span class="w"></span>
-<a id="__codelineno-9-34" name="__codelineno-9-34"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">As</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">fileCheckerError</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-35" name="__codelineno-9-35"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">fileCheckerError</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-9-36" name="__codelineno-9-36"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-37" name="__codelineno-9-37"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-9-38" name="__codelineno-9-38"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-9-39" name="__codelineno-9-39"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-9-40" name="__codelineno-9-40"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-31" name="__codelineno-9-31"></a><span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fileChecker</span><span class="p">(</span><span class="s">&quot;doesNotExist.txt&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-32" name="__codelineno-9-32"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-33" name="__codelineno-9-33"></a><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">fileCheckerError</span><span class="w"> </span><span class="nx">FileCheckerError</span>
+<a id="__codelineno-9-34" name="__codelineno-9-34"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">As</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">fileCheckerError</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-35" name="__codelineno-9-35"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">fileCheckerError</span><span class="p">)</span>
+<a id="__codelineno-9-36" name="__codelineno-9-36"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-37" name="__codelineno-9-37"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-9-38" name="__codelineno-9-38"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-9-39" name="__codelineno-9-39"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-40" name="__codelineno-9-40"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>output:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>FileCheckerError doesNotExist.txt: open doesNotExist.txt: no such file or directory
@@ -2442,13 +2459,13 @@ For example if the programm runs out of memory or if you accessed a slice past i
 <span class="normal"><a href="#__codelineno-11-4">4</a></span>
 <span class="normal"><a href="#__codelineno-11-5">5</a></span>
 <span class="normal"><a href="#__codelineno-11-6">6</a></span>
-<span class="normal"><a href="#__codelineno-11-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">doPanic</span><span class="p">(</span><span class="nx">msg</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="nb">panic</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-11-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">doPanic</span><span class="p">(</span><span class="nx">msg</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="nb">panic</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="p">}</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4"></a>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">    </span><span class="nx">doPanic</span><span class="p">(</span><span class="s">&quot;What is happening?&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">    </span><span class="nx">doPanic</span><span class="p">(</span><span class="s">&quot;What is happening?&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>output:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>panic: What is happening?
@@ -2476,20 +2493,20 @@ Call <code>recover</code> in a defer function, if recover returns the value of t
 <span class="normal"><a href="#__codelineno-13-11">11</a></span>
 <span class="normal"><a href="#__codelineno-13-12">12</a></span>
 <span class="normal"><a href="#__codelineno-13-13">13</a></span>
-<span class="normal"><a href="#__codelineno-13-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">div60</span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">recover</span><span class="p">();</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="p">}()</span><span class="w"></span>
-<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mi">60</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">div60</span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">recover</span><span class="p">();</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="p">}()</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mi">60</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">i</span><span class="p">)</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="p">}</span>
 <a id="__codelineno-13-9" name="__codelineno-13-9"></a>
-<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">val</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">}</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">        </span><span class="nx">div60</span><span class="p">(</span><span class="nx">val</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">val</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">}</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">        </span><span class="nx">div60</span><span class="p">(</span><span class="nx">val</span><span class="p">)</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>output is:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>60
@@ -2516,19 +2533,19 @@ For that you can just print out the error with the verb <code>%+v</code>.</p>
 <span class="normal"><a href="#__codelineno-15-10">10</a></span>
 <span class="normal"><a href="#__codelineno-15-11">11</a></span>
 <span class="normal"><a href="#__codelineno-15-12">12</a></span>
-<span class="normal"><a href="#__codelineno-15-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">divide</span><span class="p">(</span><span class="nx">dividend</span><span class="w"> </span><span class="kt">float64</span><span class="p">,</span><span class="w"> </span><span class="nx">divisor</span><span class="w"> </span><span class="kt">float64</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">float64</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">divisor</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Errorf</span><span class="p">(</span><span class="s">&quot;divisor is %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">divisor</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">dividend</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">divisor</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="w"></span>
-<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">divide</span><span class="p">(</span><span class="nx">dividend</span><span class="w"> </span><span class="kt">float64</span><span class="p">,</span><span class="w"> </span><span class="nx">divisor</span><span class="w"> </span><span class="kt">float64</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">float64</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">divisor</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Errorf</span><span class="p">(</span><span class="s">&quot;divisor is %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">divisor</span><span class="p">)</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">dividend</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">divisor</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="p">}</span>
 <a id="__codelineno-15-7" name="__codelineno-15-7"></a>
-<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">divide</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%+v&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">divide</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%+v&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>the output would be:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>./prog.go:13:9: assignment mismatch: 1 variable but divide returns 2 values
@@ -2554,42 +2571,6 @@ For that you can just print out the error with the verb <code>%+v</code>.</p>
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../types_interfaces_methods/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Types, Interfaces and Methods" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Types, Interfaces and Methods
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../modules_packages_imports/" class="md-footer__link md-footer__link--next" aria-label="Next: Modules, Packages, and Imports" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Modules, Packages, and Imports
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -2611,14 +2592,13 @@ For that you can just print out the error with the verb <code>%+v</code>.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6df46069.min.js"></script>
       
         <script src="../../../javascripts/extra.js"></script>
       
-    
     
   </body>
 </html>

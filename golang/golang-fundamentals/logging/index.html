@@ -10,8 +10,14 @@
       
         <link rel="canonical" href="https://bykof.github.io/golang/golang-fundamentals/logging/">
       
+      
+        <link rel="prev" href="../standard_library/">
+      
+      
+        <link rel="next" href="../context/">
+      
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
@@ -19,11 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0d440cfe.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -111,8 +116,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -120,8 +123,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -160,7 +161,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -307,17 +308,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_1">
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
           Homepage
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Homepage" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Homepage
@@ -355,17 +357,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
           React
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="React" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           React
@@ -683,17 +686,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           JavaScript
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="JavaScript" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           JavaScript
@@ -723,17 +727,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3_2">
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
           BYOT (Build Your Own Tool)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="BYOT (Build Your Own Tool)" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           BYOT (Build Your Own Tool)
@@ -906,17 +911,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           Golang
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Golang" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Golang
@@ -948,17 +954,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_2">
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
           Golang Fundamentals
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Golang Fundamentals" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
           Golang Fundamentals
@@ -1142,7 +1149,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -1295,17 +1302,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_3">
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
           Dependency Injection
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Dependency Injection" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
           Dependency Injection
@@ -1356,17 +1364,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_4">
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
           Architecture and Best Practices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Architecture and Best Practices" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_4">
           <span class="md-nav__icon md-icon"></span>
           Architecture and Best Practices
@@ -1403,17 +1412,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_5">
+        <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
           Docker
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Docker" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_5">
           <span class="md-nav__icon md-icon"></span>
           Docker
@@ -1450,17 +1460,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_6">
+        <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
           Design Patterns
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Design Patterns" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_6">
           <span class="md-nav__icon md-icon"></span>
           Design Patterns
@@ -1505,17 +1516,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
           Exercises
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Exercises
@@ -1545,17 +1557,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_2">
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
           JavaScript Fundamentals
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="JavaScript Fundamentals" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
           JavaScript Fundamentals
@@ -1606,17 +1619,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_3">
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
           Browser API
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Browser API" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_3">
           <span class="md-nav__icon md-icon"></span>
           Browser API
@@ -1653,17 +1667,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_4">
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
           Go
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Go" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_4">
           <span class="md-nav__icon md-icon"></span>
           Go
@@ -1728,17 +1743,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_5">
+        <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
           React
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="React" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_5">
           <span class="md-nav__icon md-icon"></span>
           React
@@ -1925,6 +1941,7 @@
                   
 
 
+
 <h1 id="logging">Logging</h1>
 <p>To use logging the <code>log</code> package provides a standard logger, which prints to the systems <code>Standard out</code>. <a href="https://pkg.go.dev/log#pkg-overview">Source</a></p>
 <p>The documentation says:</p>
@@ -1939,14 +1956,14 @@
 <span class="normal"><a href="#__codelineno-0-5">5</a></span>
 <span class="normal"><a href="#__codelineno-0-6">6</a></span>
 <span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nx">a</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nx">logger</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">log</span><span class="p">.</span><span class="nx">Default</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nx">logger</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="s">&quot;Just print a string &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nx">logger</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;print a digit: %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nx">logger</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="s">&quot;print and os.Exit(1)&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nx">logger</span><span class="p">.</span><span class="nx">Panic</span><span class="p">(</span><span class="s">&quot;print and panic&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nx">a</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nx">logger</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">log</span><span class="p">.</span><span class="nx">Default</span><span class="p">()</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nx">logger</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="s">&quot;Just print a string &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nx">logger</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;print a digit: %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nx">logger</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="s">&quot;print and os.Exit(1)&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nx">logger</span><span class="p">.</span><span class="nx">Panic</span><span class="p">(</span><span class="s">&quot;print and panic&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>output:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2009/11/10 23:00:00 Just print a string 2
@@ -1986,37 +2003,37 @@ Here you could use embedding, to support the log.Logger struct:</p>
 <span class="normal"><a href="#__codelineno-2-28">28</a></span>
 <span class="normal"><a href="#__codelineno-2-29">29</a></span>
 <span class="normal"><a href="#__codelineno-2-30">30</a></span>
-<span class="normal"><a href="#__codelineno-2-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">JSONLogger</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Logger</span><span class="w"></span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-2-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">JSONLogger</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Logger</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">}</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">l</span><span class="w"> </span><span class="nx">JSONLogger</span><span class="p">)</span><span class="w"> </span><span class="nx">Print</span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="kd">interface</span><span class="p">{})</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="nx">bytes</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">json</span><span class="p">.</span><span class="nx">Marshal</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span><span class="w"></span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">        </span><span class="s">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="nx">value</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="s">&quot;time&quot;</span><span class="p">:</span><span class="w">  </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">().</span><span class="nx">Format</span><span class="p">(</span><span class="s">&quot;2006-01-02T15:04:05Z07:00&quot;</span><span class="p">),</span><span class="w"></span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="p">})</span><span class="w"></span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="nx">l</span><span class="p">.</span><span class="nx">Logger</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">bytes</span><span class="p">))</span><span class="w"></span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">l</span><span class="w"> </span><span class="nx">JSONLogger</span><span class="p">)</span><span class="w"> </span><span class="nx">Print</span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="kd">interface</span><span class="p">{})</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="nx">bytes</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">json</span><span class="p">.</span><span class="nx">Marshal</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">        </span><span class="s">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="nx">value</span><span class="p">,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="s">&quot;time&quot;</span><span class="p">:</span><span class="w">  </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">().</span><span class="nx">Format</span><span class="p">(</span><span class="s">&quot;2006-01-02T15:04:05Z07:00&quot;</span><span class="p">),</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="p">})</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="nx">l</span><span class="p">.</span><span class="nx">Logger</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">bytes</span><span class="p">))</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="p">}</span>
 <a id="__codelineno-2-15" name="__codelineno-2-15"></a>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="kd">func</span><span class="w"> </span><span class="nx">NewJSONLogger</span><span class="p">(</span><span class="nx">logger</span><span class="w"> </span><span class="nx">log</span><span class="p">.</span><span class="nx">Logger</span><span class="p">)</span><span class="w"> </span><span class="nx">JSONLogger</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">JSONLogger</span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">        </span><span class="nx">Logger</span><span class="p">:</span><span class="w"> </span><span class="nx">logger</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="kd">func</span><span class="w"> </span><span class="nx">NewJSONLogger</span><span class="p">(</span><span class="nx">logger</span><span class="w"> </span><span class="nx">log</span><span class="p">.</span><span class="nx">Logger</span><span class="p">)</span><span class="w"> </span><span class="nx">JSONLogger</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">JSONLogger</span><span class="p">{</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">        </span><span class="nx">Logger</span><span class="p">:</span><span class="w"> </span><span class="nx">logger</span><span class="p">,</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="p">}</span>
 <a id="__codelineno-2-21" name="__codelineno-2-21"></a>
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">    </span><span class="nx">jsonLogger</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">NewJSONLogger</span><span class="p">(</span><span class="o">*</span><span class="nx">log</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"></span>
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="nx">jsonLogger</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">        </span><span class="nx">Name</span><span class="w">     </span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;name&quot;`</span><span class="w"></span>
-<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">        </span><span class="nx">LastName</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;lastName&quot;`</span><span class="w"></span>
-<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">    </span><span class="p">}{</span><span class="w"></span>
-<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">        </span><span class="nx">Name</span><span class="p">:</span><span class="w">     </span><span class="s">&quot;hello&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">        </span><span class="nx">LastName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;world&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">    </span><span class="p">})</span><span class="w"></span>
-<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">    </span><span class="nx">jsonLogger</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">NewJSONLogger</span><span class="p">(</span><span class="o">*</span><span class="nx">log</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="nx">jsonLogger</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">        </span><span class="nx">Name</span><span class="w">     </span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;name&quot;`</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">        </span><span class="nx">LastName</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;lastName&quot;`</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">    </span><span class="p">}{</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">        </span><span class="nx">Name</span><span class="p">:</span><span class="w">     </span><span class="s">&quot;hello&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">        </span><span class="nx">LastName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;world&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">    </span><span class="p">})</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="zap-logger">Zap Logger</h2>
 <p>The <a href="https://github.com/uber-go/zap">Zap Logger</a> is faster than the default logger.</p>
@@ -2044,26 +2061,26 @@ Here you could use embedding, to support the log.Logger struct:</p>
 <span class="normal"><a href="#__codelineno-4-17">17</a></span>
 <span class="normal"><a href="#__codelineno-4-18">18</a></span>
 <span class="normal"><a href="#__codelineno-4-19">19</a></span>
-<span class="normal"><a href="#__codelineno-4-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="s">&quot;go.uber.org/zap&quot;</span><span class="w"></span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">)</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="s">&quot;go.uber.org/zap&quot;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">)</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="nx">developmentLogger</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">zap</span><span class="p">.</span><span class="nx">NewDevelopment</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="nx">productionLogger</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">zap</span><span class="p">.</span><span class="nx">NewProduction</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">    </span><span class="nx">developmentLogger</span><span class="p">.</span><span class="nx">Info</span><span class="p">(</span><span class="s">&quot;failed to fetch URL&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">        </span><span class="nx">zap</span><span class="p">.</span><span class="nx">String</span><span class="p">(</span><span class="s">&quot;url&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;url&quot;</span><span class="p">),</span><span class="w"></span>
-<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">    </span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">    </span><span class="nx">productionLogger</span><span class="p">.</span><span class="nx">Info</span><span class="p">(</span><span class="s">&quot;failed to fetch URL&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">        </span><span class="nx">zap</span><span class="p">.</span><span class="nx">String</span><span class="p">(</span><span class="s">&quot;url&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;url&quot;</span><span class="p">),</span><span class="w"></span>
-<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">    </span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="nx">developmentLogger</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">zap</span><span class="p">.</span><span class="nx">NewDevelopment</span><span class="p">()</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="nx">productionLogger</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">zap</span><span class="p">.</span><span class="nx">NewProduction</span><span class="p">()</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">    </span><span class="nx">developmentLogger</span><span class="p">.</span><span class="nx">Info</span><span class="p">(</span><span class="s">&quot;failed to fetch URL&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">        </span><span class="nx">zap</span><span class="p">.</span><span class="nx">String</span><span class="p">(</span><span class="s">&quot;url&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;url&quot;</span><span class="p">),</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">    </span><span class="nx">productionLogger</span><span class="p">.</span><span class="nx">Info</span><span class="p">(</span><span class="s">&quot;failed to fetch URL&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">        </span><span class="nx">zap</span><span class="p">.</span><span class="nx">String</span><span class="p">(</span><span class="s">&quot;url&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;url&quot;</span><span class="p">),</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>output:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2022-05-12T14:27:26.733+0200    INFO    bruh/main.go:16 failed to fetch URL     {&quot;url&quot;: &quot;url&quot;}
@@ -2092,42 +2109,6 @@ The Production Logger produces a json string as log.</p>
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../standard_library/" class="md-footer__link md-footer__link--prev" aria-label="Previous: The standard library" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              The standard library
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../context/" class="md-footer__link md-footer__link--next" aria-label="Next: Context" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Context
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -2149,14 +2130,13 @@ The Production Logger produces a json string as log.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6df46069.min.js"></script>
       
         <script src="../../../javascripts/extra.js"></script>
       
-    
     
   </body>
 </html>

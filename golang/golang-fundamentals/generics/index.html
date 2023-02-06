@@ -10,8 +10,14 @@
       
         <link rel="canonical" href="https://bykof.github.io/golang/golang-fundamentals/generics/">
       
+      
+        <link rel="prev" href="../tags/">
+      
+      
+        <link rel="next" href="../third_party_libraries/">
+      
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
@@ -19,11 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0d440cfe.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -111,8 +116,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -120,8 +123,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -160,7 +161,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -307,17 +308,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_1">
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
           Homepage
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Homepage" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Homepage
@@ -355,17 +357,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
           React
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="React" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           React
@@ -683,17 +686,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           JavaScript
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="JavaScript" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           JavaScript
@@ -723,17 +727,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3_2">
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
           BYOT (Build Your Own Tool)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="BYOT (Build Your Own Tool)" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           BYOT (Build Your Own Tool)
@@ -906,17 +911,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           Golang
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Golang" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Golang
@@ -948,17 +954,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_2">
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
           Golang Fundamentals
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Golang Fundamentals" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
           Golang Fundamentals
@@ -1212,7 +1219,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -1316,17 +1323,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_3">
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
           Dependency Injection
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Dependency Injection" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
           Dependency Injection
@@ -1377,17 +1385,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_4">
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
           Architecture and Best Practices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Architecture and Best Practices" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_4">
           <span class="md-nav__icon md-icon"></span>
           Architecture and Best Practices
@@ -1424,17 +1433,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_5">
+        <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
           Docker
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Docker" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_5">
           <span class="md-nav__icon md-icon"></span>
           Docker
@@ -1471,17 +1481,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_6">
+        <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
           Design Patterns
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Design Patterns" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_6">
           <span class="md-nav__icon md-icon"></span>
           Design Patterns
@@ -1526,17 +1537,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
           Exercises
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Exercises
@@ -1566,17 +1578,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_2">
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
           JavaScript Fundamentals
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="JavaScript Fundamentals" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
           JavaScript Fundamentals
@@ -1627,17 +1640,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_3">
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
           Browser API
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Browser API" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_3">
           <span class="md-nav__icon md-icon"></span>
           Browser API
@@ -1674,17 +1688,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_4">
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
           Go
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Go" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_4">
           <span class="md-nav__icon md-icon"></span>
           Go
@@ -1749,17 +1764,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_5">
+        <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
           React
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="React" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_5">
           <span class="md-nav__icon md-icon"></span>
           React
@@ -1967,6 +1983,7 @@
                   
 
 
+
 <h1 id="generics">Generics</h1>
 <p>Generics can be used, if you want to do similar operations with the same function, but you have different variable types.</p>
 <p>Let's check an example first:</p>
@@ -2004,41 +2021,41 @@
 <span class="normal"><a href="#__codelineno-0-32">32</a></span>
 <span class="normal"><a href="#__codelineno-0-33">33</a></span>
 <span class="normal"><a href="#__codelineno-0-34">34</a></span>
-<span class="normal"><a href="#__codelineno-0-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// SumInts adds together the values of m.</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kd">func</span><span class="w"> </span><span class="nx">SumInts</span><span class="p">(</span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int64</span><span class="p">)</span><span class="w"> </span><span class="kt">int64</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="kt">int64</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="nx">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">v</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">s</span><span class="w"></span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// SumInts adds together the values of m.</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kd">func</span><span class="w"> </span><span class="nx">SumInts</span><span class="p">(</span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int64</span><span class="p">)</span><span class="w"> </span><span class="kt">int64</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="kt">int64</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="nx">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">v</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">s</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">}</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="c1">// SumFloats adds together the values of m.</span><span class="w"></span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="kd">func</span><span class="w"> </span><span class="nx">SumFloats</span><span class="p">(</span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">float64</span><span class="p">)</span><span class="w"> </span><span class="kt">float64</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="kt">float64</span><span class="w"></span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="nx">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">v</span><span class="w"></span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">s</span><span class="w"></span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="c1">// SumFloats adds together the values of m.</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="kd">func</span><span class="w"> </span><span class="nx">SumFloats</span><span class="p">(</span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">float64</span><span class="p">)</span><span class="w"> </span><span class="kt">float64</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="kt">float64</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="nx">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">v</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">s</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="p">}</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18"></a>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">    </span><span class="c1">// Initialize a map for the integer values</span><span class="w"></span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="nx">ints</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int64</span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">        </span><span class="s">&quot;first&quot;</span><span class="p">:</span><span class="w">  </span><span class="mi">34</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">        </span><span class="s">&quot;second&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">    </span><span class="c1">// Initialize a map for the integer values</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="nx">ints</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int64</span><span class="p">{</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">        </span><span class="s">&quot;first&quot;</span><span class="p">:</span><span class="w">  </span><span class="mi">34</span><span class="p">,</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">        </span><span class="s">&quot;second&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-0-25" name="__codelineno-0-25"></a>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">    </span><span class="c1">// Initialize a map for the float values</span><span class="w"></span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">    </span><span class="nx">floats</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">float64</span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">        </span><span class="s">&quot;first&quot;</span><span class="p">:</span><span class="w">  </span><span class="mf">35.98</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">        </span><span class="s">&quot;second&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">26.99</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">    </span><span class="c1">// Initialize a map for the float values</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">    </span><span class="nx">floats</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">float64</span><span class="p">{</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">        </span><span class="s">&quot;first&quot;</span><span class="p">:</span><span class="w">  </span><span class="mf">35.98</span><span class="p">,</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">        </span><span class="s">&quot;second&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">26.99</span><span class="p">,</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-0-31" name="__codelineno-0-31"></a>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Non-Generic Sums: %v and %v\n&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">        </span><span class="nx">SumInts</span><span class="p">(</span><span class="nx">ints</span><span class="p">),</span><span class="w"></span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">        </span><span class="nx">SumFloats</span><span class="p">(</span><span class="nx">floats</span><span class="p">))</span><span class="w"></span>
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Non-Generic Sums: %v and %v\n&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">        </span><span class="nx">SumInts</span><span class="p">(</span><span class="nx">ints</span><span class="p">),</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">        </span><span class="nx">SumFloats</span><span class="p">(</span><span class="nx">floats</span><span class="p">))</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>output:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Non-Generic Sums: 46 and 62.97
@@ -2068,31 +2085,31 @@
 <span class="normal"><a href="#__codelineno-2-22">22</a></span>
 <span class="normal"><a href="#__codelineno-2-23">23</a></span>
 <span class="normal"><a href="#__codelineno-2-24">24</a></span>
-<span class="normal"><a href="#__codelineno-2-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">SumIntsOrFloats</span><span class="p">[</span><span class="nx">K</span><span class="w"> </span><span class="kt">comparable</span><span class="p">,</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="kt">int64</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">float64</span><span class="p">](</span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="nx">K</span><span class="p">]</span><span class="nx">V</span><span class="p">)</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="nx">V</span><span class="w"></span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">        </span><span class="nx">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">v</span><span class="w"></span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">s</span><span class="w"></span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">SumIntsOrFloats</span><span class="p">[</span><span class="nx">K</span><span class="w"> </span><span class="kt">comparable</span><span class="p">,</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="kt">int64</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">float64</span><span class="p">](</span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="nx">K</span><span class="p">]</span><span class="nx">V</span><span class="p">)</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="nx">V</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">        </span><span class="nx">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">v</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">s</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">}</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="c1">// Initialize a map for the integer values</span><span class="w"></span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="nx">ints</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int64</span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">        </span><span class="s">&quot;first&quot;</span><span class="p">:</span><span class="w">  </span><span class="mi">34</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">        </span><span class="s">&quot;second&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="c1">// Initialize a map for the integer values</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="nx">ints</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int64</span><span class="p">{</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">        </span><span class="s">&quot;first&quot;</span><span class="p">:</span><span class="w">  </span><span class="mi">34</span><span class="p">,</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">        </span><span class="s">&quot;second&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-15" name="__codelineno-2-15"></a>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">    </span><span class="c1">// Initialize a map for the float values</span><span class="w"></span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">    </span><span class="nx">floats</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">float64</span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">        </span><span class="s">&quot;first&quot;</span><span class="p">:</span><span class="w">  </span><span class="mf">35.98</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">        </span><span class="s">&quot;second&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">26.99</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">    </span><span class="c1">// Initialize a map for the float values</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">    </span><span class="nx">floats</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">float64</span><span class="p">{</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">        </span><span class="s">&quot;first&quot;</span><span class="p">:</span><span class="w">  </span><span class="mf">35.98</span><span class="p">,</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">        </span><span class="s">&quot;second&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">26.99</span><span class="p">,</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-21" name="__codelineno-2-21"></a>
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Generic Sums: %v and %v\n&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">        </span><span class="nx">SumIntsOrFloats</span><span class="p">(</span><span class="nx">ints</span><span class="p">),</span><span class="w"></span>
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">        </span><span class="nx">SumIntsOrFloats</span><span class="p">(</span><span class="nx">floats</span><span class="p">))</span><span class="w"></span>
-<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Generic Sums: %v and %v\n&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">        </span><span class="nx">SumIntsOrFloats</span><span class="p">(</span><span class="nx">ints</span><span class="p">),</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">        </span><span class="nx">SumIntsOrFloats</span><span class="p">(</span><span class="nx">floats</span><span class="p">))</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>output:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Generic Sums: 46 and 62.97
@@ -2102,9 +2119,9 @@
 <p>For example we define:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Number</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="kt">int64</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">float64</span><span class="w"></span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Number</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="kt">int64</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">float64</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>now we can use:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
@@ -2113,13 +2130,13 @@
 <span class="normal"><a href="#__codelineno-5-4">4</a></span>
 <span class="normal"><a href="#__codelineno-5-5">5</a></span>
 <span class="normal"><a href="#__codelineno-5-6">6</a></span>
-<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">SumNumbers</span><span class="p">[</span><span class="nx">K</span><span class="w"> </span><span class="kt">comparable</span><span class="p">,</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="nx">Number</span><span class="p">](</span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="nx">K</span><span class="p">]</span><span class="nx">V</span><span class="p">)</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="nx">V</span><span class="w"></span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">        </span><span class="nx">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">v</span><span class="w"></span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">s</span><span class="w"></span>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">SumNumbers</span><span class="p">[</span><span class="nx">K</span><span class="w"> </span><span class="kt">comparable</span><span class="p">,</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="nx">Number</span><span class="p">](</span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="nx">K</span><span class="p">]</span><span class="nx">V</span><span class="p">)</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="nx">V</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">        </span><span class="nx">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">v</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">s</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="underlying-types">Underlying Types</h2>
 <p>Sometimes you define a user-defined type, but don't want to add your type to a generic function, which takes in just <code>primitive</code> types.
@@ -2138,21 +2155,21 @@ Therefore just use underlying types:</p>
 <span class="normal"><a href="#__codelineno-6-12">12</a></span>
 <span class="normal"><a href="#__codelineno-6-13">13</a></span>
 <span class="normal"><a href="#__codelineno-6-14">14</a></span>
-<span class="normal"><a href="#__codelineno-6-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Number</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">int8</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">int16</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">int32</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">int64</span><span class="w"></span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Number</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">int8</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">int16</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">int32</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">int64</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p">}</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="kd">type</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="kt">int32</span><span class="w"></span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="kd">type</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="kt">int32</span>
 <a id="__codelineno-6-6" name="__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Sum</span><span class="p">[</span><span class="nx">V</span><span class="w"> </span><span class="nx">Number</span><span class="p">](</span><span class="nx">a</span><span class="w"> </span><span class="nx">V</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="nx">V</span><span class="p">)</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="w"></span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Sum</span><span class="p">[</span><span class="nx">V</span><span class="w"> </span><span class="nx">Number</span><span class="p">](</span><span class="nx">a</span><span class="w"> </span><span class="nx">V</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="nx">V</span><span class="p">)</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="p">}</span>
 <a id="__codelineno-6-10" name="__codelineno-6-10"></a>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">Sum</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">))</span><span class="w"></span>
-<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">Sum</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">))</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>makes the error:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>MySpecialNumber does not implement Number (possibly missing ~ for int32 in constraint Number)
@@ -2174,21 +2191,21 @@ Use <code>~</code> to make the type underlying.</p>
 <span class="normal"><a href="#__codelineno-8-12">12</a></span>
 <span class="normal"><a href="#__codelineno-8-13">13</a></span>
 <span class="normal"><a href="#__codelineno-8-14">14</a></span>
-<span class="normal"><a href="#__codelineno-8-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Number</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="o">~</span><span class="kt">int</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">~</span><span class="kt">int8</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">~</span><span class="kt">int16</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">~</span><span class="kt">int32</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">~</span><span class="kt">int64</span><span class="w"></span>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Number</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="o">~</span><span class="kt">int</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">~</span><span class="kt">int8</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">~</span><span class="kt">int16</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">~</span><span class="kt">int32</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">~</span><span class="kt">int64</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="p">}</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="kd">type</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="kt">int32</span><span class="w"></span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="kd">type</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="kt">int32</span>
 <a id="__codelineno-8-6" name="__codelineno-8-6"></a>
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Sum</span><span class="p">[</span><span class="nx">V</span><span class="w"> </span><span class="nx">Number</span><span class="p">](</span><span class="nx">a</span><span class="w"> </span><span class="nx">V</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="nx">V</span><span class="p">)</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="w"></span>
-<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Sum</span><span class="p">[</span><span class="nx">V</span><span class="w"> </span><span class="nx">Number</span><span class="p">](</span><span class="nx">a</span><span class="w"> </span><span class="nx">V</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="nx">V</span><span class="p">)</span><span class="w"> </span><span class="nx">V</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="p">}</span>
 <a id="__codelineno-8-10" name="__codelineno-8-10"></a>
-<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
-<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">Sum</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">))</span><span class="w"></span>
-<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="nx">MySpecialNumber</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">Sum</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">))</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2207,17 +2224,17 @@ You have to use a primitive type!</p>
 <span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-9-10">10</a></span>
-<span class="normal"><a href="#__codelineno-9-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Stringer</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="nx">String</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Stringer</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="nx">String</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="p">}</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4"></a>
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Join</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="nx">Stringer</span><span class="p">](</span><span class="nx">things</span><span class="w"> </span><span class="p">[]</span><span class="nx">E</span><span class="p">)</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">things</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">        </span><span class="nx">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">value</span><span class="p">.</span><span class="nx">String</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="w"></span>
-<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Join</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="nx">Stringer</span><span class="p">](</span><span class="nx">things</span><span class="w"> </span><span class="p">[]</span><span class="nx">E</span><span class="p">)</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="kt">string</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">things</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">        </span><span class="nx">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">value</span><span class="p">.</span><span class="nx">String</span><span class="p">()</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>There are also new keywords invented for generics like: <code>any</code> and <code>comparable</code></p>
 <h2 id="constraints-package">Constraints Package</h2>
@@ -2228,9 +2245,9 @@ For example</p>
 <p>Check the example here:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
 <span class="normal"><a href="#__codelineno-10-2">2</a></span>
-<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="kt">any</span><span class="p">]</span><span class="w"> </span><span class="p">[]</span><span class="nx">E</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="kt">any</span><span class="p">]</span><span class="w"> </span><span class="p">[]</span><span class="nx">E</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2"></a>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kd">var</span><span class="w"> </span><span class="nx">myBunch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="kt">int</span><span class="p">]{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kd">var</span><span class="w"> </span><span class="nx">myBunch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="kt">int</span><span class="p">]{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Also you can use the <code>Bunch</code> now as parameter type:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
@@ -2241,15 +2258,15 @@ For example</p>
 <span class="normal"><a href="#__codelineno-11-6">6</a></span>
 <span class="normal"><a href="#__codelineno-11-7">7</a></span>
 <span class="normal"><a href="#__codelineno-11-8">8</a></span>
-<span class="normal"><a href="#__codelineno-11-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="kt">any</span><span class="p">]</span><span class="w"> </span><span class="p">[]</span><span class="nx">E</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-11-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="kt">any</span><span class="p">]</span><span class="w"> </span><span class="p">[]</span><span class="nx">E</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">PrintBunch</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="kt">any</span><span class="p">](</span><span class="nx">bunch</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="c1">//...</span><span class="w"></span>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">PrintBunch</span><span class="p">[</span><span class="nx">E</span><span class="w"> </span><span class="kt">any</span><span class="p">](</span><span class="nx">bunch</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="c1">//...</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="p">}</span>
 <a id="__codelineno-11-6" name="__codelineno-11-6"></a>
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="kd">func</span><span class="w"> </span><span class="p">[</span><span class="nx">b</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="p">]]</span><span class="w"> </span><span class="nx">Print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">    </span><span class="c1">// ...</span><span class="w"></span>
-<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="kd">func</span><span class="w"> </span><span class="p">[</span><span class="nx">b</span><span class="w"> </span><span class="nx">Bunch</span><span class="p">[</span><span class="nx">E</span><span class="p">]]</span><span class="w"> </span><span class="nx">Print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">    </span><span class="c1">// ...</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>or as a struct:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
@@ -2260,15 +2277,15 @@ For example</p>
 <span class="normal"><a href="#__codelineno-12-6">6</a></span>
 <span class="normal"><a href="#__codelineno-12-7">7</a></span>
 <span class="normal"><a href="#__codelineno-12-8">8</a></span>
-<span class="normal"><a href="#__codelineno-12-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">List</span><span class="p">[</span><span class="nx">T</span><span class="w"> </span><span class="kt">any</span><span class="p">]</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="nx">next</span><span class="w">  </span><span class="o">*</span><span class="nx">List</span><span class="p">[</span><span class="nx">T</span><span class="p">]</span><span class="w"></span>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="nx">value</span><span class="w"> </span><span class="nx">T</span><span class="w"></span>
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-12-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">List</span><span class="p">[</span><span class="nx">T</span><span class="w"> </span><span class="kt">any</span><span class="p">]</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="nx">next</span><span class="w">  </span><span class="o">*</span><span class="nx">List</span><span class="p">[</span><span class="nx">T</span><span class="p">]</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="nx">value</span><span class="w"> </span><span class="nx">T</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="p">}</span>
 <a id="__codelineno-12-5" name="__codelineno-12-5"></a>
-<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">    </span><span class="nx">myList</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">List</span><span class="p">[</span><span class="kt">int</span><span class="p">]{</span><span class="nx">value</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">myList</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">    </span><span class="nx">myList</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">List</span><span class="p">[</span><span class="kt">int</span><span class="p">]{</span><span class="nx">value</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">myList</span><span class="p">)</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 
 
@@ -2291,42 +2308,6 @@ For example</p>
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../tags/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tags" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Tags
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../third_party_libraries/" class="md-footer__link md-footer__link--next" aria-label="Next: Third Party Libraries" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Third Party Libraries
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -2348,14 +2329,13 @@ For example</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6df46069.min.js"></script>
       
         <script src="../../../javascripts/extra.js"></script>
       
-    
     
   </body>
 </html>

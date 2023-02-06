@@ -10,8 +10,14 @@
       
         <link rel="canonical" href="https://bykof.github.io/golang/golang-fundamentals/modules_packages_imports/">
       
+      
+        <link rel="prev" href="../errors/">
+      
+      
+        <link rel="next" href="../concurrency/">
+      
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
@@ -19,11 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0d440cfe.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -111,8 +116,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -120,8 +123,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -160,7 +161,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -307,17 +308,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_1">
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
           Homepage
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Homepage" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Homepage
@@ -355,17 +357,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
           React
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="React" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           React
@@ -683,17 +686,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           JavaScript
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="JavaScript" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           JavaScript
@@ -723,17 +727,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3_2">
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
           BYOT (Build Your Own Tool)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="BYOT (Build Your Own Tool)" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           BYOT (Build Your Own Tool)
@@ -906,17 +911,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           Golang
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Golang" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Golang
@@ -948,17 +954,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_2">
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
           Golang Fundamentals
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Golang Fundamentals" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
           Golang Fundamentals
@@ -1100,7 +1107,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -1426,17 +1433,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_3">
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
           Dependency Injection
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Dependency Injection" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
           Dependency Injection
@@ -1487,17 +1495,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_4">
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
           Architecture and Best Practices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Architecture and Best Practices" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_4">
           <span class="md-nav__icon md-icon"></span>
           Architecture and Best Practices
@@ -1534,17 +1543,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_5">
+        <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
           Docker
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Docker" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_5">
           <span class="md-nav__icon md-icon"></span>
           Docker
@@ -1581,17 +1591,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_6">
+        <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
           Design Patterns
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Design Patterns" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_6">
           <span class="md-nav__icon md-icon"></span>
           Design Patterns
@@ -1636,17 +1647,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
           Exercises
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Exercises
@@ -1676,17 +1688,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_2">
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
           JavaScript Fundamentals
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="JavaScript Fundamentals" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
           JavaScript Fundamentals
@@ -1737,17 +1750,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_3">
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
           Browser API
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Browser API" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_3">
           <span class="md-nav__icon md-icon"></span>
           Browser API
@@ -1784,17 +1798,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_4">
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
           Go
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Go" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_4">
           <span class="md-nav__icon md-icon"></span>
           Go
@@ -1859,17 +1874,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_5">
+        <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
           React
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="React" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_5">
           <span class="md-nav__icon md-icon"></span>
           React
@@ -2187,6 +2203,7 @@
                   
 
 
+
 <h1 id="modules-packages-and-imports">Modules, Packages, and Imports</h1>
 <h2 id="repositories-modules-and-packages">Repositories, Modules, and Packages</h2>
 <p>There are three main concepts in Go: <code>repositories</code>, <code>modules</code>, and <code>packages</code>.</p>
@@ -2218,7 +2235,7 @@ The <code>GLOBAL_UNIQUE_IDENTIFIER</code> is case-sensitive, therefore try to av
 <h2 id="cross-compiling">Cross Compiling</h2>
 <p>First we have to find available platforms, where we can compile to. (<a href="https://pkg.go.dev/cmd/go#hdr-Compile_packages_and_dependencies">Source</a>)</p>
 <p>To find all possible platforms use:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>go tool dist list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>go<span class="w"> </span>tool<span class="w"> </span>dist<span class="w"> </span>list
 </code></pre></div>
 <p>output:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>aix/ppc64
@@ -2270,12 +2287,12 @@ The <code>GLOBAL_UNIQUE_IDENTIFIER</code> is case-sensitive, therefore try to av
 <p>This will print out all possible cross compilations, since Go 1.15 all possible platforms are built-in.
 The format of the output is: <code>$GOOS/$GOARCH</code>.</p>
 <p>Then you can use the following pattern for <code>$GOOS</code> and <code>$GOARCH</code> to cross compile your application:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">GOOS</span><span class="o">=</span>windows <span class="nv">GOARCH</span><span class="o">=</span>amd64 go build -o main.exe main.go
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">GOOS</span><span class="o">=</span>windows<span class="w"> </span><span class="nv">GOARCH</span><span class="o">=</span>amd64<span class="w"> </span>go<span class="w"> </span>build<span class="w"> </span>-o<span class="w"> </span>main.exe<span class="w"> </span>main.go
 </code></pre></div>
 <h2 id="go-generate">Go generate</h2>
 <p>Go generate is a useful tool to run important project commands.</p>
 <p>You can run it with:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>go generate <span class="o">[</span>-run regexp<span class="o">]</span> <span class="o">[</span>-n<span class="o">]</span> <span class="o">[</span>-v<span class="o">]</span> <span class="o">[</span>-x<span class="o">]</span> <span class="o">[</span>build flags<span class="o">]</span> <span class="o">[</span>file.go... <span class="p">|</span> packages<span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>go<span class="w"> </span>generate<span class="w"> </span><span class="o">[</span>-run<span class="w"> </span>regexp<span class="o">]</span><span class="w"> </span><span class="o">[</span>-n<span class="o">]</span><span class="w"> </span><span class="o">[</span>-v<span class="o">]</span><span class="w"> </span><span class="o">[</span>-x<span class="o">]</span><span class="w"> </span><span class="o">[</span>build<span class="w"> </span>flags<span class="o">]</span><span class="w"> </span><span class="o">[</span>file.go...<span class="w"> </span><span class="p">|</span><span class="w"> </span>packages<span class="o">]</span>
 </code></pre></div>
 <p>Go generate will not run automatically with go build, go test and go run.
 It should be run manually and explicitly.</p>
@@ -2285,11 +2302,11 @@ It should be run manually and explicitly.</p>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
 <span class="normal"><a href="#__codelineno-5-4">4</a></span>
-<span class="normal"><a href="#__codelineno-5-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="c1">//go:generate echo &quot;Hello, Go Generate!&quot;</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="c1">//go:generate echo &quot;Hello, Go Generate!&quot;</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
 </code></pre></div></td></tr></table></div>
 <p>If you run this file with following commands:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>➜ go run main.go
@@ -2307,7 +2324,7 @@ It should be run manually and explicitly.</p>
 <li>uncontroversial: never have a debate about spacing or brace position ever again!</li>
 </ul>
 <p>To use it execute:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>go fmt path/to/your/package
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>go<span class="w"> </span>fmt<span class="w"> </span>path/to/your/package
 </code></pre></div>
 <p>This will format your code automatically.</p>
 <h2 id="imports-and-exports">Imports and Exports</h2>
@@ -2335,13 +2352,13 @@ It should be run manually and explicitly.</p>
 <span class="normal"><a href="#__codelineno-8-4">4</a></span>
 <span class="normal"><a href="#__codelineno-8-5">5</a></span>
 <span class="normal"><a href="#__codelineno-8-6">6</a></span>
-<span class="normal"><a href="#__codelineno-8-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Exported</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="c1">// this function can be accessed from other packages</span><span class="w"></span>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Exported</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="c1">// this function can be accessed from other packages</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="p">}</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">packageFunc</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="c1">// this function is only available in the package</span><span class="w"></span>
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">packageFunc</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="c1">// this function is only available in the package</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="packages">Packages</h2>
 <p>Creating and accessing packages very easy in Go.
@@ -2353,11 +2370,11 @@ The package clause can use the <code>package name</code> or another <code>custom
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
 <span class="normal"><a href="#__codelineno-9-3">3</a></span>
 <span class="normal"><a href="#__codelineno-9-4">4</a></span>
-<span class="normal"><a href="#__codelineno-9-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">math</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">math</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Double</span><span class="p">(</span><span class="nx">a</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="nx">in</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Double</span><span class="p">(</span><span class="nx">a</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="nx">in</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">formatter/formatter.go</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
 <span class="normal"><a href="#__codelineno-10-2">2</a></span>
@@ -2365,13 +2382,13 @@ The package clause can use the <code>package name</code> or another <code>custom
 <span class="normal"><a href="#__codelineno-10-4">4</a></span>
 <span class="normal"><a href="#__codelineno-10-5">5</a></span>
 <span class="normal"><a href="#__codelineno-10-6">6</a></span>
-<span class="normal"><a href="#__codelineno-10-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">print</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-10-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">print</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2"></a>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4"></a>
-<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Format</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Sprintf</span><span class="p">(</span><span class="s">&quot;The numer is %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">num</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Format</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Sprintf</span><span class="p">(</span><span class="s">&quot;The numer is %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">num</span><span class="p">)</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
@@ -2386,20 +2403,20 @@ The package clause can use the <code>package name</code> or another <code>custom
 <span class="normal"><a href="#__codelineno-11-11">11</a></span>
 <span class="normal"><a href="#__codelineno-11-12">12</a></span>
 <span class="normal"><a href="#__codelineno-11-13">13</a></span>
-<span class="normal"><a href="#__codelineno-11-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
 <a id="__codelineno-11-5" name="__codelineno-11-5"></a>
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">    </span><span class="s">&quot;example.com/formatter&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">    </span><span class="s">&quot;example.com/math&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">    </span><span class="s">&quot;example.com/formatter&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">    </span><span class="s">&quot;example.com/math&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="p">)</span>
 <a id="__codelineno-11-9" name="__codelineno-11-9"></a>
-<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">    </span><span class="nx">num</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">math</span><span class="p">.</span><span class="nx">Double</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">    </span><span class="nx">output</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">print</span><span class="p">.</span><span class="nx">Format</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">    </span><span class="nx">num</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">math</span><span class="p">.</span><span class="nx">Double</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">    </span><span class="nx">output</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">print</span><span class="p">.</span><span class="nx">Format</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>The import path can be relative, but always use absolute paths with the repository name as root to the module name you want to import, separated by <code>/</code>.</p>
 <p>In the example we imported <code>example.com/formatter</code> but we defined the packagein <code>formatter.go</code> to be <code>package print</code>.
@@ -2413,10 +2430,10 @@ Therefore you can just overwrite the package name by using <code>import alias</c
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
 <span class="normal"><a href="#__codelineno-12-2">2</a></span>
 <span class="normal"><a href="#__codelineno-12-3">3</a></span>
-<span class="normal"><a href="#__codelineno-12-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="nx">cryptoRand</span><span class="w"> </span><span class="s">&quot;crypto/rand&quot;</span><span class="w"></span>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="s">&quot;math/rand&quot;</span><span class="w"></span>
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="p">)</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="nx">cryptoRand</span><span class="w"> </span><span class="s">&quot;crypto/rand&quot;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="s">&quot;math/rand&quot;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="documenting-with-godoc">Documenting with godoc</h2>
 <p>With <code>godoc</code> you can document your repository and it's packages.
@@ -2464,20 +2481,20 @@ Create a package called <code>internal</code>, everyting exported in the <code>i
 <span class="normal"><a href="#__codelineno-14-11">11</a></span>
 <span class="normal"><a href="#__codelineno-14-12">12</a></span>
 <span class="normal"><a href="#__codelineno-14-13">13</a></span>
-<span class="normal"><a href="#__codelineno-14-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
-<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="s">&quot;github.com/shopspring/decimal&quot;</span><span class="w"></span>
-<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="p">)</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="s">&quot;github.com/shopspring/decimal&quot;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="p">)</span>
 <a id="__codelineno-14-5" name="__codelineno-14-5"></a>
-<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">    </span><span class="nx">price</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">decimal</span><span class="p">.</span><span class="nx">NewFromString</span><span class="p">(</span><span class="s">&quot;136.02&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">    </span><span class="nx">quantity</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">decimal</span><span class="p">.</span><span class="nx">NewFromInt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">    </span><span class="nx">total</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">price</span><span class="p">.</span><span class="nx">Mul</span><span class="p">(</span><span class="nx">quantity</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Total:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">total</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">    </span><span class="nx">price</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">decimal</span><span class="p">.</span><span class="nx">NewFromString</span><span class="p">(</span><span class="s">&quot;136.02&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">    </span><span class="nx">quantity</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">decimal</span><span class="p">.</span><span class="nx">NewFromInt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">    </span><span class="nx">total</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">price</span><span class="p">.</span><span class="nx">Mul</span><span class="p">(</span><span class="nx">quantity</span><span class="p">)</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Total:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">total</span><span class="p">)</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>If we run <code>go build</code> or <code>go run main.go</code> we get:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>main.go:6:2: no required module provides package github.com/shopspring/decimal; to add it:
@@ -2564,42 +2581,6 @@ If module is not available Google's Proxy Server downloads and stores the module
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../errors/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Errors" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Errors
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../concurrency/" class="md-footer__link md-footer__link--next" aria-label="Next: Concurrency" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Concurrency
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -2621,14 +2602,13 @@ If module is not available Google's Proxy Server downloads and stores the module
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6df46069.min.js"></script>
       
         <script src="../../../javascripts/extra.js"></script>
       
-    
     
   </body>
 </html>

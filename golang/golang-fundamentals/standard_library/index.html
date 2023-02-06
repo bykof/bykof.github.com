@@ -10,8 +10,14 @@
       
         <link rel="canonical" href="https://bykof.github.io/golang/golang-fundamentals/standard_library/">
       
+      
+        <link rel="prev" href="../concurrency/">
+      
+      
+        <link rel="next" href="../logging/">
+      
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
@@ -19,11 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0d440cfe.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -111,8 +116,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -120,8 +123,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -160,7 +161,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -307,17 +308,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_1">
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
           Homepage
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Homepage" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Homepage
@@ -355,17 +357,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
           React
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="React" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           React
@@ -683,17 +686,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           JavaScript
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="JavaScript" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           JavaScript
@@ -723,17 +727,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3_2">
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
           BYOT (Build Your Own Tool)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="BYOT (Build Your Own Tool)" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           BYOT (Build Your Own Tool)
@@ -906,17 +911,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           Golang
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Golang" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Golang
@@ -948,17 +954,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_2">
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
           Golang Fundamentals
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Golang Fundamentals" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
           Golang Fundamentals
@@ -1128,7 +1135,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -1342,17 +1349,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_3">
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
           Dependency Injection
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Dependency Injection" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
           Dependency Injection
@@ -1403,17 +1411,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_4">
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
           Architecture and Best Practices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Architecture and Best Practices" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_4">
           <span class="md-nav__icon md-icon"></span>
           Architecture and Best Practices
@@ -1450,17 +1459,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_5">
+        <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
           Docker
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Docker" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_5">
           <span class="md-nav__icon md-icon"></span>
           Docker
@@ -1497,17 +1507,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4_6">
+        <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
           Design Patterns
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Design Patterns" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_6">
           <span class="md-nav__icon md-icon"></span>
           Design Patterns
@@ -1552,17 +1563,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
           Exercises
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Exercises
@@ -1592,17 +1604,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_2">
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
           JavaScript Fundamentals
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="JavaScript Fundamentals" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
           JavaScript Fundamentals
@@ -1653,17 +1666,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_3">
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
           Browser API
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Browser API" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_3">
           <span class="md-nav__icon md-icon"></span>
           Browser API
@@ -1700,17 +1714,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_4">
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
           Go
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Go" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_4">
           <span class="md-nav__icon md-icon"></span>
           Go
@@ -1775,17 +1790,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5_5">
+        <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
           React
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="React" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_5">
           <span class="md-nav__icon md-icon"></span>
           React
@@ -2019,6 +2035,7 @@
                   
 
 
+
 <h1 id="the-standard-library">The standard library</h1>
 <p>There are a lot of "batteries included" in Go.
 The standard library is really huge, let's check some of those packages to see, how they were implemented.</p>
@@ -2031,13 +2048,13 @@ The package <code>io</code> provide this functionality and two most used interfa
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
 <span class="normal"><a href="#__codelineno-0-5">5</a></span>
 <span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Reader</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nx">Read</span><span class="p">(</span><span class="nx">p</span><span class="w"> </span><span class="p">[]</span><span class="kt">byte</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Reader</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nx">Read</span><span class="p">(</span><span class="nx">p</span><span class="w"> </span><span class="p">[]</span><span class="kt">byte</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">}</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Writer</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nx">Write</span><span class="p">(</span><span class="nx">p</span><span class="w"> </span><span class="p">[]</span><span class="kt">byte</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Writer</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nx">Write</span><span class="p">(</span><span class="nx">p</span><span class="w"> </span><span class="p">[]</span><span class="kt">byte</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p><a href="https://pkg.go.dev/io#Reader"><code>Reader</code></a> and <a href="https://pkg.go.dev/io#Writer"><code>Writer</code></a> are very simple and practical interfaces.
 They allow to read or write <code>len(p)</code> byte to a specific destination.</p>
@@ -2063,28 +2080,28 @@ They allow to read or write <code>len(p)</code> byte to a specific destination.<
 <span class="normal"><a href="#__codelineno-1-19">19</a></span>
 <span class="normal"><a href="#__codelineno-1-20">20</a></span>
 <span class="normal"><a href="#__codelineno-1-21">21</a></span>
-<span class="normal"><a href="#__codelineno-1-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">countLetters</span><span class="p">(</span><span class="nx">r</span><span class="w"> </span><span class="nx">io</span><span class="p">.</span><span class="nx">Reader</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nx">buf</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">([]</span><span class="kt">byte</span><span class="p">,</span><span class="w"> </span><span class="mi">2048</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nx">out</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">{}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">countLetters</span><span class="p">(</span><span class="nx">r</span><span class="w"> </span><span class="nx">io</span><span class="p">.</span><span class="nx">Reader</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nx">buf</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">([]</span><span class="kt">byte</span><span class="p">,</span><span class="w"> </span><span class="mi">2048</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nx">out</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">{}</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="nx">n</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">Read</span><span class="p">(</span><span class="nx">buf</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="nx">n</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">Read</span><span class="p">(</span><span class="nx">buf</span><span class="p">)</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w">  </span><span class="k">range</span><span class="w"> </span><span class="nx">bug</span><span class="p">[:</span><span class="nx">n</span><span class="p">]</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">r</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;Z&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="nx">r</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;z&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">                </span><span class="nx">out</span><span class="p">[</span><span class="nb">string</span><span class="p">(</span><span class="nx">r</span><span class="p">)]</span><span class="o">++</span><span class="w"></span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w">  </span><span class="k">range</span><span class="w"> </span><span class="nx">bug</span><span class="p">[:</span><span class="nx">n</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">r</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;Z&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="nx">r</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;z&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">                </span><span class="nx">out</span><span class="p">[</span><span class="nb">string</span><span class="p">(</span><span class="nx">r</span><span class="p">)]</span><span class="o">++</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-1-13" name="__codelineno-1-13"></a>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">io</span><span class="p">.</span><span class="nx">EOF</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nx">out</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="w"></span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">io</span><span class="p">.</span><span class="nx">EOF</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nx">out</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-1-17" name="__codelineno-1-17"></a>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">nil</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="w"></span>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">nil</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Let's see, how we can read a simple file:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
@@ -2112,32 +2129,32 @@ They allow to read or write <code>len(p)</code> byte to a specific destination.<
 <span class="normal"><a href="#__codelineno-2-23">23</a></span>
 <span class="normal"><a href="#__codelineno-2-24">24</a></span>
 <span class="normal"><a href="#__codelineno-2-25">25</a></span>
-<span class="normal"><a href="#__codelineno-2-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="s">&quot;io&quot;</span><span class="w"></span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="s">&quot;os&quot;</span><span class="w"></span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">)</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="s">&quot;io&quot;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="s">&quot;log&quot;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="s">&quot;os&quot;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">)</span>
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="nx">f</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">OpenFile</span><span class="p">(</span><span class="s">&quot;notes.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">O_RDWR</span><span class="o">|</span><span class="nx">os</span><span class="p">.</span><span class="nx">O_CREATE</span><span class="p">,</span><span class="w"> </span><span class="mo">0755</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="nx">f</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">OpenFile</span><span class="p">(</span><span class="s">&quot;notes.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">O_RDWR</span><span class="o">|</span><span class="nx">os</span><span class="p">.</span><span class="nx">O_CREATE</span><span class="p">,</span><span class="w"> </span><span class="mo">0755</span><span class="p">)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-13" name="__codelineno-2-13"></a>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">f</span><span class="p">.</span><span class="nx">Close</span><span class="p">();</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">    </span><span class="p">}()</span><span class="w"></span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">f</span><span class="p">.</span><span class="nx">Close</span><span class="p">();</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">    </span><span class="p">}()</span>
 <a id="__codelineno-2-19" name="__codelineno-2-19"></a>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">    </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">io</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">    </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">io</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-24" name="__codelineno-2-24"></a>
-<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span><span class="w"></span>
-<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>The <a href="https://pkg.go.dev/io#ReadAll"><code>ioutil.ReadAll</code></a> reads a <code>Reader</code> interface until an error or <code>io.EOF</code> is read.</p>
 <h2 id="time">time</h2>
@@ -2148,9 +2165,9 @@ The smallest amount of time is one nanosecond.
 But there are some constants, which can be used to calculate a minute, two seconds and so on:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nx">h</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Hour</span><span class="w"> </span><span class="c1">// 2 hours</span><span class="w"></span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nx">m</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Minute</span><span class="w"> </span><span class="c1">// 3 minutes</span><span class="w"></span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nx">hm</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">h</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="c1">// 2 hours and 3 minutes</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nx">h</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Hour</span><span class="w"> </span><span class="c1">// 2 hours</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nx">m</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Minute</span><span class="w"> </span><span class="c1">// 3 minutes</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nx">hm</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">h</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="c1">// 2 hours and 3 minutes</span>
 </code></pre></div></td></tr></table></div>
 <p><a href="https://pkg.go.dev/time#ParseDuration"><code>time.ParseDuration</code></a> can parse strings like <code>300ms</code> or <code>2.3h</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
@@ -2170,24 +2187,24 @@ But there are some constants, which can be used to calculate a minute, two secon
 <span class="normal"><a href="#__codelineno-4-15">15</a></span>
 <span class="normal"><a href="#__codelineno-4-16">16</a></span>
 <span class="normal"><a href="#__codelineno-4-17">17</a></span>
-<span class="normal"><a href="#__codelineno-4-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="s">&quot;time&quot;</span><span class="w"></span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="p">)</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="s">&quot;time&quot;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="p">)</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5"></a>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="nx">hours</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">ParseDuration</span><span class="p">(</span><span class="s">&quot;10h&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="nx">complex</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">ParseDuration</span><span class="p">(</span><span class="s">&quot;1h10m10s&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="nx">micro</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">ParseDuration</span><span class="p">(</span><span class="s">&quot;1µs&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="c1">// The package also accepts the incorrect but common prefix u for micro.</span><span class="w"></span>
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="nx">micro2</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">ParseDuration</span><span class="p">(</span><span class="s">&quot;1us&quot;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="nx">hours</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">ParseDuration</span><span class="p">(</span><span class="s">&quot;10h&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="nx">complex</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">ParseDuration</span><span class="p">(</span><span class="s">&quot;1h10m10s&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="nx">micro</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">ParseDuration</span><span class="p">(</span><span class="s">&quot;1µs&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="c1">// The package also accepts the incorrect but common prefix u for micro.</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="nx">micro2</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">ParseDuration</span><span class="p">(</span><span class="s">&quot;1us&quot;</span><span class="p">)</span>
 <a id="__codelineno-4-12" name="__codelineno-4-12"></a>
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">hours</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">complex</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;There are %.0f seconds in %v.\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">complex</span><span class="p">.</span><span class="nx">Seconds</span><span class="p">(),</span><span class="w"> </span><span class="nx">complex</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;There are %d nanoseconds in %v.\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">micro</span><span class="p">.</span><span class="nx">Nanoseconds</span><span class="p">(),</span><span class="w"> </span><span class="nx">micro</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;There are %6.2e seconds in %v.\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">micro2</span><span class="p">.</span><span class="nx">Seconds</span><span class="p">(),</span><span class="w"> </span><span class="nx">micro</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">hours</span><span class="p">)</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">complex</span><span class="p">)</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;There are %.0f seconds in %v.\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">complex</span><span class="p">.</span><span class="nx">Seconds</span><span class="p">(),</span><span class="w"> </span><span class="nx">complex</span><span class="p">)</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;There are %d nanoseconds in %v.\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">micro</span><span class="p">.</span><span class="nx">Nanoseconds</span><span class="p">(),</span><span class="w"> </span><span class="nx">micro</span><span class="p">)</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;There are %6.2e seconds in %v.\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">micro2</span><span class="p">.</span><span class="nx">Seconds</span><span class="p">(),</span><span class="w"> </span><span class="nx">micro</span><span class="p">)</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Now we come to a really unusual thing... parsing and formatting datetimes.
 Go follows the idea to use a format depending on the position in the string: <code>01/02 03:04:05PM 06 -0700</code>.</p>
@@ -2198,13 +2215,13 @@ Go follows the idea to use a format depending on the position in the string: <co
 <span class="normal"><a href="#__codelineno-5-4">4</a></span>
 <span class="normal"><a href="#__codelineno-5-5">5</a></span>
 <span class="normal"><a href="#__codelineno-5-6">6</a></span>
-<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="nx">t</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Parse</span><span class="p">(</span><span class="s">&quot;2006-01-02 15:04:05 -0700&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;2016-01-13 00:12:43 +0000&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">Format</span><span class="p">(</span><span class="s">&quot;January 2, 2006 at 03:04:05PM MST&quot;</span><span class="p">))</span><span class="w"></span>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="nx">t</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Parse</span><span class="p">(</span><span class="s">&quot;2006-01-02 15:04:05 -0700&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;2016-01-13 00:12:43 +0000&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">Format</span><span class="p">(</span><span class="s">&quot;January 2, 2006 at 03:04:05PM MST&quot;</span><span class="p">))</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>output would be:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>January 13, 2016 at 12:12:43AM UTC
@@ -2235,28 +2252,28 @@ It's a more "convenient" way to work with <code>time.Time</code> variables:</p>
 <span class="normal"><a href="#__codelineno-7-19">19</a></span>
 <span class="normal"><a href="#__codelineno-7-20">20</a></span>
 <span class="normal"><a href="#__codelineno-7-21">21</a></span>
-<span class="normal"><a href="#__codelineno-7-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="s">&quot;github.com/bykof/gostradamus&quot;</span><span class="w"></span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">    </span><span class="nx">dateTime</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">gostradamus</span><span class="p">.</span><span class="nx">Parse</span><span class="p">(</span><span class="s">&quot;14.07.2017 02:40:00&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DD.MM.YYYY HH:mm:ss&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="s">&quot;github.com/bykof/gostradamus&quot;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="p">)</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">    </span><span class="nx">dateTime</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">gostradamus</span><span class="p">.</span><span class="nx">Parse</span><span class="p">(</span><span class="s">&quot;14.07.2017 02:40:00&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DD.MM.YYYY HH:mm:ss&quot;</span><span class="p">)</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-7-10" name="__codelineno-7-10"></a>
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">    </span><span class="c1">// Easy manipulation</span><span class="w"></span>
-<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">    </span><span class="nx">dateTime</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">dateTime</span><span class="p">.</span><span class="nx">ShiftMonths</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">).</span><span class="nx">ShiftDays</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">    </span><span class="c1">// Easy manipulation</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">    </span><span class="nx">dateTime</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">dateTime</span><span class="p">.</span><span class="nx">ShiftMonths</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">).</span><span class="nx">ShiftDays</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <a id="__codelineno-7-13" name="__codelineno-7-13"></a>
-<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">    </span><span class="c1">// Easy formatting</span><span class="w"></span>
-<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">dateTime</span><span class="p">.</span><span class="nx">Format</span><span class="p">(</span><span class="s">&quot;DD.MM.YYYY HH:mm:ss&quot;</span><span class="p">))</span><span class="w"></span>
-<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">    </span><span class="c1">// 16.02.2017 02:40:00</span><span class="w"></span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">    </span><span class="c1">// Easy formatting</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">dateTime</span><span class="p">.</span><span class="nx">Format</span><span class="p">(</span><span class="s">&quot;DD.MM.YYYY HH:mm:ss&quot;</span><span class="p">))</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">    </span><span class="c1">// 16.02.2017 02:40:00</span>
 <a id="__codelineno-7-17" name="__codelineno-7-17"></a>
-<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">    </span><span class="c1">// Easy helper functions</span><span class="w"></span>
-<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">    </span><span class="nx">start</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">dateTime</span><span class="p">.</span><span class="nx">SpanWeek</span><span class="p">()</span><span class="w"></span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">    </span><span class="c1">// Easy helper functions</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">    </span><span class="nx">start</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">dateTime</span><span class="p">.</span><span class="nx">SpanWeek</span><span class="p">()</span>
 <a id="__codelineno-7-20" name="__codelineno-7-20"></a>
-<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">start</span><span class="p">.</span><span class="nx">String</span><span class="p">(),</span><span class="w"> </span><span class="nx">end</span><span class="p">.</span><span class="nx">String</span><span class="p">())</span><span class="w"></span>
-<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">start</span><span class="p">.</span><span class="nx">String</span><span class="p">(),</span><span class="w"> </span><span class="nx">end</span><span class="p">.</span><span class="nx">String</span><span class="p">())</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>output:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>16.02.2017 02:40:00
@@ -2277,16 +2294,16 @@ You can "map" json object fields onto your struct, even when the field names are
 <span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-9-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Test&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="nt">&quot;last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tester&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="nt">&quot;birthday&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1994-01-19T00:00:00Z&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="nt">&quot;skills&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Running&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jumping&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">    </span><span class="p">]</span><span class="w"></span>
-<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="p">}</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Test&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="nt">&quot;last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tester&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="nt">&quot;birthday&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1994-01-19T00:00:00Z&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="nt">&quot;skills&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Running&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jumping&quot;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>now we define a struct to map the data:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
@@ -2328,28 +2345,28 @@ You can "map" json object fields onto your struct, even when the field names are
 <span class="normal"><a href="#__codelineno-10-37">37</a></span>
 <span class="normal"><a href="#__codelineno-10-38">38</a></span>
 <span class="normal"><a href="#__codelineno-10-39">39</a></span>
-<span class="normal"><a href="#__codelineno-10-40">40</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="s">&quot;encoding/json&quot;</span><span class="w"></span>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">    </span><span class="s">&quot;time&quot;</span><span class="w"></span>
-<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="p">)</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-10-40">40</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="s">&quot;encoding/json&quot;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">    </span><span class="s">&quot;time&quot;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="p">)</span>
 <a id="__codelineno-10-6" name="__codelineno-10-6"></a>
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Skill</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">    </span><span class="nx">ID</span><span class="w">   </span><span class="kt">int</span><span class="w">    </span><span class="s">`json:&quot;id&quot;`</span><span class="w"></span>
-<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">    </span><span class="nx">Name</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;name&quot;`</span><span class="w"></span>
-<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Skill</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">    </span><span class="nx">ID</span><span class="w">   </span><span class="kt">int</span><span class="w">    </span><span class="s">`json:&quot;id&quot;`</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">    </span><span class="nx">Name</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;name&quot;`</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="p">}</span>
 <a id="__codelineno-10-11" name="__codelineno-10-11"></a>
-<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Skills</span><span class="w"> </span><span class="p">[]</span><span class="nx">Skill</span><span class="w"></span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Skills</span><span class="w"> </span><span class="p">[]</span><span class="nx">Skill</span>
 <a id="__codelineno-10-13" name="__codelineno-10-13"></a>
-<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Person</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">    </span><span class="nx">ID</span><span class="w">        </span><span class="kt">int</span><span class="w">       </span><span class="s">`json:&quot;id&quot;`</span><span class="w"></span>
-<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="w">    </span><span class="nx">FirstName</span><span class="w"> </span><span class="kt">string</span><span class="w">    </span><span class="s">`json:&quot;first_name&quot;`</span><span class="w"></span>
-<a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">    </span><span class="nx">LastName</span><span class="w">  </span><span class="kt">string</span><span class="w">    </span><span class="s">`json:&quot;last_name&quot;`</span><span class="w"></span>
-<a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">    </span><span class="nx">Birthday</span><span class="w">  </span><span class="nx">time</span><span class="p">.</span><span class="nx">Time</span><span class="w"> </span><span class="s">`json:&quot;birthday&quot;`</span><span class="w"></span>
-<a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">    </span><span class="nx">Skills</span><span class="w">    </span><span class="nx">Skills</span><span class="w">    </span><span class="s">`json:&quot;skills&quot;`</span><span class="w"></span>
-<a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Person</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">    </span><span class="nx">ID</span><span class="w">        </span><span class="kt">int</span><span class="w">       </span><span class="s">`json:&quot;id&quot;`</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="w">    </span><span class="nx">FirstName</span><span class="w"> </span><span class="kt">string</span><span class="w">    </span><span class="s">`json:&quot;first_name&quot;`</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">    </span><span class="nx">LastName</span><span class="w">  </span><span class="kt">string</span><span class="w">    </span><span class="s">`json:&quot;last_name&quot;`</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">    </span><span class="nx">Birthday</span><span class="w">  </span><span class="nx">time</span><span class="p">.</span><span class="nx">Time</span><span class="w"> </span><span class="s">`json:&quot;birthday&quot;`</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">    </span><span class="nx">Skills</span><span class="w">    </span><span class="nx">Skills</span><span class="w">    </span><span class="s">`json:&quot;skills&quot;`</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="p">}</span>
 <a id="__codelineno-10-21" name="__codelineno-10-21"></a>
-<a id="__codelineno-10-22" name="__codelineno-10-22"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-10-22" name="__codelineno-10-22"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-10-23" name="__codelineno-10-23"></a><span class="w">    </span><span class="nx">s</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">`</span>
 <a id="__codelineno-10-24" name="__codelineno-10-24"></a><span class="s">    {</span>
 <a id="__codelineno-10-25" name="__codelineno-10-25"></a><span class="s">        &quot;id&quot;: 123,</span>
@@ -2360,14 +2377,14 @@ You can "map" json object fields onto your struct, even when the field names are
 <a id="__codelineno-10-30" name="__codelineno-10-30"></a><span class="s">            {&quot;id&quot;: 1, &quot;name&quot;: &quot;Running&quot;},</span>
 <a id="__codelineno-10-31" name="__codelineno-10-31"></a><span class="s">            {&quot;id&quot;: 1, &quot;name&quot;: &quot;Jumping&quot;}</span>
 <a id="__codelineno-10-32" name="__codelineno-10-32"></a><span class="s">        ]</span>
-<a id="__codelineno-10-33" name="__codelineno-10-33"></a><span class="s">    }`</span><span class="w"></span>
-<a id="__codelineno-10-34" name="__codelineno-10-34"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">person</span><span class="w"> </span><span class="nx">Person</span><span class="w"></span>
-<a id="__codelineno-10-35" name="__codelineno-10-35"></a><span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">json</span><span class="p">.</span><span class="nx">Unmarshal</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">s</span><span class="p">),</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">person</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-10-36" name="__codelineno-10-36"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-10-37" name="__codelineno-10-37"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-10-38" name="__codelineno-10-38"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-10-39" name="__codelineno-10-39"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%#v&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">person</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-10-40" name="__codelineno-10-40"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-10-33" name="__codelineno-10-33"></a><span class="s">    }`</span>
+<a id="__codelineno-10-34" name="__codelineno-10-34"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">person</span><span class="w"> </span><span class="nx">Person</span>
+<a id="__codelineno-10-35" name="__codelineno-10-35"></a><span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">json</span><span class="p">.</span><span class="nx">Unmarshal</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">s</span><span class="p">),</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">person</span><span class="p">)</span>
+<a id="__codelineno-10-36" name="__codelineno-10-36"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-37" name="__codelineno-10-37"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-10-38" name="__codelineno-10-38"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-39" name="__codelineno-10-39"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%#v&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">person</span><span class="p">)</span>
+<a id="__codelineno-10-40" name="__codelineno-10-40"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>output:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>main.Person{ID:123, FirstName:&quot;Test&quot;, LastName:&quot;Tester&quot;, Birthday:time.Date(1994, time.January, 19, 0, 0, 0, 0, time.UTC), Skills:main.Skills{main.Skill{ID:1, Name:&quot;Running&quot;}, main.Skill{ID:1, Name:&quot;Jumping&quot;}}}
@@ -2425,55 +2442,55 @@ So you can send and receive http requests.</p>
 <span class="normal"><a href="#__codelineno-12-46">46</a></span>
 <span class="normal"><a href="#__codelineno-12-47">47</a></span>
 <span class="normal"><a href="#__codelineno-12-48">48</a></span>
-<span class="normal"><a href="#__codelineno-12-49">49</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="s">&quot;context&quot;</span><span class="w"></span>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="s">&quot;encoding/json&quot;</span><span class="w"></span>
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
-<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
-<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">    </span><span class="s">&quot;time&quot;</span><span class="w"></span>
-<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="p">)</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-12-49">49</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="s">&quot;context&quot;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="s">&quot;encoding/json&quot;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">    </span><span class="s">&quot;net/http&quot;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">    </span><span class="s">&quot;time&quot;</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="p">)</span>
 <a id="__codelineno-12-8" name="__codelineno-12-8"></a>
-<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">    </span><span class="nx">client</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">        </span><span class="nx">Timeout</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">    </span><span class="nx">client</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">{</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">        </span><span class="nx">Timeout</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">,</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-12-13" name="__codelineno-12-13"></a>
-<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">    </span><span class="nx">request</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewRequestWithContext</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">        </span><span class="nx">context</span><span class="p">.</span><span class="nx">Background</span><span class="p">(),</span><span class="w"></span>
-<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="w">        </span><span class="nx">http</span><span class="p">.</span><span class="nx">MethodGet</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="w">        </span><span class="s">&quot;https://jsonplaceholder.typicode.com/todos/1&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="w">        </span><span class="kc">nil</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="w">    </span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">    </span><span class="nx">request</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewRequestWithContext</span><span class="p">(</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">        </span><span class="nx">context</span><span class="p">.</span><span class="nx">Background</span><span class="p">(),</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="w">        </span><span class="nx">http</span><span class="p">.</span><span class="nx">MethodGet</span><span class="p">,</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="w">        </span><span class="s">&quot;https://jsonplaceholder.typicode.com/todos/1&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="w">        </span><span class="kc">nil</span><span class="p">,</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="w">    </span><span class="p">)</span>
 <a id="__codelineno-12-20" name="__codelineno-12-20"></a>
-<a id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-12-22" name="__codelineno-12-22"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-12-23" name="__codelineno-12-23"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-12-24" name="__codelineno-12-24"></a>
-<a id="__codelineno-12-25" name="__codelineno-12-25"></a><span class="w">    </span><span class="nx">response</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">request</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-12-26" name="__codelineno-12-26"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-12-27" name="__codelineno-12-27"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-12-28" name="__codelineno-12-28"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-12-25" name="__codelineno-12-25"></a><span class="w">    </span><span class="nx">response</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">request</span><span class="p">)</span>
+<a id="__codelineno-12-26" name="__codelineno-12-26"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-27" name="__codelineno-12-27"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-12-28" name="__codelineno-12-28"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-12-29" name="__codelineno-12-29"></a>
-<a id="__codelineno-12-30" name="__codelineno-12-30"></a><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span><span class="w"></span>
+<a id="__codelineno-12-30" name="__codelineno-12-30"></a><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
 <a id="__codelineno-12-31" name="__codelineno-12-31"></a>
-<a id="__codelineno-12-32" name="__codelineno-12-32"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">StatusCode</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusOK</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-12-33" name="__codelineno-12-33"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Sprintf</span><span class="p">(</span><span class="s">&quot;got unexpected status: %v&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">StatusCode</span><span class="p">))</span><span class="w"></span>
-<a id="__codelineno-12-34" name="__codelineno-12-34"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-12-32" name="__codelineno-12-32"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">StatusCode</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusOK</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-33" name="__codelineno-12-33"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Sprintf</span><span class="p">(</span><span class="s">&quot;got unexpected status: %v&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">StatusCode</span><span class="p">))</span>
+<a id="__codelineno-12-34" name="__codelineno-12-34"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-12-35" name="__codelineno-12-35"></a>
-<a id="__codelineno-12-36" name="__codelineno-12-36"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-12-37" name="__codelineno-12-37"></a><span class="w">        </span><span class="nx">ID</span><span class="w">        </span><span class="kt">int</span><span class="w">    </span><span class="s">`json:&quot;id&quot;`</span><span class="w"></span>
-<a id="__codelineno-12-38" name="__codelineno-12-38"></a><span class="w">        </span><span class="nx">UserID</span><span class="w">    </span><span class="kt">int</span><span class="w">    </span><span class="s">`json:&quot;userId&quot;`</span><span class="w"></span>
-<a id="__codelineno-12-39" name="__codelineno-12-39"></a><span class="w">        </span><span class="nx">Title</span><span class="w">     </span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;title&quot;`</span><span class="w"></span>
-<a id="__codelineno-12-40" name="__codelineno-12-40"></a><span class="w">        </span><span class="nx">Completed</span><span class="w"> </span><span class="kt">bool</span><span class="w">   </span><span class="s">`json:&quot;completed&quot;`</span><span class="w"></span>
-<a id="__codelineno-12-41" name="__codelineno-12-41"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-12-36" name="__codelineno-12-36"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-37" name="__codelineno-12-37"></a><span class="w">        </span><span class="nx">ID</span><span class="w">        </span><span class="kt">int</span><span class="w">    </span><span class="s">`json:&quot;id&quot;`</span>
+<a id="__codelineno-12-38" name="__codelineno-12-38"></a><span class="w">        </span><span class="nx">UserID</span><span class="w">    </span><span class="kt">int</span><span class="w">    </span><span class="s">`json:&quot;userId&quot;`</span>
+<a id="__codelineno-12-39" name="__codelineno-12-39"></a><span class="w">        </span><span class="nx">Title</span><span class="w">     </span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;title&quot;`</span>
+<a id="__codelineno-12-40" name="__codelineno-12-40"></a><span class="w">        </span><span class="nx">Completed</span><span class="w"> </span><span class="kt">bool</span><span class="w">   </span><span class="s">`json:&quot;completed&quot;`</span>
+<a id="__codelineno-12-41" name="__codelineno-12-41"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-12-42" name="__codelineno-12-42"></a>
-<a id="__codelineno-12-43" name="__codelineno-12-43"></a><span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">json</span><span class="p">.</span><span class="nx">NewDecoder</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">Body</span><span class="p">).</span><span class="nx">Decode</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">data</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-12-44" name="__codelineno-12-44"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-12-45" name="__codelineno-12-45"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-12-46" name="__codelineno-12-46"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-12-43" name="__codelineno-12-43"></a><span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">json</span><span class="p">.</span><span class="nx">NewDecoder</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">Body</span><span class="p">).</span><span class="nx">Decode</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">data</span><span class="p">)</span>
+<a id="__codelineno-12-44" name="__codelineno-12-44"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-45" name="__codelineno-12-45"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-12-46" name="__codelineno-12-46"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-12-47" name="__codelineno-12-47"></a>
-<a id="__codelineno-12-48" name="__codelineno-12-48"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%+v&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-12-49" name="__codelineno-12-49"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-12-48" name="__codelineno-12-48"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%+v&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">)</span>
+<a id="__codelineno-12-49" name="__codelineno-12-49"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>output would be:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>{ID:1 UserID:1 Title:delectus aut autem Completed:false}%
@@ -2520,45 +2537,45 @@ Every incoming request will be handled by it's own goroutine.</p>
 <span class="normal"><a href="#__codelineno-14-36">36</a></span>
 <span class="normal"><a href="#__codelineno-14-37">37</a></span>
 <span class="normal"><a href="#__codelineno-14-38">38</a></span>
-<span class="normal"><a href="#__codelineno-14-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
-<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
-<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">    </span><span class="s">&quot;time&quot;</span><span class="w"></span>
-<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="p">)</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-14-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="s">&quot;net/http&quot;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">    </span><span class="s">&quot;time&quot;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="p">)</span>
 <a id="__codelineno-14-6" name="__codelineno-14-6"></a>
-<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">    </span><span class="nx">apiMux</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewServeMux</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">    </span><span class="nx">apiMux</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/todo/&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">        </span><span class="nx">w</span><span class="p">.</span><span class="nx">Write</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&quot;todo&quot;</span><span class="p">))</span><span class="w"></span>
-<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">    </span><span class="p">})</span><span class="w"></span>
-<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">    </span><span class="nx">apiMux</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">        </span><span class="nx">w</span><span class="p">.</span><span class="nx">Write</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&quot;api&quot;</span><span class="p">))</span><span class="w"></span>
-<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="w">    </span><span class="p">})</span><span class="w"></span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">    </span><span class="nx">apiMux</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewServeMux</span><span class="p">()</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">    </span><span class="nx">apiMux</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/todo/&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">        </span><span class="nx">w</span><span class="p">.</span><span class="nx">Write</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&quot;todo&quot;</span><span class="p">))</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">    </span><span class="p">})</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">    </span><span class="nx">apiMux</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">        </span><span class="nx">w</span><span class="p">.</span><span class="nx">Write</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&quot;api&quot;</span><span class="p">))</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="w">    </span><span class="p">})</span>
 <a id="__codelineno-14-15" name="__codelineno-14-15"></a>
-<a id="__codelineno-14-16" name="__codelineno-14-16"></a><span class="w">    </span><span class="nx">mux</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewServeMux</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="w">    </span><span class="nx">mux</span><span class="p">.</span><span class="nx">Handle</span><span class="p">(</span><span class="s">&quot;/api/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">StripPrefix</span><span class="p">(</span><span class="s">&quot;/api&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">apiMux</span><span class="p">))</span><span class="w"></span>
-<a id="__codelineno-14-18" name="__codelineno-14-18"></a><span class="w">    </span><span class="nx">mux</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="w">        </span><span class="c1">// The &quot;/&quot; pattern matches everything, so we need to check</span><span class="w"></span>
-<a id="__codelineno-14-20" name="__codelineno-14-20"></a><span class="w">        </span><span class="c1">// that we&#39;re at the root here.</span><span class="w"></span>
-<a id="__codelineno-14-21" name="__codelineno-14-21"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">Path</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-14-22" name="__codelineno-14-22"></a><span class="w">            </span><span class="nx">http</span><span class="p">.</span><span class="nx">NotFound</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-14-23" name="__codelineno-14-23"></a><span class="w">            </span><span class="k">return</span><span class="w"></span>
-<a id="__codelineno-14-24" name="__codelineno-14-24"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-14-25" name="__codelineno-14-25"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Welcome to the home page!&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-14-26" name="__codelineno-14-26"></a><span class="w">    </span><span class="p">})</span><span class="w"></span>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a><span class="w">    </span><span class="nx">mux</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewServeMux</span><span class="p">()</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="w">    </span><span class="nx">mux</span><span class="p">.</span><span class="nx">Handle</span><span class="p">(</span><span class="s">&quot;/api/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">StripPrefix</span><span class="p">(</span><span class="s">&quot;/api&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">apiMux</span><span class="p">))</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18"></a><span class="w">    </span><span class="nx">mux</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="w">        </span><span class="c1">// The &quot;/&quot; pattern matches everything, so we need to check</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20"></a><span class="w">        </span><span class="c1">// that we&#39;re at the root here.</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">Path</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22"></a><span class="w">            </span><span class="nx">http</span><span class="p">.</span><span class="nx">NotFound</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">)</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23"></a><span class="w">            </span><span class="k">return</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Welcome to the home page!&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-26" name="__codelineno-14-26"></a><span class="w">    </span><span class="p">})</span>
 <a id="__codelineno-14-27" name="__codelineno-14-27"></a>
-<a id="__codelineno-14-28" name="__codelineno-14-28"></a><span class="w">    </span><span class="nx">server</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">Server</span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-14-29" name="__codelineno-14-29"></a><span class="w">        </span><span class="nx">Addr</span><span class="p">:</span><span class="w">         </span><span class="s">&quot;:8000&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-14-30" name="__codelineno-14-30"></a><span class="w">        </span><span class="nx">ReadTimeout</span><span class="p">:</span><span class="w">  </span><span class="mi">30</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-14-31" name="__codelineno-14-31"></a><span class="w">        </span><span class="nx">WriteTimeout</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-14-32" name="__codelineno-14-32"></a><span class="w">        </span><span class="nx">IdleTimeout</span><span class="p">:</span><span class="w">  </span><span class="mi">120</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-14-33" name="__codelineno-14-33"></a><span class="w">        </span><span class="nx">Handler</span><span class="p">:</span><span class="w">      </span><span class="nx">mux</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-14-34" name="__codelineno-14-34"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-14-35" name="__codelineno-14-35"></a><span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">server</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-14-36" name="__codelineno-14-36"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ErrServerClosed</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-14-37" name="__codelineno-14-37"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-14-38" name="__codelineno-14-38"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-14-39" name="__codelineno-14-39"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-14-28" name="__codelineno-14-28"></a><span class="w">    </span><span class="nx">server</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">Server</span><span class="p">{</span>
+<a id="__codelineno-14-29" name="__codelineno-14-29"></a><span class="w">        </span><span class="nx">Addr</span><span class="p">:</span><span class="w">         </span><span class="s">&quot;:8000&quot;</span><span class="p">,</span>
+<a id="__codelineno-14-30" name="__codelineno-14-30"></a><span class="w">        </span><span class="nx">ReadTimeout</span><span class="p">:</span><span class="w">  </span><span class="mi">30</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">,</span>
+<a id="__codelineno-14-31" name="__codelineno-14-31"></a><span class="w">        </span><span class="nx">WriteTimeout</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">,</span>
+<a id="__codelineno-14-32" name="__codelineno-14-32"></a><span class="w">        </span><span class="nx">IdleTimeout</span><span class="p">:</span><span class="w">  </span><span class="mi">120</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">,</span>
+<a id="__codelineno-14-33" name="__codelineno-14-33"></a><span class="w">        </span><span class="nx">Handler</span><span class="p">:</span><span class="w">      </span><span class="nx">mux</span><span class="p">,</span>
+<a id="__codelineno-14-34" name="__codelineno-14-34"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-35" name="__codelineno-14-35"></a><span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">server</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">()</span>
+<a id="__codelineno-14-36" name="__codelineno-14-36"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ErrServerClosed</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-37" name="__codelineno-14-37"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-14-38" name="__codelineno-14-38"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-39" name="__codelineno-14-39"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Sometimes you need a middleware to check if the user is allowed to access an endpoint:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.go</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
@@ -2602,48 +2619,48 @@ Every incoming request will be handled by it's own goroutine.</p>
 <span class="normal"><a href="#__codelineno-15-39">39</a></span>
 <span class="normal"><a href="#__codelineno-15-40">40</a></span>
 <span class="normal"><a href="#__codelineno-15-41">41</a></span>
-<span class="normal"><a href="#__codelineno-15-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">Password</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;notsecurepassword&quot;</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-15-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">Password</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;notsecurepassword&quot;</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2"></a>
-<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">securityMiddleware</span><span class="p">(</span><span class="nx">h</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">Handler</span><span class="p">)</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">Handler</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandlerFunc</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">Password</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">            </span><span class="nx">w</span><span class="p">.</span><span class="nx">WriteHeader</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusUnauthorized</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">            </span><span class="nx">w</span><span class="p">.</span><span class="nx">Write</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&quot;no access&quot;</span><span class="p">))</span><span class="w"></span>
-<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">            </span><span class="k">return</span><span class="w"></span>
-<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">        </span><span class="nx">h</span><span class="p">.</span><span class="nx">ServeHTTP</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">    </span><span class="p">})</span><span class="w"></span>
-<a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">securityMiddleware</span><span class="p">(</span><span class="nx">h</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">Handler</span><span class="p">)</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">Handler</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandlerFunc</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">Password</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">            </span><span class="nx">w</span><span class="p">.</span><span class="nx">WriteHeader</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusUnauthorized</span><span class="p">)</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">            </span><span class="nx">w</span><span class="p">.</span><span class="nx">Write</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&quot;no access&quot;</span><span class="p">))</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">            </span><span class="k">return</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">        </span><span class="nx">h</span><span class="p">.</span><span class="nx">ServeHTTP</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">)</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">    </span><span class="p">})</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="p">}</span>
 <a id="__codelineno-15-13" name="__codelineno-15-13"></a>
-<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="kd">func</span><span class="w"> </span><span class="nx">requestTimer</span><span class="p">(</span><span class="nx">h</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">Handler</span><span class="p">)</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">Handler</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandlerFunc</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="w">        </span><span class="nx">start</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="w">        </span><span class="nx">h</span><span class="p">.</span><span class="nx">ServeHTTP</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="w">        </span><span class="nx">end</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;request took: %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="p">.</span><span class="nx">Sub</span><span class="p">(</span><span class="nx">start</span><span class="p">))</span><span class="w"></span>
-<a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="w">    </span><span class="p">})</span><span class="w"></span>
-<a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="kd">func</span><span class="w"> </span><span class="nx">requestTimer</span><span class="p">(</span><span class="nx">h</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">Handler</span><span class="p">)</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">Handler</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandlerFunc</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="w">        </span><span class="nx">start</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">()</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="w">        </span><span class="nx">h</span><span class="p">.</span><span class="nx">ServeHTTP</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">)</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="w">        </span><span class="nx">end</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">()</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;request took: %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="p">.</span><span class="nx">Sub</span><span class="p">(</span><span class="nx">start</span><span class="p">))</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="w">    </span><span class="p">})</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="p">}</span>
 <a id="__codelineno-15-22" name="__codelineno-15-22"></a>
-<a id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="c1">// ...</span><span class="w"></span>
+<a id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="c1">// ...</span>
 <a id="__codelineno-15-24" name="__codelineno-15-24"></a>
-<a id="__codelineno-15-25" name="__codelineno-15-25"></a><span class="nx">mux</span><span class="p">.</span><span class="nx">Handle</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-15-26" name="__codelineno-15-26"></a><span class="w">    </span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-15-27" name="__codelineno-15-27"></a><span class="w">    </span><span class="nx">requestTimer</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-15-28" name="__codelineno-15-28"></a><span class="w">        </span><span class="nx">securityMiddleware</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-15-29" name="__codelineno-15-29"></a><span class="w">            </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandlerFunc</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-15-30" name="__codelineno-15-30"></a><span class="w">                </span><span class="kd">func</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-15-31" name="__codelineno-15-31"></a><span class="w">                    </span><span class="c1">// The &quot;/&quot; pattern matches everything, so we need to check</span><span class="w"></span>
-<a id="__codelineno-15-32" name="__codelineno-15-32"></a><span class="w">                    </span><span class="c1">// that we&#39;re at the root here.</span><span class="w"></span>
-<a id="__codelineno-15-33" name="__codelineno-15-33"></a><span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">Path</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-15-34" name="__codelineno-15-34"></a><span class="w">                        </span><span class="nx">http</span><span class="p">.</span><span class="nx">NotFound</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-15-35" name="__codelineno-15-35"></a><span class="w">                        </span><span class="k">return</span><span class="w"></span>
-<a id="__codelineno-15-36" name="__codelineno-15-36"></a><span class="w">                    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-15-37" name="__codelineno-15-37"></a><span class="w">                    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Welcome to the home page!&quot;</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-15-38" name="__codelineno-15-38"></a><span class="w">                </span><span class="p">},</span><span class="w"></span>
-<a id="__codelineno-15-39" name="__codelineno-15-39"></a><span class="w">            </span><span class="p">),</span><span class="w"></span>
-<a id="__codelineno-15-40" name="__codelineno-15-40"></a><span class="w">        </span><span class="p">),</span><span class="w"></span>
-<a id="__codelineno-15-41" name="__codelineno-15-41"></a><span class="w">    </span><span class="p">),</span><span class="w"></span>
-<a id="__codelineno-15-42" name="__codelineno-15-42"></a><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-15-25" name="__codelineno-15-25"></a><span class="nx">mux</span><span class="p">.</span><span class="nx">Handle</span><span class="p">(</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26"></a><span class="w">    </span><span class="s">&quot;/&quot;</span><span class="p">,</span>
+<a id="__codelineno-15-27" name="__codelineno-15-27"></a><span class="w">    </span><span class="nx">requestTimer</span><span class="p">(</span>
+<a id="__codelineno-15-28" name="__codelineno-15-28"></a><span class="w">        </span><span class="nx">securityMiddleware</span><span class="p">(</span>
+<a id="__codelineno-15-29" name="__codelineno-15-29"></a><span class="w">            </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandlerFunc</span><span class="p">(</span>
+<a id="__codelineno-15-30" name="__codelineno-15-30"></a><span class="w">                </span><span class="kd">func</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-31" name="__codelineno-15-31"></a><span class="w">                    </span><span class="c1">// The &quot;/&quot; pattern matches everything, so we need to check</span>
+<a id="__codelineno-15-32" name="__codelineno-15-32"></a><span class="w">                    </span><span class="c1">// that we&#39;re at the root here.</span>
+<a id="__codelineno-15-33" name="__codelineno-15-33"></a><span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">Path</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-34" name="__codelineno-15-34"></a><span class="w">                        </span><span class="nx">http</span><span class="p">.</span><span class="nx">NotFound</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">)</span>
+<a id="__codelineno-15-35" name="__codelineno-15-35"></a><span class="w">                        </span><span class="k">return</span>
+<a id="__codelineno-15-36" name="__codelineno-15-36"></a><span class="w">                    </span><span class="p">}</span>
+<a id="__codelineno-15-37" name="__codelineno-15-37"></a><span class="w">                    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Welcome to the home page!&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-38" name="__codelineno-15-38"></a><span class="w">                </span><span class="p">},</span>
+<a id="__codelineno-15-39" name="__codelineno-15-39"></a><span class="w">            </span><span class="p">),</span>
+<a id="__codelineno-15-40" name="__codelineno-15-40"></a><span class="w">        </span><span class="p">),</span>
+<a id="__codelineno-15-41" name="__codelineno-15-41"></a><span class="w">    </span><span class="p">),</span>
+<a id="__codelineno-15-42" name="__codelineno-15-42"></a><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 
 
@@ -2666,42 +2683,6 @@ Every incoming request will be handled by it's own goroutine.</p>
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../concurrency/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Concurrency" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Concurrency
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../logging/" class="md-footer__link md-footer__link--next" aria-label="Next: Logging" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Logging
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -2723,14 +2704,13 @@ Every incoming request will be handled by it's own goroutine.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6df46069.min.js"></script>
       
         <script src="../../../javascripts/extra.js"></script>
       
-    
     
   </body>
 </html>
