@@ -10,7 +10,7 @@ This types are comparable:
 
 -   Boolean
 -   Numeric
--   String,
+-   String
 -   Pointer
 -   Channel
 -   Interface types
