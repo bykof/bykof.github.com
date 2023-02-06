@@ -143,7 +143,6 @@ But it just differs from known concepts about inheritance.
 -   [Jetbrains Goland](https://www.jetbrains.com/go/) - paid, preferred
 -   [VSCode](https://code.visualstudio.com/) - free
     -   [Go Extension](https://code.visualstudio.com/docs/languages/go) - free
--   [LiteIDE](http://liteide.org/en/liteide/) - free, untested
 
 ## Installation
 
