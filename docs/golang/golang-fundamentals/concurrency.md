@@ -39,6 +39,8 @@ Try so spawn ten thousand system threads, this would result in a mess.
 
 ## Goroutines
 
+![](../../images/goroutines.jpg){width="400px"}
+
 Goroutines are executed by the keyword `go` before a function invocation.
 Don't see it as a async/await, it's more a "go and never come back" execution.
 If you want to return values from your `goroutine` don't use return, use it with `Channels`.
