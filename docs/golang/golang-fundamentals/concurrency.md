@@ -523,4 +523,4 @@ Adding 25 to 24
 Concurrency can be very frustrating, because a lot of things happen at the same time in your application and it can be very hard to predict or even debug, what is happening.
 For this there is a very good book by Katherine Cox-Buday it's called [`Concurrency in Go`](https://www.amazon.de/dp/1491941197/ref=cm_sw_em_r_mt_dp_CPPWPBXFH75CQVHQAT92).
 
-
+Also check out this library which adds a lot of missing features for concurrency: [Conc on Github](https://github.com/sourcegraph/conc)
