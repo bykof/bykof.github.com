@@ -116,7 +116,7 @@ func main() {
 }
 ```
 
-output is: 
+output is:
 
 ```
 Startig fast request

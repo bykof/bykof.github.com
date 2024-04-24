@@ -6,8 +6,70 @@ JSX stands for **JavaScript XML**. JSX allows us to write HTML elements with Jav
 
     ```js
     const content = 'Test'
-    const style = {background: 'red', color: 'white'}
+    const style = { background: 'red', color: 'white' }
     const element = <p style={style}>{content}</p>
+    ```
+
+## Rules
+
+If you want to write in JSX there are several rules you have to follow.
+
+1\. Always close and opened html-element
+
+!!! danger
+
+    ```jsx
+    <p>Test<p> <-- creates a JSX error
+    ```
+
+!!! success
+
+    ```jsx
+    <p>Test</p>
+    ```
+
+2\. Always think about context switching
+
+!!! danger
+
+    ```jsx
+    const a = 1;
+    const b = <p>a</p>
+
+    // will produce
+    <p>a</p>
+    ```
+
+!!! success
+
+    ```jsx
+    const a = 1;
+    const b = <p>{a}</p>
+              ^  ^ ^   ^
+              |  | |   |
+              +-- opens jsx context
+                  | |   +
+                  +-+-opens+scoped javascript context
+                  |   +
+                  +--- closes scopes javascript context
+                      |
+                      +--- closes jsx context
+    ```
+
+3\. Do not use reserved attributes
+
+!!! danger
+
+    ```jsx
+    <label for="inputfield">Test</label>
+    <input class="xl" type="text" id="inputfield"/>
+    ```
+
+!!! success
+
+    ```jsx
+    <label htmlFor="inputfield">Test</label>
+    <input className="xl" type="text" id="inputfield"/>
     ```
 
 ## Babel

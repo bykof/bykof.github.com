@@ -4,7 +4,7 @@ Google's own compile time dependency injection framework is called: [Wire](https
 Wire works a little bit different from guice for example.
 Wire generates code from a file called `wire.go` to a file called `wire_gen.go`, which can be used in the `main.go` file to initialize and start the application.
 
-Install wire first: 
+Install wire first:
 
 ```shell
 go install github.com/google/wire/cmd/wire@latest

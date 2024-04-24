@@ -58,7 +58,7 @@ func main() {
 }
 ```
 
-output: 
+output:
 
 ```
 Starting

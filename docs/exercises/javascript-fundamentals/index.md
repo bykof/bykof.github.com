@@ -18,15 +18,15 @@ To start with the exercises I can recommend you following steps:
 
 ```json
 {
-  "name": "shop",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "devDependencies": {
-    "jest": "^26.5.3"
-  },
-  "scripts": {
-    "start": "node index.js"
-  }
+    "name": "shop",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "devDependencies": {
+        "jest": "^26.5.3"
+    },
+    "scripts": {
+        "start": "node index.js"
+    }
 }
 ```

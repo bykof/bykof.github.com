@@ -11,12 +11,13 @@ yarn add axios
 Now we implement the client:
 
 `dashboard/client/index.js`
-```javascript
-import Axios from "axios";
 
-export const API_URL = "http://localhost:1337";
+```javascript
+import Axios from 'axios'
+
+export const API_URL = 'http://localhost:1337'
 
 export const getEvents = async () => {
-  return Axios.get(`${API_URL}/events`);
-};
+    return Axios.get(`${API_URL}/events`)
+}
 ```

@@ -1,8 +1,8 @@
 # Docker Images for Go
+
 Surprisingly Docker was built with the programming language Go.
 
-
-## Go Application 
+## Go Application
 
 Let's start with a simple Go webserver and init a go application:
 
@@ -89,7 +89,7 @@ Here is an example to do that:
 ```dockerfile title="Dockerfile"
 FROM golang:1.18.1-alpine AS BUILDER
 WORKDIR /app
-COPY . .                                    
+COPY . .
 RUN go build -o app main.go
 
 FROM alpine:latest

@@ -8,26 +8,27 @@ First let's create a component to show our events later:
 
 ```javascript
 export const Event = ({ title, description, start, end }) => {
-  const startDateTime = new Date(start);
-  const endDateTime = new Date(end);
+    const startDateTime = new Date(start)
+    const endDateTime = new Date(end)
 
-  return (
-    <div className="window" style={{ width: 300, marginBottom: "1em" }}>
-      <div className="title-bar">
-        <div className="title-bar-text">{title}</div>
-      </div>
-      <div className="window-body">
-        <p>{description}</p>
-        <hr />
-        <p>
-          {startDateTime.toLocaleString()} - {endDateTime.toLocaleString()}
-        </p>
-      </div>
-    </div>
-  );
-};
+    return (
+        <div className="window" style={{ width: 300, marginBottom: '1em' }}>
+            <div className="title-bar">
+                <div className="title-bar-text">{title}</div>
+            </div>
+            <div className="window-body">
+                <p>{description}</p>
+                <hr />
+                <p>
+                    {startDateTime.toLocaleString()} -{' '}
+                    {endDateTime.toLocaleString()}
+                </p>
+            </div>
+        </div>
+    )
+}
 
-export default Event;
+export default Event
 ```
 
 ## Add react-query
@@ -48,28 +49,30 @@ Create a container to fetch the data from the server and display it by using our
 `dashboard/containers/Events.js`
 
 ```javascript
-import { useQuery } from "react-query";
-import { getEvents } from "../client";
-import { Event } from "../components/Event";
+import { useQuery } from 'react-query'
+import { getEvents } from '../client'
+import { Event } from '../components/Event'
 
 export const Events = () => {
-  const { isLoading, isError, data: events, error } = useQuery(
-    "events",
-    getEvents
-  );
+    const {
+        isLoading,
+        isError,
+        data: events,
+        error,
+    } = useQuery('events', getEvents)
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+    if (isLoading) {
+        return <div>Loading...</div>
+    }
 
-  if (isError) {
-    return <div>Error fetching events: {error.toString()}</div>;
-  }
+    if (isError) {
+        return <div>Error fetching events: {error.toString()}</div>
+    }
 
-  return events.map((event) => <Event key={event.id} {...event} />);
-};
+    return events.map((event) => <Event key={event.id} {...event} />)
+}
 
-export default Events;
+export default Events
 ```
 
 ## Glueing it all together
@@ -79,28 +82,28 @@ Now we are finished and just have to call the `Event` container in the `index.js
 `dashboard/pages/index.js`
 
 ```javascript
-import Head from "next/head";
-import Events from "../containers/Events";
+import Head from 'next/head'
+import Events from '../containers/Events'
 
 const mainStyle = {
-  padding: 30,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-evenly",
-  flexWrap: "wrap",
-};
+    padding: 30,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    flexWrap: 'wrap',
+}
 
 export default function Home() {
-  return (
-    <div>
-      <Head>
-        <title>Events Dashboard</title>
-      </Head>
-      <main style={mainStyle}>
-        <Events />
-      </main>
-    </div>
-  );
+    return (
+        <div>
+            <Head>
+                <title>Events Dashboard</title>
+            </Head>
+            <main style={mainStyle}>
+                <Events />
+            </main>
+        </div>
+    )
 }
 ```
 

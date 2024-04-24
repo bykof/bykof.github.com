@@ -375,5 +375,3 @@ Follow this three rules and you'll be fine:
 1. when implementing methods of an interface for your struct (we will do interfaces in the next chapter)
 2. when the function needs to use a private variable within your struct
 3. when the function is completely related to the struct
-
-

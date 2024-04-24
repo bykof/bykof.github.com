@@ -48,9 +48,9 @@ main.Foo
 
 Reflection has three rules, that you should remember, when you work with `reflect`:
 
-1.   [Reflection goes from interface value to reflection object](#reflection-goes-from-interface-value-to-reflection-object)
-2.   [Reflection goes from reflection object to interface value](#reflection-goes-from-reflection-object-to-interface-value)
-3.   [To modify a reflection object, the value must be settable](#to-modify-a-reflection-object-the-value-must-be-settable)
+1.  [Reflection goes from interface value to reflection object](#reflection-goes-from-interface-value-to-reflection-object)
+2.  [Reflection goes from reflection object to interface value](#reflection-goes-from-reflection-object-to-interface-value)
+3.  [To modify a reflection object, the value must be settable](#to-modify-a-reflection-object-the-value-must-be-settable)
 
 ## Reflection goes from interface value to reflection object
 

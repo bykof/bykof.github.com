@@ -27,11 +27,11 @@ func main() {
 ## Semicolons
 
 Semicolons in Go are added automatically by the compiler in Go.
-They are added between the following token and a newline: 
+They are added between the following token and a newline:
 
-- An identifier (includes words like int, float64)
-- A basic literal (a number or a string constant)
-- One of the tokens: `break`, `continue`, `fallthrough`, `return`, `++`, `--`, `)` or `}`
+-   An identifier (includes words like int, float64)
+-   A basic literal (a number or a string constant)
+-   One of the tokens: `break`, `continue`, `fallthrough`, `return`, `++`, `--`, `)` or `}`
 
 This rule makes it easy to check if a code works imaginary.
 Check the following code:
@@ -73,11 +73,12 @@ ThisVariableIsExported
 
 There is one special identifier called the `blank identifier`.
 
-This identifier let's you assign every value to it, but you can never read from it: 
+This identifier let's you assign every value to it, but you can never read from it:
 
 ```go linenums="1"
 var _ = 2
 ```
+
 It's often used to "throw away" values or to test a specific type over another.
 You will see in the next chapters, why we need this.
 
@@ -97,21 +98,20 @@ continue     for          import       return       var
 
 #### Types
 
-```	
+```
 any bool byte comparable
 complex64 complex128 error float32 float64
 int int8 int16 int32 int64 rune string
 uint uint8 uint16 uint32 uint64 uintptr
 ```
 
-
 #### Constants
 
-```true false iota```
+`true false iota`
 
 Zero value:
 
-```nil```
+`nil`
 
 #### Functions
 
@@ -135,9 +135,9 @@ Following operators, assignment operators and puctuation is defined in Go.
 
 ## Integer literals
 
- An integer literal is a sequence of digits representing an integer constant. An optional prefix sets a non-decimal base: 0b or 0B for binary, 0, 0o, or 0O for octal, and 0x or 0X for hexadecimal. A single 0 is considered a decimal zero. In hexadecimal literals, letters a through f and A through F represent values 10 through 15.
+An integer literal is a sequence of digits representing an integer constant. An optional prefix sets a non-decimal base: 0b or 0B for binary, 0, 0o, or 0O for octal, and 0x or 0X for hexadecimal. A single 0 is considered a decimal zero. In hexadecimal literals, letters a through f and A through F represent values 10 through 15.
 
-For readability, an underscore character _ may appear after a base prefix or between successive digits; such underscores do not change the literal's value. 
+For readability, an underscore character \_ may appear after a base prefix or between successive digits; such underscores do not change the literal's value.
 
 ```
 int_lit        = decimal_lit | binary_lit | octal_lit | hex_lit .
@@ -181,7 +181,7 @@ A decimal floating-point literal consists of an integer part (decimal digits), a
 
 A hexadecimal floating-point literal consists of a 0x or 0X prefix, an integer part (hexadecimal digits), a radix point, a fractional part (hexadecimal digits), and an exponent part (p or P followed by an optional sign and decimal digits). One of the integer part or the fractional part may be elided; the radix point may be elided as well, but the exponent part is required. (This syntax matches the one given in IEEE 754-2008 §5.12.3.) An exponent value exp scales the mantissa (integer and fractional part) by 2exp.
 
-For readability, an underscore character _ may appear after a base prefix or between successive digits; such underscores do not change the literal value.
+For readability, an underscore character \_ may appear after a base prefix or between successive digits; such underscores do not change the literal value.
 
 ```
 float_lit         = decimal_float_lit | hex_float_lit .
@@ -234,7 +234,7 @@ hex_exponent      = ( "p" | "P" ) [ "+" | "-" ] decimal_digits .
 
 ## Imaginary literals
 
- An imaginary literal represents the imaginary part of a complex constant. It consists of an integer or floating-point literal followed by the lower-case letter i. The value of an imaginary literal is the value of the respective integer or floating-point literal multiplied by the imaginary unit i.
+An imaginary literal represents the imaginary part of a complex constant. It consists of an integer or floating-point literal followed by the lower-case letter i. The value of an imaginary literal is the value of the respective integer or floating-point literal multiplied by the imaginary unit i.
 
 ```
 imaginary_lit = (decimal_digits | int_lit | float_lit) "i" .
@@ -354,4 +354,4 @@ These examples all represent the same string:
 "\xe6\x97\xa5\xe6\x9c\xac\xe8\xaa\x9e"  // the explicit UTF-8 bytes
 ```
 
-If the source code represents a character as two code points, such as a combining form involving an accent and a letter, the result will be an error if placed in a rune literal (it is not a single code point), and will appear as two code points if placed in a string literal. 
+If the source code represents a character as two code points, such as a combining form involving an accent and a letter, the result will be an error if placed in a rune literal (it is not a single code point), and will appear as two code points if placed in a string literal.
